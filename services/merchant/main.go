@@ -3,10 +3,10 @@ package main
 import (
 	"context"
 	"sync"
+	"fmt"
 
-	// Import the generated protobuf code
-	pb "gitlab.com/otis-team/backend/services/merchant"
-	"github.com/micro/go-micro/v2"
+	pb "gitlab.com/otis-team/backend/services/merchant/proto/merchant"
+	"github.com/micro/go-micro"
 
 )
 
@@ -87,10 +87,15 @@ func main() {
 	repo := &Repository{}
 
 	srv := micro.NewService(
-			micro.Name("otis-app.com.service.merchant"),
+			micro.Name("otis-app.com.merchant.service"),
 		)
 
 	srv.Init()
 
 	pb.RegisterMerchantServiceHandler(srv.Server(), &service{repo})
+
+	// Run the server
+	if err := srv.Run(); err != nil {
+		fmt.Println(err)
+	}
 }
