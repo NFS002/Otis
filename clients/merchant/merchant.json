@@ -1,0 +1,12 @@
+{
+  "name": "Jenny's Coffee",
+  "locations": [
+    {"location": "123 South Street, St Andrews"}
+  ],
+  "tags": [
+    {"tag":  "coffee"}, {"tag":  "cafe"}, {"tag":  "small"}
+  ],
+  "contactPhone": "07851991101",
+  "contactEmail": "jenny@jennyscoffee.com",
+  "rate": 0.15
+}
