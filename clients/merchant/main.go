@@ -2,15 +2,13 @@ package main
 
 import (
 	"encoding/json"
-	micro "github.com/micro/go-micro"
+	"github.com/micro/go-micro"
 	"io/ioutil"
 	"log"
-	"os"
 
 	"context"
 
-	pb "otis-app.com/backend/clients/merchant/proto/merchant"
-
+	pb "gitlab.com/otis-team/backend/clients/merchant/proto/merchant"
 )
 
 const (
@@ -31,17 +29,17 @@ func parseFile(file string) (*pb.Merchant, error) {
 }
 
 func main() {
-	service := micro.NewService(micro.Name("otis-app.com.client.merchant"))
+	service := micro.NewService(micro.Name("otis-app.com.merchant.client"))
 	service.Init()
 
-	client := pb.NewMerchantServiceClient("otis-app.com.service.merchant", service.Client())
+	client := pb.NewMerchantServiceClient("otis-app.com.merchant.service", service.Client())
 
-	file := defaultFilename
-	if len(os.Args) > 1 {
-		file = os.Args[1]
-	}
+	//file := defaultFilename
+	//if len(os.Args) > 1 {
+	//	file = os.Args[1]
+	//}
 
-	merchant, err := parseFile(file)
+	merchant, err := parseFile("/app/merchant.json")
 
 	if err != nil {
 		log.Fatalf("Could not parse file: %v", err)

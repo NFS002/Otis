@@ -6,19 +6,21 @@ RUN apk update && apk upgrade && \
 RUN mkdir /app
 WORKDIR /app
 
+ENV GO111MODULE=on
+
 COPY . .
 
-RUN go get
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o mercahnt-service
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o merchant-client
 
+# RUN
 
 FROM alpine:latest
 
 RUN apk --no-cache add ca-certificates
 
 RUN mkdir /app
-WORKDIR /app
-ADD consignment.json /app/merchant.json
+WORKDIR /APP
+ADD merchant.json /app/merchant.json
 COPY --from=builder /app/merchant-client .
 
 CMD ["./merchant-client"]
