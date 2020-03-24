@@ -1,0 +1,40 @@
+# docker-compose.yml
+version: '3.5'
+
+services:
+  user-service:
+    restart: always
+    container_name: "user-service"
+    build: ""
+    ports:
+      - 50051
+    links:
+      - datastore
+    depends_on:
+      - datastore
+    networks:
+      - backend-tier
+      - user-tier
+    environment:
+      DB_HOST: "mongodb://datastore:27017"
+      MICRO_ADDRESS: ":50051"
+
+  datastore:
+    image: mongo:latest
+    container_name: "datastore"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONG_LOG_DIR=/dev/null
+    volumes:
+      - ./data/db:/data/db
+    networks:
+      - merchant-tier
+    ports:
+      - 27017
+    command: mongod --logpath=/dev/null
+
+networks:
+  user-tier:
+    name: user-tier
+  backend-tier:
+    name: backend-tieri

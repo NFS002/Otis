@@ -1,0 +1,21 @@
+# docker-compose.yml
+version: '3.5'
+
+services:
+  merchant-client:
+    restart: always
+    container_name: "merchant-client"
+    build: .
+    ports:
+      - 50051
+    networks:
+      - backend-tier
+      - merchant-tier
+    environment:
+      MICRO_ADDRESS: ":50051"
+
+networks:
+  merchant-tier:
+    name: merchant-tier
+  backend-tier:
+    name: backend-tier
