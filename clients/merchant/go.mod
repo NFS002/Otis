@@ -12,6 +12,7 @@ require (
 	github.com/json-iterator/go v1.1.9 // indirect
 	github.com/lucas-clemente/quic-go v0.14.1 // indirect
 	github.com/micro/go-micro v1.18.0
+	github.com/micro/protobuf v0.0.0-20180321161605-ebd3be6d4fdb // indirect
 	github.com/miekg/dns v1.1.27 // indirect
 	github.com/nats-io/nats-server/v2 v2.1.4 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
