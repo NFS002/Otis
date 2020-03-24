@@ -56,7 +56,7 @@ func main() {
 
 	getAll, err := client.GetUser(context.Background(), &pb.GetRequest{})
 	if err != nil {
-		log.Fatalf("Could not list merchants: %v", err)
+		log.Fatalf("Could not list users: %v", err)
 	}
 
 	for _, v := range getAll.Users {
