@@ -19,4 +19,5 @@ IMPORTANT! Make sure you ammend your git config file to include your name and OT
 To run:
 
 `docker-compose build`
+
 `docker-compose run`
