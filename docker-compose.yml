@@ -1,0 +1,63 @@
+# docker-compose.yml
+version: '3.5'
+
+services:
+
+  api-gateway:
+    image: microhq/micro:latest
+    restart: always
+    command: api --handler=api
+    ports:
+      - 8080:8080
+    links:
+      - api-merchant
+    networks:
+      - api-gateway-tier
+
+  api-merchant:
+    restart: always
+    container_name: "go.micro.api.merchant"
+    build: ./api/merchant/
+    ports:
+      - 50051:50051
+    networks:
+      - api-gateway-tier
+      - api-merchant-tier
+
+  merchant-service:
+    restart: always
+    container_name: "go.micro.service.merchant"
+    build: ./service/merchant/
+    ports:
+      - 50052:50052
+    links:
+      - merchant-datastore
+    networks:
+      - service-merchant-tier
+    depends_on:
+      - merchant-datastore
+    environment:
+      DB_HOST: "mongodb://merchant-datastore:27017"
+
+  merchant-datastore:
+    image: mongo:latest
+    container_name: "merchant-datastore"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONG_LOG_DIR=/dev/null
+    volumes:
+      - ./data/db:/data/db
+    networks:
+      - service-merchant-tier
+    ports:
+      - 27017:27017
+    command: mongod --logpath=/dev/null
+
+
+networks:
+  api-gateway-tier:
+    name: api-gateway-tier
+  api-merchant-tier:
+    name: api-merchant-tier
+  service-merchant-tier:
+    name: service-merchant-tier

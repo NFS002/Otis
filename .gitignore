@@ -1,4 +1,3 @@
 .DS_Store
 .idea/
-services/*/data/
-services/*/data/
+data/

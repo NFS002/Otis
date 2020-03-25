@@ -5,7 +5,7 @@ import (
 	"sync"
 	"fmt"
 
-	pb "gitlab.com/otis-team/backend/services/user/proto/user"
+	pb "gitlab.com/otis-team/backend/service/user/proto/user"
 	"github.com/micro/go-micro"
 
 )

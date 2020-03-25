@@ -8,7 +8,7 @@ import (
 
 "context"
 
-pb "gitlab.com/otis-team/backend/clients/user/proto/user"
+pb "gitlab.com/otis-team/backend/client/user/proto/user"
 )
 
 const (

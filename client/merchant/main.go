@@ -8,7 +8,7 @@ import (
 
 	"context"
 
-	pb "gitlab.com/otis-team/backend/clients/merchant/proto/merchant"
+	pb "gitlab.com/otis-team/backend/client/merchant/proto/merchant"
 )
 
 const (
@@ -29,17 +29,17 @@ func parseFile(file string) (*pb.Merchant, error) {
 }
 
 func main() {
-	service := micro.NewService(micro.Name("otis-app.com.merchant.client"))
+	service := micro.NewService(micro.Name("otis.backend.client.merchant"))
 	service.Init()
 
-	client := pb.NewMerchantServiceClient("otis-app.com.merchant.service", service.Client())
+	client := pb.NewMerchantServiceClient("otis.backend.service.merchant", service.Client())
 
 	//file := defaultFilename
 	//if len(os.Args) > 1 {
 	//	file = os.Args[1]
 	//}
 
-	merchant, err := parseFile("/app/merchant.json")
+	merchant, err := parseFile("merchant.json")
 
 	if err != nil {
 		log.Fatalf("Could not parse file: %v", err)
@@ -52,14 +52,14 @@ func main() {
 
 	log.Printf("Created: %t", r.Created)
 
-	// Retrieve
-
-	getAll, err := client.GetMerchant(context.Background(), &pb.GetRequest{})
-	if err != nil {
-		log.Fatalf("Could not list merchants: %v", err)
-	}
-
-	for _, v := range getAll.Merchants {
-		log.Println(v)
-	}
+	//// Retrieve
+	//
+	//getAll, err := client.GetMerchant(context.Background(), &pb.GetRequest{})
+	//if err != nil {
+	//	log.Fatalf("Could not list merchants: %v", err)
+	//}
+	//
+	//for _, v := range getAll.Merchants {
+	//	log.Println(v)
+	//}
 }

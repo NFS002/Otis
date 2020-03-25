@@ -1,4 +1,4 @@
-module gitlab.com/otis-team/backend/services/merchant
+module gitlab.com/otis-team/backend/service/merchant
 
 go 1.13
 
@@ -16,6 +16,7 @@ require (
 	github.com/nats-io/nats-server/v2 v2.1.4 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20200122045848-3419fae592fc // indirect
+	go.mongodb.org/mongo-driver v1.3.1
 	go.uber.org/zap v1.13.0 // indirect
 	golang.org/x/crypto v0.0.0-20200221231518-2aa609cf4a9d // indirect
 	golang.org/x/lint v0.0.0-20191125180803-fdd1cda4f05f // indirect
