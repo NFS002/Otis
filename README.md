@@ -1,4 +1,4 @@
-# Backend
+# backend
 
 Otis backend
 
@@ -21,3 +21,17 @@ To run:
 `docker-compose build`
 
 `docker-compose run`
+
+## Namespaces
+
+The namespace for Go Modules should follow the directory structure of this repository.
+
+i.e. the module name for the merchant service is *gitlab.com/otis-team/backend/service/merchant* 
+
+This helps with future importing.
+
+The namespace for services within the Micro runtime is:
+
+go.micro.[api/service/client].[name]
+
+This is to provide integration with the default Micro namespace. This will likely be changed in the future.
