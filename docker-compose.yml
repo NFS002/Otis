@@ -3,18 +3,18 @@ version: '3.5'
 
 services:
 
-  api-gateway:
+  api_gateway:
     image: microhq/micro:latest
     restart: always
     command: api --handler=api
     ports:
       - 8080:8080
     links:
-      - api-merchant
+      - api_merchant
     networks:
       - api-gateway-tier
 
-  api-merchant:
+  api_merchant:
     restart: always
     container_name: "go.micro.api.merchant"
     build: ./api/merchant/
@@ -24,7 +24,7 @@ services:
       - api-gateway-tier
       - api-merchant-tier
 
-  merchant-service:
+  service_merchant:
     restart: always
     container_name: "go.micro.service.merchant"
     build: ./service/merchant/
@@ -33,6 +33,8 @@ services:
     links:
       - merchant-datastore
     networks:
+      - api-gateway-tier
+      - api-merchant-tier
       - service-merchant-tier
     depends_on:
       - merchant-datastore

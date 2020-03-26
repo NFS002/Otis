@@ -1,4 +1,4 @@
-module gitlab.com/otis-team/backend/clients/merchant
+module gitlab.com/otis-team/backend/client/merchant
 
 go 1.13
 

@@ -1,4 +1,4 @@
-package merchant
+package main
 
 import (
 	"context"

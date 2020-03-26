@@ -1,12 +1,7 @@
-package main
+package repository
 
 import (
-	"context"
-	"github.com/satori/go.uuid"
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-	"go.mongodb.org/mongo-driver/bson"
-	//"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/mongo"
+	pb "gitlab.com/otis-team/backend/api/merchant/client/proto"
 )
 
 type Merchant struct {
@@ -135,67 +130,4 @@ func UnmarshalMerchant(merchant *Merchant) *pb.Merchant {
 		ContactEmail: merchant.ContactEmail,
 		Rate: merchant.Rate,
 	}
-}
-
-// Repository
-
-type repository interface {
-	Create(ctx context.Context, merchant *Merchant) (uuid.UUID, error)
-	GetAll(ctx context.Context) ([]*Merchant, error)
-	Get(ctx context.Context, id string) ([]*Merchant, error)
-}
-
-type MongoRepository struct {
-	collection *mongo.Collection
-}
-
-func (repository *MongoRepository) Create(ctx context.Context, merchant *Merchant) (uuid.UUID, error){
-	uuid, err := generateUUID()
-	if err != nil {
-		return uuid, err
-	}
-
-	merchant.MerchantID = uuid.String()
-
-	_, err = repository.collection.InsertOne(ctx, merchant)
-
-	return uuid, err
-}
-
-func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Merchant, error) {
-	cur, err := repository.collection.Find(ctx, bson.D{}, nil)
-	var merchants []*Merchant
-	for cur.Next(ctx) {
-		var merchant *Merchant
-		if err := cur.Decode(&merchant); err != nil {
-			return nil, err
-		}
-		merchants = append(merchants, merchant)
-	}
-
-	return merchants, err
-}
-
-func (repository *MongoRepository) Get(ctx context.Context, id string) ([]*Merchant, error) {
-	cur, err := repository.collection.Find(ctx, bson.M{"merchant_id": id}, nil)
-	var merchants []*Merchant
-	for cur.Next(ctx) {
-		var merchant *Merchant
-		if err := cur.Decode(&merchant); err != nil {
-			return nil, err
-		}
-		merchants = append(merchants, merchant)
-	}
-
-	return merchants, err
-}
-
-// UUID
-
-func generateUUID() (uuid.UUID, error){
-	var err error
-
-	uuid := uuid.Must(uuid.NewV4(), err)
-
-	return uuid, err
 }

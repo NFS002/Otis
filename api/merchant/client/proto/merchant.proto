@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package merchant;
+
+service MerchantService {
+    rpc CreateMerchant(Merchant) returns (CreateResponse) {}
+    rpc GetMerchant(GetRequest) returns (GetResponse) {}
+}
+
+// Base types
+
+message Merchant {
+    string id = 1;
+    string name = 2;
+    repeated Location locations = 3;
+    repeated Tag tags = 4;
+    string contactPhone = 5;
+    string contactEmail = 6;
+    float rate = 7;
+}
+
+message Location {
+    string location = 1;
+}
+
+message Tag {
+    string tag = 1;
+}
+
+// Create response
+
+message CreateResponse {
+    bool created = 1;
+    string merchantID = 2;
+}
+
+// Get request and response
+
+message GetRequest {
+    string id = 1;
+}
+
+message GetResponse {
+    repeated Merchant merchants = 1;
+}
+
