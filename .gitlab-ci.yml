@@ -18,4 +18,4 @@ stages:
 lint:
   stage: test
   script:
-    - golint ./...
+    - make
