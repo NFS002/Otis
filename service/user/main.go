@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	user "gitlab.com/otis-team/backend/services/user/package"
+	user "gitlab.com/otis-team/backend/service/user/package"
 	"log"
 	"os"
 	"fmt"

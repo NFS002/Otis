@@ -51,7 +51,7 @@ message UpdateResponse {
 
 // Delete request and response
 
-message DeletedRequest {
+message DeleteRequest {
     string userID = 1;
 }
 

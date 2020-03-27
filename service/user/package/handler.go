@@ -33,7 +33,7 @@ func (s *Handler) GetUser(ctx context.Context, req *pb.GetRequest, res *pb.GetRe
 		users, err = s.Repository.Get(ctx, req.UserID)
 	}
 
-	res.Users = UnMarshalUsersCollection(users)
+	res.Users = UnmarshalUsersCollection(users)
 
 	return err
 }
