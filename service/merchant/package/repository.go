@@ -142,7 +142,9 @@ func UnmarshalMerchant(merchant *Merchant) *pb.Merchant {
 type Repository interface {
 	Create(ctx context.Context, merchant *Merchant) (uuid.UUID, error)
 	GetAll(ctx context.Context) ([]*Merchant, error)
-	Get(ctx context.Context, id string) ([]*Merchant, error)
+	Get(ctx context.Context, merchantID string) ([]*Merchant, error)
+	Update(ctx context.Context, merchant *Merchant) error
+	Delete(ctx context.Context, merchantID string) error
 }
 
 type MongoRepository struct {
@@ -176,8 +178,8 @@ func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Merchant, err
 	return merchants, err
 }
 
-func (repository *MongoRepository) Get(ctx context.Context, id string) ([]*Merchant, error) {
-	cur, err := repository.Collection.Find(ctx, bson.M{"merchant_id": id}, nil)
+func (repository *MongoRepository) Get(ctx context.Context, merchantID string) ([]*Merchant, error) {
+	cur, err := repository.Collection.Find(ctx, bson.M{"merchant_id": merchantID}, nil)
 	var merchants []*Merchant
 	for cur.Next(ctx) {
 		var merchant *Merchant
@@ -188,6 +190,24 @@ func (repository *MongoRepository) Get(ctx context.Context, id string) ([]*Merch
 	}
 
 	return merchants, err
+}
+
+func (repository *MongoRepository) Update(ctx context.Context, merchant *Merchant) error {
+	err := repository.Collection.FindOneAndUpdate(ctx, bson.M{"merchant_id": merchant.MerchantID}, merchant)
+	if err != nil {
+		return err.Err()
+	}
+
+	return nil
+}
+
+func (repository *MongoRepository) Delete(ctx context.Context, merchantID string) error {
+	err := repository.Collection.FindOneAndDelete(ctx, bson.M{"merchant_id": merchantID})
+	if err != nil {
+		return err.Err()
+	}
+
+	return nil
 }
 
 // UUID

@@ -123,6 +123,35 @@ func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *proto
 	return nil
 }
 
+//func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+//	log.Print("Received Merchant.Update request")
+//
+//	if req.Method != "POST" {
+//		return errors.BadRequest("go.micro.api.merchant", "This method requires POST")
+//	}
+//
+//	ct, ok := req.Header["Content-Type"]
+//	if !ok || len(ct.Values) == 0 {
+//		return errors.BadRequest("go.micro.api.merchant", "Need Content-Type header")
+//	}
+//
+//	if ct.Values[0] != "application/json" {
+//		return errors.BadRequest("go.micro.api.example", "Expect application/json")
+//	}
+//
+//	var merchant *protoMerchant.Merchant
+//	err := json.Unmarshal([]byte(req.Body), &merchant)
+//	if err != nil {
+//		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
+//	}
+//
+//	r, err := e.client.UpdateMerchant(ctx, merchant)
+//	if err != nil {
+//		return errors.BadRequest("go.micro.api.merchant",err.Error())
+//	}
+//
+//}
+
 func main() {
 	service := micro.NewService(
 		micro.Name("go.micro.api.merchant"),

@@ -44,3 +44,19 @@ message GetResponse {
     repeated Merchant merchants = 1;
 }
 
+// Update Response
+
+message UpdateResponse {
+    bool created = 1;
+    Merchant merchant = 2;
+}
+
+// Delete request and response
+
+message DeleteRequest {
+    string merchantID = 1;
+}
+
+message DeleteResponse {
+    bool deleted = 1;
+}
