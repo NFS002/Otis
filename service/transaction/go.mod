@@ -1,4 +1,4 @@
-module gitlab.com/otis-team/backend/services/transaction
+module gitlab.com/otis-team/backend/service/transaction
 
 go 1.13
 
