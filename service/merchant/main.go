@@ -27,7 +27,7 @@ func main() {
 		uri = defaultHost
 	}
 
-	client, err := _package.CreateClient(context.Background(), uri, 0)
+	client, err := merchant.CreateClient(context.Background(), uri, 0)
 	if err != nil {
 		log.Panic(err)
 	}
@@ -35,8 +35,8 @@ func main() {
 
 	merchantCollection := client.Database("otis").Collection("merchant")
 
-	repository := &_package.MongoRepository{merchantCollection}
-	h := &_package.handler{repository}
+	repository := &merchant.MongoRepository{merchantCollection}
+	h := &merchant.Handler{repository}
 
 	pb.RegisterMerchantServiceHandler(srv.Server(), h)
 

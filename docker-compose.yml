@@ -9,8 +9,6 @@ services:
     command: api --handler=api
     ports:
       - 8080:8080
-    links:
-      - api_merchant
     networks:
       - api-gateway-tier
 
@@ -23,6 +21,8 @@ services:
       args:
         - gitlab_user=otis_cj
         - gitlab_token=1fruBCF2_5aLxaF3NBcf
+    depends_on:
+      - api_gateway
     ports:
       - 50051:50051
     networks:

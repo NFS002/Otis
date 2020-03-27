@@ -6,14 +6,14 @@ import (
 	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 )
 
-type handler struct {
-	repository
+type Handler struct {
+	Repository
 }
 
-func (s *handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.CreateResponse) error {
+func (s *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.CreateResponse) error {
 	fmt.Println("Handler called!")
 
-	uuid, err := s.repository.Create(ctx, MarshalMerchant(req))
+	uuid, err := s.Repository.Create(ctx, MarshalMerchant(req))
 	if err != nil {
 		return err
 	}
@@ -24,14 +24,14 @@ func (s *handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 	return nil
 }
 
-func (s *handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
+func (s *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
 	var merchants []*Merchant
 	var err error
 
 	if len(req.Id) == 0 {
-		merchants, err = s.repository.GetAll(ctx)
+		merchants, err = s.Repository.GetAll(ctx)
 	} else {
-		merchants, err = s.repository.Get(ctx, req.Id)
+		merchants, err = s.Repository.Get(ctx, req.Id)
 	}
 
 	res.Merchants = UnmarshalMerchantCollection(merchants)

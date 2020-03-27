@@ -6,20 +6,20 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/errors"
 	merchant "gitlab.com/otis-team/backend/service/merchant/package"
-	proto2 "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-	proto "gitlab.com/otis-team/backend/api/merchant/proto"
+	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
 	"log"
 )
 
 type Merchant struct{
-	client proto2.MerchantServiceClient
+	client protoMerchant.MerchantServiceClient
 }
 
 // Merchant.Create is a method which will be served by http request /merchant/create
 // In the event we see /[service]/[method] the [service] is used as part of the method
 // E.g /merchant/Create goes to go.micro.api.merchant Merchant.Create
 
-func (e *Merchant) Create(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
+func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Create request")
 
 	if req.Method != "POST" {
@@ -35,7 +35,7 @@ func (e *Merchant) Create(ctx context.Context, req *proto.Request, rsp *proto.Re
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var merchant *proto2.Merchant
+	var merchant *protoMerchant.Merchant
 	err := json.Unmarshal([]byte(req.Body), &merchant)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
@@ -70,7 +70,7 @@ func (e *Merchant) Create(ctx context.Context, req *proto.Request, rsp *proto.Re
 	return nil
 }
 
-func (e *Merchant) Get(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
+func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Get request")
 
 	if req.Method != "GET" {
@@ -82,44 +82,43 @@ func (e *Merchant) Get(ctx context.Context, req *proto.Request, rsp *proto.Respo
 		return errors.BadRequest("go.micro.merchant", "Please provide an ID")
 	}
 
-	r, err := e.client.GetMerchant(ctx, &proto2.GetRequest{Id: id.Values[0]}) // Seems kinda janky
+	r, err := e.client.GetMerchant(ctx, &protoMerchant.GetRequest{Id: id.Values[0]}) // Seems kinda janky
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
-	merchantCollection := merchant.MarshalMerchantCollection(r.)
+	merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
 	body, err := json.Marshal(merchantCollection)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
 	rsp.StatusCode = 200
-	rsp.Body = string(r.String())
+	rsp.Body = string(body)
 
 	return nil
 }
 
-func (e *Merchant) GetAll(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
+func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.GetAll request")
 
 	if req.Method != "GET" {
 		return errors.BadRequest("go.micro.api.merchant", "This method requires GET")
 	}
 
-	r, err := e.client.GetMerchant(ctx, &proto2.GetRequest{})
+	r, err := e.client.GetMerchant(ctx, &protoMerchant.GetRequest{})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
-
-	//merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
-	//body, err := json.Marshal(merchantCollection)
-	//if err != nil {
-	//	return errors.BadRequest("go.micro.api.merchant",err.Error())
-	//}
+	merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
+	body, err := json.Marshal(merchantCollection)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant",err.Error())
+	}
 
 	rsp.StatusCode = 200
-	rsp.Body = string(r.String())
+	rsp.Body = string(body)
 
 	return nil
 }
@@ -131,12 +130,12 @@ func main() {
 
 	service.Init()
 
-	client := proto2.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
+	client := protoMerchant.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
 
 	m := &Merchant{client}
 
 	// Registering merchant api handler
-	err := proto.RegisterMerchantHandler(service.Server(), m)
+	err := protoAPI.RegisterMerchantHandler(service.Server(), m)
 	if err != nil {
 		log.Fatal(err)
 	}

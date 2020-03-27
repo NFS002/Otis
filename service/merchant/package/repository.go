@@ -34,35 +34,35 @@ type Tags []*Tag
 // Location and Tags
 
 func MarshalLocationCollection(locations []*pb.Location) []*Location {
-	collection := make([]*Location, 0)
+	Collection := make([]*Location, 0)
 	for _, location := range locations {
-		collection = append(collection, MarshalLocation(location))
+		Collection = append(Collection, MarshalLocation(location))
 	}
-	return collection
+	return Collection
 }
 
 func MarshalTagCollection(tags []*pb.Tag) []*Tag {
-	collection := make([]*Tag, 0)
+	Collection := make([]*Tag, 0)
 	for _, tag := range tags {
-		collection = append(collection, MarshalTag(tag))
+		Collection = append(Collection, MarshalTag(tag))
 	}
-	return collection
+	return Collection
 }
 
 func UnmarshalLocationCollection(locations []*Location) []*pb.Location {
-	collection := make([]*pb.Location, 0)
+	Collection := make([]*pb.Location, 0)
 	for _, location := range locations {
-		collection = append(collection, UnmarshalLocation(location))
+		Collection = append(Collection, UnmarshalLocation(location))
 	}
-	return collection
+	return Collection
 }
 
 func UnmarshalTagCollection(tags []*Tag) []*pb.Tag {
-	collection := make([]*pb.Tag, 0)
+	Collection := make([]*pb.Tag, 0)
 	for _, tag := range tags {
-		collection = append(collection, UnmarshalTag(tag))
+		Collection = append(Collection, UnmarshalTag(tag))
 	}
-	return collection
+	return Collection
 }
 
 func MarshalLocation(location *pb.Location) *Location {
@@ -92,19 +92,19 @@ func UnmarshalTag(tag *Tag) *pb.Tag {
 // Merchant
 
 func MarshalMerchantCollection(merchants []*pb.Merchant) []*Merchant {
-	collection := make([]*Merchant, 0)
+	Collection := make([]*Merchant, 0)
 	for _, merchant := range merchants {
-		collection = append(collection, MarshalMerchant(merchant))
+		Collection = append(Collection, MarshalMerchant(merchant))
 	}
-	return collection
+	return Collection
 }
 
 func UnmarshalMerchantCollection(merchants []*Merchant) []*pb.Merchant {
-	collection := make([]*pb.Merchant, 0)
+	Collection := make([]*pb.Merchant, 0)
 	for _, merchant := range merchants {
-		collection = append(collection, UnmarshalMerchant(merchant))
+		Collection = append(Collection, UnmarshalMerchant(merchant))
 	}
-	return collection
+	return Collection
 }
 
 func MarshalMerchant(merchant *pb.Merchant) *Merchant {
@@ -139,14 +139,14 @@ func UnmarshalMerchant(merchant *Merchant) *pb.Merchant {
 
 // Repository
 
-type repository interface {
+type Repository interface {
 	Create(ctx context.Context, merchant *Merchant) (uuid.UUID, error)
 	GetAll(ctx context.Context) ([]*Merchant, error)
 	Get(ctx context.Context, id string) ([]*Merchant, error)
 }
 
 type MongoRepository struct {
-	collection *mongo.Collection
+	Collection *mongo.Collection
 }
 
 func (repository *MongoRepository) Create(ctx context.Context, merchant *Merchant) (uuid.UUID, error){
@@ -157,13 +157,13 @@ func (repository *MongoRepository) Create(ctx context.Context, merchant *Merchan
 
 	merchant.MerchantID = uuid.String()
 
-	_, err = repository.collection.InsertOne(ctx, merchant)
+	_, err = repository.Collection.InsertOne(ctx, merchant)
 
 	return uuid, err
 }
 
 func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Merchant, error) {
-	cur, err := repository.collection.Find(ctx, bson.D{}, nil)
+	cur, err := repository.Collection.Find(ctx, bson.D{}, nil)
 	var merchants []*Merchant
 	for cur.Next(ctx) {
 		var merchant *Merchant
@@ -177,7 +177,7 @@ func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Merchant, err
 }
 
 func (repository *MongoRepository) Get(ctx context.Context, id string) ([]*Merchant, error) {
-	cur, err := repository.collection.Find(ctx, bson.M{"merchant_id": id}, nil)
+	cur, err := repository.Collection.Find(ctx, bson.M{"merchant_id": id}, nil)
 	var merchants []*Merchant
 	for cur.Next(ctx) {
 		var merchant *Merchant

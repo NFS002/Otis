@@ -6,5 +6,5 @@ require (
 	github.com/golang/protobuf v1.3.5
 	github.com/micro/go-micro v1.18.0
 	github.com/micro/go-micro/v2 v2.3.0 // indirect
-	gitlab.com/otis-team/backend/service/merchant v0.0.0-20200326234919-2d638c0fb9ce
+	gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327002416-486daf26f652
 )
