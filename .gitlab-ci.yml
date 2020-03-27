@@ -10,9 +10,7 @@ before_script:
     - go env GOPATH GOBIN
     - export GOPATH=$HOME/go
     - export GOBIN=$HOME/go/bin
-    - mkdir -p $GOPATH/src/golang.org/x 
-    - git clone https://go.googlesource.com/lint $GOPATH/src/golang.org/x/lint 
-    - go get -u golang.org/x/lint/golint
+    - export PATH=$PATH:$GOPATH/bin
 
 stages:
   - test
