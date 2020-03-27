@@ -4,9 +4,9 @@ variables:
     REPO_NAME: gitlab.com/otis-team/backend
 
 before_script:
-    - mkdir  -p /$(dirname $REPO_NAME)
-    - ln -svf $CI_PROJECT_DIR /$REPO_NAME
-    - cd /$REPO_NAME
+    - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
+    - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
+    - cd $GOPATH/src/$REPO_NAME
 
 stages:
   - test
