@@ -2,7 +2,6 @@ package user
 
 import (
 	"context"
-	"fmt"
 	"github.com/satori/go.uuid"
 	pb "gitlab.com/otis-team/backend/service/user/proto/user"
 	"go.mongodb.org/mongo-driver/bson"
@@ -30,7 +29,7 @@ type Accounts []*Account
 
 // Accounts
 
-func MarshalAccountCollection(accounts []*pb.Accounts) []*Accounts {
+func MarshalAccountCollection(accounts []*pb.Account) []*Account {
 	Collection := make([]*Account, 0)
 	for _, account := range accounts {
 		Collection = append(Collection, MarshalAccount(account))
@@ -38,10 +37,10 @@ func MarshalAccountCollection(accounts []*pb.Accounts) []*Accounts {
 	return Collection
 }
 
-func UnmarshalAccountCollection(accounts []*Accounts) []*pb.Accounts {
+func UnmarshalAccountCollection(accounts []*Account) []*pb.Account {
 	Collection := make([]*pb.Account, 0)
 	for _, account := range accounts {
-		Collection = append(Collection, Unmarshal(account))
+		Collection = append(Collection, UnmarshalAccount(account))
 	}
 	return Collection
 }
@@ -80,14 +79,14 @@ func MarshalUser(user *pb.User) *User {
 	accounts := MarshalAccountCollection(user.Accounts)
 
 	return &User{
-		UserID:     user.userID,
-		FirstName:  user.firstName,
-		LastName:  	user.lastName,
-		DoB:        user.dob,
-		Gender:     user.gender,
-		University: user.university,
-		Email:      user.email,
-		Phone:      user.phone,
+		UserID:     user.UserID,
+		FirstName:  user.FirstName,
+		LastName:  	user.LastName,
+		DoB:        user.Dob,
+		Gender:     user.Gender,
+		University: user.University,
+		Email:      user.Email,
+		Phone:      user.Phone,
 		Accounts:   accounts,
 	}
 }
@@ -95,15 +94,15 @@ func MarshalUser(user *pb.User) *User {
 func UnmarshalUser(user *User) *pb.User {
 	accounts := UnmarshalAccountCollection(user.Accounts)
 
-	return &User{
-		UserID:     user.userID,
-		FirstName:  user.firstName,
-		LastName:  	user.lastName,
-		DoB:        user.dob,
-		Gender:     user.gender,
-		University: user.university,
-		Email:      user.email,
-		Phone:      user.phone,
+	return &pb.User{
+		UserID:     user.UserID,
+		FirstName:  user.FirstName,
+		LastName:  	user.LastName,
+		Dob:        user.DoB,
+		Gender:     user.Gender,
+		University: user.University,
+		Email:      user.Email,
+		Phone:      user.Phone,
 		Accounts:   accounts,
 	}
 }
@@ -143,7 +142,7 @@ func (repository *MongoRepository) GetAll(ctx context.Context) ([]*User, error) 
 		if err := cur.Decode(&user); err != nil {
 			return nil, err
 		}
-		user = append(users, user)
+		users = append(users, user)
 	}
 
 	return users, err
@@ -157,7 +156,7 @@ func (repository *MongoRepository) Get(ctx context.Context, userID string) ([]*U
 		if err := cur.Decode(&user); err != nil {
 			return nil, err
 		}
-		user = append(users, user)
+		users = append(users, user)
 	}
 
 	return users, err

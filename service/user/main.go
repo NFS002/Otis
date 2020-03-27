@@ -37,7 +37,7 @@ func main() {
 	userCollection := client.Database("otis").Collection("user")
 
 	repository := &user.MongoRepository{userCollection}
-	h := &merchant.Handler{repository}
+	h := &user.Handler{repository}
 
 	pb.RegisterUserServiceHandler(service.Server(), h)
 

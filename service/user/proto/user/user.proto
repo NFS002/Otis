@@ -18,11 +18,11 @@ message User {
     string university = 6;
     string email = 7;
     string phone = 8;
-    Accounts accounts = 9;
+    repeated Account accounts = 9;
 }
 
-message Accounts {
-    repeated string accountID = 1;
+message Account {
+    string accountID = 1;
 }
 
 // Create response

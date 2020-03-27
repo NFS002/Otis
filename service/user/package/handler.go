@@ -33,7 +33,7 @@ func (s *Handler) GetUser(ctx context.Context, req *pb.GetRequest, res *pb.GetRe
 		users, err = s.Repository.Get(ctx, req.UserID)
 	}
 
-	res.Users = UnmarshalUsersCollection(users)
+	res.Users = UnmarshalUserCollection(users)
 
 	return err
 }
@@ -47,7 +47,7 @@ func (s *Handler) UpdateUser(ctx context.Context, req *pb.User, res *pb.UpdateRe
 	}
 
 	res.Updated = true
-	res.Merchant = req
+	res.User = req
 
 	return nil
 }
