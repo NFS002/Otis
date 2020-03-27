@@ -5,6 +5,7 @@ import (
 	pb "gitlab.com/otis-team/backend/service/user/proto/user"
 	"log"
 )
+
 type Handler struct {
 	Repository
 }

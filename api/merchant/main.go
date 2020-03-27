@@ -17,7 +17,7 @@ type Merchant struct{
 
 type CreatedResponse struct {
 	Created bool `json:"created"`
-	MerchantID string `json:"merchantID"`
+	Merchant *merchant.Merchant `json:"merchantID"`
 }
 
 type GetResponse struct {
@@ -68,7 +68,7 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 
 	createResponse := CreatedResponse{
 		Created:   r.Created,
-		MerchantID: r.MerchantID,
+		Merchant: merchant.MarshalMerchant(r.Merchant),
 	}
 
 	body, err := json.Marshal(createResponse)
@@ -96,7 +96,7 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.client.GetMerchant(ctx, &protoMerchant.GetRequest{Id: id.Values[0]}) // Seems kinda janky
+	r, err := e.client.GetMerchant(ctx, &protoMerchant.GetRequest{MerchantID: id.Values[0]}) // Seems kinda janky
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}

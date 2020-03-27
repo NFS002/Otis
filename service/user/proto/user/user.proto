@@ -6,7 +6,7 @@ service UserService {
     rpc CreateUser(User) returns (CreateResponse) {}
     rpc GetUser(GetRequest) returns (GetResponse) {}
     rpc UpdateUser(User) returns (UpdateResponse) {}
-    rpc DeleteUser(User) returns (DeleteResponse) {}
+    rpc DeleteUser(DeleteRequest) returns (DeleteResponse) {}
 }
 
 message User {
