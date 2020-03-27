@@ -10,7 +10,6 @@ before_script:
     - go env GOPATH GOBIN
     - export GOPATH=$HOME/go
     - export GOBIN=$HOME/go/bin
-    - source ~/.bash_profile
     - go get -u golang.org/x/lint/golint
     - ls $GOBIN | grep golint
 
