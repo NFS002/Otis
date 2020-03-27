@@ -1,14 +1,17 @@
-image: golang:alpine
+image: golang:latest
+
+variables:
+    REPO_NAME: gitlab.com/otis-team/backend
+
+before_script:
+    - mkdir $(dirname $REPO_NAME)
+    - ln -svf $CI_PROJECT_DIR $REPO_NAME
+    - cd $REPO_NAME
 
 stages:
   - test
 
-before_script:
-  - mkdir -p /backend
-  - cp -r $CI_PROJECT_DIR /backend
-  - cd /backend
-
-lint_code:
+lint:
   stage: test
   script:
-    - make
+    - make lint
