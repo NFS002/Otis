@@ -11,7 +11,7 @@ before_script:
     - export GOPATH=$HOME/go
     - export GOBIN=$HOME/go/bin
     - mkdir -p $GOPATH/src/golang.org/x 
-    - git clone https://github.com/golang/lint.git $GOPATH/src/golang.org/x/lint 
+    - git clone https://go.googlesource.com/lint $GOPATH/src/golang.org/x/lint 
     - go get -u golang.org/x/lint/golint
 
 stages:
