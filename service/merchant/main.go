@@ -16,11 +16,11 @@ const (
 )
 
 func main() {
-	srv := micro.NewService(
+	service := micro.NewService(
 			micro.Name("go.micro.service.merchant"),
 		)
 
-	srv.Init()
+	service.Init()
 
 	uri := os.Getenv("DB_HOST")
 	if uri == "" {
@@ -38,10 +38,10 @@ func main() {
 	repository := &merchant.MongoRepository{merchantCollection}
 	h := &merchant.Handler{repository}
 
-	pb.RegisterMerchantServiceHandler(srv.Server(), h)
+	pb.RegisterMerchantServiceHandler(service.Server(), h)
 
 	// Run the server
-	if err := srv.Run(); err != nil {
+	if err := service.Run(); err != nil {
 		fmt.Println(err)
 	}
 }

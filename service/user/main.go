@@ -49,7 +49,7 @@ func (repo *Repository) Get(id string) ([]*pb.User, error) {
 	return res, nil
 }
 
-type service struct {
+type Service struct {
 	repo repository
 }
 
@@ -86,15 +86,15 @@ func (s *service) GetUser(ctx context.Context, req *pb.GetRequest, res *pb.GetRe
 func main() {
 	repo := &Repository{}
 
-	srv := micro.NewService(
+	service := micro.NewService(
 		micro.Name("otis-app.com.user.service"),
 		)
 
-	srv.Init()
+	service.Init()
 
-	pb.RegisterUserServiceHandler(srv.Server(), &service{repo})
+	pb.RegisterUserServiceHandler(service.Server(), &Service{repo})
 
-	if err := srv.Run(); err != nil {
+	if err := service.Run(); err != nil {
 		fmt.Println(err)
 	}
 }
