@@ -5,6 +5,8 @@ package merchant;
 service MerchantService {
     rpc CreateMerchant(Merchant) returns (CreateResponse) {}
     rpc GetMerchant(GetRequest) returns (GetResponse) {}
+    rpc UpdateMerchant(Merchant) returns (UpdateResponse) {}
+    rpc DeleteMerchant(DeleteRequest) returns (DeleteResponse) {}
 }
 
 // Base types
