@@ -9,8 +9,8 @@ before_script:
     - cd $GOPATH/src/$REPO_NAME
     - go get -u golang.org/x/lint/golint
     - go list -f {{.Target}} golang.org/x/lint/golint
-    - ls $GOPATH/bin
-    - ls $GOPATH/bin/golint
+    - export PATH=$PATH:$GOPATH/bin/golint
+
 
 stages:
   - test
