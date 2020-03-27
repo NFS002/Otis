@@ -7,7 +7,12 @@ before_script:
     - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
     - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
     - cd $GOPATH/src/$REPO_NAME
+    - go env GOPATH GOBIN
+    - export GOPATH=$HOME/go
+    - export GOBIN=$HOME/go/bin
+    - source ~/.bash_profile
     - go get -u golang.org/x/lint/golint
+    - ls $GOBIN | grep golint
 
 stages:
   - test
