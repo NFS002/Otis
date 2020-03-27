@@ -463,6 +463,9 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 gitlab.com/otis-team/backend v0.0.0-20200326144627-e7f8e248ac6c h1:WdBt0k1zxXf7e7lUb74ukHpryHlMjveANQ6jy9hpQ6c=
 gitlab.com/otis-team/backend v0.0.0-20200326234919-2d638c0fb9ce h1:z96i5EKMUKTj2RNVaH+U6e5+OeyJmwXIxrDBg7rXMjo=
 gitlab.com/otis-team/backend v0.0.0-20200327002416-486daf26f652 h1:6E+SHAMXNvL92aWdl7gLmwglubyNpY/bHSZN+xG4ZQ0=
+gitlab.com/otis-team/backend v0.0.0-20200327105744-3f16287fde08 h1:UTGIqSNS7FfLBGRyu+pLQZ4/pFyw28HZSmDyMUnlKlE=
+gitlab.com/otis-team/backend v0.0.0-20200327111201-5068ec823ac9 h1:3ovOSVmXNbZCawzuwQpe5Ab5J/xAgSlTnxQJ33Xu6D0=
+gitlab.com/otis-team/backend v0.0.0-20200327160250-de9cf0f5909d h1:umJ/abwwy4bDCUvnpoW4iwl0xEmVTH1XnXW5yUty3ss=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200326144627-e7f8e248ac6c h1:UDFdreR6q7x+psAu0eoMwuFeDlofZFxJI0JmessMLAM=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200326144627-e7f8e248ac6c/go.mod h1:ZJQIQN1oqwqdt+N20+fQq2/7jC1Wr7Tihrn7WN4WG48=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200326150312-5ee2a7766db6 h1:xzxrAoHw59zrfoNxB2DP1kGMrSKCzo0IlzO+zEaKZyc=
@@ -471,6 +474,12 @@ gitlab.com/otis-team/backend/service/merchant v0.0.0-20200326234919-2d638c0fb9ce
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200326234919-2d638c0fb9ce/go.mod h1:ZJQIQN1oqwqdt+N20+fQq2/7jC1Wr7Tihrn7WN4WG48=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327002416-486daf26f652 h1:cHvENddHQtYqS9fBauYm+gKXcV9TOSqPr0PmCHxQW2Q=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327002416-486daf26f652/go.mod h1:ZJQIQN1oqwqdt+N20+fQq2/7jC1Wr7Tihrn7WN4WG48=
+gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327105744-3f16287fde08 h1:8sV+ADnI5cQ+7d8dftuZLY7+CAr3ziBW6bNU1wIxbiw=
+gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327105744-3f16287fde08/go.mod h1:ZJQIQN1oqwqdt+N20+fQq2/7jC1Wr7Tihrn7WN4WG48=
+gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327111201-5068ec823ac9 h1:i8uomOT1h6Zt6LR/7wgCKAc1DkzP+/OI2xgu1skd21c=
+gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327111201-5068ec823ac9/go.mod h1:ZJQIQN1oqwqdt+N20+fQq2/7jC1Wr7Tihrn7WN4WG48=
+gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327160250-de9cf0f5909d h1:S5hGF7KqIb4eEcIrCVXcaNzrbD1m5YNQLjB9GazCDco=
+gitlab.com/otis-team/backend/service/merchant v0.0.0-20200327160250-de9cf0f5909d/go.mod h1:ZJQIQN1oqwqdt+N20+fQq2/7jC1Wr7Tihrn7WN4WG48=
 go.etcd.io/bbolt v1.3.3 h1:MUGmc65QhB3pIlaQ5bB4LwqSj6GIonVJXpZiaKNyaKk=
 go.etcd.io/bbolt v1.3.3/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.mongodb.org/mongo-driver v1.3.1 h1:op56IfTQiaY2679w922KVWa3qcHdml2K/Io8ayAOUEQ=

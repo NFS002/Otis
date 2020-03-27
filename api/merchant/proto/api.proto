@@ -44,8 +44,6 @@ service Merchant {
 	rpc Create(Request) returns(Response) {};
 	rpc GetAll(Request) returns(Response) {};
 	rpc Get(Request) returns(Response) {};
-}
-
-service Foo {
-	rpc Bar(Request) returns(Response) {};
+	rpc Update(Request) returns(Response) {};
+	rpc Delete(Request) returns(Response) {};
 }

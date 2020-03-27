@@ -5,14 +5,32 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/errors"
+	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
 	merchant "gitlab.com/otis-team/backend/service/merchant/package"
 	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
 	"log"
 )
 
 type Merchant struct{
 	client protoMerchant.MerchantServiceClient
+}
+
+type CreatedResponse struct {
+	Created bool `json:"created"`
+	Merchant *merchant.Merchant `json:"merchantID"`
+}
+
+type GetResponse struct {
+	Merchants []*merchant.Merchant `json:"merchants"`
+}
+
+type UpdateResponse struct{
+	Updated bool `json:"update"`
+	Merchant *merchant.Merchant `json:"merchant"`
+}
+
+type DeleteResponse struct{
+	Deleted bool `json:"deleted"`
 }
 
 // Merchant.Create is a method which will be served by http request /merchant/create
@@ -35,37 +53,33 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var merchant *protoMerchant.Merchant
-	err := json.Unmarshal([]byte(req.Body), &merchant)
+	var newMerchant *protoMerchant.Merchant
+	err := json.Unmarshal([]byte(req.Body), &newMerchant)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
 	}
 
-	r, err := e.client.CreateMerchant(ctx, merchant)
+	r, err := e.client.CreateMerchant(ctx, newMerchant)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
-	// set response status
 	rsp.StatusCode = 200
 
-	// respond with some json - Surely can unmarshal to JSON
-	var created string
-	if r.Created == true {
-		created = "true"
-	} else {
-		created = "false"
+	createResponse := CreatedResponse{
+		Created:   r.Created,
+		Merchant: merchant.MarshalMerchant(r.Merchant),
 	}
 
-	b, _ := json.Marshal(map[string]string{
-		"created": created,
-		"merchant_id": r.MerchantID,
-	})
-
-	log.Print("Received Merchant.Create request")
+	body, err := json.Marshal(createResponse)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", err.Error())
+	}
 
 	// set json body
-	rsp.Body = string(b)
+	rsp.Body = string(body)
+
+	return nil
 
 	return nil
 }
@@ -79,24 +93,30 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 
 	id, ok := req.Get["id"]
 	if !ok || len(id.Values) == 0 {
-		return errors.BadRequest("go.micro.merchant", "Please provide an ID")
+		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.client.GetMerchant(ctx, &protoMerchant.GetRequest{Id: id.Values[0]}) // Seems kinda janky
-	if err != nil {
-		return errors.BadRequest("go.micro.api.merchant",err.Error())
-	}
-
-	merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
-	body, err := json.Marshal(merchantCollection)
+	r, err := e.client.GetMerchant(ctx, &protoMerchant.GetRequest{MerchantID: id.Values[0]}) // Seems kinda janky
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
 	rsp.StatusCode = 200
+
+	getResponse := GetResponse{
+		Merchants: merchant.MarshalMerchantCollection(r.Merchants),
+	}
+
+	body, err := json.Marshal(getResponse)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", err.Error())
+	}
+
+	// set json body
 	rsp.Body = string(body)
 
 	return nil
+
 }
 
 func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
@@ -111,46 +131,99 @@ func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
-	merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
-	body, err := json.Marshal(merchantCollection)
-	if err != nil {
-		return errors.BadRequest("go.micro.api.merchant",err.Error())
+	rsp.StatusCode = 200
+
+	getResponse := GetResponse{
+		Merchants: merchant.MarshalMerchantCollection(r.Merchants),
 	}
 
-	rsp.StatusCode = 200
+	body, err := json.Marshal(getResponse)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", err.Error())
+	}
+
+	// set json body
 	rsp.Body = string(body)
 
 	return nil
 }
 
-//func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
-//	log.Print("Received Merchant.Update request")
-//
-//	if req.Method != "POST" {
-//		return errors.BadRequest("go.micro.api.merchant", "This method requires POST")
-//	}
-//
-//	ct, ok := req.Header["Content-Type"]
-//	if !ok || len(ct.Values) == 0 {
-//		return errors.BadRequest("go.micro.api.merchant", "Need Content-Type header")
-//	}
-//
-//	if ct.Values[0] != "application/json" {
-//		return errors.BadRequest("go.micro.api.example", "Expect application/json")
-//	}
-//
-//	var merchant *protoMerchant.Merchant
-//	err := json.Unmarshal([]byte(req.Body), &merchant)
-//	if err != nil {
-//		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
-//	}
-//
-//	r, err := e.client.UpdateMerchant(ctx, merchant)
-//	if err != nil {
-//		return errors.BadRequest("go.micro.api.merchant",err.Error())
-//	}
-//
-//}
+func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+	log.Print("Received Merchant.Update request")
+
+	if req.Method != "POST" {
+		return errors.BadRequest("go.micro.api.merchant", "This method requires POST")
+	}
+
+	ct, ok := req.Header["Content-Type"]
+	if !ok || len(ct.Values) == 0 {
+		return errors.BadRequest("go.micro.api.merchant", "Need Content-Type header")
+	}
+
+	if ct.Values[0] != "application/json" {
+		return errors.BadRequest("go.micro.api.example", "Expect application/json")
+	}
+
+	var updatedMerchant *merchant.Merchant
+	err := json.Unmarshal([]byte(req.Body), &updatedMerchant)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
+	}
+
+	r, err := e.client.UpdateMerchant(ctx, merchant.UnmarshalMerchant(updatedMerchant))
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant",err.Error())
+	}
+
+	rsp.StatusCode = 200
+
+	updateResponse := UpdateResponse{
+		Updated:   r.Updated,
+		Merchant: merchant.MarshalMerchant(r.Merchant),
+	}
+
+	body, err := json.Marshal(updateResponse)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", err.Error())
+	}
+
+	// set json body
+	rsp.Body = string(body)
+
+	return nil
+}
+
+func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+	log.Print("Received Merchant.Delete request")
+
+	if req.Method != "GET" {
+		return errors.BadRequest("go.micro.api.merchant", "This method requires GET")
+	}
+
+	merchantID, ok := req.Get["id"]
+	if !ok || len(merchantID.Values) == 0 {
+		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
+	}
+
+	r, err := e.client.DeleteMerchant(ctx, &protoMerchant.DeleteRequest{MerchantID: merchantID.Values[0]})
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", err.Error())
+	}
+
+	rsp.StatusCode = 200
+
+	deleteResponse := DeleteResponse{Deleted: r.Deleted}
+
+	body, err := json.Marshal(deleteResponse)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", err.Error())
+	}
+
+	// set json body
+	rsp.Body = string(body)
+
+	return nil
+}
 
 func main() {
 	service := micro.NewService(
