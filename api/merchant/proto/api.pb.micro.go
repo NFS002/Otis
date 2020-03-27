@@ -37,6 +37,8 @@ type MerchantService interface {
 	Create(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 	GetAll(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 	Get(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
+	Update(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
+	Delete(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 }
 
 type merchantService struct {
@@ -81,12 +83,34 @@ func (c *merchantService) Get(ctx context.Context, in *Request, opts ...client.C
 	return out, nil
 }
 
+func (c *merchantService) Update(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error) {
+	req := c.c.NewRequest(c.name, "Merchant.Update", in)
+	out := new(Response)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *merchantService) Delete(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error) {
+	req := c.c.NewRequest(c.name, "Merchant.Delete", in)
+	out := new(Response)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for Merchant service
 
 type MerchantHandler interface {
 	Create(context.Context, *Request, *Response) error
 	GetAll(context.Context, *Request, *Response) error
 	Get(context.Context, *Request, *Response) error
+	Update(context.Context, *Request, *Response) error
+	Delete(context.Context, *Request, *Response) error
 }
 
 func RegisterMerchantHandler(s server.Server, hdlr MerchantHandler, opts ...server.HandlerOption) error {
@@ -94,6 +118,8 @@ func RegisterMerchantHandler(s server.Server, hdlr MerchantHandler, opts ...serv
 		Create(ctx context.Context, in *Request, out *Response) error
 		GetAll(ctx context.Context, in *Request, out *Response) error
 		Get(ctx context.Context, in *Request, out *Response) error
+		Update(ctx context.Context, in *Request, out *Response) error
+		Delete(ctx context.Context, in *Request, out *Response) error
 	}
 	type Merchant struct {
 		merchant
@@ -118,55 +144,10 @@ func (h *merchantHandler) Get(ctx context.Context, in *Request, out *Response) e
 	return h.MerchantHandler.Get(ctx, in, out)
 }
 
-// Client API for Foo service
-
-type FooService interface {
-	Bar(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
+func (h *merchantHandler) Update(ctx context.Context, in *Request, out *Response) error {
+	return h.MerchantHandler.Update(ctx, in, out)
 }
 
-type fooService struct {
-	c    client.Client
-	name string
-}
-
-func NewFooService(name string, c client.Client) FooService {
-	return &fooService{
-		c:    c,
-		name: name,
-	}
-}
-
-func (c *fooService) Bar(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error) {
-	req := c.c.NewRequest(c.name, "Foo.Bar", in)
-	out := new(Response)
-	err := c.c.Call(ctx, req, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// Server API for Foo service
-
-type FooHandler interface {
-	Bar(context.Context, *Request, *Response) error
-}
-
-func RegisterFooHandler(s server.Server, hdlr FooHandler, opts ...server.HandlerOption) error {
-	type foo interface {
-		Bar(ctx context.Context, in *Request, out *Response) error
-	}
-	type Foo struct {
-		foo
-	}
-	h := &fooHandler{hdlr}
-	return s.Handle(s.NewHandler(&Foo{h}, opts...))
-}
-
-type fooHandler struct {
-	FooHandler
-}
-
-func (h *fooHandler) Bar(ctx context.Context, in *Request, out *Response) error {
-	return h.FooHandler.Bar(ctx, in, out)
+func (h *merchantHandler) Delete(ctx context.Context, in *Request, out *Response) error {
+	return h.MerchantHandler.Delete(ctx, in, out)
 }
