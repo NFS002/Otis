@@ -13,13 +13,13 @@ type Handler struct {
 func (s *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.CreateResponse) error {
 	log.Print("CreateMerchant handler fired!")
 
-	uuid, err := s.Repository.Create(ctx, MarshalMerchant(req))
+	merchant, err := s.Repository.Create(ctx, MarshalMerchant(req))
 	if err != nil {
 		return err
 	}
 
 	res.Created = true
-	res.MerchantID = uuid.String()
+	res.Merchant = UnmarshalMerchant(merchant)
 
 	return nil
 }
@@ -30,10 +30,10 @@ func (s *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.G
 	var merchants []*Merchant
 	var err error
 
-	if len(req.Id) == 0 {
+	if len(req.MerchantID) == 0 {
 		merchants, err = s.Repository.GetAll(ctx)
 	} else {
-		merchants, err = s.Repository.Get(ctx, req.Id)
+		merchants, err = s.Repository.Get(ctx, req.MerchantID)
 	}
 
 	res.Merchants = UnmarshalMerchantCollection(merchants)
@@ -48,7 +48,7 @@ func (s *Handler) UpdateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 		return err
 	}
 
-	res.Created = true
+	res.Updated = true
 	res.Merchant = req
 
 	return nil

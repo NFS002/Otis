@@ -178,7 +178,7 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 	rsp.StatusCode = 200
 
 	updateResponse := UpdateResponse{
-		Updated:   r.Created,
+		Updated:   r.Updated,
 		Merchant: merchant.MarshalMerchant(r.Merchant),
 	}
 

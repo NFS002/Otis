@@ -113,7 +113,7 @@ func MarshalMerchant(merchant *pb.Merchant) *Merchant {
 	tags := MarshalTagCollection(merchant.Tags)
 
 	return &Merchant{
-		MerchantID: merchant.Id,
+		MerchantID: merchant.MerchantID,
 		Name: merchant.Name,
 		Locations: locations,
 		Tags: tags,
@@ -128,7 +128,7 @@ func UnmarshalMerchant(merchant *Merchant) *pb.Merchant {
 	tags := UnmarshalTagCollection(merchant.Tags)
 
 	return &pb.Merchant{
-		Id: merchant.MerchantID,
+		MerchantID: merchant.MerchantID,
 		Name: merchant.Name,
 		Locations: locations,
 		Tags: tags,
@@ -141,7 +141,7 @@ func UnmarshalMerchant(merchant *Merchant) *pb.Merchant {
 // Repository
 
 type Repository interface {
-	Create(ctx context.Context, merchant *Merchant) (uuid.UUID, error)
+	Create(ctx context.Context, merchant *Merchant) (*Merchant, error)
 	GetAll(ctx context.Context) ([]*Merchant, error)
 	Get(ctx context.Context, merchantID string) ([]*Merchant, error)
 	Update(ctx context.Context, merchant *Merchant) error
@@ -152,17 +152,17 @@ type MongoRepository struct {
 	Collection *mongo.Collection
 }
 
-func (repository *MongoRepository) Create(ctx context.Context, merchant *Merchant) (uuid.UUID, error){
+func (repository *MongoRepository) Create(ctx context.Context, merchant *Merchant) (*Merchant, error){
 	uuid, err := generateUUID()
 	if err != nil {
-		return uuid, err
+		return nil, err
 	}
 
 	merchant.MerchantID = uuid.String()
 
 	_, err = repository.Collection.InsertOne(ctx, merchant)
 
-	return uuid, err
+	return merchant, err
 }
 
 func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Merchant, error) {
