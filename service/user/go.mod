@@ -1,4 +1,4 @@
-module gitlab.com/otis-team/backend/services/user
+module gitlab.com/otis-team/backend/service/user
 
 go 1.13
 
