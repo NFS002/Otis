@@ -4,7 +4,7 @@ variables:
     REPO_NAME: gitlab.com/otis-team/backend
 
 before_script:
-    - mkdir $(dirname $REPO_NAME)
+    - mkdir /$(dirname $REPO_NAME)
     - ln -svf $CI_PROJECT_DIR $REPO_NAME
     - cd $REPO_NAME
 
