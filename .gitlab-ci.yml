@@ -3,6 +3,11 @@ image: golang:alpine
 stages:
   - test
 
+before_script:
+  - mkdir -p /backend
+  - cp -r $CI_PROJECT_DIR /backend
+  - cd /backend
+
 lint_code:
   stage: test
   script:
