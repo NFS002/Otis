@@ -2,7 +2,6 @@ package merchant
 
 import (
 	"context"
-	"fmt"
 	"github.com/satori/go.uuid"
 	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 	"go.mongodb.org/mongo-driver/bson"
@@ -194,7 +193,6 @@ func (repository *MongoRepository) Get(ctx context.Context, merchantID string) (
 }
 
 func (repository *MongoRepository) Update(ctx context.Context, merchant *Merchant) error {
-	fmt.Println(merchant.MerchantID)
 	err := repository.Collection.FindOneAndReplace(ctx, bson.M{"merchant_id": merchant.MerchantID}, merchant)
 	if err != nil {
 		return err.Err()
