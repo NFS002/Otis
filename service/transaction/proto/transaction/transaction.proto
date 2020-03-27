@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package transaction;
+
+service TransactionService {
+    rpc CreateTransaction(Transaction) returns (CreateResponse) {}
+    rpc GetTransactions(IdRequest) returns (Transactions) {}
+}
+
+message Transaction {
+    string transactionId = 1;
+    string userId = 2;
+    string merchantId = 3;
+    string storeId = 4;
+    string gender = 5;
+    string university = 6;
+    string date = 7;
+    string time = 8;
+    Account accounts = 9;
+}
+
+message Account {
+    repeated string accountID = 1;
+}
+
+// Create response
+
+message CreateResponse {
+    bool created = 1;
+    Transaction Transaction = 2;
+}
+
+// Get request and response
+
+message IdRequest {
+    string id = 1;
+}
+
+message Transactions {
+    repeated Transaction transactions = 1;
+}
