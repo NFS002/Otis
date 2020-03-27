@@ -2,13 +2,13 @@ package main
 
 import (
 	"context"
+	"fmt"
+	"gitlab.com/otis-team/backend/service/merchant/package"
 	"log"
 	"os"
-	"fmt"
 
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 	"github.com/micro/go-micro"
-
+	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 )
 
 const (
@@ -27,7 +27,7 @@ func main() {
 		uri = defaultHost
 	}
 
-	client, err := CreateClient(context.Background(), uri, 0)
+	client, err := _package.CreateClient(context.Background(), uri, 0)
 	if err != nil {
 		log.Panic(err)
 	}
@@ -35,8 +35,8 @@ func main() {
 
 	merchantCollection := client.Database("otis").Collection("merchant")
 
-	repository := &MongoRepository{merchantCollection}
-	h := &handler{repository}
+	repository := &_package.MongoRepository{merchantCollection}
+	h := &_package.handler{repository}
 
 	pb.RegisterMerchantServiceHandler(srv.Server(), h)
 

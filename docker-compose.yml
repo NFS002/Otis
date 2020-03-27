@@ -17,7 +17,12 @@ services:
   api_merchant:
     restart: always
     container_name: "go.micro.api.merchant"
-    build: ./api/merchant/
+    build:
+      context: ./api/merchant/
+      dockerfile: Dockerfile
+      args:
+        - gitlab_user=otis_cj
+        - gitlab_token=1fruBCF2_5aLxaF3NBcf
     ports:
       - 50051:50051
     networks:

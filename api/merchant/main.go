@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/errors"
-	merchant "gitlab.com/otis-team/backend/api/merchant/client"
-	proto2 "gitlab.com/otis-team/backend/api/merchant/client/proto"
+	merchant "gitlab.com/otis-team/backend/service/merchant/package"
+	proto2 "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 	proto "gitlab.com/otis-team/backend/api/merchant/proto"
 	"log"
 )
@@ -87,14 +87,14 @@ func (e *Merchant) Get(ctx context.Context, req *proto.Request, rsp *proto.Respo
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
-	merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
+	merchantCollection := merchant.MarshalMerchantCollection(r.)
 	body, err := json.Marshal(merchantCollection)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
 	rsp.StatusCode = 200
-	rsp.Body = string(body)
+	rsp.Body = string(r.String())
 
 	return nil
 }
@@ -112,14 +112,14 @@ func (e *Merchant) GetAll(ctx context.Context, req *proto.Request, rsp *proto.Re
 	}
 
 
-	merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
-	body, err := json.Marshal(merchantCollection)
-	if err != nil {
-		return errors.BadRequest("go.micro.api.merchant",err.Error())
-	}
+	//merchantCollection := merchant.MarshalMerchantCollection(r.Merchants)
+	//body, err := json.Marshal(merchantCollection)
+	//if err != nil {
+	//	return errors.BadRequest("go.micro.api.merchant",err.Error())
+	//}
 
 	rsp.StatusCode = 200
-	rsp.Body = string(body)
+	rsp.Body = string(r.String())
 
 	return nil
 }
