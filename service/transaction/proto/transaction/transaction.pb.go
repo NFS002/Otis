@@ -9,6 +9,12 @@ import (
 	math "math"
 )
 
+import (
+	client "github.com/micro/go-micro/client"
+	server "github.com/micro/go-micro/server"
+	context "golang.org/x/net/context"
+)
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
@@ -21,12 +27,15 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 type Transaction struct {
-	TransactionID        string   `protobuf:"bytes,1,opt,name=transactionID,proto3" json:"transactionID,omitempty"`
-	UserID               string   `protobuf:"bytes,2,opt,name=userID,proto3" json:"userID,omitempty"`
-	MerchantID           string   `protobuf:"bytes,3,opt,name=merchantID,proto3" json:"merchantID,omitempty"`
-	StoreID              string   `protobuf:"bytes,4,opt,name=storeID,proto3" json:"storeID,omitempty"`
+	TransactionId        string   `protobuf:"bytes,1,opt,name=transactionId,proto3" json:"transactionId,omitempty"`
+	UserId               string   `protobuf:"bytes,2,opt,name=userId,proto3" json:"userId,omitempty"`
+	MerchantId           string   `protobuf:"bytes,3,opt,name=merchantId,proto3" json:"merchantId,omitempty"`
+	StoreId              string   `protobuf:"bytes,4,opt,name=storeId,proto3" json:"storeId,omitempty"`
+	Gender               string   `protobuf:"bytes,5,opt,name=gender,proto3" json:"gender,omitempty"`
+	University           string   `protobuf:"bytes,6,opt,name=university,proto3" json:"university,omitempty"`
 	Date                 string   `protobuf:"bytes,7,opt,name=date,proto3" json:"date,omitempty"`
 	Time                 string   `protobuf:"bytes,8,opt,name=time,proto3" json:"time,omitempty"`
+	Accounts             *Account `protobuf:"bytes,9,opt,name=accounts,proto3" json:"accounts,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -57,30 +66,44 @@ func (m *Transaction) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Transaction proto.InternalMessageInfo
 
-func (m *Transaction) GetTransactionID() string {
+func (m *Transaction) GetTransactionId() string {
 	if m != nil {
-		return m.TransactionID
+		return m.TransactionId
 	}
 	return ""
 }
 
-func (m *Transaction) GetUserID() string {
+func (m *Transaction) GetUserId() string {
 	if m != nil {
-		return m.UserID
+		return m.UserId
 	}
 	return ""
 }
 
-func (m *Transaction) GetMerchantID() string {
+func (m *Transaction) GetMerchantId() string {
 	if m != nil {
-		return m.MerchantID
+		return m.MerchantId
 	}
 	return ""
 }
 
-func (m *Transaction) GetStoreID() string {
+func (m *Transaction) GetStoreId() string {
 	if m != nil {
-		return m.StoreID
+		return m.StoreId
+	}
+	return ""
+}
+
+func (m *Transaction) GetGender() string {
+	if m != nil {
+		return m.Gender
+	}
+	return ""
+}
+
+func (m *Transaction) GetUniversity() string {
+	if m != nil {
+		return m.University
 	}
 	return ""
 }
@@ -99,9 +122,55 @@ func (m *Transaction) GetTime() string {
 	return ""
 }
 
+func (m *Transaction) GetAccounts() *Account {
+	if m != nil {
+		return m.Accounts
+	}
+	return nil
+}
+
+type Account struct {
+	AccountID            []string `protobuf:"bytes,1,rep,name=accountID,proto3" json:"accountID,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Account) Reset()         { *m = Account{} }
+func (m *Account) String() string { return proto.CompactTextString(m) }
+func (*Account) ProtoMessage()    {}
+func (*Account) Descriptor() ([]byte, []int) {
+	return fileDescriptor_2129939cf85d765e, []int{1}
+}
+
+func (m *Account) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Account.Unmarshal(m, b)
+}
+func (m *Account) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Account.Marshal(b, m, deterministic)
+}
+func (m *Account) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Account.Merge(m, src)
+}
+func (m *Account) XXX_Size() int {
+	return xxx_messageInfo_Account.Size(m)
+}
+func (m *Account) XXX_DiscardUnknown() {
+	xxx_messageInfo_Account.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Account proto.InternalMessageInfo
+
+func (m *Account) GetAccountID() []string {
+	if m != nil {
+		return m.AccountID
+	}
+	return nil
+}
+
 type CreateResponse struct {
 	Created              bool         `protobuf:"varint,1,opt,name=created,proto3" json:"created,omitempty"`
-	Transaction          *Transaction `protobuf:"bytes,2,opt,name=transaction,proto3" json:"transaction,omitempty"`
+	Transaction          *Transaction `protobuf:"bytes,2,opt,name=Transaction,proto3" json:"Transaction,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
 	XXX_unrecognized     []byte       `json:"-"`
 	XXX_sizecache        int32        `json:"-"`
@@ -111,7 +180,7 @@ func (m *CreateResponse) Reset()         { *m = CreateResponse{} }
 func (m *CreateResponse) String() string { return proto.CompactTextString(m) }
 func (*CreateResponse) ProtoMessage()    {}
 func (*CreateResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_2129939cf85d765e, []int{1}
+	return fileDescriptor_2129939cf85d765e, []int{2}
 }
 
 func (m *CreateResponse) XXX_Unmarshal(b []byte) error {
@@ -157,7 +226,7 @@ func (m *IdRequest) Reset()         { *m = IdRequest{} }
 func (m *IdRequest) String() string { return proto.CompactTextString(m) }
 func (*IdRequest) ProtoMessage()    {}
 func (*IdRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_2129939cf85d765e, []int{2}
+	return fileDescriptor_2129939cf85d765e, []int{3}
 }
 
 func (m *IdRequest) XXX_Unmarshal(b []byte) error {
@@ -196,7 +265,7 @@ func (m *Transactions) Reset()         { *m = Transactions{} }
 func (m *Transactions) String() string { return proto.CompactTextString(m) }
 func (*Transactions) ProtoMessage()    {}
 func (*Transactions) Descriptor() ([]byte, []int) {
-	return fileDescriptor_2129939cf85d765e, []int{3}
+	return fileDescriptor_2129939cf85d765e, []int{4}
 }
 
 func (m *Transactions) XXX_Unmarshal(b []byte) error {
@@ -226,6 +295,7 @@ func (m *Transactions) GetTransactions() []*Transaction {
 
 func init() {
 	proto.RegisterType((*Transaction)(nil), "transaction.Transaction")
+	proto.RegisterType((*Account)(nil), "transaction.Account")
 	proto.RegisterType((*CreateResponse)(nil), "transaction.CreateResponse")
 	proto.RegisterType((*IdRequest)(nil), "transaction.IdRequest")
 	proto.RegisterType((*Transactions)(nil), "transaction.Transactions")
@@ -236,24 +306,101 @@ func init() {
 }
 
 var fileDescriptor_2129939cf85d765e = []byte{
-	// 295 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x52, 0x4d, 0x4f, 0xc2, 0x40,
-	0x10, 0xa5, 0x40, 0xf8, 0x98, 0x22, 0xc6, 0x39, 0x90, 0x15, 0x12, 0x43, 0xaa, 0x07, 0x4f, 0x98,
-	0xe0, 0xcd, 0x78, 0xb3, 0xd1, 0x34, 0xe1, 0x54, 0xfd, 0x03, 0xb5, 0x1d, 0x63, 0x0f, 0xb4, 0xb8,
-	0x3b, 0xf8, 0xa3, 0x4c, 0xfc, 0x8f, 0xa6, 0x03, 0xe8, 0xec, 0x01, 0x6f, 0xf3, 0xde, 0xeb, 0x7c,
-	0xbc, 0xd7, 0x85, 0xcb, 0x8d, 0xad, 0xb9, 0xbe, 0x61, 0x9b, 0x55, 0x2e, 0xcb, 0xb9, 0xac, 0x2b,
-	0x5d, 0x2f, 0x44, 0xc5, 0x50, 0x51, 0xd1, 0x77, 0x00, 0xe1, 0xcb, 0x1f, 0xc6, 0x2b, 0x38, 0x51,
-	0x72, 0x12, 0x9b, 0x60, 0x1e, 0x5c, 0x0f, 0x53, 0x9f, 0xc4, 0x09, 0xf4, 0xb6, 0x8e, 0x6c, 0x12,
-	0x9b, 0xb6, 0xc8, 0x7b, 0x84, 0x17, 0x00, 0x6b, 0xb2, 0xf9, 0x7b, 0x56, 0x71, 0x12, 0x9b, 0x8e,
-	0x68, 0x8a, 0x41, 0x03, 0x7d, 0xc7, 0xb5, 0xa5, 0x24, 0x36, 0x5d, 0x11, 0x0f, 0x10, 0x11, 0xba,
-	0x45, 0xc6, 0x64, 0xfa, 0x42, 0x4b, 0xdd, 0x70, 0x5c, 0xae, 0xc9, 0x0c, 0x76, 0x5c, 0x53, 0x47,
-	0x6f, 0x30, 0x7e, 0xb0, 0x94, 0x31, 0xa5, 0xe4, 0x36, 0x75, 0xe5, 0xa8, 0x99, 0x99, 0x0b, 0x53,
-	0xc8, 0xad, 0x83, 0xf4, 0x00, 0xf1, 0x0e, 0xb4, 0x55, 0x39, 0x35, 0x5c, 0x9a, 0x85, 0x4e, 0x44,
-	0x59, 0x4f, 0xbd, 0x5c, 0x66, 0x30, 0x4c, 0x8a, 0x94, 0x3e, 0xb6, 0xe4, 0x18, 0xc7, 0xd0, 0x2e,
-	0x8b, 0x7d, 0x12, 0xed, 0xb2, 0x88, 0x56, 0x30, 0x52, 0x8d, 0x0e, 0xef, 0x61, 0xa4, 0x7a, 0x9d,
-	0x09, 0xe6, 0x9d, 0x7f, 0x37, 0x79, 0x5f, 0x2f, 0xbf, 0x02, 0x40, 0xa5, 0x3e, 0x93, 0xfd, 0x2c,
-	0x73, 0xc2, 0x15, 0x9c, 0xed, 0x9c, 0xea, 0xdf, 0x73, 0x74, 0xe6, 0x74, 0xe6, 0x29, 0x7e, 0x46,
-	0x51, 0x0b, 0x1f, 0xe1, 0xf4, 0x89, 0xd8, 0xbb, 0x7a, 0xe2, 0x75, 0xfc, 0xba, 0x9d, 0x9e, 0x1f,
-	0xdb, 0xe1, 0xa2, 0xd6, 0x6b, 0x4f, 0xde, 0xd0, 0xed, 0x4f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x48,
-	0xb9, 0xf7, 0x3e, 0x6a, 0x02, 0x00, 0x00,
+	// 363 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x92, 0x4f, 0x4e, 0xf3, 0x30,
+	0x10, 0xc5, 0x9b, 0xb4, 0x5f, 0xdb, 0x4c, 0xfa, 0x15, 0x31, 0x42, 0x95, 0x69, 0x11, 0xaa, 0x02,
+	0x12, 0x5d, 0x15, 0x54, 0x76, 0x88, 0x0d, 0x02, 0x81, 0x22, 0x75, 0x15, 0xb8, 0x40, 0x88, 0x07,
+	0xc8, 0xa2, 0x49, 0xb1, 0x9d, 0x4a, 0x9c, 0x84, 0x3b, 0x70, 0x4a, 0x14, 0xbb, 0x7f, 0xec, 0x45,
+	0xd9, 0x79, 0xde, 0x6f, 0xf2, 0x3c, 0xf3, 0x62, 0x38, 0x5b, 0x8a, 0x52, 0x95, 0x97, 0x4a, 0xa4,
+	0x85, 0x4c, 0x33, 0x95, 0x97, 0x85, 0x7d, 0x9e, 0x6a, 0x8a, 0xa1, 0x25, 0x45, 0xdf, 0x3e, 0x84,
+	0x2f, 0xbb, 0x1a, 0xcf, 0xe1, 0xbf, 0x85, 0x63, 0xce, 0xbc, 0xb1, 0x37, 0x09, 0x12, 0x57, 0xc4,
+	0x01, 0xb4, 0x2b, 0x49, 0x22, 0xe6, 0xcc, 0xd7, 0x78, 0x5d, 0xe1, 0x29, 0xc0, 0x82, 0x44, 0xf6,
+	0x91, 0x16, 0x2a, 0xe6, 0xac, 0xa9, 0x99, 0xa5, 0x20, 0x83, 0x8e, 0x54, 0xa5, 0xa0, 0x98, 0xb3,
+	0x96, 0x86, 0x9b, 0xb2, 0x76, 0x7c, 0xa7, 0x82, 0x93, 0x60, 0xff, 0x8c, 0xa3, 0xa9, 0x6a, 0xc7,
+	0xaa, 0xc8, 0x57, 0x24, 0x64, 0xae, 0xbe, 0x58, 0xdb, 0x38, 0xee, 0x14, 0x44, 0x68, 0xf1, 0x54,
+	0x11, 0xeb, 0x68, 0xa2, 0xcf, 0xb5, 0xa6, 0xf2, 0x05, 0xb1, 0xae, 0xd1, 0xea, 0x33, 0x5e, 0x41,
+	0x37, 0xcd, 0xb2, 0xb2, 0x2a, 0x94, 0x64, 0xc1, 0xd8, 0x9b, 0x84, 0xb3, 0xa3, 0xa9, 0x1d, 0xcd,
+	0x9d, 0x81, 0xc9, 0xb6, 0x2b, 0xba, 0x80, 0xce, 0x5a, 0xc4, 0x13, 0x08, 0xd6, 0x72, 0xfc, 0xc0,
+	0xbc, 0x71, 0x73, 0x12, 0x24, 0x3b, 0x21, 0x7a, 0x83, 0xfe, 0xbd, 0xa0, 0x54, 0x51, 0x42, 0x72,
+	0x59, 0x16, 0x92, 0xea, 0x35, 0x33, 0xad, 0x98, 0xf8, 0xba, 0xc9, 0xa6, 0xc4, 0x1b, 0x27, 0x6d,
+	0x9d, 0x5e, 0x38, 0x63, 0xce, 0x24, 0x16, 0x4f, 0xec, 0xe6, 0x68, 0x04, 0x41, 0xcc, 0x13, 0xfa,
+	0xac, 0x48, 0x2a, 0xec, 0x83, 0x9f, 0x6f, 0x7e, 0x8e, 0x9f, 0xf3, 0x68, 0x0e, 0x3d, 0xab, 0x57,
+	0xe2, 0x2d, 0xf4, 0x2c, 0x53, 0xa9, 0xa7, 0xfe, 0xeb, 0x26, 0xa7, 0x7b, 0xf6, 0xe3, 0x01, 0x5a,
+	0xf4, 0x99, 0xc4, 0x2a, 0xcf, 0x08, 0xe7, 0x70, 0x68, 0x36, 0xb5, 0x5f, 0xcc, 0x5e, 0xcf, 0xe1,
+	0xc8, 0x21, 0x6e, 0x46, 0x51, 0x03, 0x1f, 0xe1, 0xe0, 0x89, 0x94, 0x33, 0xf5, 0xc0, 0xf9, 0x62,
+	0xbb, 0xed, 0xf0, 0x78, 0xdf, 0x1d, 0x32, 0x6a, 0xbc, 0xb6, 0xf5, 0xb3, 0xbe, 0xfe, 0x0d, 0x00,
+	0x00, 0xff, 0xff, 0xec, 0x7a, 0x5e, 0xcf, 0xfd, 0x02, 0x00, 0x00,
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ client.Option
+var _ server.Option
+
+// Client API for TransactionService service
+
+type TransactionServiceClient interface {
+	CreateTransaction(ctx context.Context, in *Transaction, opts ...client.CallOption) (*CreateResponse, error)
+	GetTransactions(ctx context.Context, in *IdRequest, opts ...client.CallOption) (*Transactions, error)
+}
+
+type transactionServiceClient struct {
+	c           client.Client
+	serviceName string
+}
+
+func NewTransactionServiceClient(serviceName string, c client.Client) TransactionServiceClient {
+	if c == nil {
+		c = client.NewClient()
+	}
+	if len(serviceName) == 0 {
+		serviceName = "transaction"
+	}
+	return &transactionServiceClient{
+		c:           c,
+		serviceName: serviceName,
+	}
+}
+
+func (c *transactionServiceClient) CreateTransaction(ctx context.Context, in *Transaction, opts ...client.CallOption) (*CreateResponse, error) {
+	req := c.c.NewRequest(c.serviceName, "TransactionService.CreateTransaction", in)
+	out := new(CreateResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *transactionServiceClient) GetTransactions(ctx context.Context, in *IdRequest, opts ...client.CallOption) (*Transactions, error) {
+	req := c.c.NewRequest(c.serviceName, "TransactionService.GetTransactions", in)
+	out := new(Transactions)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// Server API for TransactionService service
+
+type TransactionServiceHandler interface {
+	CreateTransaction(context.Context, *Transaction, *CreateResponse) error
+	GetTransactions(context.Context, *IdRequest, *Transactions) error
+}
+
+func RegisterTransactionServiceHandler(s server.Server, hdlr TransactionServiceHandler, opts ...server.HandlerOption) {
+	s.Handle(s.NewHandler(&TransactionService{hdlr}, opts...))
+}
+
+type TransactionService struct {
+	TransactionServiceHandler
+}
+
+func (h *TransactionService) CreateTransaction(ctx context.Context, in *Transaction, out *CreateResponse) error {
+	return h.TransactionServiceHandler.CreateTransaction(ctx, in, out)
+}
+
+func (h *TransactionService) GetTransactions(ctx context.Context, in *IdRequest, out *Transactions) error {
+	return h.TransactionServiceHandler.GetTransactions(ctx, in, out)
 }

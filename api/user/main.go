@@ -5,39 +5,40 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/errors"
-	"github.com/micro/go-micro/v2"
 	protoAPI "gitlab.com/otis-team/backend/api/user/proto"
 	user "gitlab.com/otis-team/backend/service/user/package"
 	protoUser "gitlab.com/otis-team/backend/service/user/proto/user"
 	"log"
 )
 
+// User struct. All methods using this struct will be mapped to /user/<method>.
 type User struct{
 	client protoUser.UserServiceClient
 }
 
+// CreatedResponse maps CreateResponse protobuf message.
 type CreatedResponse struct {
 	Created bool `json:"created"`
 	User *user.User `json:"userID"`
 }
 
+// CreatedResponse maps CreateResponse protobuf message.
 type GetResponse struct {
 	Users []*user.User `json:"users"`
 }
 
+// UpdateResponse maps UpdateResponse protobuf message.
 type UpdateResponse struct{
 	Updated bool `json:"update"`
 	User *user.User `json:"user"`
 }
 
+// DeleteResponse maps DeleteResponse protobuf message.
 type DeleteResponse struct{
 	Deleted bool `json:"deleted"`
 }
 
-// User.Create is a method which will be served by http request /user/create
-// In the event we see /[service]/[method] the [service] is used as part of the method
-// E.g /user/Create goes to go.micro.api.user User.Create
-
+// Create method (User.Create) is served by HTTP requests to /user/create.
 func (e *User) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received User.Create request")
 
@@ -60,12 +61,16 @@ func (e *User) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.
 		return errors.BadRequest("go.micro.api.user", "Body not valid. Please reference to API documentation.")
 	}
 
+	log.Print("here")
+
 	r, err := e.client.CreateUser(ctx, newUser)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user",err.Error())
 	}
 
 	rsp.StatusCode = 200
+
+	log.Print("here 2")
 
 	createResponse := CreatedResponse{
 		Created:   r.Created,
@@ -85,6 +90,7 @@ func (e *User) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.
 	return nil
 }
 
+// Get method (User.Get) is served by HTTP requests to /user/get. Full endpoint is /user/get?id=<user_id>.
 func (e *User) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received User.Get request")
 
@@ -120,6 +126,7 @@ func (e *User) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Res
 
 }
 
+// GetAll method (User.GetAll) is served by HTTP requests to /user/get-all.
 func (e *User) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received User.GetAll request")
 
@@ -149,6 +156,7 @@ func (e *User) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.
 	return nil
 }
 
+// Update method (User.Update) is served by HTTP requests to /merchant/user.
 func (e *User) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received User.Update request")
 
@@ -194,6 +202,7 @@ func (e *User) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.
 	return nil
 }
 
+// Delete method (User.Delete) is served by HTTP requests to /user/delete. Full endpoint is /user/delete?id=<user_id>.
 func (e *User) Delete(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received User.Delete request")
 
