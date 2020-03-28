@@ -22,7 +22,7 @@ type CreatedResponse struct {
 	User *user.User `json:"userID"`
 }
 
-// CreatedResponse maps CreateResponse protobuf message.
+// GetResponse maps CreateResponse protobuf message.
 type GetResponse struct {
 	Users []*user.User `json:"users"`
 }
