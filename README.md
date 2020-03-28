@@ -1,5 +1,9 @@
 # backend
 
+
+[![pipeline status](https://gitlab.com/otis-team/backend/badges/master/pipeline.svg)](https://gitlab.com/otis-team/backend/-/commits/master)
+[![coverage report](https://gitlab.com/otis-team/backend/badges/master/coverage.svg)](https://gitlab.com/otis-team/backend/-/commits/master)
+
 Otis backend
 
 ## Directory structure
