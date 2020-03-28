@@ -393,6 +393,8 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 gitlab.com/otis-team/backend v0.0.0-20200327173209-ef122269e2dc h1:cC3nBURWQMdrJjRwzknPUYoyH/GcWFm41fYdkUZCKnk=
 gitlab.com/otis-team/backend/service/user v0.0.0-20200327173209-ef122269e2dc h1:qvBmNBVsUm2DJt2E89rbvHvsiVsbYRgwlaAK1LLJcXk=
 gitlab.com/otis-team/backend/service/user v0.0.0-20200327173209-ef122269e2dc/go.mod h1:ehr2gt+WPFdDVFe12QKEKPVuj0C8qbci4FilUTM093s=
+gitlab.com/otis-team/backend/service/user v0.0.0-20200327173517-c23610242505 h1:4yhw18CdVOzD2KaR1rPGescAGcBZ3bkL5tKLKmRa+fk=
+gitlab.com/otis-team/backend/service/user v0.0.0-20200327173517-c23610242505/go.mod h1:ehr2gt+WPFdDVFe12QKEKPVuj0C8qbci4FilUTM093s=
 go.etcd.io/bbolt v1.3.3/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.mongodb.org/mongo-driver v1.3.1 h1:op56IfTQiaY2679w922KVWa3qcHdml2K/Io8ayAOUEQ=
 go.mongodb.org/mongo-driver v1.3.1/go.mod h1:MSWZXKOynuguX+JSvwP8i+58jYCXxbia8HS3gZBapIE=

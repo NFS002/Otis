@@ -6,10 +6,12 @@ import (
 	"log"
 )
 
+// Handler struct contains other structs (mainly Repository, aka the client connection to the DB) to be used by Handler functions.
 type Handler struct {
 	Repository
 }
 
+// CreateMerchant handles gRPC requests to create a new merchant in the DB.
 func (s *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.CreateResponse) error {
 	log.Print("CreateMerchant handler fired!")
 
@@ -24,6 +26,7 @@ func (s *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 	return nil
 }
 
+// GetMerchant handles gRPC requests to retrieve one (if Merchant ID is upplied) or many merchants from the DB.
 func (s *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
 	log.Print("GetMerchant handler fired!")
 
@@ -40,6 +43,7 @@ func (s *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.G
 	return err
 }
 
+// UpdateMerchant handles gRPC requests to update a new merchant in the DB
 func (s *Handler) UpdateMerchant(ctx context.Context, req *pb.Merchant, res *pb.UpdateResponse) error {
 	log.Print("UpdateMerchant handler fired!")
 
@@ -54,6 +58,7 @@ func (s *Handler) UpdateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 	return nil
 }
 
+// DeleteMerchant handles gRPC requests to delete a new merchant from the DB
 func (s *Handler) DeleteMerchant(ctx context.Context, req *pb.DeleteRequest, res *pb.DeleteResponse) error {
 	log.Print("DeleteMerchant handler fired!")
 
