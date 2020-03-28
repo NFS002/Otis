@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"gitlab.com/otis-team/backend/service/transaction/package"
+	"gitlab.com/otis-team/backend/service/merchant/package"
 	"log"
 	"os"
 
