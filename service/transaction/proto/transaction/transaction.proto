@@ -8,26 +8,19 @@ service TransactionService {
 }
 
 message Transaction {
-    string transactionId = 1;
-    string userId = 2;
-    string merchantId = 3;
-    string storeId = 4;
-    string gender = 5;
-    string university = 6;
+    string transactionID = 1;
+    string userID = 2;
+    string merchantID = 3;
+    string storeID = 4;
     string date = 7;
     string time = 8;
-    Account accounts = 9;
-}
-
-message Account {
-    repeated string accountID = 1;
 }
 
 // Create response
 
 message CreateResponse {
     bool created = 1;
-    Transaction Transaction = 2;
+    Transaction transaction = 2;
 }
 
 // Get request and response

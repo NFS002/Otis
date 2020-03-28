@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"gitlab.com/otis-team/backend/service/merchant/package"
+	"gitlab.com/otis-team/backend/service/transaction/package"
 	"log"
 	"os"
 
@@ -18,7 +18,7 @@ const (
 func main() {
 	service := micro.NewService(
 			micro.Name("go.micro.service.merchant"),
-		)
+	)
 
 	service.Init()
 

@@ -15,6 +15,7 @@ require (
 	github.com/miekg/dns v1.1.27 // indirect
 	github.com/nats-io/nats-server/v2 v2.1.4 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/satori/go.uuid v1.2.0
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20200122045848-3419fae592fc // indirect
 	go.mongodb.org/mongo-driver v1.3.1
 	go.uber.org/zap v1.13.0 // indirect

@@ -18,7 +18,7 @@ const (
 func main() {
 	service := micro.NewService(
 		micro.Name("go.micro.service.user"),
-		)
+	)
 
 	service.Init()
 
