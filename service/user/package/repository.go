@@ -5,21 +5,23 @@ import (
 	"github.com/satori/go.uuid"
 	pb "gitlab.com/otis-team/backend/service/user/proto/user"
 	"go.mongodb.org/mongo-driver/bson"
+	"log"
+
 	//"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
 // User struct maps protobuf definition. Contains json and bson key mappings.
 type User struct {
-	UserID string `json:"user_id"`
-	FirstName string `json:"first_name"`
-	LastName string `json:"last_name"`
-	DoB string `json:"dob"`
-	Gender string `json:"gender"`
-	University string `json:"university"`
-	Email string `json:"email"`
-	Phone string `json:"phone"`
-	Accounts Accounts `json:"accounts"`
+	UserID string `json:"user_id" bson:"user_id"`
+	FirstName string `json:"first_name" bson:"first_name"`
+	LastName string `json:"last_name" bson:"last_name"`
+	DoB string `json:"dob" bson:"dob"`
+	Gender string `json:"gender" bson:"gender"`
+	University string `json:"university" bson:"university"`
+	Email string `json:"email" bson:"email"`
+	Phone string `json:"phone" bson:"phone"`
+	Accounts Accounts `json:"accounts" bson:"accounts"`
 }
 
 // Account struct maps protobuf definition. Contains json and bson key mappings.
@@ -86,6 +88,7 @@ func UnmarshalUserCollection(users []*User) []*pb.User {
 
 // MarshalUser converts User protobuf to User struct
 func MarshalUser(user *pb.User) *User {
+
 	accounts := MarshalAccountCollection(user.Accounts)
 
 	return &User{
@@ -103,7 +106,11 @@ func MarshalUser(user *pb.User) *User {
 
 // UnmarshalUser converts User struct to User protobuf
 func UnmarshalUser(user *User) *pb.User {
+	log.Print("Marshal 3")
+
 	accounts := UnmarshalAccountCollection(user.Accounts)
+
+	log.Print("Marshal 4")
 
 	return &pb.User{
 		UserID:     user.UserID,
@@ -144,6 +151,8 @@ func (repository *MongoRepository) Create(ctx context.Context, user *User) (*Use
 	user.UserID = uuid.String()
 
 	_, err = repository.Collection.InsertOne(ctx, user)
+
+	log.Print(user)
 
 	return user, err
 }
