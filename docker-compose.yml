@@ -80,6 +80,23 @@ services:
     environment:
       DB_HOST: "mongodb://datastore:27017"
 
+  service_transaction:
+    restart: always
+    container_name: "go.micro.service.transaction"
+    build: ./service/transaction/
+    ports:
+      - 50054:50054
+    links:
+      - datastore
+    networks:
+      - api-gateway-tier
+      - api-user-tier
+      - service-tier
+    depends_on:
+      - datastore
+    environment:
+      DB_HOST: "mongodb://datastore:27017"
+
   datastore:
     image: mongo:latest
     container_name: "datastore"

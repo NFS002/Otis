@@ -1,8 +1,8 @@
-package merchant
+package transaction
 
 import (
 	"context"
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
 )
 
@@ -10,59 +10,29 @@ type Handler struct {
 	Repository
 }
 
-func (s *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.CreateResponse) error {
-	log.Print("CreateMerchant handler fired!")
+func (s *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, res *pb.CreateResponse) error {
+	log.Print("CreateTransaction handler fired!")
 
-	merchant, err := s.Repository.Create(ctx, MarshalMerchant(req))
-	if err != nil {
-		return err
-	}
+	transaction, err := s.Repository.Create(ctx, MarshalTransaction(req))
 
 	res.Created = true
-	res.Merchant = UnmarshalMerchant(merchant)
+	res.Transaction = UnmarshalTransaction(transaction)
 
-	return nil
-}
-
-func (s *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
-	log.Print("GetMerchant handler fired!")
-
-	var merchants []*Merchant
-	var err error
-
-	if len(req.MerchantID) == 0 {
-		merchants, err = s.Repository.GetAll(ctx)
-	} else {
-		merchants, err = s.Repository.Get(ctx, req.MerchantID)
-	}
-
-	res.Merchants = UnmarshalMerchantCollection(merchants)
 	return err
 }
 
-func (s *Handler) UpdateMerchant(ctx context.Context, req *pb.Merchant, res *pb.UpdateResponse) error {
-	log.Print("UpdateMerchant handler fired!")
+func (s *Handler) GetTransactions(ctx context.Context, req *pb.IdRequest, res *pb.Transactions) error {
+	log.Print("GetTransactions handler fired!")
 
-	err := s.Repository.Update(ctx, MarshalMerchant(req))
-	if err != nil {
-		return err
+	var transactions []*Transaction
+	var err error
+
+	if len(req.Id) == 0 {
+		transactions, err = s.Repository.GetAll(ctx)
+	} else {
+		transactions, err = s.Repository.Get(ctx, req.Id)
 	}
 
-	res.Updated = true
-	res.Merchant = req
-
-	return nil
-}
-
-func (s *Handler) DeleteMerchant(ctx context.Context, req *pb.DeleteRequest, res *pb.DeleteResponse) error {
-	log.Print("DeleteMerchant handler fired!")
-
-	err := s.Repository.Delete(ctx, req.MerchantID)
-	if err != nil {
-		return err
-	}
-
-	res.Deleted = true
-
-	return nil
+	res.Transactions = UnmarshalTransactionCollection(transactions)
+	return err
 }

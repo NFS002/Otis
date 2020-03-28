@@ -2,11 +2,11 @@ package main
 
 import (
 	"context"
-	"sync"
 	"fmt"
-	"gitlab.com/otis-team/backend/service/merchant/package"
+	"gitlab.com/otis-team/backend/service/transaction/package"
 	"log"
 	"os"
+	"github.com/micro/go-micro"
 	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 )
 
@@ -15,13 +15,15 @@ const (
 )
 
 func main() {
+	
 	service := micro.NewService(
 			micro.Name("go.micro.service.transaction"),
 	)
 
 	service.Init()
 
-	if uri := os.Getenv("DB_HOST"); uri == "" {
+	uri := os.Getenv("DB_HOST")
+	if uri == "" {
 		uri = defaultHost
 	}
 
