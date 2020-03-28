@@ -56,13 +56,13 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var newMerchant *protoMerchant.Merchant
+	var newMerchant *merchant.Merchant
 	err := json.Unmarshal([]byte(req.Body), &newMerchant)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
 	}
 
-	r, err := e.client.CreateMerchant(ctx, newMerchant)
+	r, err := e.client.CreateMerchant(ctx, merchant.UnmarshalMerchant(newMerchant))
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -70,7 +70,7 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 	rsp.StatusCode = 200
 
 	createResponse := CreatedResponse{
-		Created:   r.Created,
+		Created: r.Created,
 		Merchant: merchant.MarshalMerchant(r.Merchant),
 	}
 
@@ -81,8 +81,6 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 
 	// set json body
 	rsp.Body = string(body)
-
-	return nil
 
 	return nil
 }
