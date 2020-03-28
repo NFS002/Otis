@@ -19,10 +19,10 @@ type User struct{
 // CreatedResponse maps CreateResponse protobuf message.
 type CreatedResponse struct {
 	Created bool `json:"created"`
-	User *user.User `json:"userID"`
+	User *user.User `json:"user"`
 }
 
-// CreatedResponse maps CreateResponse protobuf message.
+// GetResponse maps CreateResponse protobuf message.
 type GetResponse struct {
 	Users []*user.User `json:"users"`
 }
@@ -55,22 +55,18 @@ func (e *User) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var newUser *protoUser.User
+	var newUser *user.User
 	err := json.Unmarshal([]byte(req.Body), &newUser)
 	if err != nil {
-		return errors.BadRequest("go.micro.api.user", "Body not valid. Please reference to API documentation.")
+		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
 	}
 
-	log.Print("here")
-
-	r, err := e.client.CreateUser(ctx, newUser)
+	r, err := e.client.CreateUser(ctx, user.UnmarshalUser(newUser))
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user",err.Error())
 	}
 
 	rsp.StatusCode = 200
-
-	log.Print("here 2")
 
 	createResponse := CreatedResponse{
 		Created:   r.Created,

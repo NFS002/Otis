@@ -16,10 +16,13 @@ func (s *Handler) CreateUser(ctx context.Context, req *pb.User, res *pb.CreateRe
 	log.Print("CreateUser handler fired!")
 
 	user, err := s.Repository.Create(ctx, MarshalUser(req))
+	log.Print("Here 3")
 	if err != nil {
-		res.Created = true
-		res.User = UnmarshalUser(user)
+		return err
 	}
+
+	res.Created = true
+	res.User = UnmarshalUser(user)
 
 	return nil
 }

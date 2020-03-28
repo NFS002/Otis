@@ -22,7 +22,7 @@ type CreatedResponse struct {
 	Merchant *merchant.Merchant `json:"merchantID"`
 }
 
-// CreatedResponse maps CreateResponse protobuf message.
+// GetResponse maps CreateResponse protobuf message.
 type GetResponse struct {
 	Merchants []*merchant.Merchant `json:"merchants"`
 }
