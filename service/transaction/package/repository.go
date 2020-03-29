@@ -94,17 +94,17 @@ func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Transaction, 
 	cur, err := repository.Collection.Find(ctx, bson.D{}, nil)
 	if err != nil {
 		return nil, err
-	} else {
-		var transactions []*Transaction
-		for cur.Next(ctx) {
-			var transaction *Transaction
-			if err := cur.Decode(&transaction); err != nil {
-				return nil, err
-			}
-			transactions = append(transactions, transaction)
-		}
-		return transactions, err
 	}
+
+	var transactions []*Transaction
+	for cur.Next(ctx) {
+		var transaction *Transaction
+		if err := cur.Decode(&transaction); err != nil {
+			return nil, err
+		}
+		transactions = append(transactions, transaction)
+	}
+	return transactions, err
 }
 
 // Get method implements functionality to retrieve a single transaction from the DB
