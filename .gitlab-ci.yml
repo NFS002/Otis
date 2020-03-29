@@ -11,8 +11,22 @@ before_script:
 
 stages:
   - test
+  - build
 
 lint:
   stage: test
   script:
     - golint -set_exit_status ./...
+    
+container_registry:
+    stage: build
+    script: 
+     - docker build -t registry.gitlab.com/otis-team/backend ./service/merchant/
+     - docker build -t registry.gitlab.com/otis-team/backend ./service/user/
+     - docker build -t registry.gitlab.com/otis-team/backend ./service/transaction/
+     - docker build -t registry.gitlab.com/otis-team/backend ./api/merchant/
+     - docker build -t registry.gitlab.com/otis-team/backend ./api/user/ 
+     - docker push registry.gitlab.com/otis-team/backend
+
+
+     
