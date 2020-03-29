@@ -14,6 +14,8 @@ const (
 	defaultHost = "datastore:27017"
 )
 
+/* Connect to a MongoDB instance, and start and run a new grpc server on a Microservice,
+ * passing that connection to the handler functions.  */
 func main() {
 	
 	service := micro.NewService(
@@ -40,7 +42,6 @@ func main() {
 
 	pb.RegisterTransactionServiceHandler(service.Server(), h)
 
-	// Run the server
 	if err := service.Run(); err != nil {
 		fmt.Println(err)
 	}

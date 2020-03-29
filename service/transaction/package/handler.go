@@ -11,20 +11,21 @@ type Handler struct {
 	Repository
 }
 
-// CreateTransaction handles gRPC requests to create a new transaction in the DB.
-func (s *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, res *pb.CreateResponse) error {
+func (s *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, res *pb.CRUDResponse) error {
 	log.Print("CreateTransaction handler fired!")
 
 	transaction, err := s.Repository.Create(ctx, MarshalTransaction(req))
 
 	res.Created = true
-	res.Transaction = UnmarshalTransaction(transaction)
+	Collection := make([]*pb.Transaction, 0)
+	Collection = append(Collection, UnmarshalTransaction(transaction))
+	res.Transactions = Collection
 
 	return err
 }
 
 // GetTransactions handles gRPC requests to retrieve one (if Transaction ID is supplied) or many transaction from the DB.
-func (s *Handler) GetTransactions(ctx context.Context, req *pb.IdRequest, res *pb.Transactions) error {
+func (s *Handler) GetTransactions(ctx context.Context, req *pb.IdRequest, res *pb.CRUDResponse) error {
 	log.Print("GetTransactions handler fired!")
 
 	var transactions []*Transaction
@@ -37,5 +38,14 @@ func (s *Handler) GetTransactions(ctx context.Context, req *pb.IdRequest, res *p
 	}
 
 	res.Transactions = UnmarshalTransactionCollection(transactions)
+	return err
+}
+
+// Handles grpc requests to delete transactions in the DB
+func (s *Handler) DeleteTransactions(ctx context.Context, req *pb.IdRequest, res *pb.CRUDResponse) error {
+	log.Print("DeleteTransactions handler fired!")
+
+	/* Not yet implemented */
+
 	return err
 }

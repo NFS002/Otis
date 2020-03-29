@@ -61,9 +61,10 @@ func UnmarshalTransaction(transaction *Transaction) *pb.Transaction {
 	}
 }
 
-// Repository
-
-// Repository interface describes all available repository methods. Currently Create and retrieve
+/* Repository
+ *
+ * Repository interface describes all available repository methods.
+ * The Repository is an abstraction over a Mongo collection */
 type Repository interface {
 	Create(ctx context.Context, transaction *Transaction) (*Transaction, error)
 	GetAll(ctx context.Context) ([]*Transaction, error)
@@ -121,8 +122,7 @@ func (repository *MongoRepository) Get(ctx context.Context, transactionID string
 	return transactions, err
 }
 
-// UUID
-
+/* Generate a unique Id value */
 func generateID() (uuid.UUID, error){
 	var err error
 
