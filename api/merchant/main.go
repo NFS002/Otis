@@ -13,6 +13,10 @@ import (
 )
 
 
+/* This service sits inbetween the API gateway and the user/merchant/transaction services.
+ * The main function of this package receives rpc requests forwarded from the API gateway, 
+ * and then forward these to either the merchant and transaction servic, returning the response
+ * to the API */
 func main() {
 	service := micro.NewService(
 		micro.Name("go.micro.api.merchant"),

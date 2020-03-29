@@ -6,8 +6,9 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/errors"
 	protoAPI "gitlab.com/otis-team/backend/api/user/proto"
-	user "gitlab.com/otis-team/backend/service/user/package"
 	protoUser "gitlab.com/otis-team/backend/service/user/proto/user"
+	
+	user "gitlab.com/otis-team/backend/service/user/package"
 	"log"
 )
 

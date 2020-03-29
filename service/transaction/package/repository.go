@@ -40,10 +40,10 @@ func UnmarshalTransactionCollection(transactions []*Transaction) []*pb.Transacti
 // MarshalTransaction converts a transaction protobuf to transaction struct
 func MarshalTransaction(transaction *pb.Transaction) *Transaction {
 	return &Transaction{
-		TransactionID: transaction.TransactionId,
-		UserID: transaction.UserId,
-		MerchantID: transaction.MerchantId,
-		StoreID: transaction.StoreId,
+		TransactionID: transaction.TransactionID,
+		UserID: transaction.UserID,
+		MerchantID: transaction.MerchantID,
+		StoreID: transaction.StoreID,
 		Date: transaction.Date,
 		Time: transaction.Time,
 	}
@@ -52,10 +52,10 @@ func MarshalTransaction(transaction *pb.Transaction) *Transaction {
 // UnmarshalTransaction converts transaction struct to transaction protobuf
 func UnmarshalTransaction(transaction *Transaction) *pb.Transaction {
 	return &pb.Transaction {
-		TransactionId: transaction.TransactionID,
-		UserId: transaction.UserID,
-		MerchantId: transaction.MerchantID,
-		StoreId: transaction.StoreID,
+		TransactionID: transaction.TransactionID,
+		UserID: transaction.UserID,
+		MerchantID: transaction.MerchantID,
+		StoreID: transaction.StoreID,
 		Date: transaction.Date,
 		Time: transaction.Time,
 	}
@@ -67,8 +67,12 @@ func UnmarshalTransaction(transaction *Transaction) *pb.Transaction {
  * The Repository is an abstraction over a Mongo collection */
 type Repository interface {
 	Create(ctx context.Context, transaction *Transaction) (*Transaction, error)
-	GetAll(ctx context.Context) ([]*Transaction, error)
-	Get(ctx context.Context, transactionID string) ([]*Transaction, error)
+	GetAllTransactions(ctx context.Context) ([]*Transaction, error)
+	GetTransactionByID(ctx context.Context, transactionID string) ([]*Transaction, error)
+	GetTransactionsByUserID(ctx context.Context, userID string) ([]*Transaction, error)
+	GetTransactionsByMerchantID(ctx context.Context, merchantID string) ([]*Transaction, error)
+	GetTransactionsFromBSONQuery(ctx context.Context, query bson.M) ([]*Transaction, error)
+
 }
 
 // MongoRepository struct describes specif collection relevant to the repository being used

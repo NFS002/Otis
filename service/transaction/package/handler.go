@@ -16,10 +16,10 @@ func (s *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, re
 
 	transaction, err := s.Repository.Create(ctx, MarshalTransaction(req))
 
-	res.Created = true
 	Collection := make([]*pb.Transaction, 0)
 	Collection = append(Collection, UnmarshalTransaction(transaction))
 	res.Transactions = Collection
+	res.Executed = true
 
 	return err
 }
@@ -30,24 +30,26 @@ func (s *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 
 	var transactions []*Transaction
 	var err error
-	mID := req.MerchantID
+
 	tID := req.TransactionID
+	mID := req.MerchantID
 	uID := req.UserID
 
-	if tID != nil && len(req.Id) > 0 {
+	if len(tID) > 0 {
 		transactions, err = s.Repository.GetTransactionByID(ctx, tID)
-	} else if mID != nil && len(mID) > 0 {
+	} else if len(mID) > 0 {
 		transactions, err = s.Repository.GetTransactionsByMerchantID(ctx, mID)
-	} else if uID != nil && len(uID) > 0 {
-		transactions, err = s.Repository.GetTransactionsByUserID(ctx, req.UID)
+	} else if len(uID) > 0 {
+		transactions, err = s.Repository.GetTransactionsByUserID(ctx, uID)
 	}
 
 	res.Transactions = UnmarshalTransactionCollection(transactions)
+	res.Executed = true
 	return err
 }
 
 // Handles grpc requests to delete transactions in the DB
-func (s *Handler) DeleteTransactions(ctx context.Context, req *pb.IdRequest, res *pb.CRUDResponse) error {
+func (s *Handler) DeleteTransactions(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
 	log.Print("DeleteTransactions handler fired!")
 
 	/* Not yet implemented */
