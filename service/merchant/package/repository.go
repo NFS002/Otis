@@ -33,7 +33,7 @@ type Tag struct {
 	Tag string `json:"tag" bson:"tag"`
 }
 
-// TAgs struct represents slice of Tag structs
+// Tags struct represents slice of Tag structs
 type Tags []*Tag
 
 

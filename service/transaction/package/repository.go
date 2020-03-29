@@ -9,6 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
+// Transaction struct maps protbuf definition. Contains json and bson key mappings
 type Transaction struct {
 	TransactionID string `json:"transaction_id,omitempty" bson:"transaction_id"`
 	UserID string `json:"user_id,omitempty" bson:"user_id"`
@@ -18,7 +19,7 @@ type Transaction struct {
 	Time string `json:"time" bson:"time"`
 }
 
-
+// MarshalTransactionCollection converts slice of transaction protobufs to slice of transaction structs.
 func MarshalTransactionCollection(transactions []*pb.Transaction) []*Transaction {
 	Collection := make([]*Transaction, 0)
 	for _, t := range transactions {
@@ -27,7 +28,7 @@ func MarshalTransactionCollection(transactions []*pb.Transaction) []*Transaction
 	return Collection
 }
 
-
+// UnmarshalTransactionCollection converts slice of transaction structs to slice of transaction protobufs
 func UnmarshalTransactionCollection(transactions []*Transaction) []*pb.Transaction {
 	Collection := make([]*pb.Transaction, 0)
 	for _, t := range transactions {
@@ -36,6 +37,7 @@ func UnmarshalTransactionCollection(transactions []*Transaction) []*pb.Transacti
 	return Collection
 }
 
+// MarshalTransaction converts a transaction protobuf to transaction struct
 func MarshalTransaction(transaction *pb.Transaction) *Transaction {
 	return &Transaction{
 		TransactionID: transaction.TransactionId,
@@ -47,6 +49,7 @@ func MarshalTransaction(transaction *pb.Transaction) *Transaction {
 	}
 }
 
+// UnmarshalTransaction converts transaction struct to transaction protobuf
 func UnmarshalTransaction(transaction *Transaction) *pb.Transaction {
 	return &pb.Transaction {
 		TransactionId: transaction.TransactionID,
@@ -60,16 +63,19 @@ func UnmarshalTransaction(transaction *Transaction) *pb.Transaction {
 
 // Repository
 
+// Repository interface describes all available repository methods. Currently Create and retrieve
 type Repository interface {
 	Create(ctx context.Context, transaction *Transaction) (*Transaction, error)
 	GetAll(ctx context.Context) ([]*Transaction, error)
 	Get(ctx context.Context, transactionID string) ([]*Transaction, error)
 }
 
+// MongoRepository struct describes specif collection relevant to the repository being used
 type MongoRepository struct {
 	Collection *mongo.Collection
 }
 
+// Create method implements functionlaity to create a transaction in the DB. UUID is generate to fill transaction_id.
 func (repository *MongoRepository) Create(ctx context.Context, transaction *Transaction) (*Transaction, error){
 	uuid, err := generateID()
 	if err != nil {
@@ -83,6 +89,7 @@ func (repository *MongoRepository) Create(ctx context.Context, transaction *Tran
 	return transaction, err
 }
 
+// GetAll method implements functionality to retrieve all transactions from the DB
 func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Transaction, error) {
 	cur, err := repository.Collection.Find(ctx, bson.D{}, nil)
 	if err != nil {
@@ -100,6 +107,7 @@ func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Transaction, 
 	}
 }
 
+// Get method implements functionality to retrieve a single transaction from the DB
 func (repository *MongoRepository) Get(ctx context.Context, transactionID string) ([]*Transaction, error) {
 	cur, err := repository.Collection.Find(ctx, bson.M{"transaction_id": transactionID}, nil)
 	var transactions []*Transaction

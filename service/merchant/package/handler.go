@@ -26,7 +26,7 @@ func (s *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 	return nil
 }
 
-// GetMerchant handles gRPC requests to retrieve one (if Merchant ID is upplied) or many merchants from the DB.
+// GetMerchant handles gRPC requests to retrieve one (if Merchant ID is supplied) or many merchants from the DB.
 func (s *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
 	log.Print("GetMerchant handler fired!")
 
