@@ -17,8 +17,8 @@ import (
 
 // Merchant struct. All methods using this struct will be mapped to /merchant/<method>.
 type Merchant struct{
-	mClient protoMerchant.MerchantServiceClient
-	tClient protoTransaction.TransactionServiceClient
+	MerchantClient protoMerchant.MerchantServiceClient
+	TransactionClient protoTransaction.TransactionServiceClient
 }
 
 // CreatedResponse maps CreateResponse protobuf message.
@@ -72,7 +72,7 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
 	}
 
-	r, err := e.mClient.CreateMerchant(ctx, newMerchant)
+	r, err := e.MerchantClient.CreateMerchant(ctx, newMerchant)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -110,7 +110,7 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.mClient.GetMerchant(ctx, &protoMerchant.GetRequest{MerchantID: id.Values[0]}) // Seems kinda janky
+	r, err := e.MerchantClient.GetMerchant(ctx, &protoMerchant.GetRequest{MerchantID: id.Values[0]}) // Seems kinda janky
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -141,7 +141,7 @@ func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.merchant", "This method requires GET")
 	}
 
-	r, err := e.mClient.GetMerchant(ctx, &protoMerchant.GetRequest{})
+	r, err := e.MerchantClient.GetMerchant(ctx, &protoMerchant.GetRequest{})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -186,7 +186,7 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
 	}
 
-	r, err := e.mClient.UpdateMerchant(ctx, merchant.UnmarshalMerchant(updatedMerchant))
+	r, err := e.MerchantClient.UpdateMerchant(ctx, merchant.UnmarshalMerchant(updatedMerchant))
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -194,7 +194,7 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 	rsp.StatusCode = 200
 
 	updateResponse := UpdateResponse{
-		Updated:   r.Updated,
+		Updated:  r.Updated,
 		Merchant: merchant.MarshalMerchant(r.Merchant),
 	}
 
@@ -222,7 +222,7 @@ func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.mClient.DeleteMerchant(ctx, &protoMerchant.DeleteRequest{MerchantID: merchantID.Values[0]})
+	r, err := e.MerchantClient.DeleteMerchant(ctx, &protoMerchant.DeleteRequest{MerchantID: merchantID.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
@@ -256,7 +256,7 @@ func (e *Merchant) Transactions(ctx context.Context, req *protoAPI.Request, rsp 
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.tClient.GetTransactions(ctx, &protoTransaction.IdRequest{MerchantID: merchantID.Values[0]})
+	r, err := e.TransactionClient.GetTransactions(ctx, &protoTransaction.IdRequest{MerchantID: merchantID.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}

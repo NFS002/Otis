@@ -90,13 +90,12 @@ func (repository *MongoRepository) Create(ctx context.Context, transaction *Tran
 	return transaction, err
 }
 
-// GetAll method implements functionality to retrieve all transactions from the DB
-func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Transaction, error) {
-	cur, err := repository.Collection.Find(ctx, bson.D{}, nil)
+// GetAll method implements functionality to retrieve all transactions based on a BSON query
+func (repository *MongoRepository) GetTransactionsFromBSONQuery(ctx context.Context, query bson.M) ([]*Transaction, error) {
+	cur, err := repository.Collection.Find(ctx, query, nil)
 	if err != nil {
 		return nil, err
 	}
-
 	var transactions []*Transaction
 	for cur.Next(ctx) {
 		var transaction *Transaction
@@ -108,18 +107,28 @@ func (repository *MongoRepository) GetAll(ctx context.Context) ([]*Transaction, 
 	return transactions, err
 }
 
+// GetAll method implements functionality to retrieve all transactions from the DB
+func (repository *MongoRepository) GetAllTransactions(ctx context.Context) ([]*Transaction, error) {
+	query := bson.M{}
+	return repository.GetTransactionsFromBSONQuery(ctx, query)
+}
+
 // Get method implements functionality to retrieve a single transaction from the DB
-func (repository *MongoRepository) Get(ctx context.Context, transactionID string) ([]*Transaction, error) {
-	cur, err := repository.Collection.Find(ctx, bson.M{"transaction_id": transactionID}, nil)
-	var transactions []*Transaction
-	for cur.Next(ctx) {
-		var transaction *Transaction
-		if err := cur.Decode(&transaction); err != nil {
-			return nil, err
-		}
-		transactions = append(transactions, transaction)
-	}
-	return transactions, err
+func (repository *MongoRepository) GetTransactionByID(ctx context.Context, transactionID string) ([]*Transaction, error) {
+	query := bson.M{"transaction_id": transactionID }
+	return repository.GetTransactionsFromBSONQuery(ctx, query)
+}
+
+// Get method implements functionality to retrieve all transactions from a single merchant
+func (repository *MongoRepository) GetTransactionsByMerchantID(ctx context.Context, merchantID string) ([]*Transaction, error) {
+	query := bson.M{"merchant_id": merchantID }
+	return repository.GetTransactionsFromBSONQuery(ctx, query)
+}
+
+// Get method implements functionality to retrieve all transactions from a single user
+func (repository *MongoRepository) GetTransactionsByUserID(ctx context.Context, userID string) ([]*Transaction, error) {
+	query := bson.M{"user_id": userID }
+	return repository.GetTransactionsFromBSONQuery(ctx, query)
 }
 
 /* Generate a unique Id value */
