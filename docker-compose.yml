@@ -41,7 +41,7 @@ services:
     depends_on:
       - api_gateway
     ports:
-      - 50054:50054
+      - 50052:50052
     networks:
       - api-gateway-tier
       - api-user-tier
@@ -51,7 +51,7 @@ services:
     container_name: "go.micro.service.merchant"
     build: ./service/merchant/
     ports:
-      - 50052:50052
+      - 50053:50053
     links:
       - datastore
     networks:
@@ -68,7 +68,7 @@ services:
     container_name: "go.micro.service.user"
     build: ./service/user/
     ports:
-      - 50053:50053
+      - 50054:50054
     links:
       - datastore
     networks:
@@ -85,7 +85,7 @@ services:
     container_name: "go.micro.service.transaction"
     build: ./service/transaction/
     ports:
-      - 50054:50054
+      - 50055:50055
     links:
       - datastore
     networks:
