@@ -15,9 +15,12 @@ import (
 	"log"
 )
 
-// Merchant struct. All methods using this struct will be mapped to /merchant/<method>.
-type Merchant struct{
+// MerchantHandler struct. All methods using this struct will be mapped to /merchant/<method>.
+type MerchantHandler struct {
 	MerchantClient protoMerchant.MerchantServiceClient
+}
+// TransactionHandler struct. All methods using this struct are mapped to /merchant/transaction/<method>
+type TransactionHandler struct {
 	TransactionClient protoTransaction.TransactionServiceClient
 }
 
@@ -50,7 +53,7 @@ type TransactionResponse struct {
 
 
 // Create method (Merchant.Create) is served by HTTP requests to /merchant/create.
-func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *MerchantHandler) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Create request")
 
 	if req.Method != "POST" {
@@ -98,7 +101,7 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Get method (Merchant.Get) is served by HTTP requests to /merchant/get. Full endpoint is /merchant/get?id=<merchant_id>.
-func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *MerchantHandler) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Get request")
 
 	if req.Method != "GET" {
@@ -134,7 +137,7 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 }
 
 // GetAll method (Merchant.GetAll) is served by HTTP requests to /merchant/get-all.
-func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *MerchantHandler) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.GetAll request")
 
 	if req.Method != "GET" {
@@ -164,7 +167,7 @@ func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Update method (Merchant.Update) is served by HTTP requests to /merchant/update.
-func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *MerchantHandler) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Update request")
 
 	if req.Method != "POST" {
@@ -210,7 +213,7 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Delete : Method (Merchant.Delete) is served by HTTP requests to /merchant/delete. Full endpoint is /merchant/delete?id=<merchant_id>.
-func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *MerchantHandler) Delete(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Delete request")
 
 	if req.Method != "GET" {
@@ -243,7 +246,7 @@ func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Transactions method (Merchant.Transactions) is served by HTTP requests to /merchant/transactions?id=<merchant_id> */
-func (e *Merchant) Transactions(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *TransactionHandler) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Transactions request")
 
 	if req.Method != "GET" {
@@ -269,7 +272,7 @@ func (e *Merchant) Transactions(ctx context.Context, req *protoAPI.Request, rsp 
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
 
-	// SET JSON BODY
+	// Ser JSON Body
 	rsp.Body = string(body)
 
 	return nil

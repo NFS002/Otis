@@ -11,8 +11,8 @@ import (
 
 import (
 	context "context"
-	client "github.com/micro/go-micro/client"
-	server "github.com/micro/go-micro/server"
+	client "github.com/micro/go-micro/v2/client"
+	server "github.com/micro/go-micro/v2/server"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -39,7 +39,6 @@ type MerchantService interface {
 	Get(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 	Update(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 	Delete(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
-	Transactions(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 }
 
 type merchantService struct {
@@ -104,16 +103,6 @@ func (c *merchantService) Delete(ctx context.Context, in *Request, opts ...clien
 	return out, nil
 }
 
-func (c *merchantService) Transactions(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error) {
-	req := c.c.NewRequest(c.name, "Merchant.Transactions", in)
-	out := new(Response)
-	err := c.c.Call(ctx, req, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // Server API for Merchant service
 
 type MerchantHandler interface {
@@ -122,7 +111,6 @@ type MerchantHandler interface {
 	Get(context.Context, *Request, *Response) error
 	Update(context.Context, *Request, *Response) error
 	Delete(context.Context, *Request, *Response) error
-	Transactions(context.Context, *Request, *Response) error
 }
 
 func RegisterMerchantHandler(s server.Server, hdlr MerchantHandler, opts ...server.HandlerOption) error {
@@ -132,7 +120,6 @@ func RegisterMerchantHandler(s server.Server, hdlr MerchantHandler, opts ...serv
 		Get(ctx context.Context, in *Request, out *Response) error
 		Update(ctx context.Context, in *Request, out *Response) error
 		Delete(ctx context.Context, in *Request, out *Response) error
-		Transactions(ctx context.Context, in *Request, out *Response) error
 	}
 	type Merchant struct {
 		merchant
@@ -165,6 +152,55 @@ func (h *merchantHandler) Delete(ctx context.Context, in *Request, out *Response
 	return h.MerchantHandler.Delete(ctx, in, out)
 }
 
-func (h *merchantHandler) Transactions(ctx context.Context, in *Request, out *Response) error {
-	return h.MerchantHandler.Transactions(ctx, in, out)
+// Client API for Transaction service
+
+type TransactionService interface {
+	Get(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
+}
+
+type transactionService struct {
+	c    client.Client
+	name string
+}
+
+func NewTransactionService(name string, c client.Client) TransactionService {
+	return &transactionService{
+		c:    c,
+		name: name,
+	}
+}
+
+func (c *transactionService) Get(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error) {
+	req := c.c.NewRequest(c.name, "Transaction.Get", in)
+	out := new(Response)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// Server API for Transaction service
+
+type TransactionHandler interface {
+	Get(context.Context, *Request, *Response) error
+}
+
+func RegisterTransactionHandler(s server.Server, hdlr TransactionHandler, opts ...server.HandlerOption) error {
+	type transaction interface {
+		Get(ctx context.Context, in *Request, out *Response) error
+	}
+	type Transaction struct {
+		transaction
+	}
+	h := &transactionHandler{hdlr}
+	return s.Handle(s.NewHandler(&Transaction{h}, opts...))
+}
+
+type transactionHandler struct {
+	TransactionHandler
+}
+
+func (h *transactionHandler) Get(ctx context.Context, in *Request, out *Response) error {
+	return h.TransactionHandler.Get(ctx, in, out)
 }

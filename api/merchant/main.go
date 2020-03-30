@@ -18,21 +18,30 @@ import (
  * and then forward these to either the merchant and transaction servic, returning the response
  * to the API */
 func main() {
+
 	service := micro.NewService(
 		micro.Name("go.micro.api.merchant"),
 	)
 
 	service.Init()
 
-	mClient := protoMerchant.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
-	tClient := protoTransaction.NewTransactionServiceClient("go.micro.service.transaction", service.Client())
+	merchantClient := protoMerchant.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
+	
+	transactionClient := protoTransaction.NewTransactionServiceClient("go.micro.service.transaction", service.Client())
 
-	handler := &Merchant{MerchantClient: mClient, TransactionClient: tClient}
+	merchantHandler := &MerchantHandler{ MerchantClient: merchantClient }
+	transactionHandler := &TransactionHandler{ TransactionClient: transactionClient }
 
-	// Registering merchant API handler
-	err := protoAPI.RegisterMerchantHandler(service.Server(), handler)
-	if err != nil {
-		log.Fatal(err)
+	// Registering both API handlers
+
+	merchantErr := protoAPI.RegisterMerchantHandler( service.Server(), merchantHandler )
+	if merchantErr != nil {
+		log.Fatal(merchantErr)
+	}
+
+	transactionErr := protoAPI.RegisterTransactionHandler(service.Server(), transactionHandler )
+	if transactionErr != nil {
+		log.Fatal(transactionErr)
 	}
 
 	if err := service.Run(); err != nil {
