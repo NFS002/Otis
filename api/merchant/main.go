@@ -29,8 +29,8 @@ func main() {
 	
 	transactionClient := protoTransaction.NewTransactionServiceClient("go.micro.service.transaction", service.Client())
 
-	merchantHandler := &MerchantHandler{ MerchantClient: merchantClient }
-	transactionHandler := &TransactionHandler{ TransactionClient: transactionClient }
+	merchantHandler := &Merchant{ MerchantClient: merchantClient }
+	transactionHandler := &Transaction{ TransactionClient: transactionClient }
 
 	// Registering both API handlers
 
