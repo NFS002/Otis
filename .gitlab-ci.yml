@@ -26,12 +26,13 @@ container_registry:
      - docker:dind
     script: 
      - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-     - docker build -t registry.gitlab.com/otis-team/backend/service/merchant ./service/merchant/
-     - docker build -t registry.gitlab.com/otis-team/backend/service/user ./service/user/
+     - docker build -t registry.gitlab.com/otis-team/backend/service/merchant:latest ./service/merchant/
+     - docker push registry.gitlab.com/otis-team/backend/service/merchant:latest
+     - docker build -t registry.gitlab.com/otis-team/backend/service/user:latest ./service/user/
+     - docker push registry.gitlab.com/otis-team/backend/service/user:latest
 #     - docker build -t registry.gitlab.com/otis-team/backend ./service/transaction/
 #     - docker build -t registry.gitlab.com/otis-team/backend ./api/merchant/
 #     - docker build -t registry.gitlab.com/otis-team/backend ./api/user/
-     - docker push registry.gitlab.com/otis-team/backend
 
 
      
