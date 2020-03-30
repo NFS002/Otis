@@ -109,7 +109,7 @@ func (repository *MongoRepository) GetTransactionsFromBSONQuery(ctx context.Cont
 	return transactions, err
 }
 
-// GetAllTransactions: Implements functionality to retrieve all transactions from the DB
+// GetAllTransactions : Implements functionality to retrieve all transactions from the DB
 func (repository *MongoRepository) GetAllTransactions(ctx context.Context) ([]*Transaction, error) {
 	query := bson.M{}
 	return repository.GetTransactionsFromBSONQuery(ctx, query)
@@ -121,13 +121,13 @@ func (repository *MongoRepository) GetTransactionByID(ctx context.Context, trans
 	return repository.GetTransactionsFromBSONQuery(ctx, query)
 }
 
-// GetTransactionsByMerchantID: Retrieves all transactions from a single merchant
+// GetTransactionsByMerchantID : Retrieves all transactions from a single merchant
 func (repository *MongoRepository) GetTransactionsByMerchantID(ctx context.Context, merchantID string) ([]*Transaction, error) {
 	query := bson.M{"merchant_id": merchantID }
 	return repository.GetTransactionsFromBSONQuery(ctx, query)
 }
 
-// GetTransactionsByUserID: Retrieves all transactions from a single user
+// GetTransactionsByUserID : Retrieves all transactions from a single user
 func (repository *MongoRepository) GetTransactionsByUserID(ctx context.Context, userID string) ([]*Transaction, error) {
 	query := bson.M{"user_id": userID }
 	return repository.GetTransactionsFromBSONQuery(ctx, query)
