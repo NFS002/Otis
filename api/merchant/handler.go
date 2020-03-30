@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/errors"
 	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
 
@@ -48,7 +47,7 @@ type DeleteResponse struct{
 
 // TransactionResponse maps TransactionResponse protobuf message.
 type TransactionResponse struct {
-	Transactions *[]transaction.Transactions `json:"transactions"`
+	Transactions []*transaction.Transaction `json:"transactions"`
 }
 
 
@@ -137,7 +136,7 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 }
 
 // GetAll method (Merchant.GetAll) is served by HTTP requests to /merchant/get-all.
-func (e *MerchantHandler) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.GetAll request")
 
 	if req.Method != "GET" {
@@ -258,14 +257,14 @@ func (e *Transactions) Get(ctx context.Context, req *protoAPI.Request, rsp *prot
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.TransactionClient.GetTransactions(ctx, &protoTransaction.IdRequest{MerchantID: merchantID.Values[0]})
+	r, err := e.TransactionClient.GetTransactions(ctx, &protoTransaction.IdRequest{Id: merchantID.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
 
 	rsp.StatusCode = 200
 
-	transactionResponse := TransactionResponse{Transactions: r.Transactions}
+	transactionResponse := TransactionResponse{Transactions: transaction.MarshalTransactionCollection(r.Transactions)}
 
 	body, err := json.Marshal(transactionResponse)
 	if err != nil {

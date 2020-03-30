@@ -1,10 +1,7 @@
 package main
 
 import (
-	"context"
-	"encoding/json"
 	"github.com/micro/go-micro"
-	"github.com/micro/go-micro/errors"
 	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
 
 	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
@@ -29,8 +26,8 @@ func main() {
 	
 	transactionClient := protoTransaction.NewTransactionServiceClient("go.micro.service.transaction", service.Client())
 
-	merchantHandler := &MerchantHandler{ MerchantClient: merchantClient }
-	transactionHandler := &TransactionHandler{ TransactionClient: transactionClient }
+	merchantHandler := &Merchant{ MerchantClient: merchantClient }
+	transactionHandler := &Transactions{ TransactionClient: transactionClient }
 
 	// Registering both API handlers
 
