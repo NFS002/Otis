@@ -245,7 +245,7 @@ func (e *MerchantHandler) Delete(ctx context.Context, req *protoAPI.Request, rsp
 	return nil
 }
 
-// Transactions method (Merchant.Transactions) is served by HTTP requests to /merchant/transactions?id=<merchant_id> */
+// Get : Method (Transactions.Get) is served by HTTP requests to /merchant/transactions/get?id=<merchant_id> */
 func (e *TransactionHandler) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Transactions request")
 
