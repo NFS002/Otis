@@ -20,7 +20,7 @@ type Merchant struct {
 }
 // Transactions struct. All methods using this struct are mapped to /merchant/transaction/<method>
 type Transactions struct {
-	TransactionClient protoTransaction.TransactionServiceClient
+	TransactionClient protoTransaction.TransactionService
 }
 
 // CreatedResponse maps CreateResponse protobuf message.
@@ -257,7 +257,7 @@ func (e *Transactions) Get(ctx context.Context, req *protoAPI.Request, rsp *prot
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.TransactionClient.GetTransactions(ctx, &protoTransaction.IdRequest{Id: merchantID.Values[0]})
+	r, err := e.TransactionClient.GetTransactions(ctx, &protoTransaction.IDRequest{MerchantID: merchantID.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}

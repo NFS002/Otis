@@ -24,7 +24,7 @@ func main() {
 
 	merchantClient := protoMerchant.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
 	
-	transactionClient := protoTransaction.NewTransactionServiceClient("go.micro.service.transaction", service.Client())
+	transactionClient := protoTransaction.NewTransactionService("go.micro.service.transaction", service.Client())
 
 	merchantHandler := &Merchant{ MerchantClient: merchantClient }
 	transactionHandler := &Transactions{ TransactionClient: transactionClient }
