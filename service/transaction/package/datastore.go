@@ -6,7 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"time"
 )
-/* Returns a new connection to a MongoDB instance */ 
+// CreateClient: Returns a new connection to a MongoDB instance
 func CreateClient(ctx context.Context, uri string, retry int32) (*mongo.Client, error) {
 	conn, err := mongo.Connect(ctx, options.Client().ApplyURI(uri))
 	if err := conn.Ping(ctx, nil); err != nil {

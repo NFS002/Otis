@@ -11,6 +11,7 @@ type Handler struct {
 	Repository
 }
 
+// CreateTransaction : persists the given transaction in the db
 func (s *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, res *pb.CRUDResponse) error {
 	log.Print("CreateTransaction handler fired!")
 
@@ -48,7 +49,7 @@ func (s *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 	return err
 }
 
-// Handles grpc requests to delete transactions in the DB
+// DeleteTransactions : Handles grpc requests to delete transactions in the DB
 func (s *Handler) DeleteTransactions(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
 	log.Print("DeleteTransactions handler fired!")
 

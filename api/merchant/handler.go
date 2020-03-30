@@ -209,7 +209,7 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 	return nil
 }
 
-// Delete method (Merchant.Delete) is served by HTTP requests to /merchant/delete. Full endpoint is /merchant/delete?id=<merchant_id>.
+// Delete : Method (Merchant.Delete) is served by HTTP requests to /merchant/delete. Full endpoint is /merchant/delete?id=<merchant_id>.
 func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Delete request")
 
@@ -242,8 +242,7 @@ func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *proto
 	return nil
 }
 
-/* Transactions method (Merchant.Transactions) is served by HTTP requests to 
- * /merchant/transactions?id=<merchant_id> */
+// Transactions method (Merchant.Transactions) is served by HTTP requests to /merchant/transactions?id=<merchant_id> */
 func (e *Merchant) Transactions(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received Merchant.Transactions request")
 
