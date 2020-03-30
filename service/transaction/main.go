@@ -17,6 +17,8 @@ const (
 /* Connect to a MongoDB instance, and start and run a new grpc server on a Microservice,
  * passing that connection to the handler functions.  */
 func main() {
+	f := transaction.Transaction{ MerchantID: "44 "}
+	log.Printf( "Transaction: %v",f)
 	
 	service := micro.NewService(
 			micro.Name("go.micro.service.transaction"),
