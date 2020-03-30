@@ -15,11 +15,11 @@ import (
 	"log"
 )
 
-// MerchantHandler struct. All methods using this struct will be mapped to /merchant/<method>.
+// Merchant struct. All methods using this struct will be mapped to /merchant/<method>.
 type Merchant struct {
 	MerchantClient protoMerchant.MerchantServiceClient
 }
-// TransactionHandler struct. All methods using this struct are mapped to /merchant/transaction/<method>
+// Transactions struct. All methods using this struct are mapped to /merchant/transaction/<method>
 type Transactions struct {
 	TransactionClient protoTransaction.TransactionServiceClient
 }
