@@ -2,9 +2,12 @@ syntax = "proto3";
 
 package transaction;
 
+
+/* Transaction service definition: available grpc endpoimts for the transaction service */
 service TransactionService {
-    rpc CreateTransaction(Transaction) returns (CreateResponse) {}
-    rpc GetTransactions(IdRequest) returns (Transactions) {}
+    rpc CreateTransaction(Transaction) returns (CRUDResponse) {}
+    rpc GetTransactions(IDRequest) returns (CRUDResponse) {}
+    rpc DeleteTransactions(IDRequest) returns (CRUDResponse) {}
 }
 
 message Transaction {
@@ -16,19 +19,15 @@ message Transaction {
     string time = 8;
 }
 
-// Create response
-
-message CreateResponse {
-    bool created = 1;
-    Transaction transaction = 2;
+/* Query transactions by User, Merchant, or ID */
+message IDRequest {
+    string MerchantID = 1;
+    string UserID = 2;
+    string TransactionID = 3;
 }
 
-// Get request and response
-
-message IdRequest {
-    string id = 1;
-}
-
-message Transactions {
-    repeated Transaction transactions = 1;
+/* Generic CRUD Response */
+message CRUDResponse {
+    bool executed = 1;
+    repeated Transaction transactions = 2;
 }

@@ -47,3 +47,7 @@ service Merchant {
 	rpc Update(Request) returns(Response) {};
 	rpc Delete(Request) returns(Response) {};
 }
+
+service Transaction {
+	rpc Get(Request) returns(Response) {};
+}
