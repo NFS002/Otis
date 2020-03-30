@@ -30,7 +30,7 @@ container_registry:
      - docker push registry.gitlab.com/otis-team/backend/service/merchant:latest
      - docker build -t registry.gitlab.com/otis-team/backend/service/user:latest ./service/user/
      - docker push registry.gitlab.com/otis-team/backend/service/user:latest
-    - docker build -t registry.gitlab.com/otis-team/backend ./service/transaction/
+     - docker build -t registry.gitlab.com/otis-team/backend ./service/transaction/
 #     - docker build -t registry.gitlab.com/otis-team/backend ./api/merchant/
 #     - docker build -t registry.gitlab.com/otis-team/backend ./api/user/
 
