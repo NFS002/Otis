@@ -24,7 +24,7 @@ container_build:
     image: docker:stable
     services:
      - docker:dind
-     script: 
+    script: 
      - docker build -t registry.gitlab.com/otis-team/backend/service/merchant:latest ./service/merchant/
      - docker build -t registry.gitlab.com/otis-team/backend/service/user:latest ./service/user/
      - docker build -t registry.gitlab.com/otis-team/backend/service/transaction:latest ./service/transaction/
