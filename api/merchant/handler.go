@@ -271,7 +271,7 @@ func (e *Transactions) Get(ctx context.Context, req *protoAPI.Request, rsp *prot
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
 
-	// Ser JSON Body
+	// Set JSON Body
 	rsp.Body = string(body)
 
 	return nil

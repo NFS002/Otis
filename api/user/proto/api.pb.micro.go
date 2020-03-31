@@ -151,3 +151,56 @@ func (h *userHandler) Update(ctx context.Context, in *Request, out *Response) er
 func (h *userHandler) Delete(ctx context.Context, in *Request, out *Response) error {
 	return h.UserHandler.Delete(ctx, in, out)
 }
+
+// Client API for Transaction service
+
+type TransactionService interface {
+	Get(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
+}
+
+type transactionService struct {
+	c    client.Client
+	name string
+}
+
+func NewTransactionService(name string, c client.Client) TransactionService {
+	return &transactionService{
+		c:    c,
+		name: name,
+	}
+}
+
+func (c *transactionService) Get(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error) {
+	req := c.c.NewRequest(c.name, "Transaction.Get", in)
+	out := new(Response)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// Server API for Transaction service
+
+type TransactionHandler interface {
+	Get(context.Context, *Request, *Response) error
+}
+
+func RegisterTransactionHandler(s server.Server, hdlr TransactionHandler, opts ...server.HandlerOption) error {
+	type transaction interface {
+		Get(ctx context.Context, in *Request, out *Response) error
+	}
+	type Transaction struct {
+		transaction
+	}
+	h := &transactionHandler{hdlr}
+	return s.Handle(s.NewHandler(&Transaction{h}, opts...))
+}
+
+type transactionHandler struct {
+	TransactionHandler
+}
+
+func (h *transactionHandler) Get(ctx context.Context, in *Request, out *Response) error {
+	return h.TransactionHandler.Get(ctx, in, out)
+}
