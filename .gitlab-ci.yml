@@ -32,9 +32,9 @@ container_registry:
      - docker push registry.gitlab.com/otis-team/backend/service/user:latest
      - docker build -t registry.gitlab.com/otis-team/backend/service/transaction:latest ./service/transaction/
      - docker push registry.gitlab.com/otis-team/backend/service/transaction:latest
-     - docker build -t registry.gitlab.com/otis-team/backend/api/merchant ./api/merchant/
+     - docker build -t --build-arg gitlab_user=$CI_REGISTRY_USER --build_arg gitlab_token=$CI_REGISTRY_PASSWORD registry.gitlab.com/otis-team/backend/api/merchant:latest ./api/merchant/
      - docker push registry.gitlab.com/otis-team/backend/api/merchant:latest
-     - docker build -t registry.gitlab.com/otis-team/backend/api/user ./api/user/
+     - docker build -t --build-arg gitlab_user=$CI_REGISTRY_USER --build_arg gitlab_token=$CI_REGISTRY_PASSWORD registry.gitlab.com/otis-team/backend/api/user:latest ./api/user/
      - docker push registry.gitlab.com/otis-team/backend/api/user:latest
 
 
