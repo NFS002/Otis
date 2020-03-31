@@ -19,7 +19,7 @@ type User struct {
 	Client protoUser.UserServiceClient
 }
 
-// Transaction struct. All methods using this struct will be mapped to /user/transaction/<method>
+// Transactions struct. All methods using this struct will be mapped to /user/transaction/<method>
 type Transactions struct {
 	Client protoTransaction.TransactionService
 }
