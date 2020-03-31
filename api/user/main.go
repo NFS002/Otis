@@ -21,7 +21,7 @@ func main() {
 
 
 	userHandler := &User{ Client: userClient }
-	transactionHandler := &Transaction{ Client: transactionClient }
+	transactionHandler := &Transactions{ Client: transactionClient }
 
 
 	// Registering both API handlers

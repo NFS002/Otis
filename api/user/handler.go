@@ -20,7 +20,7 @@ type User struct {
 }
 
 // Transaction struct. All methods using this struct will be mapped to /user/transaction/<method>
-type Transaction struct {
+type Transactions struct {
 	Client protoTransaction.TransactionService
 }
 
@@ -243,8 +243,8 @@ func (e *User) Delete(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.
 	return nil
 }
 
-// Get method (Transaction.Get) is served by HTTP requests to /user/transaction/get?id=<user_id>.
-func (e *Transaction) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+// Get method (Transactions.Get) is served by HTTP requests to /user/transaction/get?id=<user_id>.
+func (e *Transactions) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
 	log.Print("Received User.Delete request")
 
 	if req.Method != "GET" {
