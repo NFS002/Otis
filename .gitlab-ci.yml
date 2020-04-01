@@ -55,8 +55,12 @@ lint:
 deploy:
     stage: deploy
     image: dtzar/helm-kubectl
+    only:
+     - master
+    before_script:
+     - apk add --no-cache curl jq python py-pip
+     - pip install awscli
     script:
      - export KUBECONFIG=$KUBECONFIG:./infrastructure/config-otis-backend
+     - aws eks --region eu-west-2 update-kubeconfig --name otis-backend
      - kubectl get svc
-     - kubectl apply -f service/merchant/deployment/deployment.yaml
-     
