@@ -6,6 +6,7 @@ variables:
 stages:
   - test
   - build
+  - deploy
 
 lint:
   stage: test
@@ -51,5 +52,14 @@ container_registry:
      - docker build -t registry.gitlab.com/otis-team/backend/api/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
      - docker push registry.gitlab.com/otis-team/backend/api/user:latest
 
-
+deploy:
+    stage: deploy
+    image: dtzar/helm-kubectl
+    script:
+     - kubectl config set-cluster k8s --server="${SERVER}"
+     - kubectl config set clusters.k8s.certificate-authority-data ${CERTIFICATE_AUTHORITY_DATA}
+     - kubectl config set-credentials gitlab --token="${USER_TOKEN}"
+     - kubectl config set-context default --cluster=k8s --user=gitlab
+     - kubectl config use-context default
+     - kubectl apply -f service/merchant/deployment.yaml
      
