@@ -64,3 +64,4 @@ deploy:
      - export KUBECONFIG=$KUBECONFIG:./infrastructure/config-otis-backend
      - aws eks --region eu-west-2 update-kubeconfig --name otis-backend
      - kubectl get svc
+     - kubectl kubectl apply -f ./service/merchant/deployment/deployment.yml
