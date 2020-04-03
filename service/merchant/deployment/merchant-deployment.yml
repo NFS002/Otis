@@ -1,14 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: default
   name: merchant-service
+  labels:
+    app: merchant-service
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      name: merchant-service
-      micro: service
+      app: merchant-service
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 33%
   template:
     metadata:
       labels:
@@ -16,13 +21,10 @@ spec:
     spec:
       containers:
         - name: merchant-service
+          image: registry.gitlab.com/otis-team/backend/service/merchant:latest
           command: [
             "/merchant-service",
-            "--server_address=0.0.0.0:8080",
-            "--broker_address=0.0.0.0:10001"
           ]
-          image: registry.gitlab.com/otis-team/backend/service/merchant
-          imagePullPolicy: Always
           ports:
             - containerPort: 8080
               name: merchant-port
@@ -41,10 +43,10 @@ spec:
           command: [
             "/health",
             "--health_address=0.0.0.0:8081",
-            "--server_name=greeter",
+            "--server_name=merchant-service",
             "--server_address=0.0.0.0:8080"
           ]
-          image: microhq/health:kubernetes
+          image: microhq/health
           livenessProbe:
             httpGet:
               path: /health
