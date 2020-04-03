@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: merchant-service
+  name: merchant-api
   labels:
-    app: merchant-service
+    app: merchant-api
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: merchant-service
+      app: merchant-api
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,17 +17,17 @@ spec:
   template:
     metadata:
       labels:
-        app: merchant-service
+        app: merchant-api
     spec:
       containers:
-        - name: merchant-service
+        - name: merchant-api
           image: registry.gitlab.com/otis-team/backend/service/merchant:latest
           command: [
-            "./merchant-service",
+            "./api-merchant",
           ]
           ports:
             - containerPort: 8080
-              name: merchant-port
+              name: merchantAPI-port
           env:
             - name: MICRO_SERVER_ADDRESS
               value: "0.0.0.0:8080"

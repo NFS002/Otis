@@ -66,3 +66,5 @@ deploy:
      - kubectl get svc
      - kubectl apply -f ./service/merchant/deployment/merchant-deployment.yml
      - kubectl apply -f ./service/merchant/deployment/merchant-service.yml
+     - kubectl apply -f ./api/merchant/deployment/merchantAPI-deployment.yml
+     - kubectl apply -f ./api/merchant/deployment/merchantAPI-service.yml
