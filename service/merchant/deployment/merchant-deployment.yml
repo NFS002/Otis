@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: default
-  name: merchant
+  name: merchant-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: merchants-ervice
+      name: merchant-service
       micro: service
   template:
     metadata:
@@ -15,7 +15,7 @@ spec:
         app: merchant-service
     spec:
       containers:
-        - name: merchant
+        - name: merchant-service
           command: [
             "/merchant-service",
             "--server_address=0.0.0.0:8080",
