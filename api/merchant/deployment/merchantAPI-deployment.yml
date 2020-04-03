@@ -27,7 +27,7 @@ spec:
           ]
           ports:
             - containerPort: 8080
-              name: merchantAPI-port
+              name: mAPI-port
           env:
             - name: MICRO_SERVER_ADDRESS
               value: "0.0.0.0:8080"
