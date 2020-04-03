@@ -5,6 +5,10 @@ metadata:
   name: merchant
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: merchants-ervice
+      micro: service
   template:
     metadata:
       labels:

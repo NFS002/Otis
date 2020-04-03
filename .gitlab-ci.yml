@@ -65,3 +65,4 @@ deploy:
      - aws eks --region eu-west-2 update-kubeconfig --name otis-backend
      - kubectl get svc
      - kubectl apply -f ./service/merchant/deployment/merchant-deployment.yml
+     - kubectl apply -f .service/merchant/deployment/merchant-service.yml
