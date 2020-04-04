@@ -3,6 +3,7 @@ module gitlab.com/otis-team/backend/service/user
 go 1.13
 
 require (
+	github.com/aws/aws-sdk-go v1.23.0
 	github.com/go-log/log v0.2.0 // indirect
 	github.com/golang/protobuf v1.3.5
 	github.com/micro/go-micro v1.18.0

@@ -10,7 +10,6 @@ service MerchantService {
 }
 
 // Base types
-
 message Merchant {
     string merchantID = 1;
     string name = 2;
