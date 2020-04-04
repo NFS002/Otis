@@ -6,7 +6,7 @@ import (
 
 	protoUser "gitlab.com/otis-team/backend/service/user/proto/user"
 	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
-	"log"
+	"log" 
 )
 
 func main() {
