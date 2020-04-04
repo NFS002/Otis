@@ -1,6 +1,6 @@
 package model
 
-import pb "gitlab.com/otis-team/backend/service/user/proto/merchant"
+import pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 
 //Merchant : struct reprents a merchant db resource
 type Merchant struct {
