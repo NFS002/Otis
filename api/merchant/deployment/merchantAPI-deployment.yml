@@ -19,11 +19,11 @@ spec:
       labels:
         app: merchant-api
     spec:
+      imagePullSecrets:
+        - name: my-registry
       containers:
         - name: merchant-api
           image: registry.gitlab.com/otis-team/backend/api/merchant:latest
-          imagePullSecrets:
-            - name: my-registry
           command: [
             "./api-merchant",
           ]
