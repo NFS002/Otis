@@ -23,7 +23,6 @@ func (c* DynamoClient) CreateTransaction(transaction *model.Transaction) (*model
 	return transaction, nil
 }
 
-// GetAllTransactiins : Returns all Transactions from the DB
 func (c* DynamoClient) GetAllTransactions() ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction")
@@ -36,8 +35,7 @@ func (c* DynamoClient) GetAllTransactions() ([]*model.Transaction, error) {
 	return transactions, err
 }
 
-// GetTransactionById : Returns the Transaction with the given ID from the DB
-func (c* DynamoClient) GetTransactionById(transactionId string) (*model.Transactions, error) {
+func (c* DynamoClient) GetTransactionById(transactionId string) (*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -54,7 +52,6 @@ func (c* DynamoClient) GetTransactionById(transactionId string) (*model.Transact
 	return transactions, err
 }
 
-// GetTransactionsByMerchantId : Returns all transactions made at the given merchant from the DB
 func (c *DynamoClient) GetTransactionsByMerchantId(merchantId string) ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
@@ -72,7 +69,6 @@ func (c *DynamoClient) GetTransactionsByMerchantId(merchantId string) ([]*model.
 	return transactions, err
 }
 
-// GetTransactionsByUserId : Retrieves all transactions made by the given user from the DB
 func (c *DynamoClient) GetTransactionsByUserId(userId string) ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
@@ -90,7 +86,6 @@ func (c *DynamoClient) GetTransactionsByUserId(userId string) ([]*model.Transact
 	return transactions, err
 }
 
-// DeleteTransaction : Deletes the transaction with the given ID
 func (c *DynamoClient) DeleteTransaction(transactionId string) error {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{

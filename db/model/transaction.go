@@ -1,6 +1,6 @@
 package model
 
-import pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+import pb "gitlab.com/otis-team/backend/service/user/proto/transaction"
 
 // Transaction struct represents a dynamodb transaction resource
 type Transaction struct {
