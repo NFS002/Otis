@@ -95,6 +95,8 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 	rsp.Body = string(body)
 
 	return nil
+
+	return nil
 }
 
 // Get method (Merchant.Get) is served by HTTP requests to /merchant/get. Full endpoint is /merchant/get?id=<merchant_id>.

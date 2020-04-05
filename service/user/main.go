@@ -1,26 +1,46 @@
 package main
 
 import (
+	"context"
+	"fmt"
+	user "gitlab.com/otis-team/backend/service/user/package"
 	"log"
-	client "gitlab.com/otis-team/backend/db/client"
+	"os"
+
 	"github.com/micro/go-micro"
 	pb "gitlab.com/otis-team/backend/service/user/proto/user"
+)
+
+const (
+	defaultHost = "datastore:27017"
 )
 
 func main() {
 	service := micro.NewService(
 		micro.Name("go.micro.service.user"),
 	)
+
 	service.Init()
 
-	dynamoClient = client.DynamoClient{}
-	dynamoClient.Init()
+	uri := os.Getenv("DB_HOST")
+	if uri == "" {
+		uri = defaultHost
+	}
 
-	handler := &Handler{dynamoClient}
+	client, err := user.CreateClient(context.Background(), uri, 0)
+	if err != nil {
+		log.Panic(err)
+	}
+	defer client.Disconnect(context.Background())
 
-	pb.RegisterUserServiceHandler(service.Server(), handler)
+	userCollection := client.Database("otis").Collection("user")
+
+	repository := &user.MongoRepository{userCollection}
+	h := &user.Handler{repository}
+
+	pb.RegisterUserServiceHandler(service.Server(), h)
 
 	if err := service.Run(); err != nil {
-		log.Println(err)
+		fmt.Println(err)
 	}
 }
