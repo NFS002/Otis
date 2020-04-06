@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/micro/go-micro"
-	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
+	proto "gitlab.com/otis-team/backend/api/merchant/proto"
 
-	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	merchantService "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	transactionService "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
 )
 
@@ -22,21 +22,21 @@ func main() {
 
 	service.Init()
 
-	merchantClient := protoMerchant.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
+	merchantClient := merchantService.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
 	
-	transactionClient := protoTransaction.NewTransactionService("go.micro.service.transaction", service.Client())
+	transactionClient := transactionService.NewTransactionService("go.micro.service.transaction", service.Client())
 
 	merchantHandler := &Merchant{ MerchantClient: merchantClient }
 	transactionHandler := &Transactions{ TransactionClient: transactionClient }
 
 	// Registering both API handlers
 
-	merchantErr := protoAPI.RegisterMerchantHandler( service.Server(), merchantHandler )
+	merchantErr := proto.RegisterMerchantHandler( service.Server(), merchantHandler )
 	if merchantErr != nil {
 		log.Fatal(merchantErr)
 	}
 
-	transactionErr := protoAPI.RegisterTransactionHandler(service.Server(), transactionHandler )
+	transactionErr := proto.RegisterTransactionHandler(service.Server(), transactionHandler )
 	if transactionErr != nil {
 		log.Fatal(transactionErr)
 	}

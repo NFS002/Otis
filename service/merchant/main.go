@@ -1,11 +1,10 @@
 	package main
 
 import (
-	"log"
 	"github.com/micro/go-micro"
-	client "gitlab.com/otis-team/backend/db/client"
+	"gitlab.com/otis-team/backend/db/client"
 	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-
+	"log"
 )
 
 func main() {

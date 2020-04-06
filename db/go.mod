@@ -11,10 +11,10 @@ require (
 )
 
 replace (
-	gitlab.com/otis-team/backend/api/merchant => /Usets/noah/backend/api/user
-	gitlab.com/otis-team/backend/api/user => /Users/noah/backend/api/user
-	gitlab.com/otis-team/backend/db => /Users/noah/backend/db
-	gitlab.com/otis-team/backend/service/merchant => /Users/noah/backend/service/merchant
-	gitlab.com/otis-team/backend/service/transaction => /Users/noah/backend/service/transaction
-	gitlab.com/otis-team/backend/service/user => /Users/noah/backend/service/user
+	gitlab.com/otis-team/backend/api/merchant => /Users/noah/Otis/backend/api/merchant/
+	gitlab.com/otis-team/backend/api/user => /Users/noah/Otis/backend/api/user
+	gitlab.com/otis-team/backend/db => /Users/noah/Otis/backend/db
+	gitlab.com/otis-team/backend/service/merchant => /Users/noah/Otis/backend/service/merchant
+	gitlab.com/otis-team/backend/service/transaction => /Users/noah/Otis/backend/service/transaction
+	gitlab.com/otis-team/backend/service/user => /Users/noah/Otis/backend/service/user
 )
