@@ -2,7 +2,6 @@ package model
 
 // PartnerMerchant : Struct is an in-memory representation of a merchant who is part of the Otis platform
 // PartnerMerchant resources retrieved from the DB are serialized to an instance of this struct
-
 type PartnerMerchant struct {
 	Schema      string `json:"$schema"`
 	ID          string `json:"$id"`
