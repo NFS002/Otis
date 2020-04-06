@@ -37,7 +37,7 @@ func (c* DynamoClient) GetAllMerchants() ([]*model.Merchant, error) {
 	return merchants, err
 }
 
-// GetMerchantById : Retrieves the Merchant from the DB with the given ID
+// GetMerchantByID : Retrieves the Merchant from the DB with the given ID
 func (c* DynamoClient) GetMerchantByID(merchantID string) (model.Merchants, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),

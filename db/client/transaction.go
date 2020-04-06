@@ -73,7 +73,7 @@ func (c *DynamoClient) GetTransactionsByMerchantID(merchantID string) ([]*model.
 	return transactions, err
 }
 
-// GetTransactionsByUserId : Retrieves all transactions made by the given user from the DB
+// GetTransactionsByUserID : Retrieves all transactions made by the given user from the DB
 func (c *DynamoClient) GetTransactionsByUserID(userID string) ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),

@@ -39,7 +39,7 @@ func (c *DynamoClient) GetAllUsers() (*model.Users, error) {
 }
 
 
-// GetUserBYID : Retrieves a single user from the db
+// GetUserByID : Retrieves a single user from the db
 func (c* DynamoClient) GetUserByID(userID string) (*model.Users, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
