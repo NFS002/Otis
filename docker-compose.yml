@@ -19,8 +19,8 @@ services:
       context: ./api/merchant/
       dockerfile: Dockerfile
       args:
-        - gitlab_user=otis_cj
-        - gitlab_token=1fruBCF2_5aLxaF3NBcf
+        - gitlab_user=gitlab+deploy-token-154792
+        - gitlab_token=ZbKzbXzeapzLsNkxomxx
     depends_on:
       - api_gateway
     ports:
@@ -28,6 +28,7 @@ services:
     networks:
       - api-gateway-tier
       - api-merchant-tier
+      - api-transaction-tiere
 
   api_user:
     restart: always
@@ -36,8 +37,8 @@ services:
       context: ./api/user/
       dockerfile: Dockerfile
       args:
-        - gitlab_user=otis_cj
-        - gitlab_token=1fruBCF2_5aLxaF3NBcf
+        - gitlab_user=gitlab+deploy-token-154792
+        - gitlab_token=ZbKzbXzeapzLsNkxomxx
     depends_on:
       - api_gateway
     ports:
@@ -45,78 +46,57 @@ services:
     networks:
       - api-gateway-tier
       - api-user-tier
+      - api-transaction-tier
 
   service_merchant:
     restart: always
     container_name: "go.micro.service.merchant"
-    build: ./service/merchant/
+    build:
+      context: ./service/merchant/
+      dockerfile: Dockerfile
+      args:
+        - gitlab_user=gitlab+deploy-token-154792
+        - gitlab_token=ZbKzbXzeapzLsNkxomxx
     ports:
       - 50053:50053
-    links:
-      - datastore
     networks:
       - api-gateway-tier
       - api-merchant-tier
-      - service-tier
-    depends_on:
-      - datastore
-    environment:
-      DB_HOST: "mongodb://datastore:27017"
 
   service_user:
     restart: always
     container_name: "go.micro.service.user"
-    build: ./service/user/
+    build:
+      context: ./service/user/
+      dockerfile: Dockerfile
+      args:
+        - gitlab_user=gitlab+deploy-token-154792
+        - gitlab_token=ZbKzbXzeapzLsNkxomxx
     ports:
       - 50054:50054
-    links:
-      - datastore
     networks:
       - api-gateway-tier
       - api-user-tier
-      - service-tier
-    depends_on:
-      - datastore
-    environment:
-      DB_HOST: "mongodb://datastore:27017"
 
   service_transaction:
     restart: always
     container_name: "go.micro.service.transaction"
-    build: ./service/transaction/
+    build:
+      context: ./service/transaction/
+      dockerfile: Dockerfile
+      args:
+        - gitlab_user=gitlab+deploy-token-154792
+        - gitlab_token=ZbKzbXzeapzLsNkxomxx
     ports:
       - 50055:50055
-    links:
-      - datastore
     networks:
       - api-gateway-tier
-      - api-user-tier
-      - service-tier
-    depends_on:
-      - datastore
-    environment:
-      DB_HOST: "mongodb://datastore:27017"
-
-  datastore:
-    image: mongo:latest
-    container_name: "datastore"
-    environment:
-      - MONGO_DATA_DIR=/data/db
-      - MONG_LOG_DIR=/dev/null
-    volumes:
-      - ./data/db:/data/db
-    networks:
-      - service-tier
-    ports:
-      - 27017:27017
-    command: mongod --logpath=/dev/null
+      - api-transaction-tier
 
 networks:
   api-gateway-tier:
     name: api-gateway-tier
   api-merchant-tier:
     name: api-merchant-tier
-  service-tier:
-    name: service-tier
   api-user-tier:
     name: api-user-tier
