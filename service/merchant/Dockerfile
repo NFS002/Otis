@@ -6,9 +6,19 @@ RUN apk update && apk upgrade && \
 RUN mkdir /app
 WORKDIR /app
 
+ARG gitlab_user
+ENV gitlab_user=$gitlab_user
+ARG gitlab_token
+ENV gitlab_token=$gitlab_token
+
 ENV GO111MODULE=on
 
 COPY . .
+
+RUN git config \
+    --global \
+    url."https://${gitlab_user}:${gitlab_token}@gitlab.com/".insteadOf \
+    "https://gitlab.com/"
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o merchant-service
 
