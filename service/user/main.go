@@ -14,7 +14,10 @@ func main() {
 	service.Init()
 
 	dynamoClient := client.DynamoClient{}
-	dynamoClient.Init()
+	err := dynamoClient.Init()
+	if err != nil {
+		log.Panic(err)
+	}
 
 	handler := &Handler{dynamoClient}
 

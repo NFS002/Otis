@@ -46,7 +46,7 @@ func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 		transactions, err = h.Client.GetAllTransactions()
 	}
 
-	res.Transactions = model.TransactionCollecionToPb(transactions)
+	res.Transactions = model.TransactionCollectionToProtobuf(transactions)
 	res.Executed = true
 	return err
 }

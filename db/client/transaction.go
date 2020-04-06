@@ -38,7 +38,7 @@ func (c* DynamoClient) GetAllTransactions() ([]*model.Transaction, error) {
 }
 
 // GetTransactionByID : Returns the Transaction with the given ID from the DB
-func (c* DynamoClient) GetTransactionByID(transactionId string) (*model.Transactions, error) {
+func (c* DynamoClient) GetTransactionByID(transactionId string) (model.Transactions, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -52,7 +52,7 @@ func (c* DynamoClient) GetTransactionByID(transactionId string) (*model.Transact
 	}
 	transactions := model.Transactions{}
 	err = dynamodbattribute.UnmarshalMap(result.Item,&transactions)
-	return &transactions, err
+	return transactions, err
 }
 
 // GetTransactionsByMerchantID : Returns all transactions made at the given merchant from the DB

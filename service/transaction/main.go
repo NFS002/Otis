@@ -21,7 +21,10 @@ func main() {
 
 	handler := &Handler{dynamoClient}
 
-	pb.RegisterTransactionServiceHandler(service.Server(), handler)
+	err = pb.RegisterTransactionServiceHandler(service.Server(), handler)
+	if err != nil {
+		log.Panic(err)
+	}
 
 	if err := service.Run(); err != nil {
 		log.Println(err)

@@ -17,6 +17,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/satori/go.uuid v1.2.0
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20200122045848-3419fae592fc // indirect
+	gitlab.com/otis-team/backend/db v0.0.0-00010101000000-000000000000 // indirect
 	go.mongodb.org/mongo-driver v1.3.1
 	go.uber.org/zap v1.13.0 // indirect
 	golang.org/x/lint v0.0.0-20191125180803-fdd1cda4f05f // indirect
@@ -28,12 +29,12 @@ require (
 )
 
 replace (
-    gitlab.com/otis-team/backend/db => /Users/noah/backend/db
-    gitlab.com/otis-team/backend/api/user => /Users/noah/backend/api/user
-    gitlab.com/otis-team/backend/api/merchant => /Usets/noah/backend/api/user
-    gitlab.com/otis-team/backend/service/user => /Users/noah/backend/service/user
-    gitlab.com/otis-team/backend/service/transaction => /Users/noah/backend/service/transaction
-    gitlab.com/otis-team/backend/service/merchant => /Users/noah/backend/service/merchant
+	gitlab.com/otis-team/backend/api/merchant => /Usets/noah/backend/api/user
+	gitlab.com/otis-team/backend/api/user => /Users/noah/backend/api/user
+	gitlab.com/otis-team/backend/db => /Users/noah/backend/db
+	gitlab.com/otis-team/backend/service/merchant => /Users/noah/backend/service/merchant
+	gitlab.com/otis-team/backend/service/transaction => /Users/noah/backend/service/transaction
+	gitlab.com/otis-team/backend/service/user => /Users/noah/backend/service/user
 )
 
 replace github.com/coreos/etcd v3.3.17+incompatible => github.com/coreos/etcd v3.3.4+incompatible

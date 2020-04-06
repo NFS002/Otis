@@ -4,40 +4,37 @@ import (
 	"context"
 	"encoding/json"
 	"github.com/micro/go-micro/errors"
-	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
-
-	merchant "gitlab.com/otis-team/backend/service/merchant/package"
-	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-
-	transaction "gitlab.com/otis-team/backend/service/transaction/package"
-	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	proto "gitlab.com/otis-team/backend/api/merchant/proto"
+	"gitlab.com/otis-team/backend/db/model"
+	merchantService "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	transactionService "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
 )
 
 // Merchant struct. All methods using this struct will be mapped to /merchant/<method>.
 type Merchant struct {
-	MerchantClient protoMerchant.MerchantServiceClient
+	MerchantClient merchantService.MerchantServiceClient
 }
 // Transactions struct. All methods using this struct are mapped to /merchant/transaction/<method>
 type Transactions struct {
-	TransactionClient protoTransaction.TransactionService
+	TransactionClient transactionService.TransactionService
 }
 
 // CreatedResponse maps CreateResponse protobuf message.
 type CreatedResponse struct {
 	Created bool `json:"created"`
-	Merchant *merchant.Merchant `json:"merchantID"`
+	Merchant *model.Merchant `json:"merchantID"`
 }
 
 // GetResponse maps CreateResponse protobuf message.
 type GetResponse struct {
-	Merchants []*merchant.Merchant `json:"merchants"`
+	Merchants []*model.Merchant `json:"merchants"`
 }
 
 // UpdateResponse maps UpdateResponse protobuf message.
 type UpdateResponse struct{
 	Updated bool `json:"update"`
-	Merchant *merchant.Merchant `json:"merchant"`
+	Merchant *model.Merchant `json:"merchant"`
 }
 
 // DeleteResponse maps DeleteResponse protobuf message.
@@ -47,12 +44,12 @@ type DeleteResponse struct{
 
 // TransactionResponse maps TransactionResponse protobuf message.
 type TransactionResponse struct {
-	Transactions []*transaction.Transaction `json:"transactions"`
+	Transactions []*model.Transaction `json:"transactions"`
 }
 
 
 // Create method (Merchant.Create) is served by HTTP requests to /merchant/create.
-func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *Merchant) Create(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
 	log.Print("Received Merchant.Create request")
 
 	if req.Method != "POST" {
@@ -68,7 +65,7 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var newMerchant *protoMerchant.Merchant
+	var newMerchant *merchantService.Merchant
 	err := json.Unmarshal([]byte(req.Body), &newMerchant)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
@@ -83,7 +80,7 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 
 	createResponse := CreatedResponse{
 		Created:   r.Created,
-		Merchant: merchant.MarshalMerchant(r.Merchant),
+		Merchant: model.ProtobufToMerchant(r.Merchant),
 	}
 
 	body, err := json.Marshal(createResponse)
@@ -98,7 +95,7 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Get method (Merchant.Get) is served by HTTP requests to /merchant/get. Full endpoint is /merchant/get?id=<merchant_id>.
-func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *Merchant) Get(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
 	log.Print("Received Merchant.Get request")
 
 	if req.Method != "GET" {
@@ -110,7 +107,7 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.MerchantClient.GetMerchant(ctx, &protoMerchant.GetRequest{MerchantID: id.Values[0]}) // Seems kinda janky
+	r, err := e.MerchantClient.GetMerchant(ctx, &merchantService.GetRequest{MerchantID: id.Values[0]}) // Seems kinda janky
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -118,7 +115,7 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 	rsp.StatusCode = 200
 
 	getResponse := GetResponse{
-		Merchants: merchant.MarshalMerchantCollection(r.Merchants),
+		Merchants: model.ProtobufToMerchantCollection(r.Merchants),
 	}
 
 	body, err := json.Marshal(getResponse)
@@ -134,14 +131,14 @@ func (e *Merchant) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI
 }
 
 // GetAll method (Merchant.GetAll) is served by HTTP requests to /merchant/get-all.
-func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *Merchant) GetAll(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
 	log.Print("Received Merchant.GetAll request")
 
 	if req.Method != "GET" {
 		return errors.BadRequest("go.micro.api.merchant", "This method requires GET")
 	}
 
-	r, err := e.MerchantClient.GetMerchant(ctx, &protoMerchant.GetRequest{})
+	r, err := e.MerchantClient.GetMerchant(ctx, &merchantService.GetRequest{})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -149,7 +146,7 @@ func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *proto
 	rsp.StatusCode = 200
 
 	getResponse := GetResponse{
-		Merchants: merchant.MarshalMerchantCollection(r.Merchants),
+		Merchants: model.ProtobufToMerchantCollection(r.Merchants),
 	}
 
 	body, err := json.Marshal(getResponse)
@@ -164,7 +161,7 @@ func (e *Merchant) GetAll(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Update method (Merchant.Update) is served by HTTP requests to /merchant/update.
-func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *Merchant) Update(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
 	log.Print("Received Merchant.Update request")
 
 	if req.Method != "POST" {
@@ -180,13 +177,13 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var updatedMerchant *merchant.Merchant
+	var updatedMerchant *model.Merchant
 	err := json.Unmarshal([]byte(req.Body), &updatedMerchant)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
 	}
 
-	r, err := e.MerchantClient.UpdateMerchant(ctx, merchant.UnmarshalMerchant(updatedMerchant))
+	r, err := e.MerchantClient.UpdateMerchant(ctx, model.MerchantToProtobuf(updatedMerchant))
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
@@ -195,7 +192,7 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 
 	updateResponse := UpdateResponse{
 		Updated:  r.Updated,
-		Merchant: merchant.MarshalMerchant(r.Merchant),
+		Merchant: model.ProtobufToMerchant(r.Merchant),
 	}
 
 	body, err := json.Marshal(updateResponse)
@@ -210,7 +207,7 @@ func (e *Merchant) Update(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Delete : Method (Merchant.Delete) is served by HTTP requests to /merchant/delete. Full endpoint is /merchant/delete?id=<merchant_id>.
-func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *Merchant) Delete(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
 	log.Print("Received Merchant.Delete request")
 
 	if req.Method != "GET" {
@@ -222,7 +219,7 @@ func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.MerchantClient.DeleteMerchant(ctx, &protoMerchant.DeleteRequest{MerchantID: merchantID.Values[0]})
+	r, err := e.MerchantClient.DeleteMerchant(ctx, &merchantService.DeleteRequest{MerchantID: merchantID.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
@@ -243,7 +240,7 @@ func (e *Merchant) Delete(ctx context.Context, req *protoAPI.Request, rsp *proto
 }
 
 // Get : Method (Transactions.Get) is served by HTTP requests to /merchant/transactions/get?id=<merchant_id> */
-func (e *Transactions) Get(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+func (e *Transactions) Get(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
 	log.Print("Received Merchant.Transactions request")
 
 	if req.Method != "GET" {
@@ -255,14 +252,14 @@ func (e *Transactions) Get(ctx context.Context, req *protoAPI.Request, rsp *prot
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.TransactionClient.GetTransactions(ctx, &protoTransaction.IDRequest{MerchantID: merchantID.Values[0]})
+	r, err := e.TransactionClient.GetTransactions(ctx, &transactionService.IDRequest{MerchantID: merchantID.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
 
 	rsp.StatusCode = 200
 
-	transactionResponse := TransactionResponse{Transactions: transaction.MarshalTransactionCollection(r.Transactions)}
+	transactionResponse := TransactionResponse{Transactions: model.ProtobufToTransactionCollection(r.Transactions)}
 
 	body, err := json.Marshal(transactionResponse)
 	if err != nil {

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"log"
-	"github.com/micro/go-micro"
-	client "gitlab.com/otis-team/backend/db/client"
-	model "gitlab.com/otis-team/backend/db/merchant"
+	"context"
+	"gitlab.com/otis-team/backend/db/client"
+	"gitlab.com/otis-team/backend/db/model"
 	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	"log"
 )
 
 
@@ -19,7 +19,7 @@ type Handler struct {
 func (h *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.CreateResponse) error {
 	log.Print("CreateMerchant handler fired!")
 	merchant := model.ProtobufToMerchant(req)
-	_, err := s.Client.Create(merchant)
+	_, err := h.Client.CreateMerchant(merchant)
 	res.Created = (err == nil)
 	res.Merchant = req
 	return err
@@ -29,7 +29,7 @@ func (h *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 func (h *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
 	log.Print("GetMerchant handler fired!")
 
-	var merchants []*Merchant
+	var merchants []*model.Merchant
 	var err error
 
 	if len(req.MerchantID) == 0 {
@@ -47,8 +47,8 @@ func (h *Handler) UpdateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 	log.Print("UpdateMerchant handler fired!")
 	merchant := model.ProtobufToMerchant(req)
 	/* UpdateMerchant behaves the same as CreateMerchant if the primary key is given */
-	err := s.Client.CreateMerchant(merchant)
-	res.Updated = (err == nil)
+	_, err := h.Client.CreateMerchant(merchant)
+	res.Updated = err == nil
 	res.Merchant = req
 	return err
 }
@@ -56,7 +56,7 @@ func (h *Handler) UpdateMerchant(ctx context.Context, req *pb.Merchant, res *pb.
 // DeleteMerchant handles gRPC requests to delete a new merchant from the DB
 func (h *Handler) DeleteMerchant(ctx context.Context, req *pb.DeleteRequest, res *pb.DeleteResponse) error {
 	log.Print("DeleteMerchant handler fired!")
-	err := h.Client.Delete(req.MerchantID)
-	res.Deleted = (err == nil)
+	err := h.Client.DeleteMerchant(req.MerchantID)
+	res.Deleted = err == nil
 	return err
 }
