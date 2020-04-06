@@ -36,7 +36,7 @@ func (h *Handler) GetUser(ctx context.Context, req *pb.GetRequest, res *pb.GetRe
 	if len(req.UserID) == 0 {
 		users, err = h.Client.GetAllUsers()
 	} else {
-		users, err = h.Client.GetUserById(req.UserID)
+		users, err = h.Client.GetUserByID(req.UserID)
 	}
 	if err != nil {
 		log.Println(err.Error())

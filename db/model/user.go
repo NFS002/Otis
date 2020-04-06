@@ -90,7 +90,7 @@ func ProtobufToAccountCollection(accounts []*pb.Account) []*Account {
 	return Collection
 }
 
-// AccountCollectionToProtobufCollection : Converts slice of Account structs to slice of Account protobuf messages
+// AccountCollectionToProtobuf : Converts slice of Account structs to slice of Account protobuf messages
 func AccountCollectionToProtobuf(accounts []*Account) []*pb.Account {
 	Collection := make([]*pb.Account, 0)
 	for _, account := range accounts {

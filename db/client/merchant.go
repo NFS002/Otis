@@ -38,12 +38,12 @@ func (c* DynamoClient) GetAllMerchants() ([]*model.Merchant, error) {
 }
 
 // GetMerchantById : Retrieves the Merchant from the DB with the given ID
-func (c* DynamoClient) GetMerchantById(merchantId string) (model.Merchants, error) {
+func (c* DynamoClient) GetMerchantByID(merchantID string) (model.Merchants, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {
-				S: aws.String(merchantId),
+				S: aws.String(merchantID),
 			},
 		},
 	})
@@ -62,12 +62,12 @@ func (c* DynamoClient) UpdateMerchant(merchant *model.Merchant) (*model.Merchant
 	return nil, nil
 }
 
-// Delete Merchant : Deletes a merchant with the given ID from the DB
-func (c* DynamoClient) DeleteMerchant(merchantId string) (error) {
+// DeleteMerchant : Deletes a merchant with the given ID from the DB
+func (c* DynamoClient) DeleteMerchant(merchantID string) (error) {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {
-				S: aws.String(merchantId),
+				S: aws.String(merchantID),
 			},
 		},
 		TableName: aws.String("Merchant"),

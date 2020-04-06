@@ -39,8 +39,8 @@ func (c *DynamoClient) GetAllUsers() (*model.Users, error) {
 }
 
 
-// GetUser : Retrieves a single user from the db
-func (c* DynamoClient) GetUserById(userID string) (*model.Users, error) {
+// GetUserBYID : Retrieves a single user from the db
+func (c* DynamoClient) GetUserByID(userID string) (*model.Users, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -58,12 +58,13 @@ func (c* DynamoClient) GetUserById(userID string) (*model.Users, error) {
 }
 
 
-// UpdateUser : Updates a user with the given id
-func (c* DynamoClient) UpdateUserById(userID string) (*model.User, error) {
+// UpdateUser : Not implemented
+func (c* DynamoClient) UpdateUser(user *model.User) (*model.User, error) {
 	/* Deprecated, call CreateUser instead */
 	return nil, nil
 }
 
+// DeleteUser : Deletes the user with the given ID from the DB
 func (c* DynamoClient) DeleteUser(userID string) error {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{

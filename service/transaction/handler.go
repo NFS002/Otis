@@ -41,7 +41,7 @@ func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 	} else if len(mID) > 0 {
 		transactions, err = h.Client.GetTransactionsByMerchantID(mID)
 	} else if len(uID) > 0 {
-		transactions, err = h.Client.GetTransactionsByUserId(uID)
+		transactions, err = h.Client.GetTransactionsByUserID(uID)
 	} else {
 		transactions, err = h.Client.GetAllTransactions()
 	}
@@ -51,7 +51,7 @@ func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 	return err
 }
 
-// DeleteTransaction : Handles grpc requests to delete transactions in the DB
+// DeleteTransactions : Handles grpc requests to delete transactions in the DB
 func (h *Handler) DeleteTransactions(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
 	log.Print("DeleteTransactions handler fired!")
 	err := h.Client.DeleteTransaction(req.TransactionID)

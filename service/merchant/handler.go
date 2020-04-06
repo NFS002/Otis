@@ -35,7 +35,7 @@ func (h *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.G
 	if len(req.MerchantID) == 0 {
 		merchants, err = h.Client.GetAllMerchants()
 	} else {
-		merchants, err = h.Client.GetMerchantById(req.MerchantID)
+		merchants, err = h.Client.GetMerchantByID(req.MerchantID)
 	}
 
 	res.Merchants = model.MerchantCollectionToProtobuf(merchants)

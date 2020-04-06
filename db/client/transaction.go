@@ -24,7 +24,7 @@ func (c* DynamoClient) CreateTransaction(transaction *model.Transaction) (*model
 	return transaction, nil
 }
 
-// GetAllTransactiins : Returns all Transactions from the DB
+// GetAllTransactions : Returns all Transactions from the DB
 func (c* DynamoClient) GetAllTransactions() ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
@@ -38,12 +38,12 @@ func (c* DynamoClient) GetAllTransactions() ([]*model.Transaction, error) {
 }
 
 // GetTransactionByID : Returns the Transaction with the given ID from the DB
-func (c* DynamoClient) GetTransactionByID(transactionId string) (model.Transactions, error) {
+func (c* DynamoClient) GetTransactionByID(transactionID string) (model.Transactions, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"transaction_id": {
-				S: aws.String(transactionId),
+				S: aws.String(transactionID),
 			},
 		},
 	})
@@ -56,12 +56,12 @@ func (c* DynamoClient) GetTransactionByID(transactionId string) (model.Transacti
 }
 
 // GetTransactionsByMerchantID : Returns all transactions made at the given merchant from the DB
-func (c *DynamoClient) GetTransactionsByMerchantID(merchantId string) ([]*model.Transaction, error) {
+func (c *DynamoClient) GetTransactionsByMerchantID(merchantID string) ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {
-				S: aws.String(merchantId),
+				S: aws.String(merchantID),
 			},
 		},
 	})
@@ -74,12 +74,12 @@ func (c *DynamoClient) GetTransactionsByMerchantID(merchantId string) ([]*model.
 }
 
 // GetTransactionsByUserId : Retrieves all transactions made by the given user from the DB
-func (c *DynamoClient) GetTransactionsByUserId(userId string) ([]*model.Transaction, error) {
+func (c *DynamoClient) GetTransactionsByUserID(userID string) ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"user_id": {
-				S: aws.String(userId),
+				S: aws.String(userID),
 			},
 		},
 	})
@@ -92,11 +92,11 @@ func (c *DynamoClient) GetTransactionsByUserId(userId string) ([]*model.Transact
 }
 
 // DeleteTransaction : Deletes the transaction with the given ID
-func (c *DynamoClient) DeleteTransaction(transactionId string) error {
+func (c *DynamoClient) DeleteTransaction(transactionID string) error {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"transaction_id": {
-				S: aws.String(transactionId),
+				S: aws.String(transactionID),
 			},
 		},
 		TableName: aws.String("User"),
