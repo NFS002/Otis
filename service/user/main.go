@@ -1,10 +1,10 @@
 package main
 
 import (
-	"log"
-	client "gitlab.com/otis-team/backend/db/client"
 	"github.com/micro/go-micro"
+	"gitlab.com/otis-team/backend/db/client"
 	pb "gitlab.com/otis-team/backend/service/user/proto/user"
+	"log"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	)
 	service.Init()
 
-	dynamoClient = client.DynamoClient{}
+	dynamoClient := client.DynamoClient{}
 	dynamoClient.Init()
 
 	handler := &Handler{dynamoClient}

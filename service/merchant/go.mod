@@ -29,4 +29,11 @@ require (
 	google.golang.org/grpc v1.26.0 // indirect
 )
 
-replace github.com/coreos/etcd v3.3.17+incompatible => github.com/coreos/etcd v3.3.4+incompatible
+replace (
+    gitlab.com/otis-team/backend/db => /Users/noah/backend/db
+    gitlab.com/otis-team/backend/api/user => /Users/noah/backend/api/user
+    gitlab.com/otis-team/backend/api/merchant => /Usets/noah/backend/api/user
+    gitlab.com/otis-team/backend/service/user => /Users/noah/backend/service/user
+    gitlab.com/otis-team/backend/service/transaction => /Users/noah/backend/service/transaction
+    gitlab.com/otis-team/backend/service/merchant => /Users/noah/backend/service/merchant
+)

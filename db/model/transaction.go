@@ -16,9 +16,9 @@ type Transaction struct {
 type Transactions []*Transaction
 
 // ProtobufToTransaction : Converts a protobuf transaction message to Transaction struct
-func ProtobufToTransaction(transaction *pb.Transaction) Transaction  {
+func ProtobufToTransaction(transaction *pb.Transaction) *Transaction  {
 	return &Transaction{
-		TransactionID: 	transaction.TransactionID
+		TransactionID: 	transaction.TransactionID,
 		UserID:     	transaction.UserID,
 		MerchantID: 	transaction.MerchantID,
 		StoreID:  		transaction.StoreID,
@@ -30,16 +30,16 @@ func ProtobufToTransaction(transaction *pb.Transaction) Transaction  {
 // ProtobufToTransactionCollection : Converts a protobuf message to a collection of Transaction structs
 func ProtobufToTransactionCollection(transactions []*pb.Transaction) []*Transaction  {
 	Collection := make([]*Transaction, 0)
-	for _, transaction := range users {
+	for _, transaction := range transactions {
 		Collection = append(Collection, ProtobufToTransaction(transaction))
 	}
 	return Collection
 }
 
 // TransactionToProtobuf : Converts a Transaction struct into a protobuf message
-func TransactionToProtobuf(transaction Transaction) *pb.Transaction {
+func TransactionToProtobuf(transaction *Transaction) *pb.Transaction {
 	return &pb.Transaction{
-		TransactionID:	transaction.TransactionID
+		TransactionID:	transaction.TransactionID,
 		UserID:     	transaction.UserID,
 		MerchantID: 	transaction.MerchantID,
 		StoreID:  		transaction.StoreID,
@@ -48,11 +48,12 @@ func TransactionToProtobuf(transaction Transaction) *pb.Transaction {
 	}
 }
 
-// TransactionCollectionToProtobuf : Converts a collection of 
-func TransactionCollectionToProtobuf(transactions []*pb.Transaction) []*Transaction {
+// TransactionCollectionToProtobuf : Converts a collection of Transaction structs to a protobuf message
+func TransactionCollectionToProtobuf(transactions []*Transaction) []*pb.Transaction {
 	Collection := make([]*pb.Transaction, 0)
-	for _, transaction := range users {
-		Collection = append(Collection, TransactionToProtobuf(transaction))
+	for _, transaction := range transactions {
+		t := TransactionToProtobuf(transaction)
+		Collection = append(Collection, t)
 	}
 	return Collection
 }

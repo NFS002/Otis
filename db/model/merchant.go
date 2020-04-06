@@ -13,6 +13,9 @@ type Merchant struct {
 	Rate float32 `json:"rate" dybamodbav:"rate"`
 }
 
+// Merchants represents a slice of Merchant strucrs
+type Merchants []*Merchant
+
 // Location struct maps a tag protobuf message to a db resource
 type Location struct {
 	Location string `json:"location" dybamodbav:"location"`
@@ -30,7 +33,7 @@ type Tag struct {
 type Tags []*Tag
 
 // ProtobufToMerchant : Converts a protobuf merchant message to db merchant resource
-func ProtobufToMerchant(merchant *pb.Merchant) Merchant {
+func ProtobufToMerchant(merchant *pb.Merchant) *Merchant {
 	locations := ProtobufToLocationCollection(merchant.Locations)
 	tags := ProtobufToTagCollection(merchant.Tags)
 
@@ -46,7 +49,7 @@ func ProtobufToMerchant(merchant *pb.Merchant) Merchant {
 }
 
 // ProtobufToMerchantCollection : Converts a collection of protobuf merchant messages to db merchant resource
-func ProtobufToMerchantCollection(merchant []*pb.Merchant) []*Merchant {
+func ProtobufToMerchantCollection(merchants []*pb.Merchant) []*Merchant {
 	Collection := make([]*Merchant, 0)
 	for _, merchant := range merchants {
 		Collection = append(Collection, ProtobufToMerchant(merchant))
@@ -55,14 +58,14 @@ func ProtobufToMerchantCollection(merchant []*pb.Merchant) []*Merchant {
 }
 
 // ProtobufToLocation : Converts a protobuf location message to a db resource
-func ProtobufToLocation(location *pb.Location) Location {
+func ProtobufToLocation(location *pb.Location) *Location {
 	return &Location{
 		Location: location.Location,
 	}
 }
 
 // ProtobufToLocationCollection : Converts a protobuf location message to a collection of db resources
-func ProtobufToLocationCollection(location []*pb.Location) []*Location {
+func ProtobufToLocationCollection(locations []*pb.Location) []*Location {
 	Collection := make([]*Location, 0)
 	for _, location := range locations {
 		Collection = append(Collection, ProtobufToLocation(location))
@@ -71,14 +74,14 @@ func ProtobufToLocationCollection(location []*pb.Location) []*Location {
 }
 
 // ProtobufToTag : Converts a protobuf tag message to a db resource
-func ProtobufToTag(tag *pb.Tag) Tag {
+func ProtobufToTag(tag *pb.Tag) *Tag {
 	return &Tag {
 		Tag: tag.Tag,
 	}
 }
 
 // ProtobufToTagCollection : Converts a protobuf tag message to a collection of db resources
-func ProtobufToTagCollection(tag []*pb.Tag) []*Tag {
+func ProtobufToTagCollection(tags []*pb.Tag) []*Tag {
 	Collection := make([]*Tag, 0)
 	for _, tag := range tags {
 		Collection = append(Collection, ProtobufToTag(tag))
@@ -87,9 +90,9 @@ func ProtobufToTagCollection(tag []*pb.Tag) []*Tag {
 }
 
 // MerchantToProtobuf : Converts a merchant db resource to a protobuf message
-func MerchantToProtobuf(merchant Merchant) *pb.Merchant {
-	locations := UnmarshalLocationCollection(merchant.Locations)
-	tags := UnmarshalTagCollection(merchant.Tags)
+func MerchantToProtobuf(merchant *Merchant) *pb.Merchant {
+	locations := LocationCollectionToProtobuf(merchant.Locations)
+	tags := TagCollectionToProtobuf(merchant.Tags)
 
 	return &pb.Merchant{
 		MerchantID: merchant.MerchantID,
@@ -106,13 +109,14 @@ func MerchantToProtobuf(merchant Merchant) *pb.Merchant {
 func MerchantCollectionToProtobuf(merchants []*Merchant) []*pb.Merchant {
 	Collection := make([]*pb.Merchant, 0)
 	for _, merchant := range merchants {
-		Collection = append(Collection, MerchantToProtobuf(merchant))
+		m := MerchantToProtobuf(merchant)
+		Collection = append(Collection, m)
 	}
 	return Collection
 }
 
 // LocationToProtobuf : Converts a location db resource to a protobuf messsge
-func LocationToProtobuf(location Location) *pb.Location  {
+func LocationToProtobuf(location *Location) *pb.Location  {
 	return &pb.Location{
 		Location: location.Location,
 	}
@@ -122,13 +126,14 @@ func LocationToProtobuf(location Location) *pb.Location  {
 func LocationCollectionToProtobuf(locations []*Location) []*pb.Location  {
 	Collection := make([]*pb.Location, 0)
 	for _, location := range locations {
-		Collection = append(Collection, LocationToProtobuf(location))
+		l := LocationToProtobuf(location)
+		Collection = append(Collection, l)
 	}
 	return Collection
 }
 
 // TagToProtobuf : Converts a tag db resource to a protobuf message
-func TagToProtobuf(tag Tag) *pb.Tag {
+func TagToProtobuf(tag *Tag) *pb.Tag {
 	return &pb.Tag{
 		Tag: tag.Tag,
 	}
@@ -138,7 +143,8 @@ func TagToProtobuf(tag Tag) *pb.Tag {
 func TagCollectionToProtobuf(tags []*Tag) []*pb.Tag {
 	Collection := make([]*pb.Tag, 0)
 	for _, tag := range tags {
-		Collection = append(Collection, TagToProtobuf(tag))
+		t := TagToProtobuf(tag)
+		Collection = append(Collection, t)
 	}
 	return Collection
 }

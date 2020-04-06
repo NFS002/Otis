@@ -1,10 +1,10 @@
 package main
 
 import (
-	"log"
 	"github.com/micro/go-micro"
-	client "gitlab.com/otis-team/backend/db/client"
+	"gitlab.com/otis-team/backend/db/client"
 	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	"log"
 )
 
 func main() {
@@ -13,8 +13,8 @@ func main() {
 	)
 	service.Init()
 
-	dynamoClient = client.DynamoClient{}
-	err = dynamoClient.Init()
+	dynamoClient := client.DynamoClient{}
+	err := dynamoClient.Init()
 	if err != nil {
 		log.Panic(err)
 	}
@@ -24,6 +24,6 @@ func main() {
 	pb.RegisterTransactionServiceHandler(service.Server(), handler)
 
 	if err := service.Run(); err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 }

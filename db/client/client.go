@@ -2,7 +2,7 @@ package client
 
 import (
 	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"gitlab.com/otis-team/backend/db/model"
+	"github.com/aws/aws-sdk-go/aws/session"
 )
 
 

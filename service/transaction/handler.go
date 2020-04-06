@@ -1,11 +1,11 @@
 package main
 
 import (
-	"log"
-	"github.com/micro/go-micro"
-	client "gitlab.com/otis-team/backend/db/client"
-	model "gitlab.com/otis-team/backend/db/transaction"
+	"context"
+	"gitlab.com/otis-team/backend/db/client"
+	"gitlab.com/otis-team/backend/db/model"
 	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	"log"
 )
 
 
@@ -20,8 +20,8 @@ func (h *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, re
 	log.Print("CreateTransaction handler fired")
 	transaction := model.ProtobufToTransaction(req)
 	_, err := h.Client.CreateTransaction(transaction)
-	res.Created = (err == nil)
-	res.User = req
+	res.Executed = (err == nil)
+	res.Transactions = []*pb.Transaction{ req }
 	return err
 }
 
@@ -29,7 +29,7 @@ func (h *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, re
 func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
 	log.Print("GetTransactions handler fired")
 
-	var transactions []*Transaction
+	var transactions []*model.Transaction
 	var err error
 
 	tID := req.TransactionID
@@ -41,7 +41,7 @@ func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 	} else if len(mID) > 0 {
 		transactions, err = h.Client.GetTransactionsByMerchantID(mID)
 	} else if len(uID) > 0 {
-		transactions, err = h.Client.GetTransactionsByUserID(uID)
+		transactions, err = h.Client.GetTransactionsByUserId(uID)
 	} else {
 		transactions, err = h.Client.GetAllTransactions()
 	}
@@ -52,9 +52,9 @@ func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 }
 
 // DeleteTransaction : Handles grpc requests to delete transactions in the DB
-func (h *Handler) DeleteTransaction(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
+func (h *Handler) DeleteTransactions(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
 	log.Print("DeleteTransactions handler fired!")
-	_, err := h.Client.DeleteTransaction(req.TransactionID)
-	res.Deleted = (err == nil)
+	err := h.Client.DeleteTransaction(req.TransactionID)
+	res.Executed = (err == nil)
 	return err
 }

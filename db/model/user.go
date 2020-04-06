@@ -48,7 +48,7 @@ func ProtobufToUser(user *pb.User) *User {
 // UserToProtobuf : Converts User struct to User protobuf message
 func UserToProtobuf(user *User) *pb.User {
 
-	accounts := UnmarshalAccountCollection(user.Accounts)
+	accounts := AccountCollectionToProtobuf(user.Accounts)
 
 	return &pb.User{
 		UserID:     user.UserID,
@@ -72,8 +72,8 @@ func ProtobufToUserCollection(users []*pb.User) []*User {
 	return Collection
 }
 
-// UserToProtobufCollection : Converts slice of User structs to slice of User protobuf messages
-func UserToProtobufCollection(users []*User) []*pb.User {
+// UserCollectionToProtobuf : Converts slice of User structs to slice of User protobuf messages
+func UserCollectionToProtobuf(users []*User) []*pb.User {
 	Collection := make([]*pb.User, 0)
 	for _, user := range users {
 		Collection = append(Collection, UserToProtobuf(user))
@@ -90,8 +90,8 @@ func ProtobufToAccountCollection(accounts []*pb.Account) []*Account {
 	return Collection
 }
 
-// AccountToProtobufCollection : Converts slice of Account structs to slice of Account protobufs messages
-func AccountToProtobufCollection(accounts []*Account) []*pb.Account {
+// AccountCollectionToProtobufCollection : Converts slice of Account structs to slice of Account protobuf messages
+func AccountCollectionToProtobuf(accounts []*Account) []*pb.Account {
 	Collection := make([]*pb.Account, 0)
 	for _, account := range accounts {
 		Collection = append(Collection, AccountToProtobuf(account))

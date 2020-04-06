@@ -1,14 +1,15 @@
 package client
 
 import (
-	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"gitlab.com/otis-team/backend/db/model"
 )
 
 // CreateTransaction : Creates a new transaction in the db
 func (c* DynamoClient) CreateTransaction(transaction *model.Transaction) (*model.Transaction, error) {
-	av, err := dynamodbav.Marshal(transaction)
+	av, err := dynamodbattribute.MarshalMap(transaction)
 	if err != nil {
 		return nil, err
 	}
@@ -26,49 +27,49 @@ func (c* DynamoClient) CreateTransaction(transaction *model.Transaction) (*model
 // GetAllTransactiins : Returns all Transactions from the DB
 func (c* DynamoClient) GetAllTransactions() ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
-		TableName: aws.String("Transaction")
+		TableName: aws.String("Transaction"),
 	})
 	if err != nil {
 		return nil, err
 	}
-	transactions = model.Transactions{}
-	err := dynamodbav.Unmarshal(result,&transactions)
+	transactions := model.Transactions{}
+	err = dynamodbattribute.UnmarshalMap(result.Item,&transactions)
 	return transactions, err
 }
 
-// GetTransactionById : Returns the Transaction with the given ID from the DB
-func (c* DynamoClient) GetTransactionById(transactionId string) (*model.Transactions, error) {
+// GetTransactionByID : Returns the Transaction with the given ID from the DB
+func (c* DynamoClient) GetTransactionByID(transactionId string) (*model.Transactions, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"transaction_id": {
 				S: aws.String(transactionId),
-			}
+			},
 		},
 	})
 	if err != nil {
 		return nil, err
 	}
-	transactions = model.Transactions{}
-	err := dynamodbav.Unmarshal(result,&transactions)
-	return transactions, err
+	transactions := model.Transactions{}
+	err = dynamodbattribute.UnmarshalMap(result.Item,&transactions)
+	return &transactions, err
 }
 
-// GetTransactionsByMerchantId : Returns all transactions made at the given merchant from the DB
-func (c *DynamoClient) GetTransactionsByMerchantId(merchantId string) ([]*model.Transaction, error) {
+// GetTransactionsByMerchantID : Returns all transactions made at the given merchant from the DB
+func (c *DynamoClient) GetTransactionsByMerchantID(merchantId string) ([]*model.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {
 				S: aws.String(merchantId),
-			}
+			},
 		},
 	})
 	if err != nil {
 		return nil, err
 	}
-	transactions = model.Transactions{}
-	err := dynamodbav.Unmarshal(result,&transactions)
+	transactions := model.Transactions{}
+	err = dynamodbattribute.UnmarshalMap(result.Item,&transactions)
 	return transactions, err
 }
 
@@ -79,14 +80,14 @@ func (c *DynamoClient) GetTransactionsByUserId(userId string) ([]*model.Transact
 		Key: map[string]*dynamodb.AttributeValue{
 			"user_id": {
 				S: aws.String(userId),
-			}
+			},
 		},
 	})
 	if err != nil {
 		return nil, err
 	}
-	transactions = model.Transactions{}
-	err := dynamodbav.Unmarshal(result,&transactions)
+	transactions := model.Transactions{}
+	err = dynamodbattribute.UnmarshalMap(result.Item, &transactions)
 	return transactions, err
 }
 
@@ -96,7 +97,7 @@ func (c *DynamoClient) DeleteTransaction(transactionId string) error {
 		Key: map[string]*dynamodb.AttributeValue{
 			"transaction_id": {
 				S: aws.String(transactionId),
-			}
+			},
 		},
 		TableName: aws.String("User"),
 	}
