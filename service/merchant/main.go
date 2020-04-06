@@ -9,8 +9,6 @@ import (
 	
 	"github.com/micro/go-micro"
 	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-	k8s "github.com/micro/examples/kubernetes/go/micro"
-
 )
 
 const (
@@ -18,7 +16,7 @@ const (
 )
 
 func main() {
-	service := k8s.NewService(
+	service := micro.NewService(
 			micro.Name("go.micro.service.merchant"),
 	)
 
