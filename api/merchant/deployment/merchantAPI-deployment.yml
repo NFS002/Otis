@@ -33,10 +33,10 @@ spec:
           env:
             - name: MICRO_SERVER_ADDRESS
               value: "0.0.0.0:8080"
-            - name: MICRO_BROKER
-              value: "nats"
-            - name: MICRO_BROKER_ADDRESS
-              value: "nats-cluster"
+#            - name: MICRO_BROKER
+#              value: "nats"
+#            - name: MICRO_BROKER_ADDRESS
+#              value: "nats-cluster"
             - name: MICRO_REGISTRY
               value: "etcd"
             - name: MICRO_REGISTRY_ADDRESS
@@ -45,7 +45,7 @@ spec:
           command: [
             "/health",
             "--health_address=0.0.0.0:8081",
-            "--server_name=merchant-service",
+            "--server_name=merchant-api",
             "--server_address=0.0.0.0:8080"
           ]
           image: microhq/health

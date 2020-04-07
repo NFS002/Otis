@@ -50,6 +50,32 @@ type TransactionResponse struct {
 	Transactions []*transaction.Transaction `json:"transactions"`
 }
 
+// Health method (Merchant.Health) is served by HTTP requests to /merchant/health.
+func (e *Merchant) Health(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
+	log.Print("Received Merchant.Health request")
+
+	if req.Method != "GET" {
+		errors.BadRequest("go.micro.api.merchant", "This method requires GET")
+	}
+
+	rsp.StatusCode = 200
+
+	type Health struct{
+		Status string `json:"status"`
+	}
+
+	health := Health{Status: "OK"}
+
+	body, err := json.Marshal(health)
+	if err != nil {
+		return errors.BadRequest("go.micro.api.merchant", err.Error())
+	}
+
+	// set json body
+	rsp.Body = string(body)
+
+	return nil
+}
 
 // Create method (Merchant.Create) is served by HTTP requests to /merchant/create.
 func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *protoAPI.Response) error {
@@ -93,8 +119,6 @@ func (e *Merchant) Create(ctx context.Context, req *protoAPI.Request, rsp *proto
 
 	// set json body
 	rsp.Body = string(body)
-
-	return nil
 
 	return nil
 }

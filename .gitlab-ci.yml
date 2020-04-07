@@ -64,6 +64,8 @@ deploy:
      - export KUBECONFIG=$KUBECONFIG:./infrastructure/config-otis-backend
      - aws eks --region eu-west-2 update-kubeconfig --name otis-backend
      - kubectl get svc
+     - kubectl delete service merchant-service merchant-api
+     - kubectl delete deployment merchant-service merchant-api
      - kubectl apply -f ./service/merchant/deployment/merchant-deployment.yml
      - kubectl apply -f ./service/merchant/deployment/merchant-service.yml
      - kubectl apply -f ./api/merchant/deployment/merchantAPI-deployment.yml

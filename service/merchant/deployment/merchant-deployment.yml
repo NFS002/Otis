@@ -23,7 +23,7 @@ spec:
         - name: my-registry
       containers:
         - name: merchant-service
-          image: registry.gitlab.com/otis-team/backend/service/merchant:latest
+          image: registry.gitlab.com/otis-team/backend/service/merchant
           command: [
             "./merchant-service",
           ]
