@@ -4,8 +4,8 @@ variables:
     REPO_NAME: gitlab.com/otis-team/backend
 
 stages:
-  - test
-  - build
+#   - test
+#   - build
   - deploy
 
 lint:
