@@ -45,5 +45,5 @@ spec:
           image: micro/micro
           imagePullPolicy: Always
           ports:
-            - containerPort: 443
+            - containerPort: 80
               name: api-port
