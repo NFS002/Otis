@@ -14,10 +14,7 @@ require (
 )
 
 replace (
-    //FIND
-    KLJKLJKLJ
-    //REPLACE
-	gitlab.com/otis-team/backend/api/merchant => /Users/noah/Otis/backend/api/merchant/
+	gitlab.com/otis-team/backend/api/merchant => /Users/noah/Otis/backend/api/merchant/ //_LOCAL
 	gitlab.com/otis-team/backend/api/user => /Users/noah/Otis/backend/api/user
 	gitlab.com/otis-team/backend/db => /Users/noah/Otis/backend/db
 	gitlab.com/otis-team/backend/service/merchant => /Users/noah/Otis/backend/service/merchant

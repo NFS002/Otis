@@ -20,33 +20,6 @@ type Transactions struct {
 	TransactionClient transactionService.TransactionService
 }
 
-// CreatedResponse maps CreateResponse protobuf message.
-type CreatedResponse struct {
-	Created bool `json:"created"`
-	Merchant *model.Merchant `json:"merchantID"`
-}
-
-// GetResponse maps CreateResponse protobuf message.
-type GetResponse struct {
-	Merchants []*model.Merchant `json:"merchants"`
-}
-
-// UpdateResponse maps UpdateResponse protobuf message.
-type UpdateResponse struct{
-	Updated bool `json:"update"`
-	Merchant *model.Merchant `json:"merchant"`
-}
-
-// DeleteResponse maps DeleteResponse protobuf message.
-type DeleteResponse struct{
-	Deleted bool `json:"deleted"`
-}
-
-// TransactionResponse maps TransactionResponse protobuf message.
-type TransactionResponse struct {
-	Transactions []*model.Transaction `json:"transactions"`
-}
-
 
 // Create method (Merchant.Create) is served by HTTP requests to /merchant/create.
 func (e *Merchant) Create(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
@@ -78,12 +51,12 @@ func (e *Merchant) Create(ctx context.Context, req *proto.Request, rsp *proto.Re
 
 	rsp.StatusCode = 200
 
-	createResponse := CreatedResponse{
-		Created:   r.Created,
-		Merchant: model.ProtobufToMerchant(r.Merchant),
+	responseBody := map[string]interface{}{
+		"executed":   r.Created,
+		"merchants": model.ProtobufToMerchant(r.Merchant),
 	}
 
-	body, err := json.Marshal(createResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
@@ -107,18 +80,19 @@ func (e *Merchant) Get(ctx context.Context, req *proto.Request, rsp *proto.Respo
 		return errors.BadRequest("go.micro.api.merchant", "Please provide an ID")
 	}
 
-	r, err := e.MerchantClient.GetMerchant(ctx, &merchantService.GetRequest{MerchantID: id.Values[0]}) // Seems kinda janky
+	r, err := e.MerchantClient.GetMerchant(ctx, &merchantService.GetRequest{MerchantID: id.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant",err.Error())
 	}
 
 	rsp.StatusCode = 200
 
-	getResponse := GetResponse{
-		Merchants: model.ProtobufToMerchantCollection(r.Merchants),
+	responseBody := map[string]interface{}{
+		"executed": r.Merchants != nil,
+		"merchant": model.ProtobufToMerchantCollection(r.Merchants),
 	}
 
-	body, err := json.Marshal(getResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
@@ -145,11 +119,12 @@ func (e *Merchant) GetAll(ctx context.Context, req *proto.Request, rsp *proto.Re
 
 	rsp.StatusCode = 200
 
-	getResponse := GetResponse{
-		Merchants: model.ProtobufToMerchantCollection(r.Merchants),
+	responseBody := map[string]interface{}{
+		"executed": r.Merchants != nil,
+		"merchants": model.ProtobufToMerchantCollection(r.Merchants),
 	}
 
-	body, err := json.Marshal(getResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
@@ -190,12 +165,12 @@ func (e *Merchant) Update(ctx context.Context, req *proto.Request, rsp *proto.Re
 
 	rsp.StatusCode = 200
 
-	updateResponse := UpdateResponse{
-		Updated:  r.Updated,
-		Merchant: model.ProtobufToMerchant(r.Merchant),
+	responseBody := map[string]interface{}{
+		"executed":  r.Updated,
+		"merchant": model.ProtobufToMerchant(r.Merchant),
 	}
 
-	body, err := json.Marshal(updateResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
@@ -226,9 +201,11 @@ func (e *Merchant) Delete(ctx context.Context, req *proto.Request, rsp *proto.Re
 
 	rsp.StatusCode = 200
 
-	deleteResponse := DeleteResponse{Deleted: r.Deleted}
+	responseBody := map[string]interface{}{
+		"executed": r.Deleted,
+	}
 
-	body, err := json.Marshal(deleteResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}
@@ -259,9 +236,12 @@ func (e *Transactions) Get(ctx context.Context, req *proto.Request, rsp *proto.R
 
 	rsp.StatusCode = 200
 
-	transactionResponse := TransactionResponse{Transactions: model.ProtobufToTransactionCollection(r.Transactions)}
+	responseBody := map[string]interface{}{
+		"executed": r.Transactions != nil,
+		"transactions": model.ProtobufToTransactionCollection(r.Transactions),
+	}
 
-	body, err := json.Marshal(transactionResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}

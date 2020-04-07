@@ -3,9 +3,8 @@ package main
 import (
 	"github.com/micro/go-micro"
 	proto "gitlab.com/otis-team/backend/api/user/proto"
-
-	userService "gitlab.com/otis-team/backend/service/user/proto/user"
 	transactionService "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	userService "gitlab.com/otis-team/backend/service/user/proto/user"
 	"log"
 )
 

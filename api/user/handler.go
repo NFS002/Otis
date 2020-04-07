@@ -21,34 +21,6 @@ type Transactions struct {
 	Client transactionService.TransactionService
 }
 
-// CreatedResponse maps CreateResponse protobuf message.
-type CreatedResponse struct {
-	Created bool `json:"created"`
-	User *model.User `json:"user"`
-}
-
-// GetResponse maps CreateResponse protobuf message.
-type GetResponse struct {
-	Users []*model.User `json:"users"`
-}
-
-// UpdateResponse maps UpdateResponse protobuf message.
-type UpdateResponse struct{
-	Updated bool `json:"update"`
-	User *model.User `json:"user"`
-}
-
-// DeleteResponse maps DeleteResponse protobuf message.
-type DeleteResponse struct{
-	Deleted bool `json:"deleted"`
-}
-
-// TransactionResponse maps TransactionResponse protobuf message.
-type TransactionResponse struct {
-	Transactions []*model.Transaction `json:"transactions"`
-} 
-
-
 // Create method (User.Create) is served by HTTP requests to /user/create.
 func (e *User) Create(ctx context.Context, req *proto.Request, rsp *proto.Response) error {
 	log.Print("Received User.Create request")
@@ -79,12 +51,12 @@ func (e *User) Create(ctx context.Context, req *proto.Request, rsp *proto.Respon
 
 	rsp.StatusCode = 200
 
-	createResponse := CreatedResponse{
-		Created:   r.Created,
-		User: model.ProtobufToUser(r.User),
+	responseBody := map[string]interface{}{
+		"executed":   r.Created,
+		"user": model.ProtobufToUser(r.User),
 	}
 
-	body, err := json.Marshal(createResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user", err.Error())
 	}
@@ -115,11 +87,11 @@ func (e *User) Get(ctx context.Context, req *proto.Request, rsp *proto.Response)
 
 	rsp.StatusCode = 200
 
-	getResponse := GetResponse{
-		Users: model.ProtobufToUserCollection(r.Users),
+	responseBody := map[string]interface{}{
+		"users": model.ProtobufToUserCollection(r.Users),
 	}
 
-	body, err := json.Marshal(getResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user", err.Error())
 	}
@@ -146,11 +118,11 @@ func (e *User) GetAll(ctx context.Context, req *proto.Request, rsp *proto.Respon
 
 	rsp.StatusCode = 200
 
-	getResponse := GetResponse{
-		Users: model.ProtobufToUserCollection(r.Users),
+	responseBody := map[string]interface{}{
+		"users": model.ProtobufToUserCollection(r.Users),
 	}
 
-	body, err := json.Marshal(getResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user", err.Error())
 	}
@@ -191,12 +163,12 @@ func (e *User) Update(ctx context.Context, req *proto.Request, rsp *proto.Respon
 
 	rsp.StatusCode = 200
 
-	updateResponse := UpdateResponse{
-		Updated:   r.Updated,
-		User: model.ProtobufToUser(r.User),
+	responseBody := map[string]interface{}{
+		"executed":   r.Updated,
+		"user": model.ProtobufToUser(r.User),
 	}
 
-	body, err := json.Marshal(updateResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user", err.Error())
 	}
@@ -227,9 +199,11 @@ func (e *User) Delete(ctx context.Context, req *proto.Request, rsp *proto.Respon
 
 	rsp.StatusCode = 200
 
-	deleteResponse := DeleteResponse{Deleted: r.Deleted}
+	responseBody := map[string]interface{}{
+		"executed": r.Deleted,
+	}
 
-	body, err := json.Marshal(deleteResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user", err.Error())
 	}
@@ -260,9 +234,11 @@ func (e *Transactions) Get(ctx context.Context, req *proto.Request, rsp *proto.R
 
 	rsp.StatusCode = 200
 
-	transactionResponse := TransactionResponse{Transactions: model.ProtobufToTransactionCollection(r.Transactions)}
+	responseBody := map[string]interface{}{
+		"transactions": model.ProtobufToTransactionCollection(r.Transactions),
+	}
 
-	body, err := json.Marshal(transactionResponse)
+	body, err := json.Marshal(responseBody)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", err.Error())
 	}

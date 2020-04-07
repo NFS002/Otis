@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://gitlab.com/otis-team/data-structures/transaction.schema.json",
+  "title": "Transaction",
+  "description": "A processed transaction.",
+  "type": "object",
+  "properties": {
+    "transaction_id": {
+      "description": "The unique identifier of the transaction. Should be derived from API provider id.",
+      "type": "string"
+    },
+    "transaction_timestamp": {
+      "description": "The timestamp when the transaction took place. ISO-8601 date and time in UTC.",
+      "type": "string"
+    },
+    "processed_timestamp": {
+      "description": "The timestamp when the transaction was processed ISO-8601 date and time in UTC.",
+      "type": "string"
+    },
+    "user_id": {
+      "description": "The specific uuid of the user that this applies to",
+      "type": "string"
+    },
+    "account_id": {
+      "description": "The unique id the account that the transaction is derived from. Should match the account id from the API provider",
+      "type": "string"
+    },
+    "merchant_id": {
+      "description": "The unique id of the merchant that the transaction was made with. Either partner merchant or non-partner merchant",
+      "type": "string"
+    },
+    "amount": {
+      "description": "The transaction amount. Signed integer, negative denotes credit (i.e. purchase) and positive denotes debit (i.e. receiving money by user)",
+      "type": "number"
+    },
+    "currency": {
+      "description": "Three-letter currency code. ISO-4217.",
+      "type": "string"
+    },
+    "location": {
+      "description": "The location of the transaction. Street addess. NEEDS CLARIFICATION.",
+      "type": ["string", "null"]
+    },
+    "rating": {
+      "description": "User generated rating of the transaction. Only used for partner merchant transactions",
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 5
+    },
+    "api_tags": {
+      "description": "Tags derived from API enrichment/categorisation",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "otis_tags": {
+      "description": "Tags derived from merchant id",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "weather": {
+      "description": "Weather at the time and (approximate location) of transaction",
+      "$ref": "http://gitlab.com/otis-team/data-structures/weather.schema.json"
+    },
+    "holidays": {
+      "description": "Holidays that were in affect during the time of the transaction",
+      "$ref": "http://gitlab.com/otis-team/data-structures/holidays.schema.json"
+    },
+    "type": {
+      "description": "The type of transaction, i.e. credit, debit, contactless",
+      "type": "string",
+      "enum": ["CREDIT", "DEBIT", "CONTACTLESS"]
+    },
+    "online": {
+      "description": "Whether the transaction was an online transaction",
+      "type": "boolean"
+    },
+    "cashback_valid": {
+      "description": "Whether this transaction generates cashback",
+      "type": "boolean"
+    },
+    "merchant_name": {
+      "description": "Approved name of the merchant",
+      "type": "string"
+    }
+  },
+  "required": [
+    "transaction_id",
+    "merchant_id",
+    "user_id",
+    "amount",
+    "currency",
+    "location",
+    "rating",
+    "api_tags",
+    "otis_tags",
+    "weather",
+    "holiday",
+    "type",
+    "cashback_valid",
+    "merchant_name"
+  ]
+}

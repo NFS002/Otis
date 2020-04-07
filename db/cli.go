@@ -1,14 +1,14 @@
 package main
 
 import (
-	"flag"
-	"log"
 	"errors"
-	"strings"
+	"flag"
 	"github.com/aws/aws-sdk-go/aws"
-    "github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"gitlab.com/otis-team/backend/db/client"
 	"gitlab.com/otis-team/backend/db/schema"
+	"log"
+	"strings"
 )
 
 type dynamoClient client.DynamoClient
