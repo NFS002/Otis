@@ -1,7 +1,5 @@
 package user
 
-import pb "gitlab.com/otis-team/backend/service/user/proto/user"
-
 // User : Struct is a local representation of an Otis user
 // User resources retrieved from the DB are serialized to an instance of this struct
 type User struct {
