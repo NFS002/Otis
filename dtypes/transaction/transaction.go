@@ -1,5 +1,7 @@
 package transaction
 
+// Transaction : Struct is a local representation of a transaction
+// Transaction resources retrieved from the DB are serialized to an instance of this struct
 type Transaction struct {
 	Schema      string `json:"$schema"`
 	ID          string `dynamodbav:"id,omitempty" json:"$id"`

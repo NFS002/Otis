@@ -2,10 +2,8 @@ package user
 
 import pb "gitlab.com/otis-team/backend/service/user/proto/user"
 
-// User : struct to represent a DynamoDb user resource
-// Protobuf user messages must be marshalled into a instance of this struct
-// before then being marhalled to a dynamodb attribute value.
-// Similarly, users retrieved from dynamodb will be represented as an instance of this struct.
+// User : Struct is a local representation of an Otis user
+// User resources retrieved from the DB are serialized to an instance of this struct
 type User struct {
 	Schema      string `json:"$schema"`
 	ID          string `dynamodbav:"id,omitempty" json:"$id"`

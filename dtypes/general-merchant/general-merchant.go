@@ -1,6 +1,6 @@
 package generalmerchant
 
-// GeneralMerchant : Struct is an in-memory representation of a merchant who is not part of the Otis platform
+// GeneralMerchant : Struct is a local representation of a merchant who is not part of the Otis platform
 // GeneralMerchant resources retrieved from the DB are serialized to an instance of this struct
 type GeneralMerchant struct {
 	Schema      string `json:"$schema"`

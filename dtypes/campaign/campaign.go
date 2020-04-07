@@ -1,6 +1,6 @@
 package campaign
 
-// Campaign : Struct is an in-memory representation of a campaign resource
+// Campaign : Struct is a local representation of a campaign resource
 // Campaign resources retrieved fron the DB are serialized to an instance of this struct
 type Campaign struct {
 	Schema      string `json:"$schema"`
