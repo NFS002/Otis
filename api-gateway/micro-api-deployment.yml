@@ -24,6 +24,8 @@ spec:
       containers:
         - name: api
           env:
+            - name: MICRO_API_ADDRESS
+              value: ":80"
             - name: MICRO_ENABLE_STATS
               value: "true"
             - name: MICRO_BROKER
@@ -46,5 +48,5 @@ spec:
           image: micro/micro
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               name: api-port
