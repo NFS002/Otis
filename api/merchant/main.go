@@ -7,6 +7,8 @@ import (
 	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
+
+	k8s "github.com/micro/examples/kubernetes/go/micro"
 )
 
 
@@ -16,7 +18,7 @@ import (
  * to the API */
 func main() {
 
-	service := micro.NewService(
+	service := k8s.NewService(
 		micro.Name("go.micro.api.merchant"),
 	)
 
