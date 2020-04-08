@@ -40,10 +40,13 @@ spec:
               value: "30"
             - name: MICRO_ENABLE_ACME
               value: "false"
+            - name: MICRO_API_ADDRESS
+                value: ":80"
           args:
-            - api
-          image: micro/micro
+            - "api"
+            - "--handler=rpc"
+          image: micro/micro:kubernetes
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               name: api-port
