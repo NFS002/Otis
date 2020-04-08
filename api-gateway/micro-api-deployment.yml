@@ -45,7 +45,7 @@ spec:
           args:
             - "api"
             - "--handler=rpc"
-          image: micro/micro:kubernetes
+          image: micro/micro
           imagePullPolicy: Always
           ports:
             - containerPort: 80
