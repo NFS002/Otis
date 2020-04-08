@@ -40,13 +40,11 @@ spec:
               value: "30"
             - name: MICRO_ENABLE_ACME
               value: "false"
-            - name: MICRO_API_ADDRESS
-              value: ":80"
           args:
             - "api"
             - "--handler=rpc"
           image: micro/micro
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               name: api-port
