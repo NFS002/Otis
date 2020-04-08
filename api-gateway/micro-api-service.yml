@@ -8,9 +8,9 @@ metadata:
     micro: service
 spec:
   ports:
-    - name: http
-      port: 80
-      targetPort: "api-port"
+    - name: https
+      port: 443
+      targetPort: 443
   selector:
     name: micro-api
     micro: service

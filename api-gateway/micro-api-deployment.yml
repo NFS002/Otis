@@ -6,7 +6,7 @@ metadata:
   labels:
     micro: service
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       name: micro-api
@@ -24,8 +24,6 @@ spec:
       containers:
         - name: api
           env:
-            - name: MICRO_API_ADDRESS
-              value: ":80"
             - name: MICRO_ENABLE_STATS
               value: "true"
             - name: MICRO_BROKER
@@ -41,12 +39,11 @@ spec:
             - name: MICRO_REGISTER_INTERVAL
               value: "30"
             - name: MICRO_ENABLE_ACME
-              value: "false"
+              value: "true"
           args:
-            - "api"
-            - "--handler=rpc"
+            - api
           image: micro/micro
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 443
               name: api-port
