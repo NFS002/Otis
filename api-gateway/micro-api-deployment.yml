@@ -39,7 +39,9 @@ spec:
             - name: MICRO_REGISTER_INTERVAL
               value: "30"
             - name: MICRO_ENABLE_ACME
-              value: "false"
+              value: "true"
+            - name: MICRO_ACME_HOSTS
+              value: "api-otis.app.com, otis-app.com, aef8436057a2346aab70b87a890b2fb3-1626668430.eu-west-2.elb.amazonaws.com"
           args:
             - api
           image: micro/micro
