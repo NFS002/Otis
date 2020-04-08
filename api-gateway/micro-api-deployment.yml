@@ -39,7 +39,7 @@ spec:
             - name: MICRO_REGISTER_INTERVAL
               value: "30"
             - name: MICRO_ENABLE_ACME
-              value: "true"
+              value: "false"
           args:
             - api
           image: micro/micro
