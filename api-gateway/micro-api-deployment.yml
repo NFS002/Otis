@@ -41,7 +41,7 @@ spec:
             - name: MICRO_ENABLE_ACME
               value: "false"
             - name: MICRO_API_ADDRESS
-                value: ":80"
+              value: ":80"
           args:
             - "api"
             - "--handler=rpc"
