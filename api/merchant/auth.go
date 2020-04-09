@@ -1,4 +1,4 @@
-package auth
+package main
 
 import (
 	"errors"
@@ -10,12 +10,12 @@ import (
 )
 
 const (
-	API_IDENTIFIER = "https://api.otis-app.com"
-	DOMAIN = "https://otis-app.com"
+	ApiIdentifier = "https://otis-app.com"
+	Domain        = "https://otis-app.eu.auth0.com/"
 )
 
 var (
-	SIGNING_METHOD = jwt.SigningMethodRS256
+	SigningMethod = jwt.SigningMethodRS256
 )
 
 type Response struct {
@@ -37,7 +37,7 @@ type JSONWebKeys struct {
 
 func getPemCert(token *jwt.Token) (string, error) {
 	cert := ""
-	resp, err := http.Get("https://YOUR_DOMAIN/.well-known/jwks.json")
+	resp, err := http.Get(Domain + ".well-known/jwks.json")
 
 	if err != nil {
 		return cert, err
@@ -67,13 +67,13 @@ func getPemCert(token *jwt.Token) (string, error) {
 
 func validationKeyGetter(token *jwt.Token) (interface{}, error) {
 	// Verify 'aud' claim
-	aud := API_IDENTIFIER
+	aud := ApiIdentifier
 	checkAud := token.Claims.(jwt.MapClaims).VerifyAudience(aud, false)
 	if !checkAud {
 		return token, errors.New("Invalid audience.")
 	}
 	// Verify 'iss' claim
-	iss := DOMAIN
+	iss := Domain
 	checkIss := token.Claims.(jwt.MapClaims).VerifyIssuer(iss, false)
 	if !checkIss {
 		return token, errors.New("Invalid issuer.")
@@ -88,7 +88,7 @@ func validationKeyGetter(token *jwt.Token) (interface{}, error) {
 	return result, nil
 }
 
-func checkAuthHeader(header string) error{
+func CheckAuthHeader(header string) error{
 	// TODO: Make this a bit more robust, parsing-wise
 	authHeaderParts := strings.Fields(header)
 	if len(authHeaderParts) != 2 || strings.ToLower(authHeaderParts[0]) != "bearer" {
@@ -107,9 +107,9 @@ func checkAuthHeader(header string) error{
 		return fmt.Errorf("Error parsing token: %v", err)
 	}
 
-	if SIGNING_METHOD.Alg() != parsedToken.Header["alg"] {
+	if SigningMethod.Alg() != parsedToken.Header["alg"] {
 		message := fmt.Sprintf("Expected %s signing method but token specified %s",
-			SIGNING_METHOD.Alg(),
+			SigningMethod.Alg(),
 			parsedToken.Header["alg"])
 		return fmt.Errorf("Error validating token algorithm: %s", message)
 	}

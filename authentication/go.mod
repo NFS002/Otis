@@ -1,4 +1,4 @@
-module gitlab.com/otis-team/backend/auth
+module gitlab.com/otis-team/backend/authentication
 
 go 1.14
 

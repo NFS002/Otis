@@ -5,15 +5,12 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro/errors"
 	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
-
 	merchant "gitlab.com/otis-team/backend/service/merchant/package"
 	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 
 	transaction "gitlab.com/otis-team/backend/service/transaction/package"
 	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
-
-	auth "gitlab.com/otis-team/backend/auth"
 )
 
 // Merchant struct. All methods using this struct will be mapped to /merchant/<method>.
@@ -58,6 +55,16 @@ func (e *Merchant) Health(ctx context.Context, req *protoAPI.Request, rsp *proto
 
 	if req.Method != "GET" {
 		errors.BadRequest("go.micro.api.merchant", "This method requires GET")
+	}
+
+	authHeader, ok := req.Header["Authorization"]
+	if !ok || len(authHeader.Values) == 0 {
+		return errors.BadRequest("go.micro.api.merchant", "Need Authorization header")
+	}
+
+	err := CheckAuthHeader(authHeader.Values[0])
+	if err != nil {
+		return errors.BadRequest("go.micro.api.example", err.Error())
 	}
 
 	rsp.StatusCode = 200
