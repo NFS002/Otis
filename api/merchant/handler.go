@@ -12,6 +12,8 @@ import (
 	transaction "gitlab.com/otis-team/backend/service/transaction/package"
 	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
+
+	auth "gitlab.com/otis-team/backend/auth"
 )
 
 // Merchant struct. All methods using this struct will be mapped to /merchant/<method>.
