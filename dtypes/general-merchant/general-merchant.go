@@ -12,3 +12,6 @@ type GeneralMerchant struct {
 	Size        string   `protobuf:"bytes,7,opt,name=size,proto3" json:"size,omitempty"`
 	ExpenseBand string   `protobuf:"bytes,12,opt,name=expenseBand,proto3" json:"expenseBand,omitempty"`
 }
+
+// GeneralMerchants represents a slice of GeneralMerchant structs
+type GeneralMerchants []*GeneralMerchant

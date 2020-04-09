@@ -21,3 +21,6 @@ type Transaction struct {
 	CashbackValid        bool             	`protobuf:"varint,17,opt,name=cashback_valid,json=cashbackValid,proto3" json:"cashback_valid,omitempty"`
 	MerchantName         string           	`protobuf:"bytes,18,opt,name=merchant_name,json=merchantName,proto3" json:"merchant_name,omitempty"`
 }
+
+// Transactions represents a slice of Transaction structs
+type Transactions []*Transaction

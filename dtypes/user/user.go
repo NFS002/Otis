@@ -14,3 +14,6 @@ type User struct {
 	Nationality          string                 `protobuf:"bytes,9,opt,name=nationality,proto3" json:"nationality,omitempty"`
 	Tags                 []string               `protobuf:"bytes,10,rep,name=tags,proto3" json:"tags,omitempty"`
 }
+
+// Users represents a slice of User structs
+type Users []*User

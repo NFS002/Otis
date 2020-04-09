@@ -16,3 +16,6 @@ type PartnerMerchant struct {
 	GocardlessMandate    string   `protobuf:"bytes,11,opt,name=gocardlessMandate,proto3" json:"gocardlessMandate,omitempty"`
 	ExpenseBand          string   `protobuf:"bytes,12,opt,name=expenseBand,proto3" json:"expenseBand,omitempty"`
 }
+
+// PartnerMerchants represents a slice of PartnerMerchant structs
+type PartnerMerchants []*PartnerMerchant

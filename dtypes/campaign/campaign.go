@@ -15,3 +15,6 @@ type Campaign struct {
 	ValidFor             int32    `protobuf:"varint,10,opt,name=validFor,proto3" json:"validFor,omitempty"`
 	Active               bool     `protobuf:"varint,11,opt,name=active,proto3" json:"active,omitempty"`
 }
+
+// Campaigns represents a slice of Campaign structs
+type Campaigns []*Campaign
