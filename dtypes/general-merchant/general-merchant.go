@@ -3,53 +3,12 @@ package generalmerchant
 // GeneralMerchant : Struct is a local representation of a merchant who is not part of the Otis platform
 // GeneralMerchant resources retrieved from the DB are serialized to an instance of this struct
 type GeneralMerchant struct {
-	Schema      string `json:"$schema"`
-	ID          string `dynamodbav:"id,omitempty" json:"$id"`
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Type        string `json:"type"`
-	Properties  struct {
-		MerchantID struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"merchant_id"`
-		MerchantName struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"merchant_name"`
-		Locations struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-			Items       struct {
-				Description string   `json:"description"`
-				Type        []string `json:"type"`
-			} `json:"items"`
-		} `json:"locations"`
-		APITags struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-			Items       struct {
-				Type string `json:"type"`
-			} `json:"items"`
-		} `json:"api_tags"`
-		ScrapeTags struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-			Items       struct {
-				Type string `json:"type"`
-			} `json:"items"`
-		} `json:"scrape_tags"`
-		Sector struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"sector"`
-		Size struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"size"`
-		ExpenseBand struct {
-			Description string `json:"description"`
-			Ref         string `json:"$ref"`
-		} `json:"expense_band"`
-	} `json:"properties"`
+	ID          string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name        string   `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Locations   []string `protobuf:"bytes,3,rep,name=locations,proto3" json:"locations,omitempty"`
+	ApiTags     []string `protobuf:"bytes,4,rep,name=api_tags,json=apiTags,proto3" json:"api_tags,omitempty"`
+	ScrapeTags  []string `protobuf:"bytes,5,rep,name=scrape_tags,json=scrapeTags,proto3" json:"scrape_tags,omitempty"`
+	Sector      string   `protobuf:"bytes,6,opt,name=sector,proto3" json:"sector,omitempty"`
+	Size        string   `protobuf:"bytes,7,opt,name=size,proto3" json:"size,omitempty"`
+	ExpenseBand string   `protobuf:"bytes,12,opt,name=expenseBand,proto3" json:"expenseBand,omitempty"`
 }

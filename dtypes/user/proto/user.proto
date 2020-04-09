@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package user;
+
+message User {
+    string id = 1;
+    string Dob = 2;
+    Gender gender = 3;
+    enum Gender {
+        MALE = 0;
+        FEMALE = 1;
+        OTHER = 2;
+    }
+    string genderDescription = 4;
+    string university = 5;
+    string joinDate = 6;
+    string graduationYear = 7;
+    double averageWeeklySpend = 8;
+    string nationality = 9;
+    repeated string tags = 10;
+}

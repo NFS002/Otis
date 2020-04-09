@@ -3,68 +3,16 @@ package partnermerchant
 // PartnerMerchant : Struct is a local representation of a merchant who is registered with the Otis platform
 // PartnerMerchant resources retrieved from the DB are serialized to an instance of this struct
 type PartnerMerchant struct {
-	Schema      string `json:"$schema"`
-	ID          string `dynamodbav:"id,omitempty" json:"$id"`
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Type        string `json:"type"`
-	Properties  struct {
-		MerchantID struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"merchant_id"`
-		MerchantName struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"merchant_name"`
-		Locations struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-			Items       struct {
-				Description string   `json:"description"`
-				Type        []string `json:"type"`
-			} `json:"items"`
-		} `json:"locations"`
-		APITags struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-			Items       struct {
-				Type string `json:"type"`
-			} `json:"items"`
-		} `json:"api_tags"`
-		OtisTags struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-			Items       struct {
-				Type string `json:"type"`
-			} `json:"items"`
-		} `json:"otis_tags"`
-		Sector struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"sector"`
-		Size struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"size"`
-		Rate struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"rate"`
-		JoinDate struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"join_date"`
-		NextBillingDate struct {
-			Description string `json:"description"`
-			Type        string `json:"type"`
-		} `json:"next_billing_date"`
-		GocardlessMandate struct {
-			Description string `json:"description"`
-		} `json:"gocardless_mandate"`
-		ExpenseBand struct {
-			Description string `json:"description"`
-			Ref         string `json:"$ref"`
-		} `json:"expense_band"`
-	} `json:"properties"`
+	ID                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name                 string   `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Locations            []string `protobuf:"bytes,3,rep,name=locations,proto3" json:"locations,omitempty"`
+	ApiTags              []string `protobuf:"bytes,4,rep,name=api_tags,json=apiTags,proto3" json:"api_tags,omitempty"`
+	OtisTags             []string `protobuf:"bytes,5,rep,name=otis_tags,json=otisTags,proto3" json:"otis_tags,omitempty"`
+	Sector               string   `protobuf:"bytes,6,opt,name=sector,proto3" json:"sector,omitempty"`
+	Size                 string   `protobuf:"bytes,7,opt,name=size,proto3" json:"size,omitempty"`
+	Rate                 int32    `protobuf:"varint,8,opt,name=rate,proto3" json:"rate,omitempty"`
+	JoinDate             string   `protobuf:"bytes,9,opt,name=joinDate,proto3" json:"joinDate,omitempty"`
+	NextBillingDate      string   `protobuf:"bytes,10,opt,name=nextBillingDate,proto3" json:"nextBillingDate,omitempty"`
+	GocardlessMandate    string   `protobuf:"bytes,11,opt,name=gocardlessMandate,proto3" json:"gocardlessMandate,omitempty"`
+	ExpenseBand          string   `protobuf:"bytes,12,opt,name=expenseBand,proto3" json:"expenseBand,omitempty"`
 }
