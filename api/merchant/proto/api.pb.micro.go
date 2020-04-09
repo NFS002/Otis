@@ -39,6 +39,7 @@ type MerchantService interface {
 	Get(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 	Update(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 	Delete(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
+	Health(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
 }
 
 type merchantService struct {
@@ -103,6 +104,16 @@ func (c *merchantService) Delete(ctx context.Context, in *Request, opts ...clien
 	return out, nil
 }
 
+func (c *merchantService) Health(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error) {
+	req := c.c.NewRequest(c.name, "Merchant.Health", in)
+	out := new(Response)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for Merchant service
 
 type MerchantHandler interface {
@@ -111,6 +122,7 @@ type MerchantHandler interface {
 	Get(context.Context, *Request, *Response) error
 	Update(context.Context, *Request, *Response) error
 	Delete(context.Context, *Request, *Response) error
+	Health(context.Context, *Request, *Response) error
 }
 
 func RegisterMerchantHandler(s server.Server, hdlr MerchantHandler, opts ...server.HandlerOption) error {
@@ -120,6 +132,7 @@ func RegisterMerchantHandler(s server.Server, hdlr MerchantHandler, opts ...serv
 		Get(ctx context.Context, in *Request, out *Response) error
 		Update(ctx context.Context, in *Request, out *Response) error
 		Delete(ctx context.Context, in *Request, out *Response) error
+		Health(ctx context.Context, in *Request, out *Response) error
 	}
 	type Merchant struct {
 		merchant
@@ -150,6 +163,10 @@ func (h *merchantHandler) Update(ctx context.Context, in *Request, out *Response
 
 func (h *merchantHandler) Delete(ctx context.Context, in *Request, out *Response) error {
 	return h.MerchantHandler.Delete(ctx, in, out)
+}
+
+func (h *merchantHandler) Health(ctx context.Context, in *Request, out *Response) error {
+	return h.MerchantHandler.Health(ctx, in, out)
 }
 
 // Client API for Transaction service

@@ -28,70 +28,70 @@ services:
     networks:
       - api-gateway-tier
       - api-merchant-tier
-      - api-transaction-tiere
-
-  api_user:
-    restart: always
-    container_name: "go.micro.api.user"
-    build:
-      context: ./api/user/
-      dockerfile: Dockerfile
-      args:
-        - gitlab_user=gitlab+deploy-token-154792
-        - gitlab_token=ZbKzbXzeapzLsNkxomxx
-    depends_on:
-      - api_gateway
-    ports:
-      - 50052:50052
-    networks:
-      - api-gateway-tier
-      - api-user-tier
       - api-transaction-tier
 
-  service_merchant:
-    restart: always
-    container_name: "go.micro.service.merchant"
-    build:
-      context: ./service/merchant/
-      dockerfile: Dockerfile
-      args:
-        - gitlab_user=gitlab+deploy-token-154792
-        - gitlab_token=ZbKzbXzeapzLsNkxomxx
-    ports:
-      - 50053:50053
-    networks:
-      - api-gateway-tier
-      - api-merchant-tier
+#  api_user:
+#    restart: always
+#    container_name: "go.micro.api.user"
+#    build:
+#      context: ./api/user/
+#      dockerfile: Dockerfile
+#      args:
+#        - gitlab_user=gitlab+deploy-token-154792
+#        - gitlab_token=ZbKzbXzeapzLsNkxomxx
+#    depends_on:
+#      - api_gateway
+#    ports:
+#      - 50052:50052
+#    networks:
+#      - api-gateway-tier
+#      - api-user-tier
+#      - api-transaction-tier
 
-  service_user:
-    restart: always
-    container_name: "go.micro.service.user"
-    build:
-      context: ./service/user/
-      dockerfile: Dockerfile
-      args:
-        - gitlab_user=gitlab+deploy-token-154792
-        - gitlab_token=ZbKzbXzeapzLsNkxomxx
-    ports:
-      - 50054:50054
-    networks:
-      - api-gateway-tier
-      - api-user-tier
-
-  service_transaction:
-    restart: always
-    container_name: "go.micro.service.transaction"
-    build:
-      context: ./service/transaction/
-      dockerfile: Dockerfile
-      args:
-        - gitlab_user=gitlab+deploy-token-154792
-        - gitlab_token=ZbKzbXzeapzLsNkxomxx
-    ports:
-      - 50055:50055
-    networks:
-      - api-gateway-tier
-      - api-transaction-tier
+#  service_merchant:
+#    restart: always
+#    container_name: "go.micro.service.merchant"
+#    build:
+#      context: ./service/merchant/
+#      dockerfile: Dockerfile
+#      args:
+#        - gitlab_user=gitlab+deploy-token-154792
+#        - gitlab_token=ZbKzbXzeapzLsNkxomxx
+#    ports:
+#      - 50053:50053
+#    networks:
+#      - api-gateway-tier
+#      - api-merchant-tier
+#
+#  service_user:
+#    restart: always
+#    container_name: "go.micro.service.user"
+#    build:
+#      context: ./service/user/
+#      dockerfile: Dockerfile
+#      args:
+#        - gitlab_user=gitlab+deploy-token-154792
+#        - gitlab_token=ZbKzbXzeapzLsNkxomxx
+#    ports:
+#      - 50054:50054
+#    networks:
+#      - api-gateway-tier
+#      - api-user-tier
+#
+#  service_transaction:
+#    restart: always
+#    container_name: "go.micro.service.transaction"
+#    build:
+#      context: ./service/transaction/
+#      dockerfile: Dockerfile
+#      args:
+#        - gitlab_user=gitlab+deploy-token-154792
+#        - gitlab_token=ZbKzbXzeapzLsNkxomxx
+#    ports:
+#      - 50055:50055
+#    networks:
+#      - api-gateway-tier
+#      - api-transaction-tier
 
 networks:
   api-gateway-tier:
@@ -100,3 +100,5 @@ networks:
     name: api-merchant-tier
   api-user-tier:
     name: api-user-tier
+  api-transaction-tier:
+    name: api-transaction-tier
