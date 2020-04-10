@@ -1,51 +1,81 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: default
-  name: micro-api
-  labels:
-    micro: service
+  name: micro
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: micro-api
-      micro: service
-  strategy:
-    rollingUpdate:
-      maxSurge: 0
-      maxUnavailable: 1
+      app: micro
   template:
     metadata:
       labels:
-        name: micro-api
-        micro: service
+        app: micro
     spec:
       containers:
-        - name: api
-          env:
-            - name: MICRO_ENABLE_STATS
-              value: "true"
-#            - name: MICRO_BROKER
-#              value: "nats"
-#            - name: MICRO_BROKER_ADDRESS
-#              value: "nats-cluster"
-#            - name: MICRO_REGISTRY
-#              value: "etcd"
-#            - name: MICRO_REGISTRY_ADDRESS
-#              value: "etcd-cluster-client"
-            - name: MICRO_REGISTER_TTL
-              value: "60"
-            - name: MICRO_REGISTER_INTERVAL
-              value: "30"
-            - name: MICRO_ENABLE_ACME
-              value: "true"
-            - name: MICRO_ACME_HOSTS
-              value: "aef8436057a2346aab70b87a890b2fb3-1626668430.eu-west-2.elb.amazonaws.com"
-          args:
-            - api
+        - name: micro
           image: micro/micro
-          imagePullPolicy: Always
+          args:
+            - "api"
+            - "--handler=api"
+          env:
+            - name: MICRO_API_ADDRESS
+              value: ":80"
           ports:
-            - containerPort: 443
-              name: api-port
+            - containerPort: 80
+              name: port
+            - containerPort: 8080
+              name: port1
+
+#
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  namespace: default
+#  name: micro-api
+#  labels:
+#    micro: service
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      name: micro-api
+#      micro: service
+#  strategy:
+#    rollingUpdate:
+#      maxSurge: 0
+#      maxUnavailable: 1
+#  template:
+#    metadata:
+#      labels:
+#        name: micro-api
+#        micro: service
+#    spec:
+#      containers:
+#        - name: api
+#          env:
+#            - name: MICRO_ENABLE_STATS
+#              value: "true"
+##            - name: MICRO_BROKER
+##              value: "nats"
+##            - name: MICRO_BROKER_ADDRESS
+##              value: "nats-cluster"
+##            - name: MICRO_REGISTRY
+##              value: "etcd"
+##            - name: MICRO_REGISTRY_ADDRESS
+##              value: "etcd-cluster-client"
+#            - name: MICRO_REGISTER_TTL
+#              value: "60"
+#            - name: MICRO_REGISTER_INTERVAL
+#              value: "30"
+#            - name: MICRO_ENABLE_ACME
+#              value: "true"
+#            - name: MICRO_ACME_HOSTS
+#              value: "aef8436057a2346aab70b87a890b2fb3-1626668430.eu-west-2.elb.amazonaws.com"
+#          args:
+#            - api
+#          image: micro/micro
+#          imagePullPolicy: Always
+#          ports:
+#            - containerPort: 443
+#              name: api-port
