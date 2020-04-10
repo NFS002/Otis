@@ -21,6 +21,11 @@ spec:
             "--selector=static",
             "--server_address=:8080",
           ]
+          env:
+            - name: MICRO_REGISTRY
+              value: "etcd"
+            - name: MICRO_REGISTRY_ADDRESS
+              value: "etcd-cluster-client"
           ports:
             - containerPort: 8080
               name: mapi-port

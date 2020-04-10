@@ -21,6 +21,10 @@ spec:
           env:
             - name: MICRO_API_ADDRESS
               value: ":80"
+            - name: MICRO_REGISTRY
+              value: "etcd"
+            - name: MICRO_REGISTRY_ADDRESS
+              value: "etcd-cluster-client"
           ports:
             - containerPort: 80
               name: port
