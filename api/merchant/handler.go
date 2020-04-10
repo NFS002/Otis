@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro/errors"
 	protoAPI "gitlab.com/otis-team/backend/api/merchant/proto"
+	"gitlab.com/otis-team/backend/auth"
 	merchant "gitlab.com/otis-team/backend/service/merchant/package"
 	protoMerchant "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 
@@ -62,7 +63,7 @@ func (e *Merchant) Health(ctx context.Context, req *protoAPI.Request, rsp *proto
 		return errors.BadRequest("go.micro.api.merchant", "Need Authorization header")
 	}
 
-	err := CheckAuthHeader(authHeader.Values[0])
+	err := auth.CheckAuthHeader(authHeader.Values[0])
 	if err != nil {
 		return errors.BadRequest("go.micro.api.example", err.Error())
 	}

@@ -20,6 +20,9 @@ RUN git config \
     url."https://${gitlab_user}:${gitlab_token}@gitlab.com/".insteadOf \
     "https://gitlab.com/"
 
+
+RUN go get -insecure gitlab.com/otis-team/backend/auth@auth
+
 RUN GIT_TERMINAL_PROMPT=1 CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o api-merchant
 
 # RUN
