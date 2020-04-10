@@ -681,7 +681,10 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 github.com/xlab/treeprint v0.0.0-20181112141820-a009c3971eca/go.mod h1:ce1O1j6UtZfjr22oyGxGLbauSBp2YVXpARAosm7dHBg=
 gitlab.com/otis-team/backend v0.0.0-20200330224117-cbbfc773f1a3 h1:7B2TsoXnYj12eyMbKkdDxwDqQEnuBCPxhT1BqoBZygQ=
 gitlab.com/otis-team/backend v0.0.0-20200408150416-63532e1b178b h1:u0msukyW9IkEXMr3CcgLEkMYSuZqKOk/B+yIuEGHDt4=
+gitlab.com/otis-team/backend v0.0.0-20200410092126-a48060a60771 h1:Dj7EVILuJvrX8t38Z9ReFnwvAGfk6UPEvg4rA1aDor0=
 gitlab.com/otis-team/backend/api/merchant v0.0.0-20200408150416-63532e1b178b/go.mod h1:mxuxiNJV6+QCNgbFcLmMBByTfMM4xbPpj54ZUVEXr20=
+gitlab.com/otis-team/backend/auth v0.0.0-20200410092126-a48060a60771 h1:p9Ug4bsUZIxCxm6nGrXXaW5/jwMFXZn6Euu3SjDLhtk=
+gitlab.com/otis-team/backend/auth v0.0.0-20200410092126-a48060a60771/go.mod h1:WKNhjc06iziovebbzIiSCnhib0i6vTmbpofZ8ChVNII=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200329213942-4509856c7460/go.mod h1:ycPI98OappzM6g68sCz0Zy7+vwS9DL0BYy3xlFy6E90=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200330224117-cbbfc773f1a3 h1:9Ux0tl7o8/VyFrtVkcagFI1b55m/icFjI9s3uB2Gcfc=
 gitlab.com/otis-team/backend/service/merchant v0.0.0-20200330224117-cbbfc773f1a3/go.mod h1:TxF0bS4PRrZWkumlofFcExsDpoc8zW8Jb0JKVsrDEmU=
