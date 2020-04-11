@@ -1,63 +1,41 @@
+// Compile with:
+// protoc -I /Users/$USER/Otis/backend/ service/merchant/proto/merchant/merchant.proto --go_out=. --micro_out=.
 syntax = "proto3";
+
+
+// Import GeneralMerchant and PartnerMerchant data types
+import "dtypes/partner-merchant/proto/partner-merchant.proto";
+import "dtypes/general-merchant/proto/general-merchant.proto";
 
 package merchant;
 
+
 service MerchantService {
-    rpc CreateMerchant(Merchant) returns (CreateResponse) {}
-    rpc GetMerchant(GetRequest) returns (GetResponse) {}
-    rpc UpdateMerchant(Merchant) returns (UpdateResponse) {}
-    rpc DeleteMerchant(DeleteRequest) returns (DeleteResponse) {}
+    rpc CreateGeneralMerchant(MerchantRequest) returns (MerchantsResponse) {}
+    rpc CreatePartnerMerchant(MerchantRequest) returns (MerchantsResponse) {}
+    rpc GetGeneralMerchant(MerchantQuery) returns (MerchantsResponse) {}
+    rpc GetPartnerMerchant(MerchantQuery) returns (MerchantsResponse) {}
+    rpc DeleteGeneralMerchant(MerchantQuery) returns (MerchantsResponse) {}
+    rpc DeletePartnerMerchant(MerchantQuery) returns (MerchantsResponse) {}
 }
 
-// Base types
-message Merchant {
-    string merchantID = 1;
-    string name = 2;
-    repeated Location locations = 3;
-    repeated Tag tags = 4;
-    string contactPhone = 5;
-    string contactEmail = 6;
-    float rate = 7;
-}
+// Query types
 
-message Location {
-    string location = 1;
-}
-
-message Tag {
-    string tag = 1;
-}
-
-// Create response
-
-message CreateResponse {
-    bool created = 1;
-    Merchant merchant = 2;
-}
-
-// Get request and response
-
-message GetRequest {
+message MerchantQuery {
     string merchantID = 1;
 }
 
-message GetResponse {
-    repeated Merchant merchants = 1;
+message MerchantRequest {
+    partnermerchant.PartnerMerchant partnerMerchant = 1;
+    generalmerchant.GeneralMerchant generalMerchant = 2;
 }
 
-// Update Response
+// Response types
 
-message UpdateResponse {
-    bool updated = 1;
-    Merchant merchant = 2;
+message MerchantsResponse {
+    bool executed = 1;
+    repeated partnermerchant.PartnerMerchant partnerMerchants = 2;
+    repeated generalmerchant.GeneralMerchant generalMerchants = 3;
 }
 
-// Delete request and response
 
-message DeleteRequest {
-    string merchantID = 1;
-}
-
-message DeleteResponse {
-    bool deleted = 1;
-}

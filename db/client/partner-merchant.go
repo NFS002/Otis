@@ -2,13 +2,13 @@ package client
 
 import (
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"gitlab.com/otis-team/backend/db/model"
+	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
+	"gitlab.com/otis-team/backend/dtypes/partner-merchant/proto"
 )
 
-// CreateMerchant : Creates a new merchant in the db
-func (c* DynamoClient) CreateMerchant(merchant *model.Merchant) (*model.Merchant, error) {
+// CreatePartnerMerchant : Creates a new partner merchant in the db
+func (c* DynamoClient) CreatePartnerMerchant(merchant *partnermerchant.PartnerMerchant) (*partnermerchant.PartnerMerchant, error) {
 	av, err := dynamodbattribute.MarshalMap(merchant)
 	if err != nil {
 		return nil, err
@@ -24,21 +24,22 @@ func (c* DynamoClient) CreateMerchant(merchant *model.Merchant) (*model.Merchant
 	return merchant, nil
 }
 
-// GetAllMerchants : Retrieves all merchants from the DB
-func (c* DynamoClient) GetAllMerchants() ([]*model.Merchant, error) {
+
+// GetAllPartnerMerchants : Retrieves all partner merchants from the DB
+func (c* DynamoClient) GetAllPartnerMerchants() ([]*partnermerchant.PartnerMerchant, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),
 	})
 	if err != nil {
 		return nil, err
 	}
-	merchants := model.Merchants{}
+	merchants := make([]*partnermerchant.PartnerMerchant,0)
 	err = dynamodbattribute.UnmarshalMap(result.Item,&merchants)
 	return merchants, err
 }
 
-// GetMerchantByID : Retrieves the Merchant from the DB with the given ID
-func (c* DynamoClient) GetMerchantByID(merchantID string) (model.Merchants, error) {
+// GetPartnerMerchantByID : Retrieves the Merchant from the DB with the given ID
+func (c* DynamoClient) GetPartnerMerchantByID(merchantID string) (*partnermerchant.PartnerMerchant, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -50,20 +51,13 @@ func (c* DynamoClient) GetMerchantByID(merchantID string) (model.Merchants, erro
 	if err != nil {
 		return nil, err
 	}
-	merchants := model.Merchants{}
-	err = dynamodbattribute.UnmarshalMap(result.Item,merchants)
-	return merchants, err
+	merchant := &partnermerchant.PartnerMerchant{}
+	err = dynamodbattribute.UnmarshalMap(result.Item,merchant)
+	return merchant, err
 }
 
-// UpdateMerchant : Updates a merchant in the DB
-func (c* DynamoClient) UpdateMerchant(merchant *model.Merchant) (*model.Merchant, error) {
-	/* Deprecated. 
-	* Call CreateMerchant(merchant *model.Merchant) (*model.Merchant, error) instead */
-	return nil, nil
-}
-
-// DeleteMerchant : Deletes a merchant with the given ID from the DB
-func (c* DynamoClient) DeleteMerchant(merchantID string) (error) {
+// DeletePartnerMerchant : Deletes a merchant with the given ID from the DB
+func (c* DynamoClient) DeletePartnerMerchant(merchantID string) error {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {
@@ -75,4 +69,3 @@ func (c* DynamoClient) DeleteMerchant(merchantID string) (error) {
 	_, err := c.Client.DeleteItem(input)
 	return err
 }
-

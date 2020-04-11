@@ -1,10 +1,10 @@
-	package main
+package main
 
 import (
-	"github.com/micro/go-micro"
-	"gitlab.com/otis-team/backend/db/client"
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-	"log"
+		"github.com/micro/go-micro/v2"
+		"gitlab.com/otis-team/backend/db/client"
+		pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+		"log"
 )
 
 func main() {
@@ -20,8 +20,12 @@ func main() {
 	}
 
 	handler := &Handler{dynamoClient}
-	pb.RegisterMerchantServiceHandler(service.Server(), handler)
-	if err := service.Run(); err != nil {
+
+	if err = pb.RegisterMerchantServiceHandler(service.Server(), handler); err != nil {
+		log.Panic(err)
+	}
+
+	if err = service.Run(); err != nil {
 		log.Println(err)
 	}
 }

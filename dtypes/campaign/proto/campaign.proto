@@ -15,3 +15,4 @@ message Campaign {
     int32 validFor = 10;
     bool active = 11;
 }
+

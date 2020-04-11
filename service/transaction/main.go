@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/v2"
 	"gitlab.com/otis-team/backend/db/client"
 	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
@@ -26,7 +26,7 @@ func main() {
 		log.Panic(err)
 	}
 
-	if err := service.Run(); err != nil {
+	if err = service.Run(); err != nil {
 		log.Println(err)
 	}
 }

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro/errors"
 	proto "gitlab.com/otis-team/backend/api/user/proto"
-	"gitlab.com/otis-team/backend/db/model"
+	user "gitlab.com/otis-team/backend/dtypes/user/proto"
 	transactionService "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	userService "gitlab.com/otis-team/backend/service/user/proto/user"
 	"log"
@@ -13,7 +13,7 @@ import (
 
 // User struct. All methods using this struct will be mapped to /user/<method>.
 type User struct {
-	Client userService.UserServiceClient
+	Client userService.UserService
 }
 
 // Transactions struct. All methods using this struct will be mapped to /user/transaction/<method>
@@ -38,13 +38,13 @@ func (e *User) Create(ctx context.Context, req *proto.Request, rsp *proto.Respon
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var newUser *model.User
-	err := json.Unmarshal([]byte(req.Body), &newUser)
+	newUser := &user.User{}
+	err := json.Unmarshal([]byte(req.Body), newUser)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.merchant", "Body not valid. Please reference to API documentation.")
 	}
 
-	r, err := e.Client.CreateUser(ctx, model.UserToProtobuf(newUser))
+	r, err := e.Client.CreateUser(ctx, newUser)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user",err.Error())
 	}
@@ -52,8 +52,8 @@ func (e *User) Create(ctx context.Context, req *proto.Request, rsp *proto.Respon
 	rsp.StatusCode = 200
 
 	responseBody := map[string]interface{}{
-		"executed":   r.Created,
-		"user": model.ProtobufToUser(r.User),
+		"executed":   r.Executed,
+		"user": r.Users,
 	}
 
 	body, err := json.Marshal(responseBody)
@@ -80,7 +80,7 @@ func (e *User) Get(ctx context.Context, req *proto.Request, rsp *proto.Response)
 		return errors.BadRequest("go.micro.api.user", "Please provide an ID")
 	}
 
-	r, err := e.Client.GetUser(ctx, &userService.GetRequest{UserID: id.Values[0]}) // Seems kinda janky
+	r, err := e.Client.GetUser(ctx, &userService.UserQuery{UserID: id.Values[0]}) // Seems kinda janky
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user",err.Error())
 	}
@@ -88,7 +88,7 @@ func (e *User) Get(ctx context.Context, req *proto.Request, rsp *proto.Response)
 	rsp.StatusCode = 200
 
 	responseBody := map[string]interface{}{
-		"users": model.ProtobufToUserCollection(r.Users),
+		"users": r.Users,
 	}
 
 	body, err := json.Marshal(responseBody)
@@ -111,7 +111,7 @@ func (e *User) GetAll(ctx context.Context, req *proto.Request, rsp *proto.Respon
 		return errors.BadRequest("go.micro.api.user", "This method requires GET")
 	}
 
-	r, err := e.Client.GetUser(ctx, &userService.GetRequest{})
+	r, err := e.Client.GetUser(ctx, &userService.UserQuery{})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user",err.Error())
 	}
@@ -119,7 +119,7 @@ func (e *User) GetAll(ctx context.Context, req *proto.Request, rsp *proto.Respon
 	rsp.StatusCode = 200
 
 	responseBody := map[string]interface{}{
-		"users": model.ProtobufToUserCollection(r.Users),
+		"users": r.Users,
 	}
 
 	body, err := json.Marshal(responseBody)
@@ -150,13 +150,14 @@ func (e *User) Update(ctx context.Context, req *proto.Request, rsp *proto.Respon
 		return errors.BadRequest("go.micro.api.example", "Expect application/json")
 	}
 
-	var updatedUser *model.User
+	updatedUser := &user.User{}
 	err := json.Unmarshal([]byte(req.Body), &updatedUser)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user", "Body not valid. Please reference to API documentation.")
 	}
 
-	r, err := e.Client.UpdateUser(ctx, model.UserToProtobuf(updatedUser))
+	/* UpdateUser calls CreateUser internally */
+	r, err := e.Client.CreateUser(ctx, updatedUser)
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user",err.Error())
 	}
@@ -164,8 +165,8 @@ func (e *User) Update(ctx context.Context, req *proto.Request, rsp *proto.Respon
 	rsp.StatusCode = 200
 
 	responseBody := map[string]interface{}{
-		"executed":   r.Updated,
-		"user": model.ProtobufToUser(r.User),
+		"executed":   r.Executed,
+		"users": r.Users,
 	}
 
 	body, err := json.Marshal(responseBody)
@@ -192,7 +193,7 @@ func (e *User) Delete(ctx context.Context, req *proto.Request, rsp *proto.Respon
 		return errors.BadRequest("go.micro.api.user", "Please provide an ID")
 	}
 
-	r, err := e.Client.DeleteUser(ctx, &userService.DeleteRequest{UserID: userID.Values[0]})
+	r, err := e.Client.DeleteUser(ctx, &userService.UserQuery{UserID: userID.Values[0]})
 	if err != nil {
 		return errors.BadRequest("go.micro.api.user", err.Error())
 	}
@@ -200,7 +201,7 @@ func (e *User) Delete(ctx context.Context, req *proto.Request, rsp *proto.Respon
 	rsp.StatusCode = 200
 
 	responseBody := map[string]interface{}{
-		"executed": r.Deleted,
+		"executed": r.Executed,
 	}
 
 	body, err := json.Marshal(responseBody)
@@ -227,7 +228,7 @@ func (e *Transactions) Get(ctx context.Context, req *proto.Request, rsp *proto.R
 		return errors.BadRequest("go.micro.api.user", "Please provide an ID")
 	}
 
-	r, err := e.Client.GetTransactions(ctx, &transactionService.IDRequest{UserID: userID.Values[0]})
+	r, err := e.Client.GetTransactions(ctx, &transactionService.TransactionQuery{UserID: userID.Values[0]})
 	if err != nil { 
 		return errors.BadRequest("go.micro.api.user", err.Error())
 	}
@@ -235,7 +236,7 @@ func (e *Transactions) Get(ctx context.Context, req *proto.Request, rsp *proto.R
 	rsp.StatusCode = 200
 
 	responseBody := map[string]interface{}{
-		"transactions": model.ProtobufToTransactionCollection(r.Transactions),
+		"transactions": r.Transactions,
 	}
 
 	body, err := json.Marshal(responseBody)

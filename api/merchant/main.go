@@ -1,9 +1,8 @@
 package main
 
 import (
-	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/v2"
 	proto "gitlab.com/otis-team/backend/api/merchant/proto"
-
 	merchantService "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 	transactionService "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
@@ -22,7 +21,8 @@ func main() {
 
 	service.Init()
 
-	merchantClient := merchantService.NewMerchantServiceClient("go.micro.service.merchant", service.Client())
+
+	merchantClient := merchantService.NewMerchantService("go.micro.service.merchant", service.Client())
 	
 	transactionClient := transactionService.NewTransactionService("go.micro.service.transaction", service.Client())
 

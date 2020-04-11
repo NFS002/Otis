@@ -1,4 +1,7 @@
-syntax="proto3";
+// Compile with:
+// protoc proto/partner-merchant.proto --go_out=.
+
+syntax = "proto3";
 
 package partnermerchant;
 

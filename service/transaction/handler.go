@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"gitlab.com/otis-team/backend/db/client"
-	"gitlab.com/otis-team/backend/db/model"
-	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	transaction "gitlab.com/otis-team/backend/dtypes/transaction/proto"
+	transactionService "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
 	"log"
 )
 
@@ -16,20 +16,20 @@ type Handler struct {
 
 
 // CreateTransaction : Persists the given transaction in the DB
-func (h *Handler) CreateTransaction(ctx context.Context, req *pb.Transaction, res *pb.CRUDResponse) error {
+func (h *Handler) CreateTransaction(ctx context.Context, req *transactionService.TransactionQuery, res *transactionService.TransactionResponse) error {
 	log.Print("CreateTransaction handler fired")
-	transaction := model.ProtobufToTransaction(req)
-	_, err := h.Client.CreateTransaction(transaction)
-	res.Executed = (err == nil)
-	res.Transactions = []*pb.Transaction{ req }
+	t, err := h.Client.CreateTransaction(req.Transaction)
+	res.Executed = err == nil
+	res.Transactions = []*transaction.Transaction{ t }
 	return err
 }
 
 // GetTransactions handles gRPC requests to retrieve one (if Transaction ID is supplied) or many transaction from the DB.
-func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
+func (h *Handler) GetTransactions(ctx context.Context, req *transactionService.TransactionQuery, res *transactionService.TransactionResponse) error {
 	log.Print("GetTransactions handler fired")
 
-	var transactions []*model.Transaction
+	var transactions []*transaction.Transaction
+	var transaction *transaction.Transaction
 	var err error
 
 	tID := req.TransactionID
@@ -37,7 +37,8 @@ func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 	uID := req.UserID
 
 	if len(tID) > 0 {
-		transactions, err = h.Client.GetTransactionByID(tID)
+		transaction, err = h.Client.GetTransactionByID(tID)
+		transactions = append(transactions, transaction)
 	} else if len(mID) > 0 {
 		transactions, err = h.Client.GetTransactionsByMerchantID(mID)
 	} else if len(uID) > 0 {
@@ -46,15 +47,15 @@ func (h *Handler) GetTransactions(ctx context.Context, req *pb.IDRequest, res *p
 		transactions, err = h.Client.GetAllTransactions()
 	}
 
-	res.Transactions = model.TransactionCollectionToProtobuf(transactions)
-	res.Executed = true
+	res.Transactions = transactions
+	res.Executed = err == nil
 	return err
 }
 
 // DeleteTransactions : Handles grpc requests to delete transactions in the DB
-func (h *Handler) DeleteTransactions(ctx context.Context, req *pb.IDRequest, res *pb.CRUDResponse) error {
+func (h *Handler) DeleteTransactions(ctx context.Context, req *transactionService.TransactionQuery, res *transactionService.TransactionResponse) error {
 	log.Print("DeleteTransactions handler fired!")
 	err := h.Client.DeleteTransaction(req.TransactionID)
-	res.Executed = (err == nil)
+	res.Executed = err == nil
 	return err
 }

@@ -3,8 +3,9 @@ package main
 import (
 	"context"
 	"gitlab.com/otis-team/backend/db/client"
-	"gitlab.com/otis-team/backend/db/model"
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	"gitlab.com/otis-team/backend/dtypes/general-merchant/proto"
+	"gitlab.com/otis-team/backend/dtypes/partner-merchant/proto"
+	"gitlab.com/otis-team/backend/service/merchant/proto/merchant"
 	"log"
 )
 
@@ -15,48 +16,78 @@ type Handler struct {
 }
 
 
-// CreateMerchant handles gRPC requests to create a new merchant in the DB.
-func (h *Handler) CreateMerchant(ctx context.Context, req *pb.Merchant, res *pb.CreateResponse) error {
-	log.Print("CreateMerchant handler fired!")
-	merchant := model.ProtobufToMerchant(req)
-	_, err := h.Client.CreateMerchant(merchant)
-	res.Created = (err == nil)
-	res.Merchant = req
+// CreateGeneralMerchant handles gRPC requests to create a new merchant in the DB.
+func (h *Handler) CreateGeneralMerchant(ctx context.Context, req *merchant.MerchantRequest, res *merchant.MerchantsResponse) error {
+	log.Print("CreateMerchant handler fired")
+	gMerchant := req.GetGeneralMerchant()
+	_, err := h.Client.CreateGeneralMerchant(gMerchant)
+	res.Executed = err == nil
+	res.GeneralMerchants = []*generalmerchant.GeneralMerchant{ gMerchant }
 	return err
 }
 
-// GetMerchant handles gRPC requests to retrieve one (if Merchant ID is supplied) or many merchants from the DB.
-func (h *Handler) GetMerchant(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
-	log.Print("GetMerchant handler fired!")
+// CreatePartnerMerchant handles gRPC requests to create a new merchant in the DB.
+func (h *Handler) CreatePartnerMerchant(ctx context.Context, req *merchant.MerchantRequest, res *merchant.MerchantsResponse) error {
+	log.Print("CreateMerchant handler fired")
+	pMerchant := req.GetPartnerMerchant()
+	_, err := h.Client.CreatePartnerMerchant(pMerchant)
+	res.Executed = err == nil
+	res.PartnerMerchants = []*partnermerchant.PartnerMerchant{ pMerchant }
+	return err
+}
 
-	var merchants []*model.Merchant
+// GetGeneralMerchant handles gRPC requests to retrieve one (if Merchant ID is supplied) or many general merchants from the DB.
+func (h *Handler) GetGeneralMerchant(ctx context.Context, req *merchant.MerchantQuery, res *merchant.MerchantsResponse) error {
+	log.Print("GetGeneralMerchant handler fired")
+
 	var err error
+	var merchants []*generalmerchant.GeneralMerchant
+	var merchant *generalmerchant.GeneralMerchant
 
 	if len(req.MerchantID) == 0 {
-		merchants, err = h.Client.GetAllMerchants()
+		merchants, err = h.Client.GetAllGeneralMerchants()
+		res.GeneralMerchants = merchants
+		res.Executed = err == nil
 	} else {
-		merchants, err = h.Client.GetMerchantByID(req.MerchantID)
+		merchant, err = h.Client.GetGeneralMerchantByID(req.MerchantID)
+		res.GeneralMerchants = []*generalmerchant.GeneralMerchant{ merchant }
+		res.Executed = err == nil
 	}
-
-	res.Merchants = model.MerchantCollectionToProtobuf(merchants)
 	return err
 }
 
-// UpdateMerchant handles gRPC requests to update a new merchant in the DB
-func (h *Handler) UpdateMerchant(ctx context.Context, req *pb.Merchant, res *pb.UpdateResponse) error {
-	log.Print("UpdateMerchant handler fired!")
-	merchant := model.ProtobufToMerchant(req)
-	/* UpdateMerchant behaves the same as CreateMerchant if the primary key is given */
-	_, err := h.Client.CreateMerchant(merchant)
-	res.Updated = err == nil
-	res.Merchant = req
+// GetPartnerMerchant handles gRPC requests to retrieve one (if Merchant ID is supplied) or many partner merchants from the DB.
+func (h *Handler) GetPartnerMerchant(ctx context.Context, req *merchant.MerchantQuery, res *merchant.MerchantsResponse) error {
+	log.Print("GetPartnerMerchant handler fired!")
+
+	var err error
+	var merchants []*partnermerchant.PartnerMerchant
+	var merchant *partnermerchant.PartnerMerchant
+
+	if len(req.MerchantID) == 0 {
+		merchants, err = h.Client.GetAllPartnerMerchants()
+		res.PartnerMerchants = merchants
+		res.Executed = err != nil
+	} else {
+		merchant, err = h.Client.GetPartnerMerchantByID(req.MerchantID)
+		res.PartnerMerchants = []*partnermerchant.PartnerMerchant{ merchant }
+		res.Executed = err != nil
+	}
 	return err
 }
 
-// DeleteMerchant handles gRPC requests to delete a new merchant from the DB
-func (h *Handler) DeleteMerchant(ctx context.Context, req *pb.DeleteRequest, res *pb.DeleteResponse) error {
-	log.Print("DeleteMerchant handler fired!")
-	err := h.Client.DeleteMerchant(req.MerchantID)
-	res.Deleted = err == nil
+// DeletePartnerMerchant handles gRPC requests to delete a new partner merchant from the DB
+func (h *Handler) DeletePartnerMerchant(ctx context.Context, req *merchant.MerchantQuery, res *merchant.MerchantsResponse) error {
+	log.Print("DeletePartnerMerchant handler fired")
+	err := h.Client.DeletePartnerMerchant(req.MerchantID)
+	res.Executed = err == nil
+	return err
+}
+
+// DeleteGeneralMerchant handles gRPC requests to delete a new general merchant from the DB
+func (h *Handler) DeleteGeneralMerchant(ctx context.Context, req *merchant.MerchantQuery, res *merchant.MerchantsResponse) error {
+	log.Print("DeleteGeneralMerchant handler fired")
+	err := h.Client.DeleteGeneralMerchant(req.MerchantID)
+	res.Executed = err == nil
 	return err
 }

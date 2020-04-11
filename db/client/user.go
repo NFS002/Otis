@@ -4,12 +4,12 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
-	"gitlab.com/otis-team/backend/db/model"
+	"gitlab.com/otis-team/backend/dtypes/user/proto"
 )
 
 
 // CreateUser : Creates a new user in the db
-func (c* DynamoClient) CreateUser(user *model.User) (*model.User, error) {
+func (c* DynamoClient) CreateUser(user *user.User) (*user.User, error) {
 	av, err := dynamodbattribute.MarshalMap(user)
 	if err != nil {
 		return nil, err
@@ -26,21 +26,21 @@ func (c* DynamoClient) CreateUser(user *model.User) (*model.User, error) {
 }
 
 // GetAllUsers : Retrieves all users from the db
-func (c *DynamoClient) GetAllUsers() (*model.Users, error) {
+func (c *DynamoClient) GetAllUsers() ([]*user.User, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
 	})
 	if err != nil {
 		return nil, err
 	}
-	users := model.Users{}
+	users := make([]*user.User,0)
 	err = dynamodbattribute.UnmarshalMap(result.Item,&users)
-	return &users, err
+	return users, err
 }
 
 
 // GetUserByID : Retrieves a single user from the db
-func (c* DynamoClient) GetUserByID(userID string) (*model.Users, error) {
+func (c* DynamoClient) GetUserByID(userID string) (*user.User, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -52,16 +52,9 @@ func (c* DynamoClient) GetUserByID(userID string) (*model.Users, error) {
 	if err != nil {
 		return nil, err
 	}
-	users := model.Users{}
+	users := user.User{}
 	err = dynamodbattribute.UnmarshalMap(result.Item,&users)
 	return &users, err
-}
-
-
-// UpdateUser : Not implemented
-func (c* DynamoClient) UpdateUser(user *model.User) (*model.User, error) {
-	/* Deprecated, call CreateUser instead */
-	return nil, nil
 }
 
 // DeleteUser : Deletes the user with the given ID from the DB

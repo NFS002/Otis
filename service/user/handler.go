@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"gitlab.com/otis-team/backend/db/client"
-	"gitlab.com/otis-team/backend/db/model"
-	pb "gitlab.com/otis-team/backend/service/user/proto/user"
+	user "gitlab.com/otis-team/backend/dtypes/user/proto"
+	userService "gitlab.com/otis-team/backend/service/user/proto/user"
 	"log"
 )
 
@@ -14,56 +14,39 @@ type Handler struct {
 }
 
 // CreateUser handles gRPC requests to create a new user in the DB.
-func (h *Handler) CreateUser(ctx context.Context, req *pb.User, res *pb.CreateResponse) error {
+func (h *Handler) CreateUser(ctx context.Context, req *user.User, res *userService.UsersResponse) error {
 	log.Print("CreateUser handler fired")
-	user := model.ProtobufToUser(req)
-	_, err := h.Client.CreateUser(user)
-	if err != nil {
-		return err
-	}
-	res.Created = true
-	res.User = req
+	_, err := h.Client.CreateUser(req)
+	res.Executed = err == nil
+	res.Users = []*user.User{ req }
 	return nil
 }
 
 // GetUser handles gRPC requests to retrieve one (if User ID is supplied) or many users from the DB.
-func (h *Handler) GetUser(ctx context.Context, req *pb.GetRequest, res *pb.GetResponse) error {
+func (h *Handler) GetUser(ctx context.Context, req *userService.UserQuery, res *userService.UsersResponse) error {
 	log.Print("GetUser handler fired")
 
 	var err error
-	var users *model.Users
+	var dbUsers []*user.User
+	var dbUser *user.User
 
 	if len(req.UserID) == 0 {
-		users, err = h.Client.GetAllUsers()
+		dbUsers, err = h.Client.GetAllUsers()
+		res.Users = dbUsers
+		res.Executed = err == nil
 	} else {
-		users, err = h.Client.GetUserByID(req.UserID)
-	}
-	if err != nil {
-		log.Println(err.Error())
-		return err
+		dbUser, err = h.Client.GetUserByID(req.UserID)
+		res.Users = []*user.User{ dbUser }
+		res.Executed = err == nil
 	}
 
-	res.Users = model.UserCollectionToProtobuf(*users)
-	return nil
-}
-
-// UpdateUser handles gRPC requests to update a new user in the DB
-func (h *Handler) UpdateUser(ctx context.Context, req *pb.User, res *pb.UpdateResponse) error {
-	log.Print("UpdateUser handler fired")
-	user := model.ProtobufToUser( req )
-	_, err := h.Client.CreateUser(user)
-	if err != nil {
-		return err
-	}
-	res.Updated = true
-	res.User = req
-	return nil
+	return err
 }
 
 // DeleteUser handles gRPC requests to delete a new user from the DB
-func (h *Handler) DeleteUser(ctx context.Context, req *pb.DeleteRequest, res *pb.DeleteResponse) error {
+func (h *Handler) DeleteUser(ctx context.Context, req *userService.UserQuery, res *userService.UsersResponse) error {
 	log.Print("DeleteUser handler fired!")
 	err := h.Client.DeleteUser(req.UserID)
-	res.Deleted = (err == nil)
+	res.Executed = err == nil
 	return err
 }
