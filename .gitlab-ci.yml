@@ -63,12 +63,12 @@ deploy:
     script:
      - export KUBECONFIG=$KUBECONFIG:./infrastructure/config-otis-backend
      - aws eks --region eu-west-2 update-kubeconfig --name otis-backend
-     - kubectl get svc
-     - kubectl delete --ignore-not-found=true service merchant-service merchant-api
-     - kubectl delete --ignore-not-found=true deployment merchant-service merchant-api
-     - kubectl apply -f ./service/merchant/deployment/merchant-deployment.yml
-     - kubectl apply -f ./service/merchant/deployment/merchant-service.yml
+#     - kubectl get svc
+#     - kubectl delete --ignore-not-found=true service merchant-service merchant-api
+#     - kubectl delete --ignore-not-found=true deployment merchant-service merchant-api
+#     - kubectl apply -f ./service/merchant/deployment/merchant-deployment.yml
+#     - kubectl apply -f ./service/merchant/deployment/merchant-service.yml
      - kubectl apply -f ./api/merchant/deployment/merchantAPI-deployment.yml
      - kubectl apply -f ./api/merchant/deployment/merchantAPI-service.yml
-     - kubectl apply -f ./api-gateway/micro-api-deployment.yml
-     - kubectl apply -f ./api-gateway/micro-api-service.yml
+#     - kubectl apply -f ./api-gateway/micro-api-deployment.yml
+#     - kubectl apply -f ./api-gateway/micro-api-service.yml

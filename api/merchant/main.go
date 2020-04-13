@@ -19,7 +19,7 @@ import (
 func main() {
 
 	service := k8s.NewService(
-		micro.Name("go.micro.api.merchant"),
+		micro.Name("merchant"),
 	)
 
 	service.Init()
