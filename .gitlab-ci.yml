@@ -70,5 +70,5 @@ deploy:
 #     - kubectl apply -f ./service/merchant/deployment/merchant-service.yml
      - kubectl apply -f ./api/merchant/deployment/merchantAPI-deployment.yml
      - kubectl apply -f ./api/merchant/deployment/merchantAPI-service.yml
-#     - kubectl apply -f ./api-gateway/micro-api-deployment.yml
-#     - kubectl apply -f ./api-gateway/micro-api-service.yml
+     - kubectl apply -f ./api-gateway/micro-api-deployment.yml
+     - kubectl apply -f ./api-gateway/micro-api-service.yml

@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: default
   name: micro
 spec:
   replicas: 1
@@ -19,24 +20,28 @@ spec:
             - "api"
             - "--handler=api"
           env:
+            - name: MICRO_SERVER_ADDRESS
+              value: "0.0.0.0:8080"
             - name: MICRO_API_ADDRESS
               value: ":80"
             - name: MICRO_REGISTRY
               value: "etcd"
             - name: MICRO_REGISTRY_ADDRESS
-              value: "etcd-cluster-client"
+              value: "http://etcd-cluster-client"
           ports:
             - containerPort: 80
               name: port
             - containerPort: 8080
               name: port1
+            - containerPort: 53
+              name: dnsport
 
 #
 #apiVersion: apps/v1
 #kind: Deployment
 #metadata:
 #  namespace: default
-#  name: micro-api
+#  name: micro-apikube
 #  labels:
 #    micro: service
 #spec:

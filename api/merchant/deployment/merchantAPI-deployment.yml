@@ -18,17 +18,22 @@ spec:
           imagePullPolicy: Always
           command: [
             "./api-merchant",
-            "--selector=static",
-            "--server_address=:8080",
+            "--server_name=go.micro.api.merchant",
+            "--server_address=0.0.0.0:8080",
+            "--runtime=kubernetes"
           ]
           env:
+            - name: MICRO_SELECTOR
+              value: "static"
             - name: MICRO_REGISTRY
               value: "etcd"
             - name: MICRO_REGISTRY_ADDRESS
-              value: "etcd-cluster-client"
+              value: "http://etcd-cluster-client"
           ports:
             - containerPort: 8080
               name: mapi-port
+            - containerPort: 53
+              name: dnsport
 
 #apiVersion: apps/v1
 #kind: Deployment
