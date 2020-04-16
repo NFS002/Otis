@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-type dynamoClient client.DynamoClient
+type dynamoClient client.RDSClient
 
 // Default flags
 var (

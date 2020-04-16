@@ -10,7 +10,7 @@ import (
 
 // Handler struct contains the client connection to the DB, to be used by Handler functions.
 type Handler struct {
-	Client client.DynamoClient
+	Client client.RDSClient
 }
 
 // CreateUser handles gRPC requests to create a new user in the DB.

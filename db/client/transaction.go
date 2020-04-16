@@ -8,7 +8,7 @@ import (
 )
 
 // CreateTransaction : Creates a new transaction in the db
-func (c* DynamoClient) CreateTransaction(transaction *transaction.Transaction) (*transaction.Transaction, error) {
+func (c*RDSClient) CreateTransaction(transaction *transaction.Transaction) (*transaction.Transaction, error) {
 	av, err := dynamodbattribute.MarshalMap(transaction)
 	if err != nil {
 		return nil, err
@@ -25,7 +25,7 @@ func (c* DynamoClient) CreateTransaction(transaction *transaction.Transaction) (
 }
 
 // GetAllTransactions : Returns all Transactions from the DB
-func (c* DynamoClient) GetAllTransactions() ([]*transaction.Transaction, error) {
+func (c*RDSClient) GetAllTransactions() ([]*transaction.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 	})
@@ -38,7 +38,7 @@ func (c* DynamoClient) GetAllTransactions() ([]*transaction.Transaction, error) 
 }
 
 // GetTransactionByID : Returns the Transaction with the given ID from the DB
-func (c* DynamoClient) GetTransactionByID(transactionID string) (*transaction.Transaction, error) {
+func (c*RDSClient) GetTransactionByID(transactionID string) (*transaction.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -56,7 +56,7 @@ func (c* DynamoClient) GetTransactionByID(transactionID string) (*transaction.Tr
 }
 
 // GetTransactionsByMerchantID : Returns all transactions made at the given merchant from the DB
-func (c *DynamoClient) GetTransactionsByMerchantID(merchantID string) ([]*transaction.Transaction, error) {
+func (c *RDSClient) GetTransactionsByMerchantID(merchantID string) ([]*transaction.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -74,7 +74,7 @@ func (c *DynamoClient) GetTransactionsByMerchantID(merchantID string) ([]*transa
 }
 
 // GetTransactionsByUserID : Retrieves all transactions made by the given user from the DB
-func (c *DynamoClient) GetTransactionsByUserID(userID string) ([]*transaction.Transaction, error) {
+func (c *RDSClient) GetTransactionsByUserID(userID string) ([]*transaction.Transaction, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Transaction"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -92,7 +92,7 @@ func (c *DynamoClient) GetTransactionsByUserID(userID string) ([]*transaction.Tr
 }
 
 // DeleteTransaction : Deletes the transaction with the given ID
-func (c *DynamoClient) DeleteTransaction(transactionID string) error {
+func (c *RDSClient) DeleteTransaction(transactionID string) error {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"transaction_id": {

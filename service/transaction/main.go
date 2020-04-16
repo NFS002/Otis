@@ -13,7 +13,7 @@ func main() {
 	)
 	service.Init()
 
-	dynamoClient := client.DynamoClient{}
+	dynamoClient := client.RDSClient{}
 	err := dynamoClient.Init()
 	if err != nil {
 		log.Panic(err)

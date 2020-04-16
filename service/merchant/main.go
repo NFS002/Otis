@@ -1,10 +1,10 @@
 package main
 
 import (
-		"github.com/micro/go-micro/v2"
-		"gitlab.com/otis-team/backend/db/client"
-		pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
-		"log"
+	"github.com/micro/go-micro/v2"
+	"gitlab.com/otis-team/backend/db/client"
+	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	"log"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	)
 	service.Init()
 
-	dynamoClient := client.DynamoClient{}
+	dynamoClient := client.RDSClient{}
 	err := dynamoClient.Init()
 	if err != nil {
 		log.Panic(err)

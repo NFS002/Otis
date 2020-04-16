@@ -8,7 +8,7 @@ import (
 )
 
 // CreatePartnerMerchant : Creates a new partner merchant in the db
-func (c* DynamoClient) CreatePartnerMerchant(merchant *partnermerchant.PartnerMerchant) (*partnermerchant.PartnerMerchant, error) {
+func (c*RDSClient) CreatePartnerMerchant(merchant *partnermerchant.PartnerMerchant) (*partnermerchant.PartnerMerchant, error) {
 	av, err := dynamodbattribute.MarshalMap(merchant)
 	if err != nil {
 		return nil, err
@@ -26,7 +26,7 @@ func (c* DynamoClient) CreatePartnerMerchant(merchant *partnermerchant.PartnerMe
 
 
 // GetAllPartnerMerchants : Retrieves all partner merchants from the DB
-func (c* DynamoClient) GetAllPartnerMerchants() ([]*partnermerchant.PartnerMerchant, error) {
+func (c*RDSClient) GetAllPartnerMerchants() ([]*partnermerchant.PartnerMerchant, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),
 	})
@@ -39,7 +39,7 @@ func (c* DynamoClient) GetAllPartnerMerchants() ([]*partnermerchant.PartnerMerch
 }
 
 // GetPartnerMerchantByID : Retrieves the Merchant from the DB with the given ID
-func (c* DynamoClient) GetPartnerMerchantByID(merchantID string) (*partnermerchant.PartnerMerchant, error) {
+func (c*RDSClient) GetPartnerMerchantByID(merchantID string) (*partnermerchant.PartnerMerchant, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -57,7 +57,7 @@ func (c* DynamoClient) GetPartnerMerchantByID(merchantID string) (*partnermercha
 }
 
 // DeletePartnerMerchant : Deletes a merchant with the given ID from the DB
-func (c* DynamoClient) DeletePartnerMerchant(merchantID string) error {
+func (c*RDSClient) DeletePartnerMerchant(merchantID string) error {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {

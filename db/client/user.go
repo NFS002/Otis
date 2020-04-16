@@ -9,7 +9,7 @@ import (
 
 
 // CreateUser : Creates a new user in the db
-func (c* DynamoClient) CreateUser(user *user.User) (*user.User, error) {
+func (c*RDSClient) CreateUser(user *user.User) (*user.User, error) {
 	av, err := dynamodbattribute.MarshalMap(user)
 	if err != nil {
 		return nil, err
@@ -26,7 +26,7 @@ func (c* DynamoClient) CreateUser(user *user.User) (*user.User, error) {
 }
 
 // GetAllUsers : Retrieves all users from the db
-func (c *DynamoClient) GetAllUsers() ([]*user.User, error) {
+func (c *RDSClient) GetAllUsers() ([]*user.User, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
 	})
@@ -40,7 +40,7 @@ func (c *DynamoClient) GetAllUsers() ([]*user.User, error) {
 
 
 // GetUserByID : Retrieves a single user from the db
-func (c* DynamoClient) GetUserByID(userID string) (*user.User, error) {
+func (c*RDSClient) GetUserByID(userID string) (*user.User, error) {
 	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
 		Key: map[string]*dynamodb.AttributeValue{
@@ -58,7 +58,7 @@ func (c* DynamoClient) GetUserByID(userID string) (*user.User, error) {
 }
 
 // DeleteUser : Deletes the user with the given ID from the DB
-func (c* DynamoClient) DeleteUser(userID string) error {
+func (c*RDSClient) DeleteUser(userID string) error {
 	input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"user_id": {

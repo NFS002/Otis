@@ -2,21 +2,21 @@ package client
 
 import (
 	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/aws/aws-sdk-go/service/rds"
 )
 
 
 
-// DynamoClient : Struct to represent a connection to a DynamoDB instance 
-type DynamoClient struct {
+// RDSClient : Struct to represent a connection to a DynamoDB instance
+type RDSClient struct {
 	Session *session.Session
-	Client *dynamodb.DynamoDB
+	Client  *rds.RDS
 }
 
-// Init : Function called on startup to initialize the dynamodb connection 
+// Init : Function called on startup to initialize the amazon RDS connection
 // AWS credentials and access keys must also be made available seperately.
 // Please see the section on 'Specifying credentials' at https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html
-func (c *DynamoClient) Init() error {
+func (c *RDSClient) Init() error {
 	var err error
 	if c.Session == nil || c.Client == nil {
 		err = c.newSession()
@@ -27,12 +27,12 @@ func (c *DynamoClient) Init() error {
 	return err
 }
 
-func (c *DynamoClient) newSession() error {
+func (c *RDSClient) newSession() error {
 	sess, err := session.NewSession()
 	c.Session = sess
 	return err
 }
 
-func (c *DynamoClient) newClient() {
-	c.Client = dynamodb.New(c.Session)
+func (c *RDSClient) newClient() {
+	c.Client = rds.New(c.Session)
 }
