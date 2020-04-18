@@ -1,15 +1,12 @@
 package client
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"gitlab.com/otis-team/backend/dtypes/partner-merchant/proto"
 )
 
 // CreatePartnerMerchant : Creates a new partner merchant in the db
 func (c*RDSClient) CreatePartnerMerchant(merchant *partnermerchant.PartnerMerchant) (*partnermerchant.PartnerMerchant, error) {
-	av, err := dynamodbattribute.MarshalMap(merchant)
+	/*av, err := dynamodbattribute.MarshalMap(merchant)
 	if err != nil {
 		return nil, err
 	}
@@ -22,12 +19,14 @@ func (c*RDSClient) CreatePartnerMerchant(merchant *partnermerchant.PartnerMercha
 		return nil, err
 	}
 	return merchant, nil
+	Not implemented */
+	return nil, nil
 }
 
 
 // GetAllPartnerMerchants : Retrieves all partner merchants from the DB
 func (c*RDSClient) GetAllPartnerMerchants() ([]*partnermerchant.PartnerMerchant, error) {
-	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
+	/*result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),
 	})
 	if err != nil {
@@ -35,12 +34,13 @@ func (c*RDSClient) GetAllPartnerMerchants() ([]*partnermerchant.PartnerMerchant,
 	}
 	merchants := make([]*partnermerchant.PartnerMerchant,0)
 	err = dynamodbattribute.UnmarshalMap(result.Item,&merchants)
-	return merchants, err
+	return merchants, err*/
+	return nil, nil
 }
 
 // GetPartnerMerchantByID : Retrieves the Merchant from the DB with the given ID
 func (c*RDSClient) GetPartnerMerchantByID(merchantID string) (*partnermerchant.PartnerMerchant, error) {
-	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
+	/*result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("Merchant"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {
@@ -53,12 +53,13 @@ func (c*RDSClient) GetPartnerMerchantByID(merchantID string) (*partnermerchant.P
 	}
 	merchant := &partnermerchant.PartnerMerchant{}
 	err = dynamodbattribute.UnmarshalMap(result.Item,merchant)
-	return merchant, err
+	return merchant, err*/
+	return nil, nil
 }
 
 // DeletePartnerMerchant : Deletes a merchant with the given ID from the DB
 func (c*RDSClient) DeletePartnerMerchant(merchantID string) error {
-	input := &dynamodb.DeleteItemInput{
+	/*input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"merchant_id": {
 				S: aws.String(merchantID),
@@ -67,5 +68,6 @@ func (c*RDSClient) DeletePartnerMerchant(merchantID string) error {
 		TableName: aws.String("Merchant"),
 	}
 	_, err := c.Client.DeleteItem(input)
-	return err
+	return err*/
+	return nil
 }

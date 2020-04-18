@@ -1,16 +1,13 @@
 package client
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"gitlab.com/otis-team/backend/dtypes/user/proto"
 )
 
 
 // CreateUser : Creates a new user in the db
 func (c*RDSClient) CreateUser(user *user.User) (*user.User, error) {
-	av, err := dynamodbattribute.MarshalMap(user)
+	/*av, err := dynamodbattribute.MarshalMap(user)
 	if err != nil {
 		return nil, err
 	}
@@ -22,12 +19,13 @@ func (c*RDSClient) CreateUser(user *user.User) (*user.User, error) {
 	if err != nil {
 		return nil, err
 	}
-	return user, nil
+	return user, nil*/
+	return nil, nil
 }
 
 // GetAllUsers : Retrieves all users from the db
 func (c *RDSClient) GetAllUsers() ([]*user.User, error) {
-	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
+	/*result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
 	})
 	if err != nil {
@@ -35,13 +33,14 @@ func (c *RDSClient) GetAllUsers() ([]*user.User, error) {
 	}
 	users := make([]*user.User,0)
 	err = dynamodbattribute.UnmarshalMap(result.Item,&users)
-	return users, err
+	return users, err*/
+	return nil, nil
 }
 
 
 // GetUserByID : Retrieves a single user from the db
 func (c*RDSClient) GetUserByID(userID string) (*user.User, error) {
-	result, err := c.Client.GetItem(&dynamodb.GetItemInput{
+	/*result, err := c.Client.GetItem(&dynamodb.GetItemInput{
 		TableName: aws.String("User"),
 		Key: map[string]*dynamodb.AttributeValue{
 			"user_id": {
@@ -54,12 +53,13 @@ func (c*RDSClient) GetUserByID(userID string) (*user.User, error) {
 	}
 	users := user.User{}
 	err = dynamodbattribute.UnmarshalMap(result.Item,&users)
-	return &users, err
+	return &users, err*/
+	return nil, nil
 }
 
 // DeleteUser : Deletes the user with the given ID from the DB
 func (c*RDSClient) DeleteUser(userID string) error {
-	input := &dynamodb.DeleteItemInput{
+	/*input := &dynamodb.DeleteItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
 			"user_id": {
 				S: aws.String(userID),
@@ -68,5 +68,6 @@ func (c*RDSClient) DeleteUser(userID string) error {
 		TableName: aws.String("User"),
 	}
 	_, err := c.Client.DeleteItem(input)
-	return err
+	return err*/
+	return nil
 }

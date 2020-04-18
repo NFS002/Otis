@@ -15,7 +15,7 @@ type rdsClient struct {
 func getEnvOrPanic( key string ) string {
 	v, exists := os.LookupEnv( key )
 	if !exists {
-		panic("Environment variabl not found: " + key)
+		panic("Environment variable not found: " + key)
 	}
 	return v
 }
