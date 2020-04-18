@@ -3,7 +3,7 @@ package client
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/jinzhu/gorm/dialects/postgres" // Postgresql driver
 	"log"
 	"os"
 )
