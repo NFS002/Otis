@@ -5,6 +5,7 @@ go 1.14
 require (
 	github.com/aws/aws-sdk-go v1.30.4
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/protobuf v1.3.5 // indirect
 	github.com/jinzhu/gorm v1.9.12
 	github.com/kr/pretty v0.1.0 // indirect

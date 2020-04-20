@@ -1,17 +1,33 @@
-package schema
+package migrations
 
 import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 )
 
-// MerchantSchema : DynamoDB loose (NoSQL) schema for the merchant table
-var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
+// TransactionSchema : DynamoDB loose (NoSQL) migrations for the transaction table
+var TransactionSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
 
-	// (Required). An array of attributes that describe the key schema for the table and indexes.
+	// An array of attributes that describe the key migrations for the table and indexes.
+    // AttributeDefinitions is a required field
 	AttributeDefinitions: []*dynamodb.AttributeDefinition{
 		{
 
+			// Required
+			AttributeName: aws.String("transactionId"),
+
+			// The data type for the attribute, where:
+			//
+			//    * S - the attribute is of type String
+			//
+			//    * N - the attribute is of type Number
+			//
+			//    * B - the attribute is of type Binary
+			//
+			// AttributeType is a required field
+			AttributeType: aws.String("S"),
+		},
+		{
 			// Required
 			AttributeName: aws.String("merchantId"),
 
@@ -30,15 +46,19 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
 
 	KeySchema: []*dynamodb.KeySchemaElement{
 		{
-			AttributeName: aws.String("merchantId"),
+			AttributeName: aws.String("transactionId"),
 			KeyType:       aws.String("HASH"),
+		},
+		{
+			AttributeName: aws.String("merchantId"),
+			KeyType:       aws.String("RANGE"),
 		},
 	},
 
 	// For current minimum and maximum provisioned throughput values, see Limits
     // (https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html)
 	// in the Amazon DynamoDB Developer Guide.
-	// If using a PAY_PER_REQUEST billing model, this value is automatically set to 0
+	// If using a PAY_PER_REQUEST billing model, this value is automatically set to
 	ProvisionedThroughput: &dynamodb.ProvisionedThroughput{
 		ReadCapacityUnits:  aws.Int64(0),
 		WriteCapacityUnits: aws.Int64(0),
@@ -58,7 +78,6 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
     //    NEW_AND_OLD_IMAGES - Both the new and the old item images of the item
     //    are written to the stream.
     StreamSpecification: &dynamodb.StreamSpecification {
-
 		// Indicates whether DynamoDB Streams is enabled (true) or disabled (false)
 		// on the table.
 		//
@@ -84,7 +103,7 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
 	},
 
 	// Table Name (required)
-	TableName: aws.String("Merchant"),
+	TableName: aws.String("Transaction"),
 
 	// Controls how you are charged for read and write throughput and how you manage
     // capacity. This setting can be changed later.
@@ -111,14 +130,14 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
 		// encryption. To specify a CMK, use its key ID, Amazon Resource Name (ARN),
 		// alias name, or alias ARN. Note that you should only provide this parameter
 		// if the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
-		KMSMasterKeyId: aws.String("?"),
+		//KMSMasterKeyId: aws.String("?"),
 
 		// Server-side encryption type. The only supported value is:
 		//
 		//    * KMS - Server-side encryption that uses AWS Key Management Service. The
 		//    key is stored in your account and is managed by AWS KMS (AWS KMS charges
 		//    apply).
-		SSEType: aws.String("kms"),
+		SSEType: aws.String("KMS"),
 	},
 
 	// One or more local secondary indexes (the maximum is 5) to be created on the
@@ -131,8 +150,8 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
     //    * IndexName - The name of the local secondary index. Must be unique only
     //    for this table.
     //
-    //    * KeySchema - Specifies the key schema for the local secondary index.
-    //    The key schema must begin with the same partition key as the table.
+    //    * KeySchema - Specifies the key migrations for the local secondary index.
+    //    The key migrations must begin with the same partition key as the table.
     //
     //    * Projection - Specifies attributes that are copied (projected) from the
     //    table into the index. These are in addition to the primary key attributes
@@ -149,12 +168,11 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
     //    attributes when determining the total.
     LocalSecondaryIndexes: []*dynamodb.LocalSecondaryIndex {
 		&dynamodb.LocalSecondaryIndex{
-
-			IndexName: aws.String("_tags"),
+			IndexName: aws.String("date"),
 
 			KeySchema: []*dynamodb.KeySchemaElement{
-				&dynamodb.KeySchemaElement{
-					AttributeName: aws.String("_tags"),
+				{
+					AttributeName: aws.String("date"),
 					KeyType:       aws.String("S"),
 				},
 			},
@@ -167,10 +185,10 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
 				// all of the local secondary indexes, must not exceed 20. If you project the
 				// same attribute into two different indexes, this counts as two distinct attributes
 				// when determining the total.
-    			NonKeyAttributes: []*string{
-					aws.String("name"),
-					aws.String("storeId"),
-				},
+    			/*NonKeyAttributes: []*string{
+					aws.String("?"),
+					aws.String("?"),
+				},*/
 
 				// The set of attributes that are projected into the index:
 				//
@@ -180,7 +198,7 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
 				//    index. The list of projected attributes is in NonKeyAttributes.
 				//
 				//    * ALL - All of the table attributes are projected into the index.
-				ProjectionType: aws.String("INCLUDE"),
+				ProjectionType: aws.String("ALL"),
 			},
 		},
 	},
@@ -192,7 +210,7 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
     //    * IndexName - The name of the global secondary index. Must be unique only
     //    for this table.
     //
-    //    * KeySchema - Specifies the key schema for the global secondary index.
+    //    * KeySchema - Specifies the key migrations for the global secondary index.
     //
     //    * Projection - Specifies attributes that are copied (projected) from the
     //    table into the index. These are in addition to the primary key attributes
@@ -212,12 +230,12 @@ var MerchantSchema *dynamodb.CreateTableInput = &dynamodb.CreateTableInput{
     //    global secondary index, consisting of read and write capacity units.
 	/*GlobalSecondaryIndexes: []*dynamodb.GlobalSecondaryIndex {
 		&dynamodb.GlobalSecondaryIndex{
-			IndexName: aws.String("tags"),
+			IndexName: aws.String("?"),
 
 			KeySchema: []*dynamodb.KeySchemaElement{
 				{
-					AttributeName: aws.String(""),
-					KeyType:       aws.String(""),
+					AttributeName: aws.String("?"),
+					KeyType:       aws.String("?"),
 				},
 				{
 					AttributeName: aws.String("?"),
