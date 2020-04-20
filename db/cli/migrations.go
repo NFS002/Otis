@@ -15,10 +15,11 @@ const (
 		"countries,admins,contributions,universities"
 )
 
+// CreateTable : Utility function as part of a CLI program to automate and execute various db migrations
 func CreateTable(t string) {
 	cli := client.RDSClient{}
 	cli.DB.
-	t = strings.ToLower( t )
+		t = strings.ToLower( t )
 	log.Printf("Creating table: %s",t)
 	var err error
 	switch t {
