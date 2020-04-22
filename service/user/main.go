@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
-	user "gitlab.com/otis-team/backend/service/user/package"
+	user "gitlab.com/otis_team/backend/service/user/package"
 	"log"
 	"os"
 
 	"github.com/micro/go-micro"
-	pb "gitlab.com/otis-team/backend/service/user/proto/user"
+	pb "gitlab.com/otis_team/backend/service/user/proto/user"
 )
 
 const (

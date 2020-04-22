@@ -4,16 +4,16 @@ import (
 	"context"
 	"encoding/json"
 	"github.com/micro/go-micro/errors"
-	protoAPI "gitlab.com/otis-team/backend/api/user/proto"
+	protoAPI "gitlab.com/otis_team/backend/api/user/proto"
 
-	user "gitlab.com/otis-team/backend/service/user/package"
-	protoUser "gitlab.com/otis-team/backend/service/user/proto/user"
+	user "gitlab.com/otis_team/backend/service/user/package"
+	protoUser "gitlab.com/otis_team/backend/service/user/proto/user"
 
-	transaction "gitlab.com/otis-team/backend/service/transaction/package"
-	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	transaction "gitlab.com/otis_team/backend/service/transaction/package"
+	protoTransaction "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
 	"log"
 
-	"gitlab.com/otis-team/backend/auth"
+	"gitlab.com/otis_team/backend/auth"
 
 )
 

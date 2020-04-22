@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
-	"gitlab.com/otis-team/backend/service/transaction/package"
+	"gitlab.com/otis_team/backend/service/transaction/package"
 	"log"
 	"os"
 	"github.com/micro/go-micro"
-	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	pb "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
 )
 
 const (

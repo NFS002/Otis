@@ -2,7 +2,7 @@ package user
 
 import (
 	"context"
-	pb "gitlab.com/otis-team/backend/service/user/proto/user"
+	pb "gitlab.com/otis_team/backend/service/user/proto/user"
 	"log"
 )
 

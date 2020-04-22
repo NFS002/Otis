@@ -2,7 +2,7 @@ package transaction
 
 import (
 	"context"
-	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	pb "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
 	"log"
 )
 

@@ -1,14 +1,14 @@
-	package main
+package main
 
 import (
 	"context"
 	"fmt"
-	"gitlab.com/otis-team/backend/service/merchant/package"
+	"gitlab.com/otis_team/backend/service/merchant/package"
 	"log"
 	"os"
 	
 	"github.com/micro/go-micro"
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	pb "gitlab.com/otis_team/backend/service/merchant/proto/merchant"
 )
 
 const (

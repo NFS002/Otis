@@ -3,7 +3,7 @@ package transaction
 import (               
 	"context"
 	"github.com/satori/go.uuid"
-	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	pb "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
 	"go.mongodb.org/mongo-driver/bson"
 	//"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

@@ -3,7 +3,7 @@ package user
 import (
 	"context"
 	"github.com/satori/go.uuid"
-	pb "gitlab.com/otis-team/backend/service/user/proto/user"
+	pb "gitlab.com/otis_team/backend/service/user/proto/user"
 	"go.mongodb.org/mongo-driver/bson"
 	"log"
 

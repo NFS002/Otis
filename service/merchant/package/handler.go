@@ -2,7 +2,7 @@ package merchant
 
 import (
 	"context"
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	pb "gitlab.com/otis_team/backend/service/merchant/proto/merchant"
 	"log"
 )
 

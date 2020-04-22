@@ -3,7 +3,7 @@ package merchant
 import (
 	"context"
 	"github.com/satori/go.uuid"
-	pb "gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	pb "gitlab.com/otis_team/backend/service/merchant/proto/merchant"
 	"go.mongodb.org/mongo-driver/bson"
 	//"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

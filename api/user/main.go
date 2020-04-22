@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/micro/go-micro"
-	protoAPI "gitlab.com/otis-team/backend/api/user/proto"
+	protoAPI "gitlab.com/otis_team/backend/api/user/proto"
 
-	protoUser "gitlab.com/otis-team/backend/service/user/proto/user"
-	protoTransaction "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	protoUser "gitlab.com/otis_team/backend/service/user/proto/user"
+	protoTransaction "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
 	"log"
 )
 
