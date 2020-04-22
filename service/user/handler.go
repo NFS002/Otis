@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"gitlab.com/otis-team/backend/db/client"
-	user "gitlab.com/otis-team/backend/dtypes/user/proto"
-	userService "gitlab.com/otis-team/backend/service/user/proto/user"
+	"gitlab.com/otis_team/backend/db/client"
+	user "gitlab.com/otis_team/backend/dtypes/user/proto"
+	userService "gitlab.com/otis_team/backend/service/user/proto/user"
 	"log"
 )
 

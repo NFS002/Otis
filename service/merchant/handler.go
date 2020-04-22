@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	"gitlab.com/otis-team/backend/db/client"
-	"gitlab.com/otis-team/backend/dtypes/general-merchant/proto"
-	"gitlab.com/otis-team/backend/dtypes/partner-merchant/proto"
-	"gitlab.com/otis-team/backend/service/merchant/proto/merchant"
+	"gitlab.com/otis_team/backend/db/client"
+	"gitlab.com/otis_team/backend/dtypes/general-merchant/proto"
+	"gitlab.com/otis_team/backend/dtypes/partner-merchant/proto"
+	"gitlab.com/otis_team/backend/service/merchant/proto/merchant"
 	"log"
 )
 

@@ -4,7 +4,7 @@
 package transaction
 
 import (
-	_ "gitlab.com/otis-team/backend/dtypes/transaction/proto"
+	_ "gitlab.com/otis_team/backend/dtypes/transaction/proto"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"

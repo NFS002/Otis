@@ -3,8 +3,8 @@ package main
 import (
 	"errors"
 	"flag"
-	"gitlab.com/otis-team/backend/db/client"
-	"gitlab.com/otis-team/backend/db/migrations/tables"
+	"gitlab.com/otis_team/backend/db/client"
+	"gitlab.com/otis_team/backend/db/migrations/tables"
 	"log"
 	"strings"
 )

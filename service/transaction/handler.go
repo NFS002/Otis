@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"gitlab.com/otis-team/backend/db/client"
-	transaction "gitlab.com/otis-team/backend/dtypes/transaction/proto"
-	transactionService "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	"gitlab.com/otis_team/backend/db/client"
+	transaction "gitlab.com/otis_team/backend/dtypes/transaction/proto"
+	transactionService "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
 	"log"
 )
 

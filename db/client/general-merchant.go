@@ -3,7 +3,7 @@ package client
 import (
 	//"github.com/aws/aws-sdk-go/service/dynamodb"
 	//"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
-	"gitlab.com/otis-team/backend/dtypes/general-merchant/proto"
+	"gitlab.com/otis_team/backend/dtypes/general-merchant/proto"
 )
 
 

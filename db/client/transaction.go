@@ -1,7 +1,7 @@
 package client
 
 import (
-	"gitlab.com/otis-team/backend/dtypes/transaction/proto"
+	"gitlab.com/otis_team/backend/dtypes/transaction/proto"
 )
 
 // CreateTransaction : Creates a new transaction in the db

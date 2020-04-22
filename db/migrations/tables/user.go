@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	//"gitlab.com/otis-team/backend/db/client"
+	//"gitlab.com/otis_team/backend/db/client"
 	"io/ioutil"
 	"log"
 	"strings"

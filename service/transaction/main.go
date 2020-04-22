@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/micro/go-micro/v2"
-	"gitlab.com/otis-team/backend/db/client"
-	pb "gitlab.com/otis-team/backend/service/transaction/proto/transaction"
+	"gitlab.com/otis_team/backend/db/client"
+	pb "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
 	"log"
 )
 

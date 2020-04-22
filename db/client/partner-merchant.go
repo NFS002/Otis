@@ -1,7 +1,7 @@
 package client
 
 import (
-	"gitlab.com/otis-team/backend/dtypes/partner-merchant/proto"
+	"gitlab.com/otis_team/backend/dtypes/partner-merchant/proto"
 )
 
 // CreatePartnerMerchant : Creates a new partner merchant in the db

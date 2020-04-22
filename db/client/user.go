@@ -1,7 +1,7 @@
 package client
 
 import (
-	"gitlab.com/otis-team/backend/dtypes/user/proto"
+	"gitlab.com/otis_team/backend/dtypes/user/proto"
 )
 
 

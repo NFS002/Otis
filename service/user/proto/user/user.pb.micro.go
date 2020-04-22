@@ -4,7 +4,7 @@
 package user
 
 import (
-	proto1 "gitlab.com/otis-team/backend/dtypes/user/proto"
+	proto1 "gitlab.com/otis_team/backend/dtypes/user/proto"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
