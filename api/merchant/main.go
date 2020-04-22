@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/micro/go-micro/v2"
+	"github.com/micro/go-micro"
 	proto "gitlab.com/otis_team/backend/api/merchant/proto"
 	merchantService "gitlab.com/otis_team/backend/service/merchant/proto/merchant"
 	transactionService "gitlab.com/otis_team/backend/service/transaction/proto/transaction"

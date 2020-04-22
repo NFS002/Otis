@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/micro/go-micro/v2"
+	"github.com/micro/go-micro"
 	"gitlab.com/otis_team/backend/db/client"
 	pb "gitlab.com/otis_team/backend/service/user/proto/user"
 	"log"
@@ -14,7 +14,8 @@ func main() {
 	service.Init()
 
 	dynamoClient := client.RDSClient{}
-	err := dynamoClient.Init()
+	var err error
+	//err = dynamoClient.Init()
 	if err != nil {
 		log.Panic(err)
 	}
