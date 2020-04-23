@@ -1,8 +1,8 @@
 # backend
 
 
-[![pipeline status](https://gitlab.com/otis-team/backend/badges/master/pipeline.svg)](https://gitlab.com/otis-team/backend/-/commits/master)
-[![coverage report](https://gitlab.com/otis-team/backend/badges/master/coverage.svg)](https://gitlab.com/otis-team/backend/-/commits/master)
+[![pipeline status](https://gitlab.com/otis_team/backend/badges/master/pipeline.svg)](https://gitlab.com/otis_team/backend/-/commits/master)
+[![coverage report](https://gitlab.com/otis_team/backend/badges/master/coverage.svg)](https://gitlab.com/otis_team/backend/-/commits/master)
 
 Otis backend
 
@@ -16,7 +16,7 @@ Otis backend
 
 To clone:
 
-`git clone git@gitlab.com:otis-team/backend.git` 
+`git clone git@gitlab.com:otis_team/backend.git` 
 
 IMPORTANT! Make sure you ammend your git config file to include your name and OTIS EMAIL! 
 
@@ -30,7 +30,7 @@ To run:
 
 The namespace for Go Modules should follow the directory structure of this repository.
 
-i.e. the module name for the merchant service is *gitlab.com/otis-team/backend/service/merchant* 
+i.e. the module name for the merchant service is *gitlab.com/otis_team/backend/service/merchant* 
 
 This helps with future importing.
 

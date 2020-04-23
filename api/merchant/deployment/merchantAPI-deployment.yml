@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: merchant-api
-          image: registry.gitlab.com/otis-team/backend/api/merchant:latest
+          image: registry.gitlab.com/otis_team/backend/api/merchant:latest
           imagePullPolicy: Always
           command: [
             "./api-merchant",

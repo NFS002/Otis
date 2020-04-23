@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://gitlab.com/otis-team/data-structures/campaign.schema.json",
+  "$id": "http://gitlab.com/otis_team/data-structures/campaign.schema.json",
   "title": "Campaign",
   "description": "A partner merchant campaign",
   "type": "object",
@@ -30,7 +30,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "$ref": "http://gitlab.com/otis-team/data-structures/user.schema.json"
+        "$ref": "http://gitlab.com/otis_team/data-structures/user.schema.json"
       }
     },
     "transactions_set": {
@@ -38,7 +38,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "$ref": "http://gitlab.com/otis-team/data-structures/transaction.schema.json"
+        "$ref": "http://gitlab.com/otis_team/data-structures/transaction.schema.json"
       }
     },
     "valid_for": {

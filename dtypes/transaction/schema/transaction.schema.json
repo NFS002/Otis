@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://gitlab.com/otis-team/data-structures/transaction.schema.json",
+  "$id": "http://gitlab.com/otis_team/data-structures/transaction.schema.json",
   "title": "Transaction",
   "description": "A processed transaction.",
   "type": "object",
@@ -63,7 +63,7 @@
     },
     "weather": {
       "description": "Weather at the time and (approximate location) of transaction",
-      "$ref": "http://gitlab.com/otis-team/data-structures/weather.schema.json"
+      "$ref": "http://gitlab.com/otis_team/data-structures/weather.schema.json"
     },
     "holidays": {
       "description": "Holidays that were in affect during the time of the transaction",

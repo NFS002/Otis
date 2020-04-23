@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://gitlab.com/otis-team/data-structures/partner-merchant.schema.json",
+  "$id": "http://gitlab.com/otis_team/data-structures/partner-merchant.schema.json",
   "title": "Partner Merchant",
   "description": "A partner merchant",
   "type": "object",
@@ -60,7 +60,7 @@
     },
     "expense_band": {
       "description": "Expense bands for the merchant for their given sector",
-      "$ref": "http://gitlab.com/otis-team/data-structures/sector-bands.schema.json"
+      "$ref": "http://gitlab.com/otis_team/data-structures/sector-bands.schema.json"
     }
   }
 }
