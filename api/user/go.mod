@@ -2,14 +2,6 @@ module gitlab.com/otis_team/backend/api/user
 
 go 1.13
 
-require (
-	github.com/golang/protobuf v1.3.5
-	github.com/micro/go-micro v1.18.0
-	gitlab.com/otis_team/backend/auth v0.0.0-20200410103937-7aa75954b834 // indirect
-	gitlab.com/otis_team/backend/service/transaction v0.0.0-20200331103832-dcee07a226fa
-	gitlab.com/otis_team/backend/service/user v0.0.0-20200327173517-c23610242505
-)
-
 replace (
 	gitlab.com/otis_team/backend/api/merchant => /Users/noah/Otis/backend/api/merchant/ //_LOCAL
 	gitlab.com/otis_team/backend/api/user => /Users/noah/Otis/backend/api/user //_LOCAL
@@ -20,4 +12,11 @@ replace (
 	gitlab.com/otis_team/backend/service/user => /Users/noah/Otis/backend/service/user //_LOCAL
 )
 
-// replace gitlab.com/otis_team/backend/auth => ../../auth
+require (
+	github.com/golang/protobuf v1.4.0
+	github.com/micro/go-micro v1.18.0
+	github.com/micro/go-micro/v2 v2.5.0
+	gitlab.com/otis_team/backend/dtypes v0.0.0-00010101000000-000000000000 // indirect
+	gitlab.com/otis_team/backend/service/transaction v0.0.0-00010101000000-000000000000 // indirect
+	gitlab.com/otis_team/backend/service/user v0.0.0-00010101000000-000000000000 // indirect
+)

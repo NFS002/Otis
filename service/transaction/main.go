@@ -1,50 +1,33 @@
 package main
 
 import (
-	"context"
-	"fmt"
-	"gitlab.com/otis_team/backend/service/transaction/package"
-	"log"
-	"os"
 	"github.com/micro/go-micro"
+	"gitlab.com/otis_team/backend/db/client"
 	pb "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
+	"log"
 )
 
-const (
-	defaultHost = "datastore:27017"
-)
-
-/* Connect to a MongoDB instance, and start and run a new grpc server on a Microservice,
- * passing that connection to the handler functions.  */
+/* Run the transaction service */
 func main() {
-	f := transaction.Transaction{ MerchantID: "44 "}
-	log.Printf( "Transaction: %v",f)
-	
 	service := micro.NewService(
-			micro.Name("go.micro.service.transaction"),
+		micro.Name("go.micro.service.merchant"),
 	)
-
 	service.Init()
 
-	uri := os.Getenv("DB_HOST")
-	if uri == "" {
-		uri = defaultHost
-	}
-
-	client, err := transaction.CreateClient(context.Background(), uri, 0)
+	dynamoClient := client.RDSClient{}
+	var err error
+	//err = dynamoClient.Init()
 	if err != nil {
 		log.Panic(err)
 	}
-	defer client.Disconnect(context.Background())
 
-	transactionCollection := client.Database("otis").Collection("transaction")
+	handler := &Handler{dynamoClient}
 
-	repository := &transaction.MongoRepository{transactionCollection}
-	h := &transaction.Handler{repository}
+	if err = pb.RegisterTransactionServiceHandler(service.Server(), handler); err != nil {
+		log.Panic(err)
+	}
 
-	pb.RegisterTransactionServiceHandler(service.Server(), h)
-
-	if err := service.Run(); err != nil {
-		fmt.Println(err)
+	if err = service.Run(); err != nil {
+		log.Println(err)
 	}
 }

@@ -1,47 +1,33 @@
 package main
 
 import (
-	"context"
-	"fmt"
-	"gitlab.com/otis_team/backend/service/merchant/package"
-	"log"
-	"os"
-	
 	"github.com/micro/go-micro"
+	"gitlab.com/otis_team/backend/db/client"
 	pb "gitlab.com/otis_team/backend/service/merchant/proto/merchant"
+	"log"
 )
 
-const (
-	defaultHost = "datastore:27017"
-)
-
+/* Run the merchant service */
 func main() {
 	service := micro.NewService(
 			micro.Name("go.micro.service.merchant"),
 	)
-
 	service.Init()
 
-	uri := os.Getenv("DB_HOST")
-	if uri == "" {
-		uri = defaultHost
-	}
-
-	client, err := merchant.CreateClient(context.Background(), uri, 0)
+	dynamoClient := client.RDSClient{}
+	var err error
+	//err = dynamoClient.Init()
 	if err != nil {
 		log.Panic(err)
 	}
-	defer client.Disconnect(context.Background())
 
-	merchantCollection := client.Database("otis").Collection("merchant")
+	handler := &Handler{dynamoClient}
 
-	repository := &merchant.MongoRepository{merchantCollection}
-	h := &merchant.Handler{repository}
+	if err = pb.RegisterMerchantServiceHandler(service.Server(), handler); err != nil {
+		log.Panic(err)
+	}
 
-	pb.RegisterMerchantServiceHandler(service.Server(), h)
-
-	// Run the server
-	if err := service.Run(); err != nil {
-		fmt.Println(err)
+	if err = service.Run(); err != nil {
+		log.Println(err)
 	}
 }

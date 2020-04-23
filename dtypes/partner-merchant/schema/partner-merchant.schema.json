@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://gitlab.com/otis-team/data-structures/partner-merchant.schema.json",
+  "title": "Partner Merchant",
+  "description": "A partner merchant",
+  "type": "object",
+  "properties": {
+    "merchant_id": {
+      "description": "The unique identifier of the merchant.",
+      "type": "string"
+    },
+    "merchant_name": {
+      "description": "The collated name for the merchant that appears in raw transaction data",
+      "type": "string"
+    },
+    "locations": {
+      "description": "The physical presences of the merchant",
+      "type": "array",
+      "items": {
+        "description": "Street address. NEEDS CLARIFICATION.",
+        "type": ["string", "null"]
+      }
+    },
+    "api_tags": {
+      "description": "Tags derived from API enrichment/categorisation",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "otis_tags": {
+      "description": "Tags derived from merchant id",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sector": {
+      "description": "Sector defined categorisation. NEEDS CLARIFICATION.",
+      "type": "string"
+    },
+    "size": {
+      "description": "The size categorisation of the mercahnt. NEEDS CLARIFICATION.",
+      "type": "string"
+    },
+    "rate": {
+      "description": "Contractural cashback rate",
+      "type": "number"
+    },
+    "join_date": {
+      "description": "The date on which the merchant joined the Otis platform. ISO-8601 date.",
+      "type": "string"
+    },
+    "next_billing_date": {
+      "description": "The next date on which the merchant will be invoiced. ISO-8601 date.",
+      "type": "string"
+    },
+    "gocardless_mandate": {
+      "description": "Mandate ID used to initiate payment with GoCardless"
+    },
+    "expense_band": {
+      "description": "Expense bands for the merchant for their given sector",
+      "$ref": "http://gitlab.com/otis-team/data-structures/sector-bands.schema.json"
+    }
+  }
+}

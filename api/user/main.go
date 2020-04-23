@@ -2,10 +2,9 @@ package main
 
 import (
 	"github.com/micro/go-micro"
-	protoAPI "gitlab.com/otis_team/backend/api/user/proto"
-
-	protoUser "gitlab.com/otis_team/backend/service/user/proto/user"
-	protoTransaction "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
+	proto "gitlab.com/otis_team/backend/api/user/proto"
+	transactionService "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
+	userService "gitlab.com/otis_team/backend/service/user/proto/user"
 	"log"
 )
 
@@ -16,8 +15,8 @@ func main() {
 
 	service.Init()
 
-	userClient := protoUser.NewUserServiceClient("go.micro.service.user", service.Client())
-	transactionClient := protoTransaction.NewTransactionService("go.micro.service.transaction", service.Client())
+	userClient := userService.NewUserService("go.micro.service.user", service.Client())
+	transactionClient := transactionService.NewTransactionService("go.micro.service.transaction", service.Client())
 
 
 	userHandler := &User{ Client: userClient }
@@ -25,12 +24,12 @@ func main() {
 
 
 	// Registering both API handlers
-	userErr := protoAPI.RegisterUserHandler(service.Server(), userHandler )
+	userErr := proto.RegisterUserHandler(service.Server(), userHandler )
 	if userErr != nil {
 		log.Fatal(userErr)
 	}
 
-	transactionErr := protoAPI.RegisterTransactionHandler( service.Server(), transactionHandler )
+	transactionErr := proto.RegisterTransactionHandler( service.Server(), transactionHandler )
 	if transactionErr != nil {
 		log.Fatal(transactionErr)
 	}

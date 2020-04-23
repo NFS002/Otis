@@ -7,6 +7,7 @@ message Pair {
 
 // A HTTP request as RPC
 // Forward by the api handler
+// TODO: use grpc-gateway
 message Request {
 	string method = 1;
 	string path = 2;

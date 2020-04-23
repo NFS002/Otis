@@ -14,6 +14,11 @@ RUN apk update && apk upgrade && \
 RUN mkdir /app
 WORKDIR /app
 
+ARG gitlab_user
+ENV gitlab_user=$gitlab_user
+ARG gitlab_token
+ENV gitlab_token=$gitlab_token
+
 ENV GO111MODULE=on
 
 COPY . .
