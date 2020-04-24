@@ -4,4 +4,4 @@
 # This script is intended to be run after 'git pull' to set up local development environmen to use
 # local modules instead of downloading remote versions. Note that this script is only tested on MAC OS X, but should work on Linux also.
 
-find "$(cd .; pwd)" -name "go.mod" -exec sed -i '' -e '/\/\/[[:space:]]*.*\/\/_LOCAL/s/^..//' {} + ;.
+find "$(cd .; pwd)" -name "go.mod" -exec sed -i '' -e '/\/\/[[:space:]]*.*\/\/_LOCAL/s/^..//' {} + ;

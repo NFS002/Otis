@@ -21,7 +21,7 @@ RUN git config \
     "https://gitlab.com/"
 
 
-RUN GIT_TERMINAL_PROMPT=1 CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o api-merchant
+RUN GIT_TERMINAL_PROMPT=1 GOOS=linux go build -a -o api-merchant
 
 # RUN
 
