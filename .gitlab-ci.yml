@@ -1,22 +1,22 @@
-#image: golang:latest
+image: golang:latest
 
-#variables:
-#  REPO_NAME: gitlab.com/otis_team/backend
+variables:
+  REPO_NAME: gitlab.com/otis_team/backend
 
-#stages:
-#  - test
+stages:
+  - test
 #  - build
 #  - deploy
 
-# lint:
-#   stage: test
-#   before_script:
-#     - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
-#     - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
-#     - cd $GOPATH/src/$REPO_NAME
-#     - go get -u golang.org/x/lint/golint
-#   script:
-#     - golint -set_exit_status ./...
+lint:
+   stage: test
+   before_script:
+     - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
+     - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
+     - cd $GOPATH/src/$REPO_NAME
+     - go get -u golang.org/x/lint/golint
+   script:
+     - golint -set_exit_status ./...
 
 #go_build:
 #  stage: build

@@ -14,12 +14,10 @@ CREATE TABLE IF NOT EXISTS transactions (
     is_online               BOOLEAN         not null        default false,
     is_contactless          BOOLEAN         not null        default false,
     type                    TRANSACTION_T   not null        default 'UNKNOWN',
-    offer_id                INTEGER,
 
     CHECK ( value > 0 ),
 
     CONSTRAINT pk_transactions_id           PRIMARY KEY (id),
-    CONSTRAINT fk_transactions_offer_id     FOREIGN KEY (offer_id)  REFERENCES offers  (offer_id)   ON UPDATE CASCADE ON DELETE RESTRICT,
     CONSTRAINT fk_transactions_outlet_id    FOREIGN KEY (outlet_id) REFERENCES outlets (outlet_id)  ON UPDATE CASCADE ON DELETE RESTRICT,
     CONSTRAINT fk_transactions_users_id     FOREIGN KEY (user_id)   REFERENCES users   (user_id)    ON UPDATE CASCADE ON DELETE RESTRICT,
 )
