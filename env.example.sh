@@ -1,5 +1,8 @@
 #!/bin/bash
 # Otis environment variables
+export GOPRIVATE='gitlab.com/otis_team'
+
+
 export DB_CLUSTER_NAME='otis-cluster-1'
 export DB_NAME='otisdb'
 export DB_ENDPOINT='otis-db-cluster-1.cluster-c6af70dxq6zw.eu-west-2.rds.amazonaws.com'
