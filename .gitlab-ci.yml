@@ -20,7 +20,7 @@ stages:
 
 go_build:
   stage: build
-    before_script:
+  before_script:
       - cd api/merchant
     script:
       - go build -o './build/main' main.go handler.go
