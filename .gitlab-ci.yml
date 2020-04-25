@@ -5,8 +5,8 @@ variables:
 
 stages:
 #   - test
-  - build
-  - deploy
+#  - build
+#  - deploy
 
 # lint:
 #   stage: test
@@ -47,8 +47,8 @@ container_registry:
 #      - docker push registry.gitlab.com/otis_team/backend/service/user:latest
 #      - docker build -t registry.gitlab.com/otis_team/backend/service/transaction:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/transaction/
 #      - docker push registry.gitlab.com/otis_team/backend/service/transaction:latest
-#     - docker build -t registry.gitlab.com/otis_team/backend/api/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
-#     - docker push registry.gitlab.com/otis_team/backend/api/merchant:latest
+#     -  docker build -t registry.gitlab.com/otis_team/backend/api/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
+#     -  docker push registry.gitlab.com/otis_team/backend/api/merchant:latest
 #      - docker build -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
 #      - docker push registry.gitlab.com/otis_team/backend/api/user:latest
 
