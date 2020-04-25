@@ -1,10 +1,10 @@
 image: golang:latest
 
 variables:
-    REPO_NAME: gitlab.com/otis_team/backend
+  REPO_NAME: gitlab.com/otis_team/backend
 
 stages:
-#  - test
+  #  - test
   - build
 #  - deploy
 
@@ -21,9 +21,9 @@ stages:
 go_build:
   stage: build
   before_script:
-      - cd api/merchant
-    script:
-      - go build -o './build/main' main.go handler.go
+    - cd api/merchant
+  script:
+    - go build -o './build/main' main.go handler.go
 
 
 # container_build:
