@@ -10,22 +10,29 @@ import (
 )
 
 const (
-	ApiIdentifier = "https://otis-app.com"
+	// APIIdentifier : Domain against which API requests are authenticated
+	APIIdentifier = "https://otis-app.com"
+
+	// Domain : Auth0 domain
 	Domain        = "https://otis-app.eu.auth0.com/"
 )
 
 var (
+	// SigningMethod : Authentication method
 	SigningMethod = jwt.SigningMethodRS256
 )
 
+// Response : HTTP response type for authentication requests
 type Response struct {
 	Message string `json:"message"`
 }
 
+// Jwks : Struct to represent an array JWK authentication requests
 type Jwks struct {
 	Keys []JSONWebKeys `json:"keys"`
 }
 
+// JSONWebKeys : Struct to represent a JsonWebKey authentication message
 type JSONWebKeys struct {
 	Kty string `json:"kty"`
 	Kid string `json:"kid"`
@@ -67,7 +74,7 @@ func getPemCert(token *jwt.Token) (string, error) {
 
 func validationKeyGetter(token *jwt.Token) (interface{}, error) {
 	// Verify 'aud' claim
-	aud := ApiIdentifier
+	aud := APIIdentifier
 	checkAud := token.Claims.(jwt.MapClaims).VerifyAudience(aud, false)
 	if !checkAud {
 		return token, errors.New("Invalid audience.")
@@ -88,6 +95,7 @@ func validationKeyGetter(token *jwt.Token) (interface{}, error) {
 	return result, nil
 }
 
+// CheckAuthHeader : Function to inspect the header of HTTP packets and authenticate requests to the API
 func CheckAuthHeader(header string) error{
 	// TODO: Make this a bit more robust, parsing-wise
 	authHeaderParts := strings.Fields(header)
