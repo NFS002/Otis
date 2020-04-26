@@ -5,7 +5,7 @@ variables:
 
 stages:
   - test
-#  - build
+  - build
 #  - deploy
 
 lint:
@@ -26,15 +26,15 @@ lint:
 #    - go build -o './build/main' main.go handler.go
 
 
-# container_build:
-#   stage: build
-#   except:
-#     - master
-#   image: docker:stable
-#   services:
-#     - docker:dind
-#   script:
-#     - docker build -t registry.gitlab.com/otis_team/backend/service/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/merchant/
+container_build:
+   stage: build
+   only:
+     - master
+   image: docker:stable
+   services:
+     - docker:dind
+   script:
+     - docker build -t registry.gitlab.com/otis_team/backend/service/merchant:latest  --build-arg repo_name=$REPO_NAME --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/merchant/
 #     - docker build -t registry.gitlab.com/otis_team/backend/service/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/user/
 #     - docker build -t registry.gitlab.com/otis_team/backend/service/transaction:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/transaction/
 #     - docker build -t registry.gitlab.com/otis_team/backend/api/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/

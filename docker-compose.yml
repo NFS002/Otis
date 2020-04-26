@@ -19,6 +19,7 @@ services:
       context: ./api/merchant/
       dockerfile: Dockerfile
       args:
+        - repo_name=gitlab.com/otis_team/backend
         - gitlab_user=otis_noah
         - gitlab_token=t7nQMHXp1vJVtZ7sDTpJ
     depends_on:
