@@ -32,7 +32,7 @@ container_build:
      - master
    image: docker:stable
    services:
-     - docker:dind
+     - docker:19.03.8-dind
    script:
      - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/service/merchant:latest  --build-arg repo_name=$REPO_NAME --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/merchant/
 #     - docker build -t registry.gitlab.com/otis_team/backend/service/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/user/
