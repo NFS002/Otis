@@ -21,7 +21,7 @@ RUN git config \
     "https://gitlab.com/"
 
 
-RUN GIT_TERMINAL_PROMPT=1 GOOS=linux go build -a -o api-merchant
+RUN GOPRIVATE="gitlab.com/otis_team/backend" GIT_TERMINAL_PROMPT=1 GOOS=linux go build -a -o api-merchant
 
 # RUN
 

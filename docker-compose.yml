@@ -19,8 +19,8 @@ services:
       context: ./api/merchant/
       dockerfile: Dockerfile
       args:
-        - gitlab_user=gitlab+deploy-token-164947
-        - gitlab_token=LEAxqG9_8jD2-JUZanxW
+        - gitlab_user=otis_noah
+        - gitlab_token=t7nQMHXp1vJVtZ7sDTpJ
     depends_on:
       - api_gateway
     ports:
