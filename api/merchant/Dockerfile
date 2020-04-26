@@ -1,5 +1,6 @@
 FROM golang:alpine as builder
 
+ARG repo_name
 ARG gitlab_user
 ENV gitlab_user=$gitlab_user
 ARG gitlab_token
