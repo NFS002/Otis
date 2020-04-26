@@ -24,5 +24,5 @@ CREATE TABLE IF NOT EXISTS users (
 
     CONSTRAINT pk_users_id PRIMARY KEY (id),
     CONSTRAINT fk_users_university_id       FOREIGN KEY (university_id) REFERENCES universities (id) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT fk_users_nationality         FOREIGN KEY (nationality)   REFERENCES countries    (id) ON UPDATE CASCADE ON DELETE RESTRICT
+    CONSTRAINT fk_users_nationality         FOREIGN KEY (nationality)   REFERENCES countries    (code) ON UPDATE CASCADE ON DELETE RESTRICT
 );

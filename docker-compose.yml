@@ -31,23 +31,24 @@ services:
       - api-merchant-tier
       - api-transaction-tier
 
-#  api_user:
-#    restart: always
-#    container_name: "go.micro.api.user"
-#    build:
-#      context: ./api/user/
-#      dockerfile: Dockerfile
-#      args:
-#        - gitlab_user=gitlab+deploy-token-154792
-#        - gitlab_token=ZbKzbXzeapzLsNkxomxx
-#    depends_on:
-#      - api_gateway
-#    ports:
-#      - 50052:50052
-#    networks:
-#      - api-gateway-tier
-#      - api-user-tier
-#      - api-transaction-tier
+  api_user:
+    restart: always
+    container_name: "go.micro.api.user"
+    build:
+      context: ./api/user/
+      dockerfile: Dockerfile
+      args:
+        - repo_name=gitlab.com/otis_team/backend
+        - gitlab_user=otis_noah
+        - gitlab_token=t7nQMHXp1vJVtZ7sDTpJ
+    depends_on:
+      - api_gateway
+    ports:
+      - 50052:50052
+    networks:
+      - api-gateway-tier
+      - api-user-tier
+      - api-transaction-tier
 
 #  service_merchant:
 #    restart: always

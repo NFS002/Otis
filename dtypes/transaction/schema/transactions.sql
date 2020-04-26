@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS transactions (
     outlet_id               INTEGER         not null,
     user_id                 INTEGER         not null,
     value                   DECIMAL         not null,
-    currency                VARCHAR(5)      not null        default 'GBP',
+    currency                VARCHAR(5)      not null        default 'GBP',  -- ISO 4217
     is_online               BOOLEAN         not null        default false,
     is_contactless          BOOLEAN         not null        default false,
     type                    TRANSACTION_T   not null        default 'UNKNOWN',
