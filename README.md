@@ -42,16 +42,16 @@ This is to provide integration with the default Micro namespace. This will likel
 
 ## Golang local modules
 All go.mod files that require another local module use
-the replace directive as follows
-replace gitlab.com/.. => /path/to/local/directory/...
+the replace directive as follows replace gitlab.com/.. => /path/to/local/directory/...
 However, for deployment, we have to use the remote modules rather than the local ones, so we need to remove these directives.
-The shell script mod-deploy.sh searches all go.mod files and comments
-out any lines that end with '//_LOCAL'. This script should be run after
-pushing to a remote repo, or before deployment.
-Conversely, the file mod-local.sh does the opposite, and uncomments
-any lines in any go.mod files that are commented out, and that end with '//_LOCAL'
+The shell script scripts/mod-deploy.sh searches all go.mod files and comments out any lines that end with '//_LOCAL'. This script should be run after
+pushing to a remote repo, or before deployment. Conversely, the file scripts/mod-local.sh does the opposite, and uncomments
+any lines in any go.mod files that are commented out, and that end with '//_LOCAL'. 
 
 ### <a href='https://thewebivore.com/using-replace-in-go-mod-to-point-to-your-local-module/'> See this article for details </a>
+
+The shell script scripts/mod-require-delete.sh should then be used
+after scripts/mod-deploy.sh and before 'git push'/deployment which deletes every 'require block' in every go.mod file and hence clears any dependencies on local module versions.
 
 ## Dev environment
 

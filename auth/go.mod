@@ -2,9 +2,6 @@ module gitlab.com/otis_team/backend/auth
 
 go 1.14
 
-require (
-)
-
 replace (
 //	gitlab.com/otis_team/backend/api/merchant => /Users/noah/Otis/backend/api/merchant/ //_LOCAL
 //	gitlab.com/otis_team/backend/api/user => /Users/noah/Otis/backend/api/user //_LOCAL

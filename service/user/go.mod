@@ -1,6 +1,6 @@
 module gitlab.com/otis_team/backend/service/user
 
-go 1.13
+go 1.14
 
 replace (
 //	gitlab.com/otis_team/backend/api/merchant => /Users/noah/Otis/backend/api/merchant/ //_LOCAL
@@ -12,9 +12,5 @@ replace (
 //	gitlab.com/otis_team/backend/service/user => /Users/noah/Otis/backend/service/user //_LOCAL
 )
 
-require (
-	github.com/golang/protobuf v1.4.0
-	github.com/micro/go-micro v1.18.0
-	gitlab.com/otis_team/backend/db v0.0.0-00010101000000-000000000000 // indirect
-	gitlab.com/otis_team/backend/dtypes v0.0.0-00010101000000-000000000000
-)
+
+
