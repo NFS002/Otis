@@ -1,7 +1,7 @@
 image: golang:latest
 
 variables:
-  REPO_NAME: gitlab.com/otis_team/backend
+  REPO_NAME:  gitlab.com/otis_team/backend
 
 stages:
   - test
