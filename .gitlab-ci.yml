@@ -11,9 +11,9 @@ stages:
 lint:
    stage: test
    before_script:
-     - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
-     - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
-     - cd $GOPATH/src/$REPO_NAME
+     - mkdir -p $GOPATH/src/$(dirname $GOPRIVATE)
+     - ln -svf $CI_PROJECT_DIR $GOPATH/src/$GOPRIVATE
+     - cd $GOPATH/src/$GOPRIVATE
      - go get -u golang.org/x/lint/golint
    script:
      - golint -set_exit_status ./...
