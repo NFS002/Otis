@@ -18,6 +18,7 @@ ENV CGO_ENABLED=0
 ENV GOOS=linux
 
 COPY . .
+RUN "echo $DB_PASSWORD"
 
 RUN git config \
     --global \
