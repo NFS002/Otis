@@ -8,7 +8,7 @@ stages:
 lint:
    stage: test
    before_script:
-     - source ./.env
+     - source ./.env.example
      - mkdir -p $GOPATH/src/$(dirname $GOPRIVATE)
      - ln -svf $CI_PROJECT_DIR $GOPATH/src/$GOPRIVATE
      - cd $GOPATH/src/$GOPRIVATE
@@ -25,7 +25,7 @@ container_build:
    services:
      - docker:19.03.8-dind
    before_script:
-     - source ./.env
+     - source ./.env.example
    script:
      - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/merchant:latest  --build-arg goprivate=$GOPRIVATE --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
      - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg goprivate=$GOPRIVATE --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
