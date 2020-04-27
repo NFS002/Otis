@@ -1,6 +1,5 @@
 image: golang:latest
 
-
 stages:
   - test
   - build
@@ -9,6 +8,7 @@ stages:
 lint:
    stage: test
    before_script:
+     - source ./.env
      - mkdir -p $GOPATH/src/$(dirname $GOPRIVATE)
      - ln -svf $CI_PROJECT_DIR $GOPATH/src/$GOPRIVATE
      - cd $GOPATH/src/$GOPRIVATE
