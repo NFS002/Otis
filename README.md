@@ -63,5 +63,5 @@ $ source .env
 ```
 Before pushing:
 ```shell script
-$ cp .env .env.example # Then edit .env to remove sensitive information such as passwords
+$ cp .env .env.example # Then edit .env.example to remove sensitive information such as passwords
 ```

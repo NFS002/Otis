@@ -16,13 +16,6 @@ lint:
    script:
      - golint -set_exit_status ./...
 
-#go_build:
-#  stage: build
-#  before_script:
-#    - cd api/merchant
-#  script:
-#    - go build -o './build/main' main.go handler.go
-
 
 container_build:
    stage: build
