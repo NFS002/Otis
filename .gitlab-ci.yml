@@ -1,7 +1,7 @@
 image: golang:latest
 
 variables:
-  REPO_NAME: gitlab.com/otis_team/backend
+  GOPRIVATE: gitlab.com/otis_team/backend
 
 stages:
   - test
@@ -33,11 +33,9 @@ container_build:
    image: docker:stable
    services:
      - docker:19.03.8-dind
-   before_script:
-     - source ./env.sh
    script:
-     - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/merchant:latest  --build-arg repo_name=$REPO_NAME --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
-     - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg repo_name=$REPO_NAME --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
+     - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/merchant:latest  --build-arg goprivate=$GOPRIVATE --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
+     - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg goprivate=$GOPRIVATE --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
 #    - docker build -t registry.gitlab.com/otis_team/backend/service/transaction:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/transaction/
 #    - docker build -t registry.gitlab.com/otis_team/backend/api/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
 #    - docker build -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/

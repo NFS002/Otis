@@ -15,13 +15,15 @@ services:
   api_merchant:
     restart: always
     container_name: "go.micro.api.merchant"
+    env_file:
+      - .env
     build:
       context: ./api/merchant/
       dockerfile: Dockerfile
       args:
-        - repo_name=gitlab.com/otis_team/backend
-        - gitlab_user=otis_noah
-        - gitlab_token=t7nQMHXp1vJVtZ7sDTpJ
+        - goprivate=${GOPRIVATE}
+        - gitlab_user=${GITLAB_USER}
+        - gitlab_token=${GITLAB_TOKEN}
     depends_on:
       - api_gateway
     ports:
@@ -34,13 +36,15 @@ services:
   api_user:
     restart: always
     container_name: "go.micro.api.user"
+    env_file:
+      - .env
     build:
       context: ./api/user/
       dockerfile: Dockerfile
       args:
-        - repo_name=gitlab.com/otis_team/backend
-        - gitlab_user=otis_noah
-        - gitlab_token=t7nQMHXp1vJVtZ7sDTpJ
+        - goprivate=${GOPRIVATE}
+        - gitlab_user=${GITLAB_USER}
+        - gitlab_token=${GITLAB_TOKEN}
     depends_on:
       - api_gateway
     ports:

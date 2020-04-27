@@ -55,13 +55,13 @@ after scripts/mod-deploy.sh and before 'git push'/deployment which deletes every
 
 ## Dev environment
 
-Source the shell script env.sh to set up your environment variables for local development.
+Source the shell script otis.env to set up your environment variables for local development.
 The file env.example.sh serves as a template for env.sh, but does not include any sensitive information
 For example, after pulling, or before building a docker image:
 ```shell script
-$ source env.sh
+$ source .env
 ```
 Before pushing:
 ```shell script
-$ cp env.sh env.example.sh # Then edit env.sh to remove sensitive information such as passwords
+$ cp .env .env.example # Then edit .env to remove sensitive information such as passwords
 ```
