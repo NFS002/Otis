@@ -5,7 +5,6 @@ import (
 	proto "gitlab.com/otis_team/backend/api/merchant/proto"
 	merchantService "gitlab.com/otis_team/backend/service/merchant/proto/merchant"
 	transactionService "gitlab.com/otis_team/backend/service/transaction/proto/transaction"
-	"os"
 	"log"
 )
 
