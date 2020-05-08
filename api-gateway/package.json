@@ -1,0 +1,33 @@
+{
+  "name": "otis-api-gateway",
+  "version": "0.0.1",
+  "author": "Otis Technologies.",
+  "description": "API gateway for Otis backend grpc services",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/otis_team/backend.git"
+  },
+  "bugs": "https://github.com/otis_team/backend/issues",
+  "contributors": [
+    {
+      "name": "Noah Florin-Sefton",
+      "email": "noah@otis-app.com"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.4",
+    "body-parser": "^1.19.0",
+    "delay": "^4.3.0",
+    "express": "^4.17.1",
+    "grpc": "^1.24.2",
+    "helmet": "^3.22.0",
+    "stream": "0.0.2"
+  }
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package example;
+
+import "dtypes/partner-merchant/proto/partner-merchant.proto";
+
+
+service ExampleService {
+    rpc _Bite(Query) returns (Response) {};
+}
+
+// Query types
+
+message Query {
+    string id = 1;
+}
+
+message MerchantQuery {
+    string id = 1;
+    partnermerchant.PartnerMerchant merchant = 2;
+}
+
+message Response {
+    string fling = 2;
+}

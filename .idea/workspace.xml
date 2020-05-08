@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db/client/merchant.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/client/merchant.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/client/transaction.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/client/transaction.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/client/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/client/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/connection-pool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/dev-server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gateway-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/merchant/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/merchant/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/proto/example.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/user/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/user/schema/friends.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/user/schema/friends.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +45,24 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api-gateway" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="" />
+      <created>1588714591812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588714591812</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -45,29 +74,25 @@
       <screen x="0" y="23" width="1366" height="673" />
     </state>
     <state x="233" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.673@0.23.1366.673" timestamp="1586118563677" />
-    <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586120066804">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588719208111">
+      <screen x="0" y="23" width="1366" height="672" />
     </state>
     <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1586120066804" />
+    <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1366.672@0.23.1366.672" timestamp="1588719208111" />
     <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1366.673@0.23.1366.673" timestamp="1586119263402" />
-    <state x="195" y="23" key="SettingsEditor" timestamp="1586187611240">
-      <screen x="0" y="23" width="1366" height="673" />
+    <state x="195" y="23" key="SettingsEditor" timestamp="1588715722522">
+      <screen x="0" y="23" width="1366" height="672" />
     </state>
+    <state x="195" y="23" key="SettingsEditor/0.23.1366.672@0.23.1366.672" timestamp="1588715722522" />
     <state x="195" y="23" key="SettingsEditor/0.23.1366.673@0.23.1366.673" timestamp="1586187611240" />
-    <state x="434" y="23" width="670" height="673" key="search.everywhere.popup" timestamp="1586185142358">
-      <screen x="0" y="23" width="1366" height="673" />
+    <state x="323" y="151" key="run.anything.popup" timestamp="1588962825662">
+      <screen x="0" y="23" width="1366" height="672" />
     </state>
+    <state x="323" y="151" key="run.anything.popup/0.23.1366.672@0.23.1366.672" timestamp="1588962825662" />
+    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup" timestamp="1588955388759">
+      <screen x="0" y="23" width="1366" height="672" />
+    </state>
+    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup/0.23.1366.672@0.23.1366.672" timestamp="1588955388759" />
     <state x="434" y="23" width="670" height="673" key="search.everywhere.popup/0.23.1366.673@0.23.1366.673" timestamp="1586185142358" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/client/client.go</url>
-          <line>2</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
