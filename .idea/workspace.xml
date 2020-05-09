@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/connection-pool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/dev-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/gateway-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/merchant/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/merchant/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/proto/example.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/user/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtypes/user/schema/friends.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/user/schema/friends.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/general-merchant/proto/general-merchant.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/generalmerchant/proto/generalmerchant.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/general-merchant/proto/general-merchant.proto" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/generalmerchant/proto/generalmerchant.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/general-merchant/schema/general-merchant.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/generalmerchant/schema/generalmerchant.schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/partner-merchant/proto/partner-merchant.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/partnermerchant/proto/partnermerchant.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/partner-merchant/proto/partner-merchant.proto" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/partnermerchant/proto/partnermerchant.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/partner-merchant/schema/partner-merchant.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/partnermerchant/schema/partnermerchant.schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/merchant/proto/merchant/merchant.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/proto/merchant/merchant.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/merchant/proto/merchant/merchant.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/proto/merchant/merchant.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/merchant/proto/merchant/merchant.proto" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/proto/merchant/merchant.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,9 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -70,6 +71,10 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="258" y="23" key="#Project_Structure" timestamp="1589025397467">
+      <screen x="0" y="23" width="1366" height="672" />
+    </state>
+    <state x="258" y="23" key="#Project_Structure/0.23.1366.672@0.23.1366.672" timestamp="1589025397467" />
     <state x="233" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586118563677">
       <screen x="0" y="23" width="1366" height="673" />
     </state>
@@ -80,6 +85,10 @@
     <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1586120066804" />
     <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1366.672@0.23.1366.672" timestamp="1588719208111" />
     <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1366.673@0.23.1366.673" timestamp="1586119263402" />
+    <state x="396" y="97" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589022171738">
+      <screen x="0" y="23" width="1366" height="672" />
+    </state>
+    <state x="396" y="97" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1366.672@0.23.1366.672" timestamp="1589022171738" />
     <state x="195" y="23" key="SettingsEditor" timestamp="1588715722522">
       <screen x="0" y="23" width="1366" height="672" />
     </state>
@@ -89,10 +98,10 @@
       <screen x="0" y="23" width="1366" height="672" />
     </state>
     <state x="323" y="151" key="run.anything.popup/0.23.1366.672@0.23.1366.672" timestamp="1588962825662" />
-    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup" timestamp="1588955388759">
+    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup" timestamp="1589024865697">
       <screen x="0" y="23" width="1366" height="672" />
     </state>
-    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup/0.23.1366.672@0.23.1366.672" timestamp="1588955388759" />
+    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup/0.23.1366.672@0.23.1366.672" timestamp="1589024865697" />
     <state x="434" y="23" width="670" height="673" key="search.everywhere.popup/0.23.1366.673@0.23.1366.673" timestamp="1586185142358" />
   </component>
 </project>

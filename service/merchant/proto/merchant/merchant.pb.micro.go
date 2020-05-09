@@ -4,8 +4,8 @@
 package merchant
 
 import (
-	_ "gitlab.com/otis_team/backend/dtypes/general-merchant/proto"
-	_ "gitlab.com/otis_team/backend/dtypes/partner-merchant/proto"
+	_ "dtypes/general-merchant/proto"
+	_ "dtypes/partner-merchant/proto"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
@@ -13,8 +13,8 @@ import (
 
 import (
 	context "context"
-	client "github.com/micro/go-micro/client"
-	server "github.com/micro/go-micro/server"
+	client "github.com/micro/go-micro/v2/client"
+	server "github.com/micro/go-micro/v2/server"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

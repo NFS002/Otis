@@ -4,8 +4,8 @@
 package merchant
 
 import (
-	proto2 "gitlab.com/otis_team/backend/dtypes/general-merchant/proto"
-	proto1 "gitlab.com/otis_team/backend/dtypes/partner-merchant/proto"
+	proto2 "dtypes/general-merchant/proto"
+	proto1 "dtypes/partner-merchant/proto"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"

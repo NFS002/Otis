@@ -3,3 +3,4 @@
 data
 api-gateway/node_modules
 .env
+*venv
