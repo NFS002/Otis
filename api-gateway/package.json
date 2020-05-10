@@ -28,6 +28,8 @@
     "express": "^4.17.1",
     "grpc": "^1.24.2",
     "helmet": "^3.22.0",
-    "stream": "0.0.2"
+    "http-status-codes": "^1.4.0",
+    "stream": "0.0.2",
+    "winston": "^3.2.1"
   }
 }

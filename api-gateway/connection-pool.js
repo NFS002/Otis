@@ -34,7 +34,7 @@ const CONN_STATUS = {
  */
 
 module.exports = class GRPCClientPool {
-    constructor({ grpcPkg, serviceName, url: serverURL, maxConnections = 2, rpcPrefix = 'RPC', poolInterval = 200 } = {} ) {
+    constructor({ grpcPkg, serviceName, url: serverURL, maxConnections = 2, deadline = new Date( Date.now() + 5000 ), rpcPrefix = '_', poolInterval = 200 } = {} ) {
         if ( !serviceName ) throw new Error('option.serviceName is a required field');
 
         if ( !grpcPkg ) throw new Error('option.grpcPkg is a required field')
@@ -49,6 +49,9 @@ module.exports = class GRPCClientPool {
 
         // Connection Ids
         this.connCount = 0;
+
+        /* Connection timeout */
+        this.deadline = deadline;
 
         // Free-Client Check Interval
         this.poolInterval = poolInterval;
@@ -148,7 +151,7 @@ module.exports = class GRPCClientPool {
      */
     [initializeRPCs](connObj) {
         for (const rpc in connObj.conn) { // eslint-disable-line
-            if (rpc.match(/^_[A-Z]/)) {
+            if (rpc.match(/^[a-zA-Z]+$/)) {
                 // Creating Method on `this` instance => prefix + rpc_method
                 this[`${this[prefix]}${rpc}`] = async (data, cb) => {
                     const freeConnObj = await this[getFreeConn]();
@@ -160,7 +163,7 @@ module.exports = class GRPCClientPool {
                         // To avoid Duplicate resolving of Promise
                         let resolved = false;
 
-                        const response = freeConnObj.conn[rpc](data, (err, result) => {
+                        const response = freeConnObj.conn[rpc](data, { deadline: this.deadline }, (err, result) => {
                             // Release the connection after the request is Done
                             this[releaseConn](freeConnObj);
 

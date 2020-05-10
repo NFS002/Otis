@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const { getService, getValue } = require('./utils.js')
 const helmet = require('helmet')
-const merchant_api = require('./merchant')
+const errorhandler = require('./middleware/errorhandler')
 
 const app = express()
 
@@ -15,9 +15,13 @@ app.use(bodyParser.json())
 // Security middleware
 app.use(helmet())
 
-
 /* Add API modules */
-const apis = getValue('apis')
+//app.get('/merchant/general/get', function(req, res) {
+  //  throw new Error("Testing")
+//})
+
+
+ const apis = getValue('apis')
 for (api in apis) {
   let a = apis[api]
   let module = require(a.path)
@@ -29,5 +33,7 @@ for (api in apis) {
 
 port = getValue('port')
 address = getValue('address')
+
+app.use( errorhandler() )
 
 app.listen(port, address, () => console.log(`API gateway listening at http://${address}:${port}`))

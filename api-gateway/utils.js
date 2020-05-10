@@ -29,6 +29,18 @@ function getService( service_name ) {
     throw Error(`Service ${service_name} not found`)
 }
 
+
+function wrapFuncInMiddleware( func ) {
+    return async function wrap( req, res, next ) {
+        try {
+            await func(req, res, next)
+        }
+        catch(e) {
+            next(e)
+        }
+    }
+}
+
 /* Load a grpc protobuf pacakge */
 function getProtoPackage( proto_path, package_name, dirs = ['proto'] ) {
 
@@ -47,5 +59,6 @@ function getProtoPackage( proto_path, package_name, dirs = ['proto'] ) {
 module.exports = {
     getProtoPackage,
     getService,
-    getValue
+    getValue,
+    wrapFuncInMiddleware
 }

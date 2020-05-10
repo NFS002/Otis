@@ -15,11 +15,11 @@ module.exports = {
     "services": {
       "merchant": {
         "name": "merchant",
-        "address": "127.0.0.1:3005",
-        "proto_dirs": [ process.env["OTIS_HOME"], "proto", '.'],
-        "proto_file": "example.proto",
-        "package": "example",
-        "service": "ExampleService"
+        "address": process.env["OTIS_SERVICE_MERCHANT_ADDRESS"],
+        "proto_dirs": [ process.env["OTIS_HOME"] ],
+        "proto_file": "service/merchant/proto/merchant/merchant.proto",
+        "package": "merchant",
+        "service": "MerchantService"
       }
     }
   },
@@ -37,13 +37,13 @@ module.exports = {
 
     "services": {
       "merchant": {
-          "name": "merchant",
-          "address": "127.0.0.1:3005",
-          "proto_dirs": [ process.env["OTIS_HOME"], "proto", '.' ],
-          "proto_file": "example.proto",
-          "package": "example",
-          "service": "ExampleService"
-        }
+        "name": "merchant",
+        "address": process.env["OTIS_SERVICE_MERCHANT_ADDRESS"],
+        "proto_dirs": [ process.env["OTIS_HOME"] ],
+        "proto_file": "service/merchant/proto/merchant/merchant.proto",
+        "package": "merchant",
+        "service": "MerchantService"
+      }
     }
   }
 }
