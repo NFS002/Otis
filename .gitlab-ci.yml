@@ -11,7 +11,9 @@ stages:
 pylint:
    stage: test
    before_script:
-     - pip install pylint pipstylecode
+     - apt-get update -qy
+     - apt-get install -y python-dev python-pip
+     - pip install pylint pycodestyle
    script:
      - pylint service
      - pycodestyle service

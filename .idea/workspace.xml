@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/merchant/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/__main__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/merchant/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/utils.py" afterDir="false" />
     </list>
