@@ -1,0 +1,86 @@
+[MASTER]
+ignore = merchant-service-venv, proto
+
+ignore-patterns = .*_pb2.*
+
+
+disable=no-self-use
+
+# Overall score threshold to be exceeded before program exits with error.
+fail-under=10
+
+[FORMAT]
+max-line-length = 130
+
+# Maximum number of lines in a module.
+max-module-lines=1500
+
+[REFACTORING]
+
+max-nested-blocks=5
+
+never-returning-functions=sys.exit
+
+
+[BASIC]
+# Naming style matching correct argument names.
+argument-naming-style=snake_case
+
+
+# Bad variable names which should  be refused
+bad-names=foo, bar, baz
+
+# Naming style matching correct constant names.
+const-naming-style=UPPER_CASE
+
+# Minimum line length for functions/classes that require docstrings
+docstring-min-length=10
+
+# Naming style matching correct function names.
+function-naming-style=snake_case
+
+method-naming-style=PascalCase
+
+# Naming style matching correct module names.
+module-naming-style=snake_case
+
+[VARIABLES]
+
+# Naming style matching correct variable names.
+variable-rgx=^([a-zA-Z]{0,1}|[_]{0,9}[a-z0-9_]{1,30})$
+
+# List of strings which can identify a callback function by name. A callback
+# name must start or end with one of those strings.
+callbacks=cb_, _cb, cb
+
+# A regular expression matching the name of dummy variables (i.e. expected to
+# not be used).
+dummy-variables-rgx=^(_unused_.*)$
+
+# Argument names that match this expression will be ignored. Default to name
+# with leading underscore.
+ignored-argument-names=^(unused_.*)$
+
+no-space-check=trailing-comma, dict-separator
+
+# Allow the body of an if to be on the same line as the test if there is no
+# else.
+single-line-if-stmt=yes
+
+# A path to a file that contains the private dictionary; one word per line.
+spelling-private-dict-file=./pylintdict.txt
+
+# Maximum number of branch for function / method body.
+max-branches=12
+
+# Dont lint these modules
+ignored-modules=proto
+
+# Maximum number of statements in function / method body.
+max-statements=50
+
+# Allow wildcard imports from modules that define __all__.
+allow-wildcard-with-all=no
+
+# Exceptions that will emit a warning when being caught.
+overgeneral-exceptions=BaseException, Exception

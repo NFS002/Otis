@@ -8,15 +8,13 @@ stages:
   - build
 #  - deploy
 
-lint:
+pylint:
    stage: test
    before_script:
-     - mkdir -p $GOPATH/src/$(dirname $GOPRIVATE)
-     - ln -svf $CI_PROJECT_DIR $GOPATH/src/$GOPRIVATE
-     - cd $GOPATH/src/$GOPRIVATE
-     - go get -u golang.org/x/lint/golint
+     - pip install pylint pipstylecode
    script:
-     - golint -set_exit_status ./...
+     - pylint service
+     - pycodestyle service
 
 
 container_build:

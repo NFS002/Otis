@@ -1,3 +1,7 @@
+"""Utility functions for various purposes"""
+import math
+
+
 def get_distance(start, end):
     """Distance between two points."""
     coord_factor = 10000000.0
