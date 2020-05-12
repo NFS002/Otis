@@ -23,8 +23,9 @@ eslint:
   before_script:
     - cd api-gateway
     - npm install
+    - npm install -g eslint
   script:
-    - eslint .
+    - eslint --debug .
 
 
 container_build:
