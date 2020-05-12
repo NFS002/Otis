@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylintdict.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/merchant/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
