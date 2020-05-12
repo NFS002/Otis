@@ -10,10 +10,9 @@ stages:
 
 pylint:
    stage: test
+   image: python:3.6
    before_script:
-     - apt-get update -qy
-     - apt-get install -y python-dev python-pip
-     - pip install -r requirements.txt
+     - python3 -m pip install -r requirements.txt
    script:
      - pylint service/*
      - pycodestyle service/*
