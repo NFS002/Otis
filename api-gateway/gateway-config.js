@@ -12,6 +12,24 @@ module.exports = {
         }
     },
 
+    'logs': {
+        'rollbar': true,
+        'console': false,
+        'pretty_print': true,
+        'files': [
+            {
+                'filename': process.env["OTIS_HOME"] + '/api-gateway/logs/combined.log',
+                'maxsize': 1024 * 1024 * 20
+            },
+            {
+                'level': 'error',
+                'maxsize': 1024 * 1024 * 20,
+                'filename': process.env["OTIS_HOME"] + '/api-gateway/logs/error.log'
+            }
+        ]
+    },
+
+
     "services": {
       "merchant": {
         "name": "merchant",
@@ -25,7 +43,7 @@ module.exports = {
   },
   "production": {
     "address":"0.0.0.0",
-    "port": 80,
+    "port": 3000,
 
     "apis": {
         "merchant": {
@@ -33,6 +51,23 @@ module.exports = {
             "path": "./merchant",
             "prefix": "/merchant"
         }
+    },
+
+    'logs': {
+        'rollbar': true,
+        'console': false,
+        'pretty_print': false,
+        'files': [
+            {
+                'filename': process.env["OTIS_HOME"] + '/api-gateway/logs/combined.log',
+                'maxsize': 1024 * 1024 * 20
+            },
+            {
+                'level': 'error',
+                'maxsize': 1024 * 1024 * 20,
+                'filename': process.env["OTIS_HOME"] + '/api-gateway/logs/error.log'
+            }
+        ]
     },
 
     "services": {

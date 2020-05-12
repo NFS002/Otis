@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/middleware/errorhandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/public/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/public/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/middleware/express-winston.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/middleware/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/middleware/response-time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/middleware/winston-rollbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/connection-pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/connection-pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/dev-server.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/gateway-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gateway-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/merchant/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/errorhandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtypes/partnermerchant/proto/partnermerchant_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/partnermerchant/proto/partnermerchant_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/__main__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,14 +100,18 @@
       <screen x="0" y="23" width="1366" height="672" />
     </state>
     <state x="454" y="176" key="com.intellij.ide.util.TipDialog/0.23.1366.672@0.23.1366.672" timestamp="1589064754053" />
+    <state x="437" y="105" width="779" height="472" key="find.popup" timestamp="1589281837781">
+      <screen x="0" y="23" width="1366" height="672" />
+    </state>
+    <state x="437" y="105" width="779" height="472" key="find.popup/0.23.1366.672@0.23.1366.672" timestamp="1589281837781" />
     <state x="323" y="151" key="run.anything.popup" timestamp="1589048872124">
       <screen x="0" y="23" width="1366" height="672" />
     </state>
     <state x="323" y="151" key="run.anything.popup/0.23.1366.672@0.23.1366.672" timestamp="1589048872124" />
-    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup" timestamp="1589069837376">
+    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup" timestamp="1589276971146">
       <screen x="0" y="23" width="1366" height="672" />
     </state>
-    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup/0.23.1366.672@0.23.1366.672" timestamp="1589069837376" />
+    <state x="434" y="23" width="670" height="672" key="search.everywhere.popup/0.23.1366.672@0.23.1366.672" timestamp="1589276971146" />
     <state x="434" y="23" width="670" height="673" key="search.everywhere.popup/0.23.1366.673@0.23.1366.673" timestamp="1586185142358" />
   </component>
 </project>

@@ -7,6 +7,7 @@
 var HttpStatus = require('http-status-codes');
 var fs = require('fs')
 var path = require('path')
+const { logger, get_log_body } = require('./logger')
 
 /**
 * Module variables.
@@ -27,13 +28,6 @@ function escapeHtmlBlock (s) {
     /[^0-9A-Za-z ]/g,
     c => "&#" + c.charCodeAt(0) + ";"
   );
-}
-
-/**
- * Log error
- */
-function logerror (req, err) {
-  console.log("Request failed: ", err)
 }
 
 /**
@@ -60,13 +54,12 @@ function logerror (req, err) {
  * @return {Function}
  * @api public
  */
-function errorHandler(err, req, res, next) {
-    // Set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
+const error_handler = () => function(err, req, res, next) {
 
-    // Log error
-    logerror(req, err)
+    // Set local err
+    res.locals.error = err;
+    res.locals.logLevel = 'error'
+
 
     // Set status code
     if ( !res.statusCode ) {
@@ -93,6 +86,11 @@ function errorHandler(err, req, res, next) {
     var title =  HttpStatus.getStatusText(res.statusCode);
     var message = HttpStatus.getStatusText(res.statusCode);
 
+    var error_body = { title: title, message: message,
+            error: err.message, stack: err.stack }
+    for (var prop in err) error_body[prop] = error_body[prop]
+    var json_err = JSON.stringify( error_body, null, 2)
+
     // Sens response based on content type
     if ( req.accepts('text/html') )  {
       var isInspect = !err.stack && String(err) === toString.call(err)
@@ -116,16 +114,21 @@ function errorHandler(err, req, res, next) {
       res.end(body)
     // json
     } else  {
-      var error_body = { title: title, message: message,
-        error: err.message, stack: err.stack }
-      for (var prop in err) error_body[prop] = error_body[prop]
-      var json = JSON.stringify( error_body, null, 2)
       if (req.accepts('application/json') || req.accepts('json') )
         res.setHeader('Content-Type', 'application/json; charset=utf-8')
       else
         res.setHeader('Content-Type', 'text/plain; charset=utf-8')
-      res.end(json)
+      res.end(json_err)
     }
+    next()
 };
 
-module.exports = () => errorHandler
+const log_handler = () => function( req, res, time ) {
+    const log_body = get_log_body( time, req, res, res.locals.error  )
+    logger.log( log_body )
+}
+
+module.exports = {
+    log_handler,
+    error_handler
+}

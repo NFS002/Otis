@@ -13,9 +13,7 @@ async function g_get(req, res) {
    var value;
    const { _GetGeneralMerchant } = merchant_pool
    value = await _GetGeneralMerchant({ "merchantID" : "23034"  })
-   e = Error("some error")
-   e.statusCode = 500;
-   throw e;
+   res.locals.body = { "somekey": "somevalue" }
    res.end( JSON.stringify( value ) )
 
 }

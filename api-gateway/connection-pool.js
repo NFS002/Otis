@@ -34,7 +34,7 @@ const CONN_STATUS = {
  */
 
 module.exports = class GRPCClientPool {
-    constructor({ grpcPkg, serviceName, url: serverURL, maxConnections = 2, deadline = new Date( Date.now() + 5000 ), rpcPrefix = '_', poolInterval = 200 } = {} ) {
+    constructor({ grpcPkg, serviceName, url: serverURL, maxConnections = 2, timeout = 5000, rpcPrefix = '_', poolInterval = 200 } = {} ) {
         if ( !serviceName ) throw new Error('option.serviceName is a required field');
 
         if ( !grpcPkg ) throw new Error('option.grpcPkg is a required field')
@@ -50,9 +50,6 @@ module.exports = class GRPCClientPool {
         // Connection Ids
         this.connCount = 0;
 
-        /* Connection timeout */
-        this.deadline = deadline;
-
         // Free-Client Check Interval
         this.poolInterval = poolInterval;
 
@@ -61,6 +58,9 @@ module.exports = class GRPCClientPool {
 
         // gRPC Client Channel
         this[client] = grpcPkg[serviceName];
+
+        /* Connection timeout */
+        this.timeout = timeout;
 
 
         // Connection Pool Buffer
@@ -162,8 +162,8 @@ module.exports = class GRPCClientPool {
                     return new Promise((resolve, reject) => {
                         // To avoid Duplicate resolving of Promise
                         let resolved = false;
-
-                        const response = freeConnObj.conn[rpc](data, { deadline: this.deadline }, (err, result) => {
+                        const deadline = new Date( Date.now() + this.timeout )
+                        const response = freeConnObj.conn[rpc](data, { deadline: deadline }, (err, result) => {
                             // Release the connection after the request is Done
                             this[releaseConn](freeConnObj);
 
