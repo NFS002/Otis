@@ -1,11 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const { getService, getValue } = require('./utils')
+const { getValue } = require('./utils')
 const helmet = require('helmet')
-const { log_handler, error_handler } = require('./middleware/handlers')
+const { logHandler, errorHandler } = require('./middleware/handlers')
 const { logger } = require('./middleware/logger')
 const responseTime = require('response-time')
-const morganBody = require('morgan-body');
+const morganBody = require('morgan-body')
 
 const app = express()
 
@@ -18,32 +18,35 @@ app.use(bodyParser.json())
 // Security middleware
 app.use(helmet())
 
-morganBody(app);
+morganBody(app)
 
 /* Log response time and other request/response metrics */
-app.use( responseTime( log_handler() ) )
+app.use(responseTime(logHandler()))
 
 const apis = getValue('apis')
-for (api in apis) {
-  let a = apis[api]
-  let module = require(a.path)
-  let name = a.name
-  let prefix = a.prefix
+for (var api in apis) {
+  const a = apis[api]
+  const module = require(a.path)
+  const name = a.name
+  const message = `[api-gateway:${process.env.OTIS_ENV}] Adding API: ${name}`
+  const prefix = a.prefix
+  console.log(message)
+  logger.info(message)
   app.use(prefix, module)
 }
 
-port = getValue('port')
-address = getValue('address')
+var port = getValue('port')
+var address = getValue('address')
 
-app.use( error_handler() )
+app.use(errorHandler())
 
 app.listen(port, address, () => {
-    var msg = `[api-gateway:${process.env['OTIS_ENV']}] Listening at http://${address}:${port}`
-    var info = {
-        level: 'info',
-        message: msg
-    }
-    console.log(msg)
-    logger.log(info)
+  var msg = `[api-gateway:${process.env.OTIS_ENV}] Listening at http://${address}:${port}`
+  var info = {
+    level: 'info',
+    message: msg
   }
+  console.log(msg)
+  logger.log(info)
+}
 )

@@ -17,6 +17,15 @@ pylint:
      - pylint service/*
      - pycodestyle service/*
 
+eslint:
+  stage: test
+  image: node:latest
+  before_script:
+    - cd api-gateway
+    - npm install
+  script:
+    - eslint .
+
 
 container_build:
    stage: build

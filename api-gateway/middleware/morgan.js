@@ -227,7 +227,7 @@ morgan.token('response-time', function getResponseTimeToken (req, res, digits) {
   var ms = (res._startAt[0] - req._startAt[0]) * 1e3 +
     (res._startAt[1] - req._startAt[1]) * 1e-6
 
-  var rt = ms.toFixed(digits === undefined ? 3 : digits);
+  var rt = ms.toFixed(digits === undefined ? 3 : digits)
   return rt
 })
 

@@ -5,26 +5,25 @@
  * A rollbar transport for winston.
  */
 
-const winston = require('winston');
-const rollbar = require('rollbar');
-const cycle = require('cycle');
-
+const winston = require('winston')
+const Rollbar = require('rollbar')
+const cycle = require('cycle')
 
 exports.Rollbar = winston.transports.Rollbar = class extends winston.Transport {
-  constructor(opts = {}) {
-    super(opts);
+  constructor (opts = {}) {
+    super(opts)
     if (!opts.rollbarConfig.accessToken) {
-      throw "winston-transport-rollbar requires a 'rollbarConfig.accessToken' property";
+      throw Error("winston-transport-rollbar requires a 'rollbarConfig.accessToken' property")
     }
 
-    const _rollbar = new rollbar(opts.rollbarConfig);
+    const _rollbar = new Rollbar(opts.rollbarConfig)
 
-    this.name                 = 'rollbar';
-    this.level                = opts.level || 'warn';
-    this.metadataAsRequest    = opts.metadataAsRequest || false;
-    this.silent               = opts.silent || false;
-    this.rollbar              = _rollbar;
-    this.handleExceptions     = opts.handleExceptions || false;
+    this.name = 'rollbar'
+    this.level = opts.level || 'warn'
+    this.metadataAsRequest = opts.metadataAsRequest || false
+    this.silent = opts.silent || false
+    this.rollbar = _rollbar
+    this.handleExceptions = opts.handleExceptions || false
   }
 
   /**
@@ -32,13 +31,13 @@ exports.Rollbar = winston.transports.Rollbar = class extends winston.Transport {
    * @param {String} level
    * @param {Array} args
    */
-  performLogging(level, ...args) {
-    const logMethod = this.rollbar[level];
+  performLogging (level, ...args) {
+    const logMethod = this.rollbar[level]
     if (logMethod) {
-      logMethod.apply(this.rollbar, args);
+      logMethod.apply(this.rollbar, args)
     } else {
-      args[2].logLevel = level;
-      this.rollbar.log(...args);
+      args[2].logLevel = level
+      this.rollbar.log(...args)
     }
   }
 
@@ -50,45 +49,44 @@ exports.Rollbar = winston.transports.Rollbar = class extends winston.Transport {
   * @param meta {Object} **Optional** Additional metadata to attach
   * @param callback {function} Continuation to respond to when complete.
   */
-  log(level, msg, meta, callback) {
-    const self = this;
-    if (this.silent) { return callback(null, true); }
+  log (level, msg, meta, callback) {
+    const self = this
+    if (this.silent) { return callback(null, true) }
 
-    let req = null;
-    if (typeof meta === 'string') { meta = { message: meta }; }
+    let req = null
+    if (typeof meta === 'string') { meta = { message: meta } }
     if (this.metadataAsRequest) {
-      if (req && req.socket) { req = meta; }
+      if (req && req.socket) { req = meta }
     } else if (meta && meta.req) {
       if (typeof meta.req === 'function') {
-        req = meta.req();
+        req = meta.req()
       } else {
-        req = meta.req;
+        req = meta.req
       }
     }
 
     const cb = err => {
-      if (err) { return callback(err); }
+      if (err) { return callback(err) }
 
-      self.emit('logged');
-      callback(null, true);
-    };
-
+      self.emit('logged')
+      callback(null, true)
+    }
 
     if (['warn', 'error'].indexOf(level) > -1 && (msg instanceof Error || meta instanceof Error)) {
-      var error;
-      meta.level = meta.level || level;
+      var error
+      meta.level = meta.level || level
       if (meta.level === 'warn') {
-        meta.level = 'warning';
+        meta.level = 'warning'
       }
       if (msg instanceof Error) {
-        error = msg;
+        error = msg
       } else {
-        error = meta;
+        error = meta
       }
-      this.performLogging(level, error, req, meta, cb);
+      this.performLogging(level, error, req, meta, cb)
     } else {
-      const custom = typeof meta === 'object' ? cycle.decycle(meta) : meta;
-      this.performLogging(level, msg, req, custom, cb);
+      const custom = typeof meta === 'object' ? cycle.decycle(meta) : meta
+      this.performLogging(level, msg, req, custom, cb)
     }
   }
-};
+}

@@ -1,146 +1,136 @@
 /* Dependencies */
-const os = require('os');
-const _ = require('lodash')
-const winston = require('winston');
-const { getValue } = require('../utils');
-const { Rollbar } = require('./winston-rollbar');
+const os = require('os')
+const winston = require('winston')
+const { getValue } = require('../utils')
+const { Rollbar } = require('./winston-rollbar')
 
 const { format } = winston
 
-const log_config = getValue('logs')
-const log_files = log_config.files
+const logConfig = getValue('logs')
+const logFiles = logConfig.files
 
-const winston_transports = log_files.map( log  => new winston.transports.File( log ) );
+const winstonTransports = logFiles.map(log => new winston.transports.File(log))
 
 /* Print to console */
-if (log_config.console === true) {
-    winston_transports.push(  new winston.transports.Console() )
+if (logConfig.console === true) {
+  winstonTransports.push(new winston.transports.Console())
 }
 
 /* Log to rollbar  */
-if ( log_config.rollbar === true ) {
+if (logConfig.rollbar === true) {
   const r = new Rollbar({
-     rollbarConfig: {
-       accessToken: process.env["OTIS_ROLLBAR_ACCESS_TOKEN"],
-       environment: process.env["OTIS_ENV"],
-       reportLevel: 'error'
-    },
+    rollbarConfig: {
+      accessToken: process.env.OTIS_ROLLBAR_ACCESS_TOKEN,
+      environment: process.env.OTIS_ENV,
+      reportLevel: 'error'
+    }
   })
-  winston_transports.push( r )
+  winstonTransports.push(r)
 }
 
-const get_winston_format = function() {
-   if (log_config.pretty_print === true) {
-        return format.combine(
-         format.timestamp(),
-         format.json(),
-         format.prettyPrint()
-        )
-   }
-   else {
-        return format.combine(
-        format.timestamp(),
-        format.json()
-     )
-   }
+const getWinstonFormat = function () {
+  if (logConfig.pretty_print === true) {
+    return format.combine(
+      format.timestamp(),
+      format.json(),
+      format.prettyPrint()
+    )
+  } else {
+    return format.combine(
+      format.timestamp(),
+      format.json()
+    )
+  }
 }
 
-const winston_conf = {
-   level: 'info',
-   format: get_winston_format(),
-   meta: true,
-   defaultMeta: { service: 'api-gateway' },
-   transports: winston_transports
+const winstonConf = {
+  level: 'info',
+  format: getWinstonFormat(),
+  meta: true,
+  defaultMeta: { service: 'api-gateway' },
+  transports: winstonTransports
 }
 
-const get_log_message = function( req, res ) {
-    return  '[api-gateway:' + req.hostname + '] ' + req.method + "/" + req.httpVersion
-    + " " + req.originalUrl + " (" + res.statusCode + ")"
+const getLogMessage = function (req, res) {
+  return '[api-gateway:' + req.hostname + '] ' + req.method + '/' + req.httpVersion +
+    ' ' + req.originalUrl + ' (' + res.statusCode + ')'
 }
 
-const get_meta_log_body = function( req, res ) {
-    const meta = {}
-    meta['memory_usage'] = process.memoryUsage();
-    meta['total_mem'] = os.totalmem();
-    meta['pid'] = process.pid ? process.pid : '-';
-    meta['gid'] = process.gid ? process.gid : '-';
-    meta['argv'] = process.argv ? process.argv : '-';
-    meta['platform'] = process.platform ? process.platform : '-';
-    meta['total_unused_mem'] = os.freemem();
-    return meta;
+const getMetaLogBody = function (req, res) {
+  const meta = {}
+  meta.memory_usage = process.memoryUsage()
+  meta.total_mem = os.totalmem()
+  meta.pid = process.pid ? process.pid : '-'
+  meta.gid = process.gid ? process.gid : '-'
+  meta.argv = process.argv ? process.argv : '-'
+  meta.platform = process.platform ? process.platform : '-'
+  meta.total_unused_mem = os.freemem()
+  return meta
 }
 
-const get_err_log_body = function( err ) {
-    const err_log_body = {};
-    err_log_body['message'] = err.message || 'UNKNOWN';
-    err_log_body['stack'] = err.stack
-    err_log_body['error'] = err;
-    return err_log_body;
+const getErrLogBody = function (err) {
+  const errLogBody = {}
+  errLogBody.message = err.message || 'UNKNOWN'
+  errLogBody.stack = err.stack
+  errLogBody.error = err
+  return errLogBody
 }
 
-const get_log_body = function( time, req, res, err ) {
-    const req_log_body = {}
-    const res_log_body = {}
-    const log_body = {}
+const getLogBody = function (time, req, res, err) {
+  const reqLogBody = {}
+  const resLogBody = {}
+  const logBody = {}
 
-    req_log_body['type'] = 'http request'
-    res_log_body['type'] = 'http response'
+  reqLogBody.type = 'http request'
+  resLogBody.type = 'http response'
 
-    req_log_body['headers'] = req.headers
-    res_log_body['headers'] = res.getHeaders()
+  reqLogBody.headers = req.headers
+  resLogBody.headers = res.getHeaders()
 
-    req_log_body['url'] = req.originalUrl;
+  reqLogBody.url = req.originalUrl
 
+  reqLogBody.host = req.hostname
+  reqLogBody.ip = req.ip
 
-    req_log_body['host'] = req.hostname
-    req_log_body['ip'] = req.ip
+  const reqBody = req.body
+  const resBody = res.locals.body
 
-    const req_body = req.body
-    const res_body = res.locals.body
+  if (reqBody) { reqLogBody.body = reqBody }
+  if (resBody) { resLogBody.body = resBody }
 
-    if (req_body)
-        req_log_body['body'] = JSON.stringify(req_body);
-    if (res_body)
-        res_log_body['body'] = JSON.stringify(res_body);
+  const reqCookies = req.cookies
+  const resCookies = res.cookies
 
-    const req_cookies = req.cookies;
-    const res_cookies = res.cookies;
+  if (reqCookies) { reqLogBody.cookies = reqCookies }
+  if (resCookies) { resLogBody.cookies = resCookies }
 
-    if (req_cookies)
-        req_log_body['cookies'] = req_cookies
-    if (res_cookies)
-        res_log_body['cookies'] = res_cookies
+  logBody.request = reqLogBody
+  logBody.response = resLogBody
+  logBody.message = getLogMessage(req, res)
+  logBody.meta = getMetaLogBody(req, res)
 
+  if (err) {
+    const errLogBody = getErrLogBody(err)
 
-    log_body['request'] = req_log_body;
-    log_body['response'] = res_log_body
-    log_body['message'] = get_log_message( req, res )
-    log_body['meta'] = get_meta_log_body( req, res )
+    logBody.error = errLogBody
+    logBody.message += (' - ' + errLogBody.message)
+  }
 
-    if ( err ) {
-        const err_log_body = get_err_log_body( err )
-
-        log_body['error'] = err_log_body
-        log_body['message'] += (' - ' + err_log_body['message'])
+  if (time) {
+    logBody.response_time = time.toFixed(3)
+    if (time > 3500) {
+      res.locals.logLevel = 'warning'
     }
+  }
 
-    if ( time ) {
-      log_body['response_time'] = time.toFixed(3)
-      if ( time > 3500 ) {
-        res.locals.logLevel = 'warning'
-      }
-    }
+  logBody.level = res.locals.logLevel || 'info'
 
-    log_body['level'] = res.locals.logLevel || 'info'
-
-    return log_body
+  return logBody
 }
 
-
-const logger = winston.createLogger( winston_conf );
-
+const logger = winston.createLogger(winstonConf)
 
 module.exports = {
-    logger,
-    get_log_body
+  logger,
+  getLogBody
 }
