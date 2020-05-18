@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/service/lib/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/lib/utils/formatter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/lib/utils/logs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/lib/utils/wrappers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/merchant/impl/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/merchant/logs/combined.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/merchant/logs/error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/merchant/service-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/pylintdict.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/connection-pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/connection-pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/gateway-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gateway-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/morgan.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/morgan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/winston-rollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/winston-rollbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylintdict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylintrc" beforeDir="false" afterPath="$PROJECT_DIR$/service/pylintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/___init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/lib/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/lib/utils/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templaterc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/service/tox.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
