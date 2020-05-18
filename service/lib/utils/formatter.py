@@ -38,6 +38,7 @@ class LogFormatter(JSONFormatter):
         return os_meta
 
     def json_record(self, message: str, extra: dict, record: logging.LogRecord) -> dict:
+        """ Format a log record """
         # Include builtins
         extra['message'] = message
         extra['level'] = record.levelname
