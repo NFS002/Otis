@@ -1,0 +1,71 @@
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T17:53:38.328479"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T17:53:41.732001", "request": "merchantID: \"23034\"\n"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T22:32:41.999109"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T22:57:32.327964"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T22:59:15.737062"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:15:42.944376"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:18:40.855183"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:19:29.540733"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:21:57.103191"}
+{"message": "Listening on 127.0.0.1:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:22:43.655672"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:22:52.275745", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:24:34.543230", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:25:35.871353", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:25:50.734455", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:26:11.018963", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:34:55.969707", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:09.417269", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:20.159377", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:20.780681", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:23.544189", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:24.141841", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:24.895721", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:25.853734", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:41.062424", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:41.847283", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:43.241254", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:43.755553", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:44.331668", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:45.034671", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:45.885820", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:46.425544", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:46.775177", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:47.338952", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:47.889851", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:48.395829", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:48.885441", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:49.373465", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:50.103327", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:50.646427", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:51.109300", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:35:52.075691", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:37:55.958900", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:37:56.493340", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:38:19.212244", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:38:19.983863", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:38:20.506334", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:38:21.001452", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:45.846911", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:46.563609", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:47.466421", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:48.191245", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:56.158754", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:56.635012", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:57.129179", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:57.613903", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:58.044542", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:58.428319", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:39:59.270646", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:00.890496", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:01.478181", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:01.998036", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:02.436001", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:48.877670", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:49.413569", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:50.039999", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:50.637849", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:51.285905", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:51.921423", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:52.498907", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:53.077866", "request": "merchantID: \"23034\"\n"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-18T23:40:53.706357", "request": "merchantID: \"23034\"\n"}

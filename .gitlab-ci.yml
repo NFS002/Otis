@@ -1,7 +1,4 @@
-image: golang:latest
-
-variables:
-  GOPRIVATE: gitlab.com/otis_team/backend
+#image: python:3.6
 
 stages:
   - test
@@ -10,12 +7,13 @@ stages:
 
 pylint:
    stage: test
-   image: python:3.6
+   image: python:latest
    before_script:
      - python3 -m pip install -r requirements.txt
+     - cd service
    script:
-     - pylint service/*
-     - pycodestyle service/*
+     - pylint merchant lib
+     - pycodestyle merchant lib
 
 eslint:
   stage: test

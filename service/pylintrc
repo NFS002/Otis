@@ -4,13 +4,13 @@ ignore = merchant-service-venv, proto
 ignore-patterns = .*_pb2.*
 
 
-disable=no-self-use
+disable=no-self-use, import-error, broad-except, global-statement
 
 # Overall score threshold to be exceeded before program exits with error.
 fail-under=10
 
 [FORMAT]
-max-line-length = 130
+max-line-length=130
 
 # Maximum number of lines in a module.
 max-module-lines=1500
@@ -39,7 +39,9 @@ docstring-min-length=10
 # Naming style matching correct function names.
 function-naming-style=snake_case
 
-method-naming-style=PascalCase
+max-args=8
+
+method-rgx=^([A-Z][a-z]+(?:[A-Z][a-z]+)*|[_]{0,9}[a-z0-9_]{1,30})$
 
 # Naming style matching correct module names.
 module-naming-style=snake_case

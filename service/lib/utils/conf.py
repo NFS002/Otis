@@ -1,5 +1,24 @@
-"""Utility functions for various purposes"""
+"""Load and read config file"""
+import os
 import math
+import json
+
+
+def load_config(path='./service-config.json'):
+    f = open(path)
+    d = json.load(f)
+    f.close()
+    return d[os.getenv("OTIS_ENV", default="development")]
+
+
+def get_value(conf, key=''):
+    if key == '':
+        return conf
+    parts = key.split('::')
+    length = len(parts)
+    for i in range(length):
+        conf = conf[parts[i]]
+    return conf
 
 
 def get_distance(start, end):

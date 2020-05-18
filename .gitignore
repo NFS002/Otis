@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 data
-api-gateway/node_modules
+node_modules
 .env
 *venv
+logs/*
