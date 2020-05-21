@@ -27,6 +27,15 @@ function getService (serviceName) {
 	throw Error(`Service ${serviceName} not found`)
 }
 
+function isEmpty (obj) {
+	for (var i in obj) {
+		if (Object.hasOwnProperty.call(obj, i)) {
+			return false
+		}
+	}
+	return true
+}
+
 function wrapFuncInMiddleware (func) {
 	return async function wrap (req, res, next) {
 		try {
@@ -55,5 +64,6 @@ module.exports = {
 	getProtoPackage,
 	getService,
 	getValue,
+	isEmpty,
 	wrapFuncInMiddleware
 }

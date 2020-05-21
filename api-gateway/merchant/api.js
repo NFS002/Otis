@@ -3,17 +3,16 @@ const { getProtoPackage, getValue } = require("../utils.js")
 
 const merchantService = getValue("services::merchant")
 const merchantProtoPkg = getProtoPackage(merchantService.proto_file, merchantService.package, merchantService.proto_dirs)
-const merchantPoolOpts = { grpcPkg: merchantProtoPkg, serviceName: merchantService.service, urls: merchantService.addresses }
+const merchantPoolOpts = { grpcPkg: merchantProtoPkg, serviceName: merchantService.service, urls: merchantService.addresses, tlsConf: getValue("tls") }
 
 const merchantPool = new ClientPool(merchantPoolOpts)
 
 /* General merchant handlers */
 
 async function gGet (req, res) {
-	var value
 	const { _GetGeneralMerchant } = merchantPool
-	value = await _GetGeneralMerchant({ merchantID: "23034" })
-	res.locals.body = { somekey: "somevalue" }
+	var value = await _GetGeneralMerchant({ merchantID: "23034" })
+	res.locals.body = value
 	res.end(JSON.stringify(value))
 }
 

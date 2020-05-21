@@ -1,6 +1,9 @@
+const { readFileSync } = require("fs")
+const { join } = require("path")
 const grpc = require("grpc")
 const delay = require("delay")
 const stream = require("stream")
+const { isEmpty } = require("./utils")
 
 // Properties - Symbols
 const maxConns = Symbol("MaxConns")
@@ -10,6 +13,7 @@ const client = Symbol("Client")
 const connPool = Symbol("ConnPool")
 
 // Methods - Symbols
+const genCreds = Symbol("GenCreds")
 const createNewConn = Symbol("CreateNewConn")
 const getFreeConn = Symbol("GetFreeConn")
 const findFreeConn = Symbol("FindFreeConn")
@@ -31,12 +35,15 @@ const CONN_STATUS = {
  */
 
 module.exports = class GRPCClientPool {
-	constructor ({ grpcPkg, serviceName, urls: serverURLs, maxConnections, timeout = 5000, rpcPrefix = "_", poolInterval = 200 } = {}) {
+	constructor ({ grpcPkg, serviceName, urls: serverURLs, maxConnections, timeout = 5000, rpcPrefix = "_", poolInterval = 200, tlsConf = {} } = {}) {
 		if (!serviceName) throw new Error("option.serviceName is a required field")
 
 		if (!grpcPkg) throw new Error("option.grpcPkg is a required field")
 
 		if (!serverURLs || !serverURLs.length) throw new Error("option.url is a required field")
+
+
+		this.tlsConf = tlsConf
 
 		// Max Client connections to Server
 		this[maxConns] = maxConnections || urls.length * 2
@@ -76,14 +83,43 @@ module.exports = class GRPCClientPool {
 	}
 
 	/**
+	 * Generates a set of TLS credentials using the global config,
+	 * to use in the next gRPC connection
+	 *
+	 */
+	[genCreds] () {
+	    var creds
+	        var opts = {}
+	    if (!isEmpty(this.tlsConf) && Object.hasOwnProperty.call(this.tlsConf, "use_tls") && this.tlsConf.use_tls === true) {
+	        var rootDir = this.tlsConf.root_dir
+	        var rootCa = readFileSync(join(rootDir, this.tlsConf.root_ca))
+	        var privateKey = undefined
+	        var certChain = undefined
+	        var privateKey = readFileSync(join(rootDir, this.tlsConf.private_key))
+	        var certChain = readFileSync(join(rootDir, this.tlsConf.cert_chain))
+			if (Object.hasOwnProperty.call(this.tlsConf, "domain_override")) {
+				opts = {
+				    "grpc.ssl_target_name_override": this.tlsConf.domain_override,
+				    "grpc.default_authority": "localhost"
+				}
+			}
+			creds = grpc.credentials.createSsl(rootCa, null, null)
+	    } else {
+	        creds = grpc.credentials.createInsecure()
+	    }
+		return [creds, opts]
+	}
+
+	/**
 	 * Creates a New Connection and Adds it to the pool in FREE status
 	 */
 	[createNewConn] () {
 		const newConnId = ++this.connCount
 		const nextUrl = this[urls][this.connIndex]
 		this.connIndex = (this.connIndex + 1) % this[urls].length
+		var allCreds = this[genCreds]()
 		this[connPool][CONN_STATUS.FREE][newConnId] = {
-			conn: new this[client](nextUrl, grpc.credentials.createInsecure()),
+			conn: new this[client](nextUrl, allCreds[0], allCreds[1]),
 			id: newConnId
 		}
 	}

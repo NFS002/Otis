@@ -65,3 +65,10 @@ Before pushing:
 ```shell script
 $ cp .env .env.example # Then edit .env.example to remove sensitive information such as passwords
 ```
+
+
+## Follow this example to generate tls certificates, and place them in the certs/ directory
+
+# https://jsherz.com/grpc/node/nodejs/mutual/authentication/ssl/2017/10/27/grpc-node-with-mutual-auth.html
+
+## Configure the api-gateway and service config to use the same values you used when generating the certificates

@@ -1,7 +1,9 @@
+const { join } = require("path")
+
 module.exports = {
 	development: {
 
-		address: "127.0.0.1",
+		address: "localhost",
 		port: 3000,
 
 		apis: {
@@ -18,13 +20,13 @@ module.exports = {
 			pretty_print: true,
 			files: [
 				{
-					filename: process.env.OTIS_HOME + "./api-gateway/logs/combined.log",
+					filename: join(process.env.OTIS_HOME, "api-gateway/logs/combined.log"),
 					maxsize: 1024 * 1024 * 20
 				},
 				{
 					level: "error",
 					maxsize: 1024 * 1024 * 20,
-					filename: process.env.OTIS_HOME + "./api-gateway/logs/error.log"
+					filename: join(process.env.OTIS_HOME, "api-gateway/logs/error.log")
 				}
 			]
 		},
@@ -33,12 +35,21 @@ module.exports = {
 			merchant: {
 				addresses: ["localhost:3005"],
 				name: "merchant",
-				address: process.env.OTIS_SERVICE_MERCHANT_ADDRESS,
 				proto_dirs: [process.env.OTIS_HOME],
-				proto_file: "./service/merchant/proto/merchant/merchant.proto",
+				proto_file: join(process.env.OTIS_HOME, "service/merchant/proto/merchant/merchant.proto"),
 				package: "merchant",
 				service: "MerchantService"
 			}
+		},
+
+		tls: {
+		    use_tls: true,
+		    root_dir: join(process.env.OTIS_HOME, "certs"),
+			domain: "localhost",
+			domain_override: "merchant.service.slide.com",
+			root_ca: "Slide-local.crt",
+			private_key: "gateway.slide.com.key",
+			cert_chain: "gateway.slide.com.crt"
 		}
 	},
 	production: {
@@ -59,13 +70,13 @@ module.exports = {
 			pretty_print: false,
 			files: [
 				{
-					filename: process.env.OTIS_HOME + "./api-gateway/logs/combined.log",
+					filename: join(process.env.OTIS_HOME, "api-gateway/logs/combined.log"),
 					maxsize: 1024 * 1024 * 20
 				},
 				{
 					level: "error",
 					maxsize: 1024 * 1024 * 20,
-					filename: process.env.OTIS_HOME + "./api-gateway/logs/error.log"
+					filename: join(process.env.OTIS_HOME, "api-gateway/logs/error.log")
 				}
 			]
 		},
@@ -75,10 +86,20 @@ module.exports = {
 				name: "merchant",
 				addresses: ["localhost:3005"],
 				proto_dirs: [process.env.OTIS_HOME],
-				proto_file: "./service/merchant/proto/merchant/merchant.proto",
+				proto_file: join(process.env.OTIS_HOME, "./service/merchant/proto/merchant/merchant.proto"),
 				package: "merchant",
 				service: "MerchantService"
 			}
+		},
+
+		tls: {
+		    use_tls: false,
+			root_dir: join(process.env.OTIS_HOME, "certs"),
+			domain_override: "localhost",
+			domain: "gateway.slide.com",
+			root_ca: "Slide-local.crt",
+			private_key: "gateway.slide.com.key",
+			cert_chain: "gateway.slide.com.crt"
 		}
 	}
 }

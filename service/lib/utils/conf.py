@@ -1,14 +1,7 @@
 """Load and read config file"""
 import os
 import math
-import json
-
-
-def load_config(path='./service-config.json'):
-    f = open(path)
-    d = json.load(f)
-    f.close()
-    return d[os.getenv("OTIS_ENV", default="development")]
+import grpc
 
 
 def get_value(conf, key=''):
@@ -19,6 +12,28 @@ def get_value(conf, key=''):
     for i in range(length):
         conf = conf[parts[i]]
     return conf
+
+
+def gen_creds(service_config):
+    """Generate a set of TLS credentials to use in a gRPC server """
+    tls_conf = get_value(service_config, 'tls')
+    if tls_conf is not None and 'use_tls' in tls_conf and tls_conf['use_tls'] is True:
+        opts = ()
+        certs_dir = tls_conf["root_dir"]
+        root_ca = open(os.path.join(certs_dir, tls_conf["root_ca"]), 'rb').read()
+        private_key = open(os.path.join(certs_dir, tls_conf["private_key"]), 'rb').read()
+        cert_chain = open(os.path.join(certs_dir, tls_conf["cert_chain"]), 'rb').read()
+        verify_client = tls_conf.get("verify_client", True)
+        creds = grpc.ssl_server_credentials(
+            [(private_key, cert_chain)],
+            root_certificates=root_ca, require_client_auth=False,
+        )
+        if "domain_override" in tls_conf:
+            opts = (('grpc.ssl_target_name_override', tls_conf["domain_override"]),)
+
+        return creds, opts
+
+    return None
 
 
 def get_distance(start, end):

@@ -45,7 +45,7 @@ def add_file_handler(logger, path, formatter, max_bytes=None, backups=None, leve
     logger.addHandler(fh)
 
 
-def get_logger(logging_conf, logs_dir, log_name):
+def get_logger(logging_conf, log_name):
     """ Method return a logger instance with configuration options
         from ./service-config.json """
     log = logging.getLogger(log_name)
@@ -62,7 +62,7 @@ def get_logger(logging_conf, logs_dir, log_name):
         add_rollbar_handler(log)
 
     for f in logging_conf['files']:
-        filename = os.path.join(logs_dir, f['filename'])
+        filename = f['filename']
         level = f.get('level')
         max_bytes = f.get('maxsize')
         backups = f.get('backups')
