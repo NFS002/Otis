@@ -88,22 +88,19 @@ module.exports = class GRPCClientPool {
 	 *
 	 */
 	[genCreds] () {
-	    var creds
-	        var opts = {}
+	    var creds = {}
+	    var opts = {}
 	    if (!isEmpty(this.tlsConf) && Object.hasOwnProperty.call(this.tlsConf, "use_tls") && this.tlsConf.use_tls === true) {
 	        var rootDir = this.tlsConf.root_dir
 	        var rootCa = readFileSync(join(rootDir, this.tlsConf.root_ca))
-	        var privateKey = undefined
-	        var certChain = undefined
 	        var privateKey = readFileSync(join(rootDir, this.tlsConf.private_key))
 	        var certChain = readFileSync(join(rootDir, this.tlsConf.cert_chain))
 			if (Object.hasOwnProperty.call(this.tlsConf, "domain_override")) {
 				opts = {
-				    "grpc.ssl_target_name_override": this.tlsConf.domain_override,
-				    "grpc.default_authority": "localhost"
+				    "grpc.ssl_target_name_override": this.tlsConf.domain_override
 				}
 			}
-			creds = grpc.credentials.createSsl(rootCa, null, null)
+			creds = grpc.credentials.createSsl(rootCa, privateKey, certChain)
 	    } else {
 	        creds = grpc.credentials.createInsecure()
 	    }

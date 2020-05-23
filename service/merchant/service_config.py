@@ -34,8 +34,7 @@ SERVICE_CONFIG = \
             "tls": {
                 "use_tls": True,
                 "root_dir": os.path.join(os.environ["OTIS_HOME"], "certs"),
-                "domain": "merchant.service.slide.com",
-                "domain_override": "localhost",
+                "domain": "merchant.service.slide",
                 "root_ca": "Slide-local.crt",
                 "private_key": "merchant.service.slide.com.key",
                 "cert_chain": "merchant.service.slide.com.crt",
@@ -69,7 +68,7 @@ SERVICE_CONFIG = \
             },
 
             "tls": {
-                "use_tls": False,
+                "use_tls": True,
                 "root_dir": os.path.join(os.environ["OTIS_HOME"], "certs"),
                 "domain": "merchant.service.slide.com",
                 "root_ca": "Slide-local.crt",

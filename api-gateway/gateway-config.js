@@ -93,7 +93,7 @@ module.exports = {
 		},
 
 		tls: {
-		    use_tls: false,
+		    use_tls: true,
 			root_dir: join(process.env.OTIS_HOME, "certs"),
 			domain_override: "localhost",
 			domain: "gateway.slide.com",

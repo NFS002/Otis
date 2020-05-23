@@ -48,5 +48,4 @@ app.listen(port, address, () => {
 	}
 	console.log(msg)
 	logger.log(info)
-}
-)
+})

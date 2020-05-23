@@ -5780,3 +5780,1635 @@
   service: 'api-gateway',
   timestamp: '2020-05-21T19:03:34.746Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 34947072,
+      heapTotal: 13918208,
+      heapUsed: 11577216,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 50100,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 78602240
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '31.462',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-21T19:13:28.842Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 41328640,
+      heapTotal: 13918208,
+      heapUsed: 11586904,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 50253,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 100155392
+  },
+  error: {
+    message: '14 UNAVAILABLE: failed to connect to all addresses',
+    stack: 'Error: 14 UNAVAILABLE: failed to connect to all addresses\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 14,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'failed to connect to all addresses'
+    }
+  },
+  response_time: '36.856',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-21T19:14:25.194Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 50724864,
+      heapTotal: 29908992,
+      heapUsed: 11845136,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 50325,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 173506560
+  },
+  error: {
+    message: '14 UNAVAILABLE: failed to connect to all addresses',
+    stack: 'Error: 14 UNAVAILABLE: failed to connect to all addresses\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 14,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'failed to connect to all addresses'
+    }
+  },
+  response_time: '39.659',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-21T19:14:59.449Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 51171328,
+      heapTotal: 29908992,
+      heapUsed: 11798528,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 50394,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 103448576
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '31.867',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-21T19:15:56.712Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 50610176,
+      heapTotal: 30433280,
+      heapUsed: 11925000,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 50923,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 87310336
+  },
+  error: {
+    message: '14 UNAVAILABLE: failed to connect to all addresses',
+    stack: 'Error: 14 UNAVAILABLE: failed to connect to all addresses\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 14,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'failed to connect to all addresses'
+    }
+  },
+  response_time: '37.013',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-21T19:35:01.499Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50851840,
+      heapTotal: 30171136,
+      heapUsed: 11819288,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 51161,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 47489024
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '207.207',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-21T19:36:46.925Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50642944,
+      heapTotal: 30171136,
+      heapUsed: 12003632,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 51866,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 104873984
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '28.958',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-21T23:45:55.710Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 41541632,
+      heapTotal: 14180352,
+      heapUsed: 11588408,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 52120,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 293765120
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '43.965',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T08:00:54.656Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/general/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 51462144,
+      heapTotal: 29908992,
+      heapUsed: 11875904,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 60483,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 238071808
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '67.618',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T21:25:00.847Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 51122176,
+      heapTotal: 29908992,
+      heapUsed: 11864664,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 63072,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 61349888
+  },
+  error: {
+    message: '14 UNAVAILABLE: failed to connect to all addresses',
+    stack: 'Error: 14 UNAVAILABLE: failed to connect to all addresses\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 14,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'failed to connect to all addresses'
+    }
+  },
+  response_time: '30.793',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:21:54.879Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 51019776,
+      heapTotal: 30171136,
+      heapUsed: 11858496,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 63526,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31731712
+  },
+  error: {
+    message: '14 UNAVAILABLE: failed to connect to all addresses',
+    stack: 'Error: 14 UNAVAILABLE: failed to connect to all addresses\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 14,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'failed to connect to all addresses'
+    }
+  },
+  response_time: '34.351',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:33:10.212Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 51437568,
+      heapTotal: 30433280,
+      heapUsed: 11898632,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 63768,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 47915008
+  },
+  error: {
+    message: '14 UNAVAILABLE: failed to connect to all addresses',
+    stack: 'Error: 14 UNAVAILABLE: failed to connect to all addresses\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 14,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'failed to connect to all addresses'
+    }
+  },
+  response_time: '29.690',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:36:13.720Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 26750976,
+      heapTotal: 13918208,
+      heapUsed: 11573504,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 64066,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 235905024
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '60.560',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:45:03.604Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 50274304,
+      heapTotal: 30171136,
+      heapUsed: 11843800,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 64322,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 169451520
+  },
+  error: {
+    message: '14 UNAVAILABLE: failed to connect to all addresses',
+    stack: 'Error: 14 UNAVAILABLE: failed to connect to all addresses\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 14,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'failed to connect to all addresses'
+    }
+  },
+  response_time: '20.100',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:46:18.863Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50929664,
+      heapTotal: 29908992,
+      heapUsed: 11877672,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 64440,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 271380480
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '47.755',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:48:15.566Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 34844672,
+      heapTotal: 13918208,
+      heapUsed: 11585504,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 64751,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 57925632
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '76.651',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:54:10.212Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50851840,
+      heapTotal: 30171136,
+      heapUsed: 11871512,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 64864,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 43692032
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '51.091',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T22:58:55.207Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50675712,
+      heapTotal: 29646848,
+      heapUsed: 11884040,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 65046,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 102572032
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '57.472',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T23:03:18.105Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 34144256,
+      heapTotal: 13918208,
+      heapUsed: 11589184,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 65114,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 107671552
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '26.149',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T23:04:00.372Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50397184,
+      heapTotal: 30171136,
+      heapUsed: 11862016,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 65391,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 51118080
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '29.582',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-22T23:11:40.709Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50933760,
+      heapTotal: 30171136,
+      heapUsed: 11856744,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 67574,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 351125504
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '107.798',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T00:06:41.336Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 2 UNKNOWN: Error in service handler!',
+  meta: {
+    memory_usage: {
+      rss: 51073024,
+      heapTotal: 29908992,
+      heapUsed: 11938584,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 67632,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 64716800
+  },
+  error: {
+    message: '2 UNKNOWN: Error in service handler!',
+    stack: 'Error: 2 UNKNOWN: Error in service handler!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 2 UNKNOWN: Error in service handler!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 2,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Error in service handler!'
+    }
+  },
+  response_time: '63.162',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T00:07:59.455Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 2 UNKNOWN: Error in service handler!',
+  meta: {
+    memory_usage: {
+      rss: 50331648,
+      heapTotal: 30171136,
+      heapUsed: 11960064,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 67731,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 165335040
+  },
+  error: {
+    message: '2 UNKNOWN: Error in service handler!',
+    stack: 'Error: 2 UNKNOWN: Error in service handler!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 2 UNKNOWN: Error in service handler!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 2,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Error in service handler!'
+    }
+  },
+  response_time: '53.188',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T00:09:17.863Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - 12 UNIMPLEMENTED: Method not found!',
+  meta: {
+    memory_usage: {
+      rss: 50909184,
+      heapTotal: 29908992,
+      heapUsed: 11911992,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 67814,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 98942976
+  },
+  error: {
+    message: '12 UNIMPLEMENTED: Method not found!',
+    stack: 'Error: 12 UNIMPLEMENTED: Method not found!\n' +
+      '    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\n' +
+      '    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\n' +
+      '    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\n' +
+      '    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\n' +
+      '    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)',
+    error: Error: 12 UNIMPLEMENTED: Method not found!
+        at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+        at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+        at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+        at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+        at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+      code: 12,
+      metadata: Metadata { _internal_repr: {}, flags: 0 },
+      details: 'Method not found!'
+    }
+  },
+  response_time: '28.600',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T00:11:50.469Z'
+}

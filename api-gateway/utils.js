@@ -39,7 +39,7 @@ function isEmpty (obj) {
 function wrapFuncInMiddleware (func) {
 	return async function wrap (req, res, next) {
 		try {
-			await func(req, res, next)
+			await func(req, res)
 		} catch (e) {
 			next(e)
 		}
@@ -47,7 +47,7 @@ function wrapFuncInMiddleware (func) {
 }
 
 /* Load a grpc protobuf pacakge */
-function getProtoPackage (protoPath, packageName, dirs = ["proto"]) {
+function getProtoPackage (protoPath, packageName, dirs = [".", "proto"]) {
 	const packageDefinition = protoLoader.loadSync(protoPath, {
 		keepCase: false,
 		longs: String,

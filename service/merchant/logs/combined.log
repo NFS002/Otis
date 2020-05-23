@@ -84,3 +84,47 @@
 {"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T19:59:27.773659"}
 {"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T19:59:31.404509", "request": "merchantID: \"23034\"\n"}
 {"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T20:03:31.521936"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T20:13:14.883861"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T20:14:22.203523"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T20:14:54.523089"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T20:15:53.576867"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T20:34:58.440378"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-21T20:36:44.905570"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T00:45:51.947598"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T09:00:50.563555"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T22:24:50.666901"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:43:34.035057"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:44:58.642288"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:45:45.036909"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:45:48.217461", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:46:16.218526"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:48:12.891700"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:53:59.473180"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-22T23:58:52.304815"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:03:15.567398"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:03:54.678533"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:11:38.372709"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:43:29.895004"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:43:35.013472", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:45:13.454125"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:45:16.163719", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:48:00.345114"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:48:04.295240", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:48:55.408321"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:48:58.002709", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:49:09.091499"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:49:11.434656", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:54:56.372173"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:54:58.440533", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:55:38.423671"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:55:40.540275", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:58:49.587400"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T00:58:51.784728", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:06:31.205130"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:07:57.328694"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:09:10.696191"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:11:43.772957"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:12:27.003025"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:12:29.220945", "request": "merchantID: \"230-34\"\n"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:20:36.672613"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-05-23T01:20:39.171861", "request": "merchantID: \"230-34\"\n"}

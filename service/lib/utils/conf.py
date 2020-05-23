@@ -18,7 +18,6 @@ def gen_creds(service_config):
     """Generate a set of TLS credentials to use in a gRPC server """
     tls_conf = get_value(service_config, 'tls')
     if tls_conf is not None and 'use_tls' in tls_conf and tls_conf['use_tls'] is True:
-        opts = ()
         certs_dir = tls_conf["root_dir"]
         root_ca = open(os.path.join(certs_dir, tls_conf["root_ca"]), 'rb').read()
         private_key = open(os.path.join(certs_dir, tls_conf["private_key"]), 'rb').read()
@@ -26,12 +25,10 @@ def gen_creds(service_config):
         verify_client = tls_conf.get("verify_client", True)
         creds = grpc.ssl_server_credentials(
             [(private_key, cert_chain)],
-            root_certificates=root_ca, require_client_auth=False,
+            root_certificates=root_ca, require_client_auth=verify_client,
         )
-        if "domain_override" in tls_conf:
-            opts = (('grpc.ssl_target_name_override', tls_conf["domain_override"]),)
 
-        return creds, opts
+        return creds
 
     return None
 
