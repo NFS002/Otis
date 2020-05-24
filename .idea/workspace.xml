@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/merchant/validators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dtypes/merchant/schema/merchantquery.schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/logs/combined.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/logs/combined.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/schemas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/public/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/public/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/logs/combined.log" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/logs/combined.log" afterDir="false" />
-    </list>
+    <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

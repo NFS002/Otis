@@ -117,7 +117,7 @@ const getLogBody = function (time, req, res, err) {
 		logBody.message += (" - Error: " + err.message)
 	}
 
-    /* Default log level */
+	/* Default log level */
 	logBody.level = logBody.level || "info"
 
 	return logBody
