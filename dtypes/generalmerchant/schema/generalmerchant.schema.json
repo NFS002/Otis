@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://gitlab.com/otis_team/data-structures/general-merchant.schema.json",
+  "$id": "http://gitlab.com/otis_team/backend/dtypes/generalmerchant/schema/generalmerchant.schema.json",
   "title": "General merchant",
   "description": "A merchant who is not part of the Otis platform",
   "type": "object",
@@ -48,7 +48,10 @@
     },
     "expense_band": {
       "description": "Expense bands for the merchant for their given sector",
-      "$ref": "http://gitlab.com/otis_team/data-structures/sector-bands.schema.json"
+      "type": "array",
+      "items": {
+        "$ref": "http://gitlab.com/otis_team/backend/dtypes/merchant/schema/expensebands.schema.json"
+      }
     }
   }
 }
