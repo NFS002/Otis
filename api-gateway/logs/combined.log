@@ -13759,3 +13759,3002 @@
   service: 'api-gateway',
   timestamp: '2020-05-24T01:05:35.640Z'
 }
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T01:21:47.995Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T01:21:48.018Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 41639936,
+      heapTotal: 15228928,
+      heapUsed: 12951240,
+      external: 1459671,
+      arrayBuffers: 33982
+    },
+    total_mem: 4294967296,
+    pid: 84653,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20361216
+  },
+  response_time: '257.490',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T01:22:06.262Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?i=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?i=2 (400) - "i" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 42135552,
+      heapTotal: 15228928,
+      heapUsed: 13394528,
+      external: 1465069,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 84653,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19206144
+  },
+  error: {
+    message: '"i" is not allowed',
+    stack: 'ValidationError: "i" is not allowed',
+    error: [Error [ValidationError]: "i" is not allowed] {
+      _original: { i: '2' },
+      details: [
+        {
+          message: '"i" is not allowed',
+          path: [ 'i' ],
+          type: 'object.unknown',
+          context: { child: 'i', label: 'i', value: '2', key: 'i' }
+        }
+      ]
+    }
+  },
+  response_time: '7.708',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T01:22:24.909Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:33:13.915Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:33:13.937Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?i=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?i=2 (500) - schemas is not defined',
+  meta: {
+    memory_usage: {
+      rss: 17022976,
+      heapTotal: 15540224,
+      heapUsed: 12716952,
+      external: 1456837,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 89067,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40353792
+  },
+  error: {
+    message: 'schemas is not defined',
+    stack: 'ReferenceError: schemas is not defined\n' +
+      '    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:41:32)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\n' +
+      '    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\n' +
+      '    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\n' +
+      '    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\n' +
+      '    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)',
+    error: ReferenceError: schemas is not defined
+        at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:41:32)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+        at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+        at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+        at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+  },
+  response_time: '29.298',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:33:28.165Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:41:40.678Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:41:40.703Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?i=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?i=2 (500) - validate is not a function',
+  meta: {
+    memory_usage: {
+      rss: 42340352,
+      heapTotal: 15278080,
+      heapUsed: 12704600,
+      external: 1456837,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 89519,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 189661184
+  },
+  error: {
+    message: 'validate is not a function',
+    stack: 'TypeError: validate is not a function\n' +
+      '    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:42:21)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\n' +
+      '    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\n' +
+      '    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\n' +
+      '    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\n' +
+      '    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)',
+    error: TypeError: validate is not a function
+        at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:42:21)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+        at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+        at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+        at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+  },
+  response_time: '3.911',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:41:49.690Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:42:38.379Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:42:38.395Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?i=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?i=2 (500) - validate is not a function',
+  meta: {
+    memory_usage: {
+      rss: 56827904,
+      heapTotal: 33366016,
+      heapUsed: 12880776,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 89592,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32006144
+  },
+  error: {
+    message: 'validate is not a function',
+    stack: 'TypeError: validate is not a function\n' +
+      '    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:43:21)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\n' +
+      '    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\n' +
+      '    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\n' +
+      '    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\n' +
+      '    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)',
+    error: TypeError: validate is not a function
+        at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:43:21)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+        at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+        at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+        at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+  },
+  response_time: '4.647',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:42:42.706Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:43:09.874Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:43:09.902Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?i=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?i=2 (500) - validate is not a function',
+  meta: {
+    memory_usage: {
+      rss: 55705600,
+      heapTotal: 33628160,
+      heapUsed: 12881568,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 89630,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 266149888
+  },
+  error: {
+    message: 'validate is not a function',
+    stack: 'TypeError: validate is not a function\n' +
+      '    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:43:21)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\n' +
+      '    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\n' +
+      '    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\n' +
+      '    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\n' +
+      '    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)',
+    error: TypeError: validate is not a function
+        at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:43:21)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+        at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+        at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+        at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+  },
+  response_time: '4.505',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:43:12.674Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:44:42.245Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:44:42.263Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:45:30.455Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:45:30.477Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:45:48.816Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:45:48.833Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:46:19.694Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:46:19.718Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?i=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?i=2 (200)',
+  meta: {
+    memory_usage: {
+      rss: 44392448,
+      heapTotal: 15540224,
+      heapUsed: 12993304,
+      external: 1451479,
+      arrayBuffers: 25790
+    },
+    total_mem: 4294967296,
+    pid: 89795,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 84885504
+  },
+  response_time: '48.545',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:46:28.823Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:47:07.302Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:47:07.326Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?i=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?i=2 (200)',
+  meta: {
+    memory_usage: {
+      rss: 56745984,
+      heapTotal: 33103872,
+      heapUsed: 13123712,
+      external: 1452767,
+      arrayBuffers: 25790
+    },
+    total_mem: 4294967296,
+    pid: 89873,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26370048
+  },
+  response_time: '31.540',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:47:09.399Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 43835392,
+      heapTotal: 15802368,
+      heapUsed: 12884272,
+      external: 1465069,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 89873,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28672000
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '6.021',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:47:56.999Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 27848704,
+      heapTotal: 16064512,
+      heapUsed: 14016240,
+      external: 1473352,
+      arrayBuffers: 47623
+    },
+    total_mem: 4294967296,
+    pid: 89873,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 46432256
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '3.704',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:51:56.671Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (200)',
+  meta: {
+    memory_usage: {
+      rss: 32112640,
+      heapTotal: 16064512,
+      heapUsed: 13688360,
+      external: 1473567,
+      arrayBuffers: 47838
+    },
+    total_mem: 4294967296,
+    pid: 89873,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16805888
+  },
+  response_time: '34.801',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:52:04.239Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:52:28.301Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:52:28.320Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (200)',
+  meta: {
+    memory_usage: {
+      rss: 58331136,
+      heapTotal: 33366016,
+      heapUsed: 13126688,
+      external: 1452767,
+      arrayBuffers: 25790
+    },
+    total_mem: 4294967296,
+    pid: 90128,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 76365824
+  },
+  response_time: '33.325',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:52:37.092Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?something=4 (200)',
+  meta: {
+    memory_usage: {
+      rss: 45244416,
+      heapTotal: 15540224,
+      heapUsed: 12840792,
+      external: 1459711,
+      arrayBuffers: 33982
+    },
+    total_mem: 4294967296,
+    pid: 90128,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 107692032
+  },
+  response_time: '5.402',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:52:58.070Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:54:26.290Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:54:26.312Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 55455744,
+      heapTotal: 33103872,
+      heapUsed: 12881144,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 90253,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 128000000
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '4.582',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:54:33.794Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/html; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 36466688,
+      heapTotal: 16064512,
+      heapUsed: 13008928,
+      external: 1461400,
+      arrayBuffers: 35671
+    },
+    total_mem: 4294967296,
+    pid: 90253,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 58691584
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '3.749',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T11:55:39.558Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:04:24.581Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:04:24.607Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 57221120,
+      heapTotal: 33103872,
+      heapUsed: 12913392,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 90725,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35348480
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '5.898',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:04:27.653Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk& (200)',
+  meta: {
+    memory_usage: {
+      rss: 52273152,
+      heapTotal: 16064512,
+      heapUsed: 13534568,
+      external: 1461401,
+      arrayBuffers: 35672
+    },
+    total_mem: 4294967296,
+    pid: 90725,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 84426752
+  },
+  response_time: '121.094',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:04:34.212Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk (200)',
+  meta: {
+    memory_usage: {
+      rss: 52297728,
+      heapTotal: 16064512,
+      heapUsed: 13698016,
+      external: 1461401,
+      arrayBuffers: 35672
+    },
+    total_mem: 4294967296,
+    pid: 90725,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 80977920
+  },
+  response_time: '15.123',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:04:38.502Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/html; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 35069952,
+      heapTotal: 16064512,
+      heapUsed: 13113888,
+      external: 1461401,
+      arrayBuffers: 35672
+    },
+    total_mem: 4294967296,
+    pid: 90725,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 41476096
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '3.883',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:05:53.451Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk (200)',
+  meta: {
+    memory_usage: {
+      rss: 28700672,
+      heapTotal: 16064512,
+      heapUsed: 14098256,
+      external: 1473561,
+      arrayBuffers: 47832
+    },
+    total_mem: 4294967296,
+    pid: 90725,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17715200
+  },
+  response_time: '24.688',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:07:04.387Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:24:29.877Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:24:29.909Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56459264,
+      heapTotal: 32841728,
+      heapUsed: 12873648,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 91210,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 46321664
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '6.235',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:24:36.487Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 62668800,
+      heapTotal: 33103872,
+      heapUsed: 14193952,
+      external: 1474639,
+      arrayBuffers: 47622
+    },
+    total_mem: 4294967296,
+    pid: 91210,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 50573312
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '1.351',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:24:38.874Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk (200)',
+  meta: {
+    memory_usage: {
+      rss: 45625344,
+      heapTotal: 15802368,
+      heapUsed: 13321904,
+      external: 1461400,
+      arrayBuffers: 35671
+    },
+    total_mem: 4294967296,
+    pid: 91210,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 41971712
+  },
+  response_time: '141.242',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:24:56.111Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'application/json; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 44630016,
+      heapTotal: 15802368,
+      heapUsed: 13492928,
+      external: 1469592,
+      arrayBuffers: 43863
+    },
+    total_mem: 4294967296,
+    pid: 91210,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 77635584
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '1.307',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:25:04.941Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&somethin=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'application/json; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&somethin=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 44797952,
+      heapTotal: 15802368,
+      heapUsed: 13508016,
+      external: 1473559,
+      arrayBuffers: 47830
+    },
+    total_mem: 4294967296,
+    pid: 91210,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19099648
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'somethin' },
+          message: 'should NOT have additional properties'
+        },
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '0.843',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:25:32.745Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2mll;k&somethin=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'application/json; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2mll;k&somethin=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 45424640,
+      heapTotal: 15802368,
+      heapUsed: 14131608,
+      external: 1485718,
+      arrayBuffers: 59989
+    },
+    total_mem: 4294967296,
+    pid: 91210,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 97189888
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'somethin' },
+          message: 'should NOT have additional properties'
+        },
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '0.466',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:25:42.576Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2mllk&somethin=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'application/json; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2mllk&somethin=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 45195264,
+      heapTotal: 15802368,
+      heapUsed: 13904336,
+      external: 1485144,
+      arrayBuffers: 59415
+    },
+    total_mem: 4294967296,
+    pid: 91210,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40439808
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'somethin' },
+          message: 'should NOT have additional properties'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '0.493',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:25:49.170Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:48:11.564Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:48:11.590Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk& (200)',
+  meta: {
+    memory_usage: {
+      rss: 57327616,
+      heapTotal: 33103872,
+      heapUsed: 13109280,
+      external: 1452767,
+      arrayBuffers: 25790
+    },
+    total_mem: 4294967296,
+    pid: 92051,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 202887168
+  },
+  response_time: '127.616',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:48:16.306Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk& (200)',
+  meta: {
+    memory_usage: {
+      rss: 57409536,
+      heapTotal: 33103872,
+      heapUsed: 13462408,
+      external: 1460999,
+      arrayBuffers: 33982
+    },
+    total_mem: 4294967296,
+    pid: 92051,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 115802112
+  },
+  response_time: '8.300',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:48:17.486Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2j&',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-security-policy': "default-src 'none'",
+      'content-type': 'text/html; charset=utf-8',
+      'content-length': 1254
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2j& (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 44728320,
+      heapTotal: 15802368,
+      heapUsed: 12876432,
+      external: 1459711,
+      arrayBuffers: 33982
+    },
+    total_mem: 4294967296,
+    pid: 92051,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40730624
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '4.278',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:48:21.825Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:50:49.403Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:50:49.430Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2j&',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-security-policy': "default-src 'none'",
+      'content-type': 'text/html; charset=utf-8',
+      'content-length': 1273
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2j& (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 54468608,
+      heapTotal: 33103872,
+      heapUsed: 12860056,
+      external: 1452767,
+      arrayBuffers: 25790
+    },
+    total_mem: 4294967296,
+    pid: 92185,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 67297280
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '5.979',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:50:51.699Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:51:04.276Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:51:04.298Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2j&',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2j& (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56643584,
+      heapTotal: 33890304,
+      heapUsed: 12835648,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 92225,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 66396160
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '9.222',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:51:06.771Z'
+}
+{
+  message: '[api-gateway:production] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:51:42.448Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:production] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:51:42.470Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2j&',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2j& (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56356864,
+      heapTotal: 32841728,
+      heapUsed: 12835488,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 92319,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 50814976
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '5.817',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T12:51:46.967Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:11:49.937Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:11:49.957Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56180736,
+      heapTotal: 33103872,
+      heapUsed: 12842120,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 92777,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 24129536
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        },
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '6.758',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:11:57.687Z'
+}
+{
+  message: '[api-gateway:production] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:12:14.621Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:production] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:12:14.639Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (400) - validation failed',
+  meta: {
+    memory_usage: {
+      rss: 55898112,
+      heapTotal: 32841728,
+      heapUsed: 12868640,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 92815,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 75890688
+  },
+  error: {
+    message: 'validation failed',
+    stack: undefined,
+    error: [ValidationError: validation failed] {
+      errors: [
+        {
+          keyword: 'additionalProperties',
+          dataPath: '',
+          schemaPath: '#/additionalProperties',
+          params: { additionalProperty: 'something' },
+          message: 'should NOT have additional properties'
+        },
+        {
+          keyword: 'pattern',
+          dataPath: '.merchantID',
+          schemaPath: '#/properties/merchantID/pattern',
+          params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+          message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+        }
+      ],
+      validation: true,
+      ajv: true
+    }
+  },
+  response_time: '5.038',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:12:18.138Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:25:14.325Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:25:14.374Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jkjk&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jkjk&something=4 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56291328,
+      heapTotal: 32841728,
+      heapUsed: 12810184,
+      external: 1456837,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 93149,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 163827712
+  },
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'something' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  response_time: '8.214',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:25:20.050Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jh',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jh (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 49491968,
+      heapTotal: 16064512,
+      heapUsed: 12967496,
+      external: 1461401,
+      arrayBuffers: 35672
+    },
+    total_mem: 4294967296,
+    pid: 93149,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 146411520
+  },
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  response_time: '1.465',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:25:28.003Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jhlk',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jhlk (200)',
+  meta: {
+    memory_usage: {
+      rss: 51015680,
+      heapTotal: 16064512,
+      heapUsed: 14160320,
+      external: 1465369,
+      arrayBuffers: 39640
+    },
+    total_mem: 4294967296,
+    pid: 93149,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 118222848
+  },
+  response_time: '66.310',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:25:31.457Z'
+}
+{
+  message: '[api-gateway:production] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:26:32.060Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:production] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:26:32.350Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2jhlk',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2jhlk (200)',
+  meta: {
+    memory_usage: {
+      rss: 54767616,
+      heapTotal: 33103872,
+      heapUsed: 13096936,
+      external: 1451479,
+      arrayBuffers: 25790
+    },
+    total_mem: 4294967296,
+    pid: 93253,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 105897984
+  },
+  response_time: '54.924',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:26:34.901Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 29757440,
+      heapTotal: 33103872,
+      heapUsed: 13499024,
+      external: 1465069,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 93253,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 51453952
+  },
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  response_time: '49.651',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:26:39.516Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:45:33.237Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:45:33.257Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 57212928,
+      heapTotal: 33366016,
+      heapUsed: 12861856,
+      external: 1458125,
+      arrayBuffers: 31148
+    },
+    total_mem: 4294967296,
+    pid: 93871,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 48197632
+  },
+  response_time: '4.790',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:45:40.866Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2kjlk',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2kjlk (200)',
+  meta: {
+    memory_usage: {
+      rss: 51060736,
+      heapTotal: 16064512,
+      heapUsed: 13276472,
+      external: 1461400,
+      arrayBuffers: 35671
+    },
+    total_mem: 4294967296,
+    pid: 93871,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29310976
+  },
+  response_time: '108.283',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:45:52.857Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantD=2kjlk',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantD=2kjlk (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 51204096,
+      heapTotal: 16064512,
+      heapUsed: 13434160,
+      external: 1461400,
+      arrayBuffers: 35671
+    },
+    total_mem: 4294967296,
+    pid: 93871,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22888448
+  },
+  response_time: '0.707',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'merchantD' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:45:57.247Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 51892224,
+      heapTotal: 16064512,
+      heapUsed: 14288624,
+      external: 1465368,
+      arrayBuffers: 39639
+    },
+    total_mem: 4294967296,
+    pid: 93871,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25108480
+  },
+  response_time: '5.581',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T13:46:11.072Z'
+}

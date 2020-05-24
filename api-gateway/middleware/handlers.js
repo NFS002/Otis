@@ -3,31 +3,9 @@
  * Module dependencies.
  */
 
-var fs = require("fs")
-var path = require("path")
 var { logger, getLogBody } = require("./logger")
-var Joi = require("@hapi/joi")
+var Ajv = require("ajv")
 var HttpStatus = require("http-status-codes")
-
-/**
- * Module variables.
- */
-
-var STYLESHEET = fs.readFileSync(path.join(__dirname, "../public/style.css"), "utf8")
-var TEMPLATE = fs.readFileSync(path.join(__dirname, "../public/error.html"), "utf8")
-var toString = Object.prototype.toString
-
-/**
- * Escape a block of HTML, preserving whitespace.
- * @api private
- */
-
-function escapeHtmlBlock (s) {
-	return s.replace(
-		/[^0-9A-Za-z ]/g,
-		c => "&#" + c.charCodeAt(0) + ";"
-	)
-}
 
 /**
  * Error handler:
@@ -35,21 +13,6 @@ function escapeHtmlBlock (s) {
  * Development error handler, providing stack traces
  * and error message responses for requests accepting text, html,
  * or json.
- *
- * Text:
- *
- *   By default, and when _text/plain_ is accepted a simple stack trace
- *   or error message will be returned.
- *
- * JSON:
- *
- *   When _application/json_ is accepted, connect will respond with
- *   an object in the form of `{ "error": error }`.
- *
- * HTML:
- *
- *   When accepted connect will output a nice html stack trace.
- *
  * @return {Function}
  * @api public
  */
@@ -65,64 +28,36 @@ const errorHandler = () => function (err, req, res, next) {
 	if (res._header)
 		return req.socket.destroy()
 
-
-	// Security header for content sniffing
-	res.setHeader("X-Content-Type-Options", "nosniff")
-
-	var s = String(err.stack || err)
-	var title = HttpStatus.getStatusText(res.statusCode)
-	var message = HttpStatus.getStatusText(res.statusCode)
-
 	var errorBody = {
-		title: title,
-		message: message,
-		error: err.message,
-		stack: err.stack
+	    message: HttpStatus.getStatusText(res.statusCode),
+		details: err.message || "unknown"
 	}
 
-	for (var prop in err) errorBody[prop] = err[prop]
-	var jsonErr = JSON.stringify(errorBody, null, 2)
-
-	// Sens response based on content type
-	if (req.accepts("text/html")) {
-		var isInspect = !err.stack && String(err) === toString.call(err)
-		var errorHtml = !isInspect
-			? escapeHtmlBlock(s.split("\n", 1)[0] || "Error")
-			: "Error"
-		var stack = !isInspect
-			? String(s).split("\n").slice(1)
-			: [s]
-		var stackHtml = stack
-			.map(function (v) { return "<li>" + escapeHtmlBlock(v) + "</li>" })
-			.join("")
-		var body = TEMPLATE
-			.replace("{style}", STYLESHEET)
-			.replace("{stack}", stackHtml)
-			.replace("{title}", title)
-			.replace("{message}", message)
-			.replace("{statusCode}", res.statusCode)
-			.replace(/\{error\}/g, errorHtml)
-		res.setHeader("Content-Type", "text/html; charset=utf-8")
-		res.end(body)
-		// json
+	var jsonErrorBody = { }
+	if ((process.env.OTIS_ENV || "development") === "development") {
+	    errorBody.error = err
+		jsonErrorBody = JSON.stringify(errorBody, null, "\t")
 	} else {
-		if (req.accepts("application/json") || req.accepts("json"))
-		    res.setHeader("Content-Type", "application/json; charset=utf-8")
-		 else
-		    res.setHeader("Content-Type", "text/plain; charset=utf-8")
-
-		res.end(jsonErr)
+	    jsonErrorBody = JSON.stringify(errorBody)
 	}
+
+
+	if (req.accepts("application/json") || req.accepts("json"))
+		res.setHeader("Content-Type", "application/json; charset=utf-8")
+	else
+		res.setHeader("Content-Type", "text/plain; charset=utf-8")
+
+	res.end(jsonErrorBody)
 	next()
 }
 
 /* Returns the equivalent HTTP status code of a JS error */
 function getStatusCode (err) {
-	if (err.status)
+	if (err.status && err.status !== 200)
 		return err.status
-	if (err.statusCode)
+	if (err.statusCode && err.statusCode !== 200)
 		return err.statusCode
-	if (err instanceof Joi.ValidationError)
+	if (err instanceof Ajv.ValidationError)
 		return 400
 
 	return 500

@@ -1,6 +1,6 @@
 const ClientPool = require("../connection-pool")
 const { getProtoPackage, getValue } = require("../utils.js")
-const schemas = require("./schemas.js")
+const validators = require("./validators.js")
 
 const merchantService = getValue("services::merchant")
 const merchantProtoPkg = getProtoPackage(merchantService.proto_file, merchantService.package, merchantService.proto_dirs)
@@ -77,7 +77,7 @@ module.exports = {
 		prefix: "/partner/get",
 		handler: pGet,
 		verb: "get",
-		schemas: [schemas.merchantQuerySchema]
+		validators: [validators.merchantQueryValidator]
 	},
 
 	pCreate: {

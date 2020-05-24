@@ -12,10 +12,8 @@ function getValue (key) {
 	var length = parts.length
 	var property = config
 
-
 	for (var i = 0; i < length; i++)
 		property = property[parts[i]]
-
 
 	return property
 }
@@ -33,17 +31,16 @@ function isEmpty (obj) {
 		if (Object.hasOwnProperty.call(obj, i))
 			return false
 
-
 	return true
 }
 
-function wrapFuncInMiddleware (func, schemas) {
+function wrapFuncInMiddleware (func, validators) {
 	return async function wrap (req, res, next) {
 		try {
-		    if (schemas && schemas.length)
-		        for (var s of schemas)
-		            await s.validateAsync(req.query)
-			await func(req, res)
+		    if (validators && validators.length)
+		        for (var validate of validators)
+		            await validate(req.query)
+		    func(req, res)
 		} catch (e) {
 			next(e)
 		}

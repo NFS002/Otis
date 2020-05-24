@@ -67,13 +67,6 @@ const getMetaLogBody = function (req, res) {
 	return meta
 }
 
-const getErrLogBody = function (err) {
-	const errLogBody = {}
-	errLogBody.message = err.message || "UNKNOWN"
-	errLogBody.stack = err.stack
-	errLogBody.error = err
-	return errLogBody
-}
 
 const getLogBody = function (time, req, res, err) {
 	const reqLogBody = {}
@@ -108,20 +101,23 @@ const getLogBody = function (time, req, res, err) {
 	logBody.message = getLogMessage(req, res)
 	logBody.meta = getMetaLogBody(req, res)
 
-	if (err) {
-		const errLogBody = getErrLogBody(err)
-
-		logBody.error = errLogBody
-		logBody.message += (" - " + errLogBody.message)
-	}
 
 	if (time) {
-		logBody.response_time = time.toFixed(3)
-		if (time > 3500)
-			res.locals.logLevel = "warning"
+	    var roundedStrTime = String(time.toFixed(3))
+		logBody.response_time = roundedStrTime
+		if (time > 3500) {
+		    logBody.message += (" - Warning: Slow Response Time: " + roundedStrTime)
+			logBody.level = "warning"
+		}
 	}
 
-	logBody.level = res.locals.logLevel || "info"
+	if (err) {
+	    logBody.level = "error"
+		logBody.error = err
+		logBody.message += (" - Error: " + err.message)
+	}
+
+	logBody.level = logBody.level || "info"
 
 	return logBody
 }
