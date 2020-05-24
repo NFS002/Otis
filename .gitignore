@@ -3,6 +3,7 @@
 data
 node_modules
 .env
+.gitlab-ci.yml
 *venv
 logs/*
 certs/*
