@@ -1,0 +1,82 @@
+#image: python:3.6
+
+stages:
+  - test
+  - build
+#  - deploy
+
+pylint:
+   stage: test
+   image: python:3.6
+   before_script:
+     - cd service
+     - python3 -m pip install -r requirements.txt
+   script:
+     - pylint merchant lib
+     - pycodestyle merchant lib
+
+eslint:
+  stage: test
+  image: node:latest
+  before_script:
+    - cd api-gateway
+    - npm install
+    - npm install -g eslint
+  script:
+    - eslint --debug .
+
+
+container_build:
+   stage: build
+   only:
+     - master
+   image: docker:stable
+   services:
+     - docker:19.03.8-dind
+   script:
+     - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/merchant:latest  --build-arg goprivate=$GOPRIVATE --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
+     - docker build --no-cache=true -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg goprivate=$GOPRIVATE --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
+#    - docker build -t registry.gitlab.com/otis_team/backend/service/transaction:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/transaction/
+#    - docker build -t registry.gitlab.com/otis_team/backend/api/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
+#    - docker build -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
+
+# container_registry:
+#    stage: build
+#    only:
+#     - master
+#    image: docker:stable
+#    services:
+#     - docker:dind
+#    script:
+#      - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+#      - docker build -t registry.gitlab.com/otis_team/backend/service/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/merchant/
+#      - docker push registry.gitlab.com/otis_team/backend/service/merchant:latest
+#      - docker build -t registry.gitlab.com/otis_team/backend/service/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/user/
+#      - docker push registry.gitlab.com/otis_team/backend/service/user:latest
+#      - docker build -t registry.gitlab.com/otis_team/backend/service/transaction:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/transaction/
+#      - docker push registry.gitlab.com/otis_team/backend/service/transaction:latest
+#      - docker build -t registry.gitlab.com/otis_team/backend/api/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
+#      - docker push registry.gitlab.com/otis_team/backend/api/merchant:latest
+#      - docker build -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
+#      - docker push registry.gitlab.com/otis_team/backend/api/user:latest
+
+#deploy:
+#    stage: deploy
+#    image: dtzar/helm-kubectl
+#    only:
+#     - master
+#    before_script:
+#     - apk add --no-cache curl jq python py-pip
+#     - pip install awscli
+#    script:
+#     - export KUBECONFIG=$KUBECONFIG:./infrastructure/config-otis-backend
+#     - aws eks --region eu-west-2 update-kubeconfig --name otis-backend
+#     - kubectl get svc
+#     - kubectl delete --ignore-not-found=true service merchant-service merchant-api
+#     - kubectl delete --ignore-not-found=true deployment merchant-service merchant-api
+#     - kubectl apply -f ./service/merchant/deployment/merchant-deployment.yml
+#     - kubectl apply -f ./service/merchant/deployment/merchant-service.yml
+#     - kubectl apply -f ./api/merchant/deployment/merchantAPI-deployment.yml
+#     - kubectl apply -f ./api/merchant/deployment/merchantAPI-service.yml
+#     - kubectl apply -f ./api-gateway/micro-api-deployment.yml
+#     - kubectl apply -f ./api-gateway/micro-api-service.yml
