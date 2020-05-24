@@ -1,5 +1,6 @@
 const ClientPool = require("../connection-pool")
 const { getProtoPackage, getValue } = require("../utils.js")
+const schemas = require("./schemas.js")
 
 const merchantService = getValue("services::merchant")
 const merchantProtoPkg = getProtoPackage(merchantService.proto_file, merchantService.package, merchantService.proto_dirs)
@@ -32,7 +33,7 @@ async function gDelete (req, res) {
 
 async function pGet (req, res) {
 	const { _GetPartnerMerchant } = merchantPool
-	const value = await _GetPartnerMerchant({ merchantID: "230-34" })
+	const value = await _GetPartnerMerchant(req.query)
 	res.end(JSON.stringify(value))
 }
 
@@ -75,7 +76,8 @@ module.exports = {
 	pGet: {
 		prefix: "/partner/get",
 		handler: pGet,
-		verb: "get"
+		verb: "get",
+		schemas: [schemas.merchantQuerySchema]
 	},
 
 	pCreate: {

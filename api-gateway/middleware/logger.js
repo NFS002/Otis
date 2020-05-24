@@ -12,9 +12,9 @@ const logFiles = logConfig.files
 const winstonTransports = logFiles.map(log => new winston.transports.File(log))
 
 /* Print to console */
-if (logConfig.console === true) {
+if (logConfig.console === true)
 	winstonTransports.push(new winston.transports.Console())
-}
+
 
 /* Log to rollbar  */
 if (logConfig.rollbar === true) {
@@ -29,18 +29,17 @@ if (logConfig.rollbar === true) {
 }
 
 const getWinstonFormat = function () {
-	if (logConfig.pretty_print === true) {
+	if (logConfig.pretty_print === true)
 		return format.combine(
 			format.timestamp(),
 			format.json(),
 			format.prettyPrint()
 		)
-	} else {
+	 else
 		return format.combine(
 			format.timestamp(),
 			format.json()
 		)
-	}
 }
 
 const winstonConf = {
@@ -95,14 +94,14 @@ const getLogBody = function (time, req, res, err) {
 	const reqBody = req.body
 	const resBody = res.locals.body
 
-	if (reqBody) { reqLogBody.body = reqBody }
-	if (resBody) { resLogBody.body = resBody }
+	if (reqBody) reqLogBody.body = reqBody
+	if (resBody) resLogBody.body = resBody
 
 	const reqCookies = req.cookies
 	const resCookies = res.cookies
 
-	if (reqCookies) { reqLogBody.cookies = reqCookies }
-	if (resCookies) { resLogBody.cookies = resCookies }
+	if (reqCookies) reqLogBody.cookies = reqCookies
+	if (resCookies) resLogBody.cookies = resCookies
 
 	logBody.request = reqLogBody
 	logBody.response = resLogBody
@@ -118,9 +117,8 @@ const getLogBody = function (time, req, res, err) {
 
 	if (time) {
 		logBody.response_time = time.toFixed(3)
-		if (time > 3500) {
+		if (time > 3500)
 			res.locals.logLevel = "warning"
-		}
 	}
 
 	logBody.level = res.locals.logLevel || "info"

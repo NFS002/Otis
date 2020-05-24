@@ -32,6 +32,7 @@
         "line-comment-position": ["error", { "position": "above", "ignorePattern": "-" }],
         "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
         "no-shadow-restricted-names": "error",
-        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+        "curly": ["error", "multi", "consistent"]
     }
 }

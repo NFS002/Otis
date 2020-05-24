@@ -23,6 +23,7 @@
   "main": "index.js",
   "dependencies": {
     "@grpc/proto-loader": "^0.5.4",
+    "@hapi/joi": "^17.1.1",
     "body-parser": "^1.19.0",
     "chalk": "^4.0.0",
     "cycle": "^1.0.3",

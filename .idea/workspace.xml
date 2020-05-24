@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/merchant/schemas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/connection-pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/connection-pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/gateway-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gateway-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/logs/combined.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/logs/combined.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/merchant/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/merchant/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/lib/utils/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/lib/utils/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/__main__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/merchant/logs/combined.log" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/logs/combined.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/merchant/service_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/merchant/service_config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,12 +120,12 @@
       <screen x="0" y="23" width="1366" height="672" />
     </state>
     <state x="323" y="151" key="run.anything.popup/0.23.1366.672@0.23.1366.672" timestamp="1589048872124" />
-    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup" timestamp="1590188638897">
+    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup" timestamp="1590277991430">
       <screen x="0" y="23" width="1366" height="676" />
     </state>
     <state x="434" y="23" width="670" height="672" key="search.everywhere.popup/0.23.1366.672@0.23.1366.672" timestamp="1589323597787" />
     <state x="434" y="23" width="670" height="673" key="search.everywhere.popup/0.23.1366.673@0.23.1366.673" timestamp="1586185142358" />
-    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup/0.23.1366.676@0.23.1366.676" timestamp="1590188638897" />
+    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup/0.23.1366.676@0.23.1366.676" timestamp="1590277991430" />
     <state x="427" y="249" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1590191225610">
       <screen x="0" y="23" width="1366" height="676" />
     </state>

@@ -12,33 +12,37 @@ function getValue (key) {
 	var length = parts.length
 	var property = config
 
-	for (var i = 0; i < length; i++) {
+
+	for (var i = 0; i < length; i++)
 		property = property[parts[i]]
-	}
+
 
 	return property
 }
 
 function getService (serviceName) {
 	const services = config.services
-	for (var service of services) {
-		if (service.name === serviceName) { return service }
-	}
+	for (var service of services)
+		if (service.name === serviceName) return service
+
 	throw Error(`Service ${serviceName} not found`)
 }
 
 function isEmpty (obj) {
-	for (var i in obj) {
-		if (Object.hasOwnProperty.call(obj, i)) {
+	for (var i in obj)
+		if (Object.hasOwnProperty.call(obj, i))
 			return false
-		}
-	}
+
+
 	return true
 }
 
-function wrapFuncInMiddleware (func) {
+function wrapFuncInMiddleware (func, schemas) {
 	return async function wrap (req, res, next) {
 		try {
+		    if (schemas && schemas.length)
+		        for (var s of schemas)
+		            await s.validateAsync(req.query)
 			await func(req, res)
 		} catch (e) {
 			next(e)

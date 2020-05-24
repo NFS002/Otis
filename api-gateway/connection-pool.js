@@ -95,11 +95,11 @@ module.exports = class GRPCClientPool {
 	        var rootCa = readFileSync(join(rootDir, this.tlsConf.root_ca))
 	        var privateKey = readFileSync(join(rootDir, this.tlsConf.private_key))
 	        var certChain = readFileSync(join(rootDir, this.tlsConf.cert_chain))
-			if (Object.hasOwnProperty.call(this.tlsConf, "domain_override")) {
+			if (Object.hasOwnProperty.call(this.tlsConf, "domain_override"))
 				opts = {
 				    "grpc.ssl_target_name_override": this.tlsConf.domain_override
 				}
-			}
+
 			creds = grpc.credentials.createSsl(rootCa, privateKey, certChain)
 	    } else {
 	        creds = grpc.credentials.createInsecure()
@@ -132,11 +132,11 @@ module.exports = class GRPCClientPool {
 		if (freeConnObj) return freeConnObj
 
 		// if number of connections < Max Allowed Connections, then Create a New Connection
-		if (this.connCount < this[maxConns]) {
+		if (this.connCount < this[maxConns])
 			this[createNewConn]()
-		} else {
+		 else
 			await delay(this.poolInterval + (Math.random() * 10))
-		}
+
 		return this[getFreeConn]()
 	}
 
@@ -185,7 +185,7 @@ module.exports = class GRPCClientPool {
 	 */
 	[initializeRPCs] (connObj) {
         for (const rpc in connObj.conn) { // eslint-disable-line
-			if (rpc.match(/^[a-zA-Z]+$/)) {
+			if (rpc.match(/^[a-zA-Z]+$/))
 				// Creating Method on `this` instance => prefix + rpc_method
 				this[`${this[prefix]}${rpc}`] = async (data, cb) => {
 					const freeConnObj = await this[getFreeConn]()
@@ -211,7 +211,6 @@ module.exports = class GRPCClientPool {
 						}
 					})
 				}
-			}
 		}
 	}
 }

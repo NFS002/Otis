@@ -12,9 +12,9 @@ const cycle = require("cycle")
 exports.Rollbar = winston.transports.Rollbar = class extends winston.Transport {
 	constructor (opts = {}) {
 		super(opts)
-		if (!opts.rollbarConfig.accessToken) {
+		if (!opts.rollbarConfig.accessToken)
 			throw Error("winston-transport-rollbar requires a 'rollbarConfig.accessToken' property")
-		}
+
 
 		const _rollbar = new Rollbar(opts.rollbarConfig)
 
@@ -51,22 +51,21 @@ exports.Rollbar = winston.transports.Rollbar = class extends winston.Transport {
 	 */
 	log (level, msg, meta, callback) {
 		const self = this
-		if (this.silent) { return callback(null, true) }
+		if (this.silent) return callback(null, true)
 
 		let req = null
-		if (typeof meta === "string") { meta = { message: meta } }
+		if (typeof meta === "string") meta = { message: meta }
 		if (this.metadataAsRequest) {
-			if (req && req.socket) { req = meta }
+			if (req && req.socket) req = meta
 		} else if (meta && meta.req) {
-			if (typeof meta.req === "function") {
+			if (typeof meta.req === "function")
 				req = meta.req()
-			} else {
+			 else
 				req = meta.req
-			}
 		}
 
 		const cb = err => {
-			if (err) { return callback(err) }
+			if (err) return callback(err)
 
 			self.emit("logged")
 			callback(null, true)
@@ -75,14 +74,14 @@ exports.Rollbar = winston.transports.Rollbar = class extends winston.Transport {
 		if (["warn", "error"].indexOf(level) > -1 && (msg instanceof Error || meta instanceof Error)) {
 			var error
 			meta.level = meta.level || level
-			if (meta.level === "warn") {
+			if (meta.level === "warn")
 				meta.level = "warning"
-			}
-			if (msg instanceof Error) {
+
+			if (msg instanceof Error)
 				error = msg
-			} else {
+			 else
 				error = meta
-			}
+
 			this.performLogging(level, error, req, meta, cb)
 		} else {
 			const custom = typeof meta === "object" ? cycle.decycle(meta) : meta

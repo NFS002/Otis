@@ -58,9 +58,9 @@ function morgan (format, options) {
 		deprecate("morgan(options): use morgan(" + (typeof fmt === "string" ? JSON.stringify(fmt) : "format") + ", options) instead")
 	}
 
-	if (fmt === undefined) {
+	if (fmt === undefined)
 		deprecate("undefined format: specify a format")
-	}
+
 
 	// output on request instead of response
 	var immediate = opts.immediate
@@ -186,11 +186,11 @@ morgan.format("dev", function developmentFormatLine (tokens, req, res) {
 	// get colored function
 	var fn = developmentFormatLine[color]
 
-	if (!fn) {
+	if (!fn)
 		// compile
 		fn = developmentFormatLine[color] = compile("\x1b[0m:method :url \x1b[" +
       color + "m:status\x1b[0m :response-time ms - :res[content-length]\x1b[0m")
-	}
+
 
 	return fn(tokens, req, res)
 })
@@ -216,10 +216,10 @@ morgan.token("method", function getMethodToken (req) {
  */
 
 morgan.token("response-time", function getResponseTimeToken (req, res, digits) {
-	if (!req._startAt || !res._startAt) {
+	if (!req._startAt || !res._startAt)
 		// missing request and/or response start time
 		return
-	}
+
 
 	// calculate diff
 	var ms = (res._startAt[0] - req._startAt[0]) * 1e3 +
@@ -234,10 +234,10 @@ morgan.token("response-time", function getResponseTimeToken (req, res, digits) {
  */
 
 morgan.token("total-time", function getTotalTimeToken (req, res, digits) {
-	if (!req._startAt || !res._startAt) {
+	if (!req._startAt || !res._startAt)
 		// missing request and/or response start time
 		return
-	}
+
 
 	// time elapsed from request start
 	var elapsed = process.hrtime(req._startAt)
@@ -338,9 +338,9 @@ morgan.token("req", function getRequestToken (req, res, field) {
  */
 
 morgan.token("res", function getResponseHeader (req, res, field) {
-	if (!headersSent(res)) {
+	if (!headersSent(res))
 		return undefined
-	}
+
 
 	// get header
 	var header = res.getHeader(field)
@@ -381,18 +381,18 @@ function clfdate (dateTime) {
  */
 
 function compile (format) {
-	if (typeof format !== "string") {
+	if (typeof format !== "string")
 		throw new TypeError("argument format must be a string")
-	}
+
 
 	var fmt = String(JSON.stringify(format))
 	var js = "  \"use strict\"\n  return " + fmt.replace(/:([-\w]{2,})(?:\[([^\]]+)\])?/g, function (_, name, arg) {
 		var tokenArguments = "req, res"
 		var tokenFunction = "tokens[" + String(JSON.stringify(name)) + "]"
 
-		if (arg !== undefined) {
+		if (arg !== undefined)
 			tokenArguments += ", " + String(JSON.stringify(arg))
-		}
+
 
 		return "\" +\n    (" + tokenFunction + "(" + tokenArguments + ") || \"-\") + \""
 	})
@@ -422,9 +422,9 @@ function createBufferStream (stream, interval) {
 
 	// write function
 	function write (str) {
-		if (timer === null) {
+		if (timer === null)
 			timer = setTimeout(flush, interval)
-		}
+
 
 		buf.push(str)
 	}

@@ -3,10 +3,11 @@
  * Module dependencies.
  */
 
-var HttpStatus = require("http-status-codes")
 var fs = require("fs")
 var path = require("path")
-const { logger, getLogBody } = require("./logger")
+var { logger, getLogBody } = require("./logger")
+var Joi = require("@hapi/joi")
+var HttpStatus = require("http-status-codes")
 
 /**
  * Module variables.
@@ -58,22 +59,12 @@ const errorHandler = () => function (err, req, res, next) {
 	res.locals.logLevel = "error"
 
 	// Set status code
-	if (!res.statusCode) {
-		if (err.statusCode) {
-			res.statusCode = err.statusCode
-		} else if (err.status) {
-			res.statusCode = err.status
-		} else {
-			res.statusCode = 500
-		}
-	} else if (res.statusCode === 200) {
-		res.statusCode = 500
-	}
+	res.statusCode = getStatusCode(err)
 
 	// cannot actually respond
-	if (res._header) {
+	if (res._header)
 		return req.socket.destroy()
-	}
+
 
 	// Security header for content sniffing
 	res.setHeader("X-Content-Type-Options", "nosniff")
@@ -88,6 +79,7 @@ const errorHandler = () => function (err, req, res, next) {
 		error: err.message,
 		stack: err.stack
 	}
+
 	for (var prop in err) errorBody[prop] = err[prop]
 	var jsonErr = JSON.stringify(errorBody, null, 2)
 
@@ -114,10 +106,26 @@ const errorHandler = () => function (err, req, res, next) {
 		res.end(body)
 		// json
 	} else {
-		if (req.accepts("application/json") || req.accepts("json")) { res.setHeader("Content-Type", "application/json; charset=utf-8") } else { res.setHeader("Content-Type", "text/plain; charset=utf-8") }
+		if (req.accepts("application/json") || req.accepts("json"))
+		    res.setHeader("Content-Type", "application/json; charset=utf-8")
+		 else
+		    res.setHeader("Content-Type", "text/plain; charset=utf-8")
+
 		res.end(jsonErr)
 	}
 	next()
+}
+
+/* Returns the equivalent HTTP status code of a JS error */
+function getStatusCode (err) {
+	if (err.status)
+		return err.status
+	if (err.statusCode)
+		return err.statusCode
+	if (err instanceof Joi.ValidationError)
+		return 400
+
+	return 500
 }
 
 const logHandler = () => function (req, res, time) {

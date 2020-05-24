@@ -6,7 +6,8 @@ const utils = require("../utils")
 /* Add API methods */
 for (var endpoint in api) {
 	var prefix = api[endpoint].prefix
-	var handler = utils.wrapFuncInMiddleware(api[endpoint].handler)
+	var schemas = api[endpoint].schemas
+	var handler = utils.wrapFuncInMiddleware(api[endpoint].handler, schemas)
 	var verb = api[endpoint].verb
 	router[verb](prefix, handler)
 }

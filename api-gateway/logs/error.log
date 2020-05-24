@@ -7412,3 +7412,1996 @@
   service: 'api-gateway',
   timestamp: '2020-05-23T00:11:50.469Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?id=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?id=2 (500) - "id" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 54521856,
+      heapTotal: 33054720,
+      heapUsed: 12909976,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 79285,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28684288
+  },
+  error: {
+    message: '"id" is not allowed',
+    stack: 'ValidationError: "id" is not allowed',
+    error: [Error [ValidationError]: "id" is not allowed] {
+      _original: { id: '2' },
+      details: [
+        {
+          message: '"id" is not allowed',
+          path: [ 'id' ],
+          type: 'object.unknown',
+          context: { child: 'id', label: 'id', value: '2', key: 'id' }
+        }
+      ]
+    }
+  },
+  response_time: '9.367',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:19:52.186Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?mercantID=2',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?mercantID=2 (500) - "mercantID" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 28250112,
+      heapTotal: 15753216,
+      heapUsed: 13473472,
+      external: 1461401,
+      arrayBuffers: 35672
+    },
+    total_mem: 4294967296,
+    pid: 79285,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 59875328
+  },
+  error: {
+    message: '"mercantID" is not allowed',
+    stack: 'ValidationError: "mercantID" is not allowed',
+    error: [Error [ValidationError]: "mercantID" is not allowed] {
+      _original: { mercantID: '2' },
+      details: [
+        {
+          message: '"mercantID" is not allowed',
+          path: [ 'mercantID' ],
+          type: 'object.unknown',
+          context: {
+            child: 'mercantID',
+            label: 'mercantID',
+            value: '2',
+            key: 'mercantID'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '5.209',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:21:47.711Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get? (500) - "merchantID" is required',
+  meta: {
+    memory_usage: {
+      rss: 54833152,
+      heapTotal: 32792576,
+      heapUsed: 12899016,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 80027,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32022528
+  },
+  error: {
+    message: '"merchantID" is required',
+    stack: 'ValidationError: "merchantID" is required',
+    error: [Error [ValidationError]: "merchantID" is required] {
+      _original: {},
+      details: [
+        {
+          message: '"merchantID" is required',
+          path: [ 'merchantID' ],
+          type: 'any.required',
+          context: { label: 'merchantID', key: 'merchantID' }
+        }
+      ]
+    }
+  },
+  response_time: '10.836',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:35:04.975Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get? (500) - "merchantID" is required',
+  meta: {
+    memory_usage: {
+      rss: 61022208,
+      heapTotal: 33054720,
+      heapUsed: 14231048,
+      external: 1474641,
+      arrayBuffers: 47624
+    },
+    total_mem: 4294967296,
+    pid: 80027,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31535104
+  },
+  error: {
+    message: '"merchantID" is required',
+    stack: 'ValidationError: "merchantID" is required',
+    error: [Error [ValidationError]: "merchantID" is required] {
+      _original: {},
+      details: [
+        {
+          message: '"merchantID" is required',
+          path: [ 'merchantID' ],
+          type: 'any.required',
+          context: { label: 'merchantID', key: 'merchantID' }
+        }
+      ]
+    }
+  },
+  response_time: '1.802',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:35:06.621Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 41984000,
+      heapTotal: 14966784,
+      heapUsed: 12735824,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 80175,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19521536
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '13.601',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:38:20.441Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 43413504,
+      heapTotal: 15491072,
+      heapUsed: 13851488,
+      external: 1469592,
+      arrayBuffers: 43863
+    },
+    total_mem: 4294967296,
+    pid: 80175,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 80441344
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '1.475',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:39:35.554Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 25669632,
+      heapTotal: 15753216,
+      heapUsed: 12911888,
+      external: 1465069,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 80362,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18997248
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '36.284',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:42:16.579Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 54726656,
+      heapTotal: 32530432,
+      heapUsed: 12953040,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 81105,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 24788992
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '17.103',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-23T23:57:59.855Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - s.validateAsync is not a function',
+  meta: {
+    memory_usage: {
+      rss: 54099968,
+      heapTotal: 32792576,
+      heapUsed: 12882584,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 81564,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 301039616
+  },
+  error: {
+    message: 's.validateAsync is not a function',
+    stack: 'TypeError: s.validateAsync is not a function\n' +
+      '    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:44:23)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\n' +
+      '    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\n' +
+      '    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\n' +
+      '    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\n' +
+      '    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)',
+    error: TypeError: s.validateAsync is not a function
+        at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:44:23)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+        at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+        at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+        at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+  },
+  response_time: '3.802',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:14:00.330Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - s.validateAsync is not a function',
+  meta: {
+    memory_usage: {
+      rss: 54620160,
+      heapTotal: 32530432,
+      heapUsed: 12875000,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 81609,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 60092416
+  },
+  error: {
+    message: 's.validateAsync is not a function',
+    stack: 'TypeError: s.validateAsync is not a function\n' +
+      '    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:45:23)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\n' +
+      '    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\n' +
+      '    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\n' +
+      '    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\n' +
+      '    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\n' +
+      '    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\n' +
+      '    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)',
+    error: TypeError: s.validateAsync is not a function
+        at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:45:23)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+        at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+        at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+        at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+        at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+  },
+  response_time: '4.173',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:14:39.414Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 55083008,
+      heapTotal: 32530432,
+      heapUsed: 13043568,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 81655,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 146374656
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '58.794',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:15:13.697Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 53637120,
+      heapTotal: 32268288,
+      heapUsed: 12886600,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 81719,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 101416960
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '8.305',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:16:28.356Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 60055552,
+      heapTotal: 32530432,
+      heapUsed: 14260000,
+      external: 1474639,
+      arrayBuffers: 47622
+    },
+    total_mem: 4294967296,
+    pid: 81719,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 87392256
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '1.759',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:16:31.415Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 54706176,
+      heapTotal: 32792576,
+      heapUsed: 13058688,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 81757,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 60923904
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '15.292',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:16:54.865Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 55066624,
+      heapTotal: 32792576,
+      heapUsed: 12922328,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 82088,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20824064
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '12.850',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:22:15.607Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 42688512,
+      heapTotal: 16015360,
+      heapUsed: 13237136,
+      external: 1461400,
+      arrayBuffers: 35671
+    },
+    total_mem: 4294967296,
+    pid: 82088,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 48418816
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '0.957',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:22:41.982Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/html; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 20418560,
+      heapTotal: 16015360,
+      heapUsed: 14173344,
+      external: 1465366,
+      arrayBuffers: 39637
+    },
+    total_mem: 4294967296,
+    pid: 82088,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 42803200
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '34.718',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:24:06.920Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/html; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 21696512,
+      heapTotal: 16015360,
+      heapUsed: 13937368,
+      external: 1475253,
+      arrayBuffers: 49524
+    },
+    total_mem: 4294967296,
+    pid: 82088,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 162983936
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '7.103',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:24:59.002Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/html; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 26071040,
+      heapTotal: 16015360,
+      heapUsed: 13726752,
+      external: 1485142,
+      arrayBuffers: 59413
+    },
+    total_mem: 4294967296,
+    pid: 82088,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29130752
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '2.878',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:25:10.909Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 54214656,
+      heapTotal: 32530432,
+      heapUsed: 12968920,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 82596,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 380063744
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '12.525',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:39:58.691Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 42831872,
+      heapTotal: 16015360,
+      heapUsed: 13025880,
+      external: 1461400,
+      arrayBuffers: 35671
+    },
+    total_mem: 4294967296,
+    pid: 82596,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19824640
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '2.984',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:40:41.172Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 54816768,
+      heapTotal: 32792576,
+      heapUsed: 12953448,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 82660,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 122253312
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '8.666',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:40:52.353Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 54853632,
+      heapTotal: 32792576,
+      heapUsed: 12922080,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 82706,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 261226496
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '8.557',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:42:03.129Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-security-policy': "default-src 'none'",
+      'content-type': 'text/html; charset=utf-8',
+      'content-length': 1268
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 37527552,
+      heapTotal: 14966784,
+      heapUsed: 12752048,
+      external: 1459671,
+      arrayBuffers: 33982
+    },
+    total_mem: 4294967296,
+    pid: 83073,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 47824896
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '13.421',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:57:08.647Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-security-policy': "default-src 'none'",
+      'content-type': 'text/html; charset=utf-8',
+      'content-length': 1281
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (500) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 45637632,
+      heapTotal: 32792576,
+      heapUsed: 12961568,
+      external: 1460959,
+      arrayBuffers: 33982
+    },
+    total_mem: 4294967296,
+    pid: 83133,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 42291200
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '13.953',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T00:57:49.404Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/html; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (400) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 24203264,
+      heapTotal: 32530432,
+      heapUsed: 12997536,
+      external: 1466317,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 83490,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 52690944
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '174.718',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T01:02:11.410Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: 'application/xml'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/plain; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (400) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 37806080,
+      heapTotal: 15228928,
+      heapUsed: 12748736,
+      external: 1465029,
+      arrayBuffers: 39340
+    },
+    total_mem: 4294967296,
+    pid: 83702,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 99799040
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '10.166',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T01:05:23.728Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+    },
+    url: '/merchant/partner/get?merchantID=2&something=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'content-type': 'text/html; charset=utf-8'
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=2&something=4 (400) - "something" is not allowed',
+  meta: {
+    memory_usage: {
+      rss: 32681984,
+      heapTotal: 15491072,
+      heapUsed: 13311584,
+      external: 1461400,
+      arrayBuffers: 35671
+    },
+    total_mem: 4294967296,
+    pid: 83702,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26202112
+  },
+  error: {
+    message: '"something" is not allowed',
+    stack: 'ValidationError: "something" is not allowed',
+    error: [Error [ValidationError]: "something" is not allowed] {
+      _original: { merchantID: '2', something: '4' },
+      details: [
+        {
+          message: '"something" is not allowed',
+          path: [ 'something' ],
+          type: 'object.unknown',
+          context: {
+            child: 'something',
+            label: 'something',
+            value: '4',
+            key: 'something'
+          }
+        }
+      ]
+    }
+  },
+  response_time: '9.838',
+  level: 'error',
+  service: 'api-gateway',
+  timestamp: '2020-05-24T01:05:35.640Z'
+}
