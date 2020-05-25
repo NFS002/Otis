@@ -327,7 +327,7 @@ module.exports = function morganBody (app, options) {
 		}
 
 		if (logRequestBody)
-			app.use(morgan(logBodyGen("Request", req => req.body), morganOptions))
+			app.use(morgan(logBodyGen("Request", req => req.hasRawBody ? req.rawBody : req.body), morganOptions))
 
 
 		if (logResponseBody) {

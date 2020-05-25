@@ -76,12 +76,12 @@ const logHandler = () => function (req, res, time) {
 }
 
 /* Set the req.rawBody property to the raw request body */
-/* eslint-disable no-unused-vars */
 var setRawBody = function (req, res, buf, encoding) {
-	if (buf && buf.length)
+	if (buf && buf.length) {
 		req.rawBody = buf.toString(encoding || "utf8")
+		req.hasRawBody = true
+	}
 }
-/* eslint-enable no-unused-vars */
 
 class PathNotFoundError extends Error {
 	constructor (message, ...args) {
@@ -101,7 +101,7 @@ class InvalidContentTypeError extends Error {
 
 const invalidContentTypeHandler = () => function (req, res, next) {
 	var ctype = req.headers["content-type"]
-	var validCType = "json"
+	var validCType = "*/json"
 	if (!req.is(validCType))
 	    throw new InvalidContentTypeError(`Request content type (${ctype}) must be set to ${validCType}`)
 
@@ -112,5 +112,6 @@ module.exports = {
 	logHandler,
 	errorHandler,
 	notFoundHandler,
+	setRawBody,
 	invalidContentTypeHandler
 }

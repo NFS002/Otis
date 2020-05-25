@@ -84,7 +84,9 @@ const getLogBody = function (time, req, res, err) {
 	reqLogBody.host = req.hostname
 	reqLogBody.ip = req.ip
 
-	if (req.body)
+	if (req.hasRawBody)
+	    reqLogBody.body = req.rawBody
+	else if (req.body)
 	    reqLogBody.body = req.body
 
 	if (res.locals.body)

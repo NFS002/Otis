@@ -2,11 +2,11 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const { getValue } = require("./utils")
 const helmet = require("helmet")
-const { logHandler, errorHandler, notFoundHandler, invalidContentTypeHandler } = require("./middleware/handlers")
 const { logger } = require("./middleware/logger")
 const morganBody = require("./middleware/morgan-body")
 const requestId = require("./middleware/request-id")
 const responseTime = require("./middleware/response-time")
+const { logHandler, errorHandler, setRawBody, notFoundHandler, invalidContentTypeHandler } = require("./middleware/handlers")
 
 const app = express()
 
@@ -25,11 +25,10 @@ if (useMorgan === true) {
 app.use(responseTime(logHandler()))
 
 /*
- * Try parse application/json,
- * and then parse all other request content types as application/x-www-form-urlencoded
+ * Try parse as application/json request content type
  */
 app.use(invalidContentTypeHandler())
-app.use(bodyParser.json({ extended: true, type: "*/*" }))
+app.use(bodyParser.json({ extended: true, type: "*/json", verify: setRawBody }))
 
 const apis = getValue("apis")
 for (var api in apis) {

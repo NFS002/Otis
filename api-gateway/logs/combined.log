@@ -9780,3 +9780,2891 @@
   service: 'api-gateway',
   timestamp: '2020-05-25T00:59:10.245Z'
 }
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:32:10.010Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:32:10.044Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '631bf0e7-9cce-4402-933a-0599d7c6bc9c',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBands\\": [\\"bread\\", \\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 47120384,
+      heapTotal: 33366016,
+      heapUsed: 13693160,
+      external: 1553342,
+      arrayBuffers: 126365
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 280846336
+  },
+  response_time: '24.281',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBands": ["bread", "cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:32:17.534Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '74'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {
+      name: 'gregoriespaninies',
+      sector: 'food',
+      expenseBans: [ 'cheese' ]
+    }
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'c483bab5-d074-4cdd-9476-70d0831105a4',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBans"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 41676800,
+      heapTotal: 16326656,
+      heapUsed: 13489064,
+      external: 1461652,
+      arrayBuffers: 35923
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25321472
+  },
+  response_time: '11.503',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBans' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:32:45.373Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '70'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'e0de53b1-f4da-4234-b4a9-34d905a50e1c',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"chees",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 43229184,
+      heapTotal: 16326656,
+      heapUsed: 14495736,
+      external: 1474042,
+      arrayBuffers: 48313
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29007872
+  },
+  response_time: '1.256',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["chees',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:33:32.221Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '74'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {
+      name: 'gregoriespaninies',
+      sector: 'food',
+      expenseBans: [ 'cheese' ]
+    }
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'e5c37180-65b0-44ff-b412-983cdfe860cb',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBans"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 33447936,
+      heapTotal: 16326656,
+      heapUsed: 14129816,
+      external: 1483706,
+      arrayBuffers: 57977
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 89247744
+  },
+  response_time: '2.247',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBans' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:34:14.354Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b073d5f1-a682-4bbd-aa22-adb0690a4539',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBands\\": [\\"bread\\", \\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 34246656,
+      heapTotal: 16326656,
+      heapUsed: 14767912,
+      external: 1496107,
+      arrayBuffers: 70378
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 24530944
+  },
+  response_time: '1.216',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBands": ["bread", "cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:34:29.393Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2020894d-189a-4ce2-be36-f5d5895dc510',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBands\\": [\\"bread\\", \\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 34086912,
+      heapTotal: 16326656,
+      heapUsed: 14407288,
+      external: 1487103,
+      arrayBuffers: 61374
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18788352
+  },
+  response_time: '1.051',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBands": ["bread", "cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:34:33.673Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '74'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {
+      name: 'gregoriespaninies',
+      sector: 'food',
+      expenseBans: [ 'cheese' ]
+    }
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2e4fe83f-1575-4f6e-8f2a-03610e369f5c',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBans"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 33701888,
+      heapTotal: 16326656,
+      heapUsed: 13999936,
+      external: 1478326,
+      arrayBuffers: 52597
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 222093312
+  },
+  response_time: '2.697',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBans' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:34:41.135Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '74'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {
+      name: 'gregoriespaninies',
+      sector: 'food',
+      expenseBans: [ 'cheese' ]
+    }
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '77ee0dfc-c10d-4f6d-a623-a5f92ffbeef6',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBans"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 33603584,
+      heapTotal: 16326656,
+      heapUsed: 14617304,
+      external: 1490720,
+      arrayBuffers: 64991
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 103800832
+  },
+  response_time: '0.628',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBans' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:35:38.074Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '74'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2e0d6cfb-45a4-440a-a64a-b0b0d5c017de',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 33361920,
+      heapTotal: 16326656,
+      heapUsed: 14306504,
+      external: 1491953,
+      arrayBuffers: 66224
+    },
+    total_mem: 4294967296,
+    pid: 18386,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 48263168
+  },
+  response_time: '0.545',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:106:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:35:53.186Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:41:46.036Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:41:46.053Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '70'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f90a9742-cde5-43bb-abeb-4609245130b2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 37883904,
+      heapTotal: 15802368,
+      heapUsed: 12892928,
+      external: 1456853,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 19094,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 221200384
+  },
+  response_time: '3.674',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:106:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:42:01.567Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ed6adf29-3e86-4e5a-a791-3e1c69a48ef2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 43671552,
+      heapTotal: 16064512,
+      heapUsed: 14073240,
+      external: 1523396,
+      arrayBuffers: 97667
+    },
+    total_mem: 4294967296,
+    pid: 19094,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17608704
+  },
+  response_time: '25.482',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:42:41.807Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:47:24.440Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:47:24.456Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f23d6a36-9d81-49da-9bee-90f5b802a295',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 48488448,
+      heapTotal: 33103872,
+      heapUsed: 13639952,
+      external: 1560236,
+      arrayBuffers: 134547
+    },
+    total_mem: 4294967296,
+    pid: 19360,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32112640
+  },
+  response_time: '20.473',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:47:29.728Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:48:23.031Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:48:23.046Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '76fc6f56-bdda-46a5-be61-b0f12caf101f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 56270848,
+      heapTotal: 34152448,
+      heapUsed: 13662544,
+      external: 1560236,
+      arrayBuffers: 134547
+    },
+    total_mem: 4294967296,
+    pid: 19399,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 33701888
+  },
+  response_time: '21.676',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:48:27.456Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:53:37.906Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:53:37.922Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '29771314-6905-4aab-96e5-62701ec6783c',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 55709696,
+      heapTotal: 33890304,
+      heapUsed: 13700856,
+      external: 1560236,
+      arrayBuffers: 134547
+    },
+    total_mem: 4294967296,
+    pid: 19553,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 208510976
+  },
+  response_time: '24.814',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:53:42.889Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:55:20.882Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:55:20.903Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f9abc6d8-ac13-4345-9d2b-6eb091e54f1e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 56061952,
+      heapTotal: 33366016,
+      heapUsed: 13733416,
+      external: 1561524,
+      arrayBuffers: 134547
+    },
+    total_mem: 4294967296,
+    pid: 19586,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 259080192
+  },
+  response_time: '22.049',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T01:55:24.021Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:14:50.675Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:14:50.696Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ce28ef4a-e8ab-4007-879a-8f2d53cbb766',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 56049664,
+      heapTotal: 33628160,
+      heapUsed: 13680072,
+      external: 1561524,
+      arrayBuffers: 134547
+    },
+    total_mem: 4294967296,
+    pid: 20229,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35459072
+  },
+  response_time: '22.082',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:14:57.283Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'apn',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '31c38cf0-af9d-457f-a9c7-1195cf7b1161',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (apn) must be set to */json",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (apn) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 42733568,
+      heapTotal: 16588800,
+      heapUsed: 13446184,
+      external: 1461417,
+      arrayBuffers: 35688
+    },
+    total_mem: 4294967296,
+    pid: 20229,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 103550976
+  },
+  response_time: '0.523',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (apn) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:106:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:15:24.669Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:16:40.140Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:16:40.155Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'apn',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a7b7b0e4-9f61-4def-bcea-4c7e0491b040',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "name"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'name'"\n` +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "sector"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'sector'"\n` +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56344576,
+      heapTotal: 33628160,
+      heapUsed: 13023408,
+      external: 1465257,
+      arrayBuffers: 39568
+    },
+    total_mem: 4294967296,
+    pid: 20335,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 30269440
+  },
+  response_time: '5.959',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'name' },
+        message: "should have required property 'name'"
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'sector' },
+        message: "should have required property 'sector'"
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:16:42.533Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:17:21.801Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:17:21.827Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:18:38.812Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:18:38.828Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'apn',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a24e706e-30e2-4621-8459-acbbb6799011',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (apn) must be set to */json",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (apn) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 55959552,
+      heapTotal: 33628160,
+      heapUsed: 12997968,
+      external: 1465045,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 20403,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 62402560
+  },
+  response_time: '10.541',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (apn) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:106:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:18:42.129Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '71'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3db8b606-f2bf-4495-b5f3-12e634cf1a1b',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBans\\": [\\"cheese",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 50126848,
+      heapTotal: 16326656,
+      heapUsed: 13811752,
+      external: 1548416,
+      arrayBuffers: 122687
+    },
+    total_mem: 4294967296,
+    pid: 20403,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 38817792
+  },
+  response_time: '21.192',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:18:53.637Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:22:40.894Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:22:40.913Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '74'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBans": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '23c725a6-ee1a-4081-8d23-070896740c04',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBans"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 44101632,
+      heapTotal: 15540224,
+      heapUsed: 13544688,
+      external: 1560239,
+      arrayBuffers: 134550
+    },
+    total_mem: 4294967296,
+    pid: 20473,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 55668736
+  },
+  response_time: '21.188',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBans' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:22:55.708Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '50b69daf-4d90-488e-8939-45dd7ab19402',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBansd"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 50679808,
+      heapTotal: 15802368,
+      heapUsed: 14306944,
+      external: 1484684,
+      arrayBuffers: 58955
+    },
+    total_mem: 4294967296,
+    pid: 20473,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20742144
+  },
+  response_time: '1.896',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBansd' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:23:08.651Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBands": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3136f154-0752-4fb7-863b-f6d2fcba7e6e'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: false }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 51601408,
+      heapTotal: 16326656,
+      heapUsed: 14645024,
+      external: 1482010,
+      arrayBuffers: 56281
+    },
+    total_mem: 4294967296,
+    pid: 20473,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17330176
+  },
+  response_time: '243.620',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:23:43.341Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:26:50.301Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:26:50.334Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBands": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f1f704bd-d33b-42e3-828d-74c7f9575230'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: false }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 57913344,
+      heapTotal: 33628160,
+      heapUsed: 14023800,
+      external: 1556170,
+      arrayBuffers: 129193
+    },
+    total_mem: 4294967296,
+    pid: 20814,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40652800
+  },
+  response_time: '52.087',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:26:56.551Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ec98aacd-51e5-4583-9540-ec203d7cb59b',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBansd"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 45256704,
+      heapTotal: 16064512,
+      heapUsed: 13385144,
+      external: 1465321,
+      arrayBuffers: 39592
+    },
+    total_mem: 4294967296,
+    pid: 20814,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31739904
+  },
+  response_time: '5.062',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBansd' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:27:25.459Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1ec338ef-6d1e-44f7-84a8-d63b3787b088',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBansd"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 51535872,
+      heapTotal: 16326656,
+      heapUsed: 14608968,
+      external: 1482031,
+      arrayBuffers: 56302
+    },
+    total_mem: 4294967296,
+    pid: 20814,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16670720
+  },
+  response_time: '0.913',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBansd' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:27:36.114Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ae7488e1-81ad-488e-81e5-190186c75ff5',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBansd"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 51314688,
+      heapTotal: 16326656,
+      heapUsed: 14371792,
+      external: 1482010,
+      arrayBuffers: 56281
+    },
+    total_mem: 4294967296,
+    pid: 20814,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28975104
+  },
+  response_time: '1.023',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBansd' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:27:40.312Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:27:49.180Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:27:49.196Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9713956d-ea72-4524-95b1-2ce4cbc2dc96',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBansd"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56553472,
+      heapTotal: 33366016,
+      heapUsed: 13644976,
+      external: 1560238,
+      arrayBuffers: 134549
+    },
+    total_mem: 4294967296,
+    pid: 20994,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 33492992
+  },
+  response_time: '20.097',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBansd' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:27:52.477Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '73'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["chees]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '95b61536-a246-4cbc-9de2-8c4e5627c72e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBansd\\": [\\"chees]}",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 45170688,
+      heapTotal: 16326656,
+      heapUsed: 13488784,
+      external: 1461649,
+      arrayBuffers: 35920
+    },
+    total_mem: 4294967296,
+    pid: 20994,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 113176576
+  },
+  response_time: '1.517',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["chees]}',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:28:47.649Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '73'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["chees]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'bdc32754-edb5-4b81-a0b3-8a4034de0095',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBansd\\": [\\"chees]}",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 45998080,
+      heapTotal: 16326656,
+      heapUsed: 14392064,
+      external: 1474041,
+      arrayBuffers: 48312
+    },
+    total_mem: 4294967296,
+    pid: 20994,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 80347136
+  },
+  response_time: '0.582',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["chees]}',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:29:04.170Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:30:10.663Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:30:10.681Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '73'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["chees]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '0fe7b88c-136f-4c1c-bf31-b01f0fadcf5e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "Unexpected end of JSON input",\n' +
+      '\t"error": {\n' +
+      '\t\t"expose": true,\n' +
+      '\t\t"statusCode": 400,\n' +
+      '\t\t"status": 400,\n' +
+      '\t\t"body": "{\\"name\\": \\"gregoriespaninies\\", \\"sector\\": \\"food\\", \\"expenseBansd\\": [\\"chees]}",\n' +
+      '\t\t"type": "entity.parse.failed"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: Unexpected end of JSON input',
+  meta: {
+    memory_usage: {
+      rss: 56840192,
+      heapTotal: 33890304,
+      heapUsed: 13644208,
+      external: 1560236,
+      arrayBuffers: 134547
+    },
+    total_mem: 4294967296,
+    pid: 21177,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 43962368
+  },
+  response_time: '24.482',
+  level: 'error',
+  error: SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at parse (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:89:19)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/read.js:121:18
+      at invokeCallback (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:224:16)
+      at done (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:213:7)
+      at IncomingMessage.onEnd (/Users/noah/Otis/backend/api-gateway/node_modules/raw-body/index.js:273:7)
+      at IncomingMessage.emit (events.js:315:20)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["chees]}',
+    type: 'entity.parse.failed'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:30:15.725Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd2c4c3be-8b0e-4b64-a77d-4115ef10282c',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBansd"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 39514112,
+      heapTotal: 34152448,
+      heapUsed: 15002248,
+      external: 1568792,
+      arrayBuffers: 143063
+    },
+    total_mem: 4294967296,
+    pid: 21177,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 58970112
+  },
+  response_time: '4.903',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBansd' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:30:26.617Z'
+}

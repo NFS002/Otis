@@ -33,7 +33,6 @@
     "grpc": "^1.24.2",
     "helmet": "^3.22.0",
     "http-status-codes": "^1.4.0",
-    "lodash": "^4.17.15",
     "moment-timezone": "^0.5.31",
     "morgan": "^1.10.0",
     "on-headers": "^1.0.2",
