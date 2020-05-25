@@ -1,12 +1,12 @@
 #image: python:3.6
 
 stages:
-#  - test
+  - test
 #  - build
 #  - deploy
 
 pylint:
-   stage: test
+#   stage: test
    image: python:3.6
    before_script:
      - cd service
@@ -16,7 +16,7 @@ pylint:
      - pycodestyle merchant lib
 
 eslint:
-  stage: test
+#  stage: test
   image: node:latest
   before_script:
     - cd api-gateway
