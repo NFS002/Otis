@@ -6,7 +6,9 @@ stages:
 #  - deploy
 
 pylint:
-#   stage: test
+   stage: test
+   only:
+     - master
    image: python:3.6
    before_script:
      - cd service
@@ -16,7 +18,9 @@ pylint:
      - pycodestyle merchant lib
 
 eslint:
-#  stage: test
+  stage: test
+  only:
+    - master
   image: node:latest
   before_script:
     - cd api-gateway
