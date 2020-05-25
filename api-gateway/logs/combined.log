@@ -12668,3 +12668,183 @@
   service: 'api-gateway',
   timestamp: '2020-05-25T02:30:26.617Z'
 }
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:33:32.704Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:33:32.721Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/json',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{"name": "gregoriespaninies", "sector": "food", "expenseBansd": ["cheese"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1ff3638f-c41a-486a-9d91-b33e6a30f6f8',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expenseBansd"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 44326912,
+      heapTotal: 15540224,
+      heapUsed: 13556808,
+      external: 1560238,
+      arrayBuffers: 134549
+    },
+    total_mem: 4294967296,
+    pid: 21428,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 163143680
+  },
+  response_time: '21.335',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expenseBansd' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:33:46.592Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'applicati/jon',
+      'content-length': '75'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '11e81627-c881-495d-81f4-8a7cd4452c5a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (applicati/jon) must be set to */json",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (applicati/jon) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 49905664,
+      heapTotal: 15802368,
+      heapUsed: 13666784,
+      external: 1461416,
+      arrayBuffers: 35687
+    },
+    total_mem: 4294967296,
+    pid: 21428,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 191860736
+  },
+  response_time: '0.719',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (applicati/jon) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:106:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-05-25T02:34:25.993Z'
+}

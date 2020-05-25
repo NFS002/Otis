@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/logs/combined.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/logs/combined.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/handlers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/middleware/morgan-body.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/middleware/morgan-body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -6,69 +6,92 @@
 
 Otis backend
 
-## Directory structure
+## Requirements
+- gRPC & protobuf compiler (only required for development, rather than running)
+- Python >= 3.5
+- Node.js >= 10
+- Npm >= 6
+- Tested on Mac OS Mojave (10.14.1)
 
-- api (contains any Micro API services that handle requests from API Gateway)
-- service (contains all Micro services)
-- client (contains some clients for respective services)
 
-## Local Development
+## Directory structure:
 
-To clone:
+- api-gateway (Node.js/Express API Gateway)
+- service (Contains all Python/gRPC microservices)
+- service/lib (Shared library for each microservice)
+- dtypes (Definitions of key data types implemented in different programming languages)
 
-`git clone git@gitlab.com:otis_team/backend.git` 
+## Setting up a local development environment
 
-IMPORTANT! Make sure you ammend your git config file to include your name and OTIS EMAIL! 
 
-To run:
-
-`docker-compose build`
-
-`docker-compose run`
-
-## Namespaces
-
-The namespace for Go Modules should follow the directory structure of this repository.
-
-i.e. the module name for the merchant service is *gitlab.com/otis_team/backend/service/merchant* 
-
-This helps with future importing.
-
-The namespace for services within the Micro runtime is:
-
-go.micro.[api/service/client].[name]
-
-This is to provide integration with the default Micro namespace. This will likely be changed in the future.
-
-## Golang local modules
-All go.mod files that require another local module use
-the replace directive as follows replace gitlab.com/.. => /path/to/local/directory/...
-However, for deployment, we have to use the remote modules rather than the local ones, so we need to remove these directives.
-The shell script scripts/mod-deploy.sh searches all go.mod files and comments out any lines that end with '//_LOCAL'. This script should be run after
-pushing to a remote repo, or before deployment. Conversely, the file scripts/mod-local.sh does the opposite, and uncomments
-any lines in any go.mod files that are commented out, and that end with '//_LOCAL'. 
-
-### <a href='https://thewebivore.com/using-replace-in-go-mod-to-point-to-your-local-module/'> See this article for details </a>
-
-The shell script scripts/mod-require-delete.sh should then be used
-after scripts/mod-deploy.sh and before 'git push'/deployment which deletes every 'require block' in every go.mod file and hence clears any dependencies on local module versions.
-
-## Dev environment
-
-Source the shell script otis.env to set up your environment variables for local development.
+### Environment variables
+Source the shell script .env to set up your environment variables for local development.
 The file env.example.sh serves as a template for env.sh, but does not include any sensitive information
-For example, after pulling, or before building a docker image:
+
 ```shell script
+$ cp .env.example .env 
+# Then manually edit .env to include values for your own set of credentials
 $ source .env
 ```
-Before pushing:
+
+### Python virtual environement
+Creating a virtual environment for each microservice is not necessary but recommended.
 ```shell script
-$ cp .env .env.example # Then edit .env.example to remove sensitive information such as passwords
+$ cd service/<service_name>
+$ python3 -m venv <virtual_env_name>
+```
+Then, to activate the virtual environment and install dependencies before running the service:
+```shell script
+$ source <virtual_env_name>/bin/activate
+$ pip install -r requirements.txt
+$ deactivate # Deactivates the current virtual environment
+```
+
+### Node.js dependencies
+To install all node.js dependencies required for the api-gateway, we use
+npm:
+
+```shell script
+$ cd api-gateway
+$ npm install
 ```
 
 
-## Follow this example to generate tls certificates, and place them in the certs/ directory
 
-# https://jsherz.com/grpc/node/nodejs/mutual/authentication/ssl/2017/10/27/grpc-node-with-mutual-auth.html
+## Configuration
+Configuration specifically for the api-gateway can be made through
+a control file at *api-gateway/gateway-config.js*. Similarly, there is a configuration file
+for each microservice at service/<service_name>/service-config.py.
+You will probably need to manually edit these files to meet your own requirements
+before running the api-gateway or any of individual microservices
 
-## Configure the api-gateway and service config to use the same values you used when generating the certificates
+## Running the api-gateway
+
+```shell script
+$ node .
+```
+
+## Running a microservice
+
+```shell script
+$ cd service/<service_name>
+# Activate the virtual environment, if necessary
+$ python3 .
+```
+
+## TLS/SSL
+By default, we use mutual TLS, to encrypt all gRPC connections, where both the client and server (in our case the api-gateway and a microservice)
+provide certificates and private RSA keys, and each certificate is verified by the certificate authority of the other. Of course, the private keys or the certificates 
+are not included in this repository, so you if you want to use tls you will need to generate your own, and place them in the configured directory (See 'Configuration' section above).
+To do that, you can follow the tutorial here (https://jsherz.com/grpc/node/nodejs/mutual/authentication/ssl/2017/10/27/grpc-node-with-mutual-auth.html)
+or alternatively use the open-ssl CLI tool. Using TLS is not strictly necessary for a local development environment, so if you want to use unencrypted and unauthenticated 
+connections instead, you must set the "use_tls" variable in the api-gateway configuration file, and the configuration file of *every* microservice to false.
+For example:
+```
+{
+...
+    "use_tls": false,
+...
+}
+```
+See the 'Configuration' section for more details.
