@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dtypes/merchant/schema/merchantsresponse.schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dtypes/generalmerchant/schema/generalmerchant.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/generalmerchant/schema/generalmerchant.schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtypes/merchant/schema/expensebands.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/merchant/schema/expenseband.schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dtypes/partnermerchant/schema/partnermerchant.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/dtypes/partnermerchant/schema/partnermerchant.schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,21 +107,21 @@
     </state>
     <state x="454" y="176" key="com.intellij.ide.util.TipDialog/0.23.1366.672@0.23.1366.672" timestamp="1589299445526" />
     <state x="454" y="177" key="com.intellij.ide.util.TipDialog/0.23.1366.676@0.23.1366.676" timestamp="1590058432205" />
-    <state x="437" y="105" width="779" height="475" key="find.popup" timestamp="1590320487800">
+    <state x="437" y="105" width="779" height="475" key="find.popup" timestamp="1590343848107">
       <screen x="0" y="23" width="1366" height="676" />
     </state>
     <state x="437" y="105" width="779" height="472" key="find.popup/0.23.1366.672@0.23.1366.672" timestamp="1589287653340" />
-    <state x="437" y="105" width="779" height="475" key="find.popup/0.23.1366.676@0.23.1366.676" timestamp="1590320487800" />
+    <state x="437" y="105" width="779" height="475" key="find.popup/0.23.1366.676@0.23.1366.676" timestamp="1590343848107" />
     <state x="323" y="151" key="run.anything.popup" timestamp="1589048872124">
       <screen x="0" y="23" width="1366" height="672" />
     </state>
     <state x="323" y="151" key="run.anything.popup/0.23.1366.672@0.23.1366.672" timestamp="1589048872124" />
-    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup" timestamp="1590331810367">
+    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup" timestamp="1590352260810">
       <screen x="0" y="23" width="1366" height="676" />
     </state>
     <state x="434" y="23" width="670" height="672" key="search.everywhere.popup/0.23.1366.672@0.23.1366.672" timestamp="1589323597787" />
     <state x="434" y="23" width="670" height="673" key="search.everywhere.popup/0.23.1366.673@0.23.1366.673" timestamp="1586185142358" />
-    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup/0.23.1366.676@0.23.1366.676" timestamp="1590331810367" />
+    <state x="434" y="23" width="670" height="158" key="search.everywhere.popup/0.23.1366.676@0.23.1366.676" timestamp="1590352260810" />
     <state x="427" y="249" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1590191225610">
       <screen x="0" y="23" width="1366" height="676" />
     </state>

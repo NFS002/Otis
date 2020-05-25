@@ -3,13 +3,14 @@
   "$id": "http://gitlab.com/otis_team/backend/dtypes/partnermerchant/schema/partnermerchant.schema.json",
   "title": "Partner Merchant",
   "description": "A partner merchant",
+  "$async": true,
   "type": "object",
   "properties": {
-    "merchant_id": {
+    "id": {
       "description": "The unique identifier of the merchant.",
       "type": "string"
     },
-    "merchant_name": {
+    "name": {
       "description": "The collated name for the merchant that appears in raw transaction data",
       "type": "string"
     },
@@ -21,14 +22,14 @@
         "type": ["string", "null"]
       }
     },
-    "api_tags": {
+    "apiTags": {
       "description": "Tags derived from API enrichment/categorisation",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
-    "otis_tags": {
+    "otisTags": {
       "description": "Tags derived from merchant id",
       "type": "array",
       "items": {
@@ -47,23 +48,26 @@
       "description": "Contractural cashback rate",
       "type": "number"
     },
-    "join_date": {
+    "joinDate": {
       "description": "The date on which the merchant joined the Otis platform. ISO-8601 date.",
       "type": "string"
     },
-    "next_billing_date": {
+    "nextBillingDate": {
       "description": "The next date on which the merchant will be invoiced. ISO-8601 date.",
       "type": "string"
     },
-    "gocardless_mandate": {
+    "gocardlessMandate": {
       "description": "Mandate ID used to initiate payment with GoCardless"
     },
-    "expense_band": {
+    "expenseBands": {
       "description": "Expense bands for the merchant for their given sector",
       "type": "array",
       "items": {
-        "$ref": "http://gitlab.com/otis_team/backend/dtypes/merchant/schema/expensebands.schema.json"
-      }
+        "$ref": "http://gitlab.com/otis_team/backend/dtypes/merchant/schema/expenseband.schema.json"
+      },
+      "additionalItems": false
     }
-  }
+  },
+  "required": ["name", "sector", "expenseBands"],
+  "additionalProperties": false
 }

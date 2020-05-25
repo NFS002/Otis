@@ -3,13 +3,14 @@
   "$id": "http://gitlab.com/otis_team/backend/dtypes/generalmerchant/schema/generalmerchant.schema.json",
   "title": "General merchant",
   "description": "A merchant who is not part of the Otis platform",
+  "$async": true,
   "type": "object",
   "properties": {
-    "merchant_id": {
+    "id": {
       "description": "The unique identifier of the merchant.",
       "type": "string"
     },
-    "merchant_name": {
+    "name": {
       "description": "The collated name for the merchant that appears in raw transaction data",
       "type": "string"
     },
@@ -24,14 +25,14 @@
         ]
       }
     },
-    "api_tags": {
+    "apiTags": {
       "description": "Tags derived from API enrichment/categorisation",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
-    "scrape_tags": {
+    "scrapeTags": {
       "description": "Tags derived from webscraping",
       "type": "array",
       "items": {
@@ -46,12 +47,15 @@
       "description": "The size categorisation of the mercahnt. NEEDS CLARIFICATION.",
       "type": "string"
     },
-    "expense_band": {
+    "expenseBands": {
       "description": "Expense bands for the merchant for their given sector",
       "type": "array",
       "items": {
-        "$ref": "http://gitlab.com/otis_team/backend/dtypes/merchant/schema/expensebands.schema.json"
-      }
+        "$ref": "http://gitlab.com/otis_team/backend/dtypes/merchant/schema/expenseband.schema.json"
+      },
+      "additionalItems": false
     }
-  }
+  },
+  "required": ["name", "sector", "expenseBands"],
+  "additionalProperties": false
 }
