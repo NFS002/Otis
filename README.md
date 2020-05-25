@@ -95,3 +95,6 @@ For example:
 }
 ```
 See the 'Configuration' section for more details.
+
+## System architecture diagrams, data policies, and further documentation are available in a seperate repository at
+### https://gitlab.com/otis_team/docs
