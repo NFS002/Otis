@@ -8,7 +8,6 @@ logs/*
 certs/*
 api-gateway
 service
-.gitlab-ci.yml
 .env.example
 README.md
 dtypes
