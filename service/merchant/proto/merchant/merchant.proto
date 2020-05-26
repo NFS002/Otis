@@ -1,0 +1,41 @@
+// Compile with:
+// protoc -I /Users/$USER/Otis/backend/ service/merchant/proto/merchant/merchant.proto --go_out=. --micro_out=.
+// Remember to compile this file and all dependencies from the same directory
+syntax = "proto3";
+
+// Import GeneralMerchant and PartnerMerchant data types
+import "dtypes/partnermerchant/proto/partnermerchant.proto";
+import "dtypes/generalmerchant/proto/generalmerchant.proto";
+
+package merchant;
+
+
+service MerchantService {
+    rpc CreateGeneralMerchant(MerchantRequest) returns (MerchantsResponse) {}
+    rpc CreatePartnerMerchant(MerchantRequest) returns (MerchantsResponse) {}
+    rpc GetGeneralMerchant(MerchantQuery) returns (MerchantsResponse) {}
+    rpc GetPartnerMerchant(MerchantQuery) returns (MerchantsResponse) {}
+    rpc DeleteGeneralMerchant(MerchantQuery) returns (MerchantsResponse) {}
+    rpc DeletePartnerMerchant(MerchantQuery) returns (MerchantsResponse) {}
+}
+
+// Query types
+
+message MerchantQuery {
+    string merchantID = 1;
+}
+
+message MerchantRequest {
+    partnermerchant.PartnerMerchant partnerMerchant = 1;
+    generalmerchant.GeneralMerchant generalMerchant = 2;
+}
+
+// Response types
+
+message MerchantsResponse {
+    bool executed = 1;
+    repeated partnermerchant.PartnerMerchant partnerMerchants = 2;
+    repeated generalmerchant.GeneralMerchant generalMerchants = 3;
+}
+
+

@@ -7,8 +7,6 @@ stages:
 
 pylint:
    stage: test
-   only:
-     - master
    image: python:3.6
    before_script:
      - cd service
@@ -19,8 +17,6 @@ pylint:
 
 eslint:
   stage: test
-  only:
-    - master
   image: node:latest
   before_script:
     - cd api-gateway

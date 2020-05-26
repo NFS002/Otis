@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://gitlab.com/otis_team/backend/dtypes/merchant/schema/expenseband.schema.json",
+  "title": "Merchant expense band",
+  "description": "A merchants expense band for their given sector",
+  "$async": true,
+  "type": "string",
+  "properties": {
+      "name": {
+        "description": "An expense band",
+        "type": "string",
+        "minLength": 3
+      }
+  },
+  "required": ["band"],
+  "additionalProperties": false
+}

@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: merchant-service
+  labels:
+    app: merchant-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: merchant-service
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 33%
+  template:
+    metadata:
+      labels:
+        app: merchant-service
+    spec:
+      imagePullSecrets:
+        - name: my-registry
+      containers:
+        - name: merchant-service
+          image: registry.gitlab.com/otis_team/backend/service/merchant
+          command: [
+            "./merchant-service",
+          ]
+          ports:
+            - containerPort: 8080
+              name: merchant-port
+          env:
+            - name: MICRO_SERVER_ADDRESS
+              value: "0.0.0.0:8080"
+            - name: MICRO_BROKER
+              value: "nats"
+            - name: MICRO_BROKER_ADDRESS
+              value: "nats-cluster"
+            - name: MICRO_REGISTRY
+              value: "etcd"
+            - name: MICRO_REGISTRY_ADDRESS
+              value: "etcd-cluster-client"
+        - name: health
+          command: [
+            "/health",
+            "--health_address=0.0.0.0:8081",
+            "--server_name=merchant-service",
+            "--server_address=0.0.0.0:8080"
+          ]
+          image: microhq/health
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8081
+            initialDelaySeconds: 3
+            periodSeconds: 3

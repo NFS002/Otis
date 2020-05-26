@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="" />
+    <list default="true" id="016f229b-c169-449b-91f9-b7d445c5c6f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,10 +76,11 @@
       <screen x="0" y="23" width="1366" height="672" />
     </state>
     <state x="258" y="23" key="#Project_Structure/0.23.1366.672@0.23.1366.672" timestamp="1589025397467" />
-    <state x="233" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586118563677">
-      <screen x="0" y="23" width="1366" height="673" />
+    <state x="233" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590427904141">
+      <screen x="0" y="23" width="1366" height="676" />
     </state>
     <state x="233" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.673@0.23.1366.673" timestamp="1586118563677" />
+    <state x="233" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.676@0.23.1366.676" timestamp="1590427904141" />
     <state x="425" y="188" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589305578467">
       <screen x="0" y="23" width="1366" height="672" />
     </state>
