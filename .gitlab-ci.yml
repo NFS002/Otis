@@ -1,14 +1,18 @@
 #image: python:3.6
 
 stages:
-  - test
-  - build
+#  - test
+#  - build
 #  - deploy
+   - echo
+
+
+echo:
+  stage: echo
+  script: echo "Job exited succesfully"
 
 pylint:
    stage: test
-   only:
-     - master
    image: python:3.6
    before_script:
      - cd service
@@ -19,8 +23,6 @@ pylint:
 
 eslint:
   stage: test
-  only:
-    - master
   image: node:latest
   before_script:
     - cd api-gateway
