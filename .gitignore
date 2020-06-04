@@ -6,8 +6,3 @@ node_modules
 *venv
 logs/*
 certs/*
-api-gateway
-service
-.env.example
-README.md
-dtypes

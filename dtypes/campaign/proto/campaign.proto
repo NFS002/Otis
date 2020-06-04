@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package campaign;
+
+message Campaign {
+    string id = 1;
+    string merchantID = 2;
+    string rate = 3;
+    string startTimestamp = 4;
+    string endTimestamp = 5;
+    repeated string userSet = 6;
+    repeated string transactionSet = 7;
+    string title = 8;
+    string description = 9;
+    int32 validFor = 10;
+    bool active = 11;
+}
+

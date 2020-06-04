@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package country;
+
+message Country {
+    string id = 1; //ISO 3166-1 ALPHA
+    string name = 2;
+}

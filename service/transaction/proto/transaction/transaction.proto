@@ -1,0 +1,30 @@
+// protoc -I /Users/$USER/Otis/backend/ service/transaction/proto/transaction/transaction.proto --go_out=. --micro_out=.
+syntax = "proto3";
+
+// Import Transaction data type
+import "dtypes/transaction/proto/transaction.proto";
+
+package transaction;
+
+
+/* Transaction service definition: available grpc endpoints for the transaction service */
+service TransactionService {
+    rpc CreateTransaction(TransactionQuery) returns (TransactionResponse) {}
+    rpc GetTransactions(TransactionQuery) returns (TransactionResponse) {}
+    rpc DeleteTransactions(TransactionQuery) returns (TransactionResponse) {}
+}
+
+
+/* Query transactions by User, Merchant, or ID */
+message TransactionQuery {
+    transaction.Transaction transaction = 1;
+    string MerchantID = 2;
+    string UserID = 3;
+    string TransactionID = 4;
+}
+
+/* Generic CRUD Response */
+message TransactionResponse {
+    bool executed = 1;
+    repeated Transaction transactions = 2;
+}

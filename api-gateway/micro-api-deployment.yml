@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: micro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: micro
+  template:
+    metadata:
+      labels:
+        app: micro
+    spec:
+      containers:
+        - name: micro
+          image: microhq/micro:latest
+          env:
+            - name: MICRO_ENABLE_STATS
+              value: "true"
+#            - name: MICRO_BROKER
+#              value: "nats"
+#            - name: MICRO_BROKER_ADDRESS
+#              value: "nats-cluster"
+            - name: MICRO_REGISTRY
+              value: "etcd"
+            - name: MICRO_REGISTRY_ADDRESS
+              value: "etcd-cluster-client"
+            - name: MICRO_REGISTER_TTL
+              value: "60"
+            - name: MICRO_REGISTER_INTERVAL
+              value: "30"
+            - name: MICRO_API_ADDRESS
+              value: ":80"
+            - name: MICRO_SERVER_ADDRESS
+              value: "0.0.0.0:8080"
+          args:
+            - "api"
+            - "--handler=api"
+          ports:
+            - containerPort: 80
+              name: port
+            - containerPort: 8080
+              name: port1
+            - containerPort: 53
+              name: dnsport
