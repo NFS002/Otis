@@ -29,6 +29,8 @@ eslint:
 
 container_build:
    stage: build
+   only:
+     - master
    image: docker:stable
    services:
      - docker:19.03.8-dind
