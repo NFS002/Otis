@@ -3,6 +3,8 @@
 data
 node_modules
 .env
+.env.local
+testdata.json
 *venv
 logs/*
 certs/*

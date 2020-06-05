@@ -12,7 +12,6 @@ const app = express()
 
 // Security middleware
 app.use(helmet())
-app.use(bodyParser.raw({ type: "*/*", verify: setRawBody }))
 
 if (getValue("morgan") === true) {
 	/* Each request is assigned a unique ID */
@@ -24,10 +23,11 @@ if (getValue("morgan") === true) {
 app.use(responseTime(logHandler()))
 
 /*
- * Try parse as application/json request content type
+ * Try parse as application/json request content type,
+ * and set the raw request body on the request object for debugging
  */
 app.use(invalidContentTypeHandler())
-app.use(bodyParser.json({ extended: true, type: "*/json" }))
+app.use(bodyParser.json({ extended: true, type: "*/json", verify: setRawBody }))
 
 const apis = getValue("apis")
 for (var api in apis) {

@@ -12168,3 +12168,1271 @@
   service: 'api-gateway',
   timestamp: '2020-06-04T11:41:37.115Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '0',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'eec07168-a033-46fb-8bc8-12413bc215ea',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56033280,
+      heapTotal: 33103872,
+      heapUsed: 13667312,
+      external: 1561299,
+      arrayBuffers: 134322
+    },
+    total_mem: 4294967296,
+    pid: 80644,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 30789632
+  },
+  response_time: '5.588',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:51:22.392Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '0',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '53dee0c7-f066-4450-aead-d6b478c5643f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 42315776,
+      heapTotal: 16588800,
+      heapUsed: 13471024,
+      external: 1461424,
+      arrayBuffers: 35695
+    },
+    total_mem: 4294967296,
+    pid: 80644,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26832896
+  },
+  response_time: '3.343',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:52:36.181Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '2',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '90366cd9-19ee-49d3-82f7-4e77eb3ed352',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 43585536,
+      heapTotal: 16588800,
+      heapUsed: 14398480,
+      external: 1473765,
+      arrayBuffers: 48036
+    },
+    total_mem: 4294967296,
+    pid: 80644,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23728128
+  },
+  response_time: '0.402',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:108:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:52:48.104Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '2',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'cf52b637-fc52-4c43-b813-f78232fad816',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 39231488,
+      heapTotal: 15540224,
+      heapUsed: 13527392,
+      external: 1560183,
+      arrayBuffers: 134494
+    },
+    total_mem: 4294967296,
+    pid: 80785,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 130342912
+  },
+  response_time: '3.407',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:108:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:53:22.042Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '0',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '0db5c62a-2a43-4865-9328-c0d523fc0ebc',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 55984128,
+      heapTotal: 33366016,
+      heapUsed: 13613200,
+      external: 1560011,
+      arrayBuffers: 134322
+    },
+    total_mem: 4294967296,
+    pid: 80842,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 39522304
+  },
+  response_time: '4.730',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:108:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:54:03.225Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '0',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '52f57a53-cf79-428d-9b71-f229888ac17f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 48001024,
+      heapTotal: 33890304,
+      heapUsed: 13627624,
+      external: 1560011,
+      arrayBuffers: 134322
+    },
+    total_mem: 4294967296,
+    pid: 80910,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35700736
+  },
+  response_time: '4.277',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:108:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:55:31.003Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '0'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a84d322a-21e2-4703-883a-74629aa65900',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 37576704,
+      heapTotal: 16326656,
+      heapUsed: 13470224,
+      external: 1461423,
+      arrayBuffers: 35694
+    },
+    total_mem: 4294967296,
+    pid: 80910,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26509312
+  },
+  response_time: '3.050',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:56:08.083Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '0'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a9159851-72fa-4f98-bd44-150c97b83b8f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56061952,
+      heapTotal: 33366016,
+      heapUsed: 13637784,
+      external: 1560011,
+      arrayBuffers: 134322
+    },
+    total_mem: 4294967296,
+    pid: 81134,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 113803264
+  },
+  response_time: '5.217',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:57:45.825Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '0',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '976b5930-0a46-4bf9-897c-434e74108d03',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 55877632,
+      heapTotal: 33628160,
+      heapUsed: 13629344,
+      external: 1560011,
+      arrayBuffers: 134322
+    },
+    total_mem: 4294967296,
+    pid: 81191,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32845824
+  },
+  response_time: '7.901',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:58:49.559Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '4'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{hi}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '8e470fff-dea2-4c1d-af2f-3915b272e5a4',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 49303552,
+      heapTotal: 16326656,
+      heapUsed: 13478488,
+      external: 1461581,
+      arrayBuffers: 35852
+    },
+    total_mem: 4294967296,
+    pid: 81191,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23461888
+  },
+  response_time: '1.032',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T21:59:23.892Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '4'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{hi}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '78784547-f71c-433d-8aa6-c1b6f31c753a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 43610112,
+      heapTotal: 15802368,
+      heapUsed: 13559440,
+      external: 1560168,
+      arrayBuffers: 134479
+    },
+    total_mem: 4294967296,
+    pid: 81326,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 38342656
+  },
+  response_time: '6.240',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T22:01:15.399Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '0',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2c538dc9-7eb0-4ca7-aaa4-0c9a3e890d69',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 44408832,
+      heapTotal: 16326656,
+      heapUsed: 13697480,
+      external: 1461424,
+      arrayBuffers: 35695
+    },
+    total_mem: 4294967296,
+    pid: 81326,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28278784
+  },
+  response_time: '0.897',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:108:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-04T22:01:38.992Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '0',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b899755c-ada8-4739-ae59-7eaf3f44387e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 35086336,
+      heapTotal: 15540224,
+      heapUsed: 13511120,
+      external: 1560011,
+      arrayBuffers: 134322
+    },
+    total_mem: 4294967296,
+    pid: 81443,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 34824192
+  },
+  response_time: '4.910',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:108:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-04T22:04:51.918Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-length': '80',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expense_bands": ["sausages", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'aa26fffa-8b4e-48ea-953a-80acffa96cfa',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 42123264,
+      heapTotal: 15802368,
+      heapUsed: 14177640,
+      external: 1476461,
+      arrayBuffers: 50732
+    },
+    total_mem: 4294967296,
+    pid: 81443,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 36544512
+  },
+  response_time: '0.444',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:108:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-04T22:05:04.278Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '80'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expense_bands": ["sausages", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'dd58aabb-6f97-485d-a4de-c12c9e847650',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "type",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/type",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"type": "object"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should be object"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 42143744,
+      heapTotal: 16326656,
+      heapUsed: 14076024,
+      external: 1482267,
+      arrayBuffers: 56538
+    },
+    total_mem: 4294967296,
+    pid: 81443,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17915904
+  },
+  response_time: '2.554',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'type',
+        dataPath: '',
+        schemaPath: '#/type',
+        params: { type: 'object' },
+        message: 'should be object'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T22:05:47.061Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '80'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {
+      name: 'greggs',
+      sector: 'food',
+      expense_bands: [ 'sausages', 'bread' ]
+    }
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f30ff36a-b982-4d7a-a8f8-0c772db82aaf',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "expense_bands"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "expenseBands"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'expenseBands'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 55554048,
+      heapTotal: 33628160,
+      heapUsed: 13737824,
+      external: 1561533,
+      arrayBuffers: 134556
+    },
+    total_mem: 4294967296,
+    pid: 81974,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32616448
+  },
+  response_time: '25.022',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'expense_bands' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'expenseBands' },
+        message: "should have required property 'expenseBands'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-04T22:07:02.353Z'
+}

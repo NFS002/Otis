@@ -1,6 +1,5 @@
 """ Configuration file for the merchant service, indexed by the current environment"""
 import os
-from service.lib.psql.connection import dump_psql
 
 SERVICE_HOME = os.path.join(os.path.join(os.environ["OTIS_HOME"], "service/merchant"))
 
@@ -14,11 +13,16 @@ SERVICE_CONFIG = \
             },
 
             "rdb_engine": {
-                "strategy": "mock",
-                "executor": dump_psql
+                "echo": False
             },
 
             "logs": {
+                "rdb": {
+                    "level": "INFO",
+                    "format": "%(asctime)s - %(message)s;",
+                    "logger": "sqlalchemy.engine",
+                    "file": os.path.join(SERVICE_HOME, "logs/rdb.log")
+                },
                 "meta": False,
                 "rollbar": True,
                 "console": True,
@@ -52,6 +56,10 @@ SERVICE_CONFIG = \
             "network": {
                 "address": "0.0.0.0",
                 "port": 3005
+            },
+
+            "rdb_engine": {
+                "echo": False
             },
 
             "logs": {

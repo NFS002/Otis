@@ -1,0 +1,46 @@
+2020-06-05 13:08:43,219 - select version();
+2020-06-05 13:08:43,220 - {};
+2020-06-05 13:08:43,221 - select current_schema();
+2020-06-05 13:08:43,221 - {};
+2020-06-05 13:08:43,224 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-05 13:08:43,224 - {};
+2020-06-05 13:08:43,225 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-05 13:08:43,225 - {};
+2020-06-05 13:08:43,225 - show standard_conforming_strings;
+2020-06-05 13:08:43,225 - {};
+2020-06-05 13:08:43,228 - 
+CREATE TABLE merchants (
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	deleted_at TIMESTAMP WITH TIME ZONE, 
+	updated_at TIMESTAMP WITH TIME ZONE NOT NULL, 
+	id SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+;
+2020-06-05 13:08:43,228 - {};
+2020-06-05 13:08:43,241 - COMMIT;
+2020-06-05 13:19:17,476 - select version();
+2020-06-05 13:19:17,477 - {};
+2020-06-05 13:19:17,482 - select current_schema();
+2020-06-05 13:19:17,482 - {};
+2020-06-05 13:19:17,486 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-05 13:19:17,486 - {};
+2020-06-05 13:19:17,488 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-05 13:19:17,488 - {};
+2020-06-05 13:19:17,488 - show standard_conforming_strings;
+2020-06-05 13:19:17,489 - {};
+2020-06-05 13:19:17,493 - 
+CREATE TABLE merchants (
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	deleted_at TIMESTAMP WITH TIME ZONE, 
+	updated_at TIMESTAMP WITH TIME ZONE NOT NULL, 
+	id SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+;
+2020-06-05 13:19:17,493 - {};
+2020-06-05 13:19:17,520 - COMMIT;

@@ -40,7 +40,7 @@ async function pGet (req, res) {
 
 async function pCreate (req, res) {
 	const { _CreatePartnerMerchant } = merchantPool
-	const value = await _CreatePartnerMerchant(req.body)
+	const value = await _CreatePartnerMerchant({ partnerMerchant: req.body })
 	res.locals.body = value
 	res.end(JSON.stringify(value))
 }
