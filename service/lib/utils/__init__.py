@@ -3,3 +3,4 @@ from .conf import *
 from .formatter import LogFormatter
 from .logs import *
 from .wrappers import *
+from .prototools import *

@@ -8,10 +8,6 @@ from rollbar.logger import RollbarHandler
 from .formatter import LogFormatter
 
 
-def request_to_dict(request):
-    return {"request": str(request)}
-
-
 def add_rollbar_handler(logger, history_size=3):
     """ Log handler that sends log records to rollbar.com """
     access_token = os.environ["OTIS_ROLLBAR_ACCESS_TOKEN"]

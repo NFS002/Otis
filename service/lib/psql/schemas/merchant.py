@@ -17,6 +17,7 @@ class Merchant(MerchantBase, IdMixin, CreatedAtMixin, UpdatedAtMixin, DeletedAtM
 
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
+    sector = Column(String, nullable=False)
 
     def __init__(self, **kwargs):
         AddressMixin.__init__(self, nullable=False)

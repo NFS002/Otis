@@ -13,7 +13,8 @@ SERVICE_CONFIG = \
             },
 
             "rdb_engine": {
-                "echo": False
+                "echo": False,
+                "strategy": "plain"
             },
 
             "logs": {
