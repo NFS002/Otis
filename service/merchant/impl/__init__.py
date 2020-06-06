@@ -23,38 +23,56 @@ class MerchantService(merchant_service_pb2_grpc.MerchantServiceServicer):
 
     @default_logging_wrapper
     def CreateGeneralMerchant(self, request, unused_context, optional_request_dict):
-        # Parse request to dtype format
-        # Insert request to db as new general merchant
+        """ Parse request to dtype format
+        Insert request to db as new general merchant """
+        session = self.Session()
         print("called create general", "->", request, "<-")
-        return merchant_service_pb2.MerchantsResponse()
+        print("called create general as dict", "->", optional_request_dict, "<-")
+        merchant = Merchant(**optional_request_dict['generalMerchant'])
+        session.add(merchant)
+        session.commit()
+        return merchant_service_pb2.MerchantsResponse(executed=True)
 
     @default_logging_wrapper
     def CreatePartnerMerchant(self, request, unused_context, optional_request_dict):
         """ Parse request to dtype format
         Insert request to db as new general merchant """
         # Merchant.metadata.create_all(self.db_engine, checkfirst=False)
-        # session = self.Session()
+        session = self.Session()
         print("called create partner", "->", request, "<-")
         print("called create partner as dict", "->", optional_request_dict, "<-")
-        # merchant = Merchant(**optional_request_dict['partnerMerchant'])
-        # session.add(merchant)
-        # merchant = session.query(Merchant).filter_by(name=partner_merchant.name).first()
-        # session.commit()
+        merchant = Merchant(**optional_request_dict['partnerMerchant'])
+        session.add(merchant)
+        session.commit()
         return merchant_service_pb2.MerchantsResponse(executed=True)
 
     @default_logging_wrapper
     def GetGeneralMerchant(self, request, unused_context, optional_request_dict):
-        # Parse request to dtype format
-        # Insert request to db as new general merchant
+        """ Parse request to dtype format
+        Insert request to db as new general merchant """
         print("called get general", "->", request, "<-")
-        return merchant_service_pb2.MerchantsResponse()
+        print("called get general as dict", "->", optional_request_dict, "<-")
+        session = self.Session()
+        if 'merchantID' in optional_request_dict:
+            merchant_id = Merchant(**optional_request_dict['merchantID'])
+            merchant = session.query(Merchant).filter_by(id=merchant_id).first()
+        else:
+            merchant = session.query(Merchant)
+        return merchant_service_pb2.MerchantsResponse(generalMerchants=[merchant], executed=True)
 
     @default_logging_wrapper
     def GetPartnerMerchant(self, request, unused_context, optional_request_dict):
-        # Parse request to dtype format
-        # Insert request to db as new general merchant
+        """ Parse request to dtype format
+        Insert request to db as new general merchant """
         print("called get partner", "->", request, "<-")
-        return merchant_service_pb2.MerchantsResponse()
+        print("called get partner as dict", "->", optional_request_dict, "<-")
+        session = self.Session()
+        if 'merchantID' in optional_request_dict:
+            merchant_id = Merchant(**optional_request_dict['merchantID'])
+            merchant = session.query(Merchant).filter_by(id=merchant_id).first()
+        else:
+            merchant = session.query(Merchant)
+        return merchant_service_pb2.MerchantsResponse(partnerMerchants=[merchant], executed=True)
 
     @default_logging_wrapper
     def DeleteGeneralMerchant(self, request, unused_context, optional_request_dict):
