@@ -9,7 +9,7 @@
     "merchantID": {
       "description": "The unique identifier of the merchant.",
       "type": "string",
-      "pattern": "^[-_a-zA-Z0-9]{4,}$"
+      "pattern": "^[-_a-zA-Z0-9]+$"
     }
   },
   "additionalProperties": false

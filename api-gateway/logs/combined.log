@@ -25757,3 +25757,6108 @@
   service: 'api-gateway',
   timestamp: '2020-06-05T23:01:24.430Z'
 }
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:07:13.028Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:07:13.060Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '79'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausages", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9b34e200-e112-4d70-aa45-23dc98a2a4fb'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 28450816,
+      heapTotal: 15540224,
+      heapUsed: 13365944,
+      external: 1467881,
+      arrayBuffers: 42190
+    },
+    total_mem: 4294967296,
+    pid: 11640,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 21422080
+  },
+  response_time: '551.843',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:09:53.313Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:38:28.776Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:38:28.798Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:41:55.453Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:41:55.477Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '162cb2a2-6e93-4f95-9fa8-91a415ac5cf4'
+    }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 39616512,
+      heapTotal: 15278080,
+      heapUsed: 13528128,
+      external: 1467879,
+      arrayBuffers: 42190
+    },
+    total_mem: 4294967296,
+    pid: 12413,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27770880
+  },
+  response_time: '462.906',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:46:15.863Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:53:18.445Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:53:18.468Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'fde3e3e1-e022-40a1-89fc-bca24a6986ce'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: false }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 37552128,
+      heapTotal: 33628160,
+      heapUsed: 14410488,
+      external: 1556176,
+      arrayBuffers: 129199
+    },
+    total_mem: 4294967296,
+    pid: 13055,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40943616
+  },
+  response_time: '272.780',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T21:53:32.658Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:23:30.276Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:23:30.297Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:25:49.494Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:25:49.520Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:26:19.577Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:26:19.613Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:26:46.993Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:26:47.033Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:27:08.771Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:27:08.793Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:29:27.338Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:29:27.365Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:32:46.930Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:32:46.955Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:35:10.792Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:35:10.815Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:41:58.811Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:41:58.833Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'abbcc463-8e82-4f00-9711-60cb74f88666',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Service not executed",\n' +
+      '\t"error_type": "Error",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Service not executed',
+  meta: {
+    memory_usage: {
+      rss: 57466880,
+      heapTotal: 33366016,
+      heapUsed: 13410664,
+      external: 1458141,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 14781,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 39448576
+  },
+  response_time: '61.099',
+  level: 'error',
+  error: Error: Service not executed
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:18:15),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:42:06.852Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:45:21.440Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:45:21.466Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'bdaff7a2-b3b4-468e-9993-2d6dd462cfcd',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 50192384,
+      heapTotal: 33890304,
+      heapUsed: 13381240,
+      external: 1456853,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 14907,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 36765696
+  },
+  response_time: '55.302',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:84:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:18:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:45:29.833Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:52:46.902Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:52:46.925Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '729bfe96-b600-4c95-919d-065d5c261618',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 57344000,
+      heapTotal: 33628160,
+      heapUsed: 13395744,
+      external: 1458141,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 15094,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 63131648
+  },
+  response_time: '70.802',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:84:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:18:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:52:56.416Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:55:05.805Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:55:05.827Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'c8058fc2-ada3-4a61-b0c6-364ada0e1ac0',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 39706624,
+      heapTotal: 15540224,
+      heapUsed: 13263832,
+      external: 1456853,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 15186,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27279360
+  },
+  response_time: '289.563',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:84:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:18:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T22:55:20.230Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:03:03.161Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:03:03.178Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '4c6aa5b0-75a2-433c-8742-60c39add0880'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 50405376,
+      heapTotal: 33366016,
+      heapUsed: 13340448,
+      external: 1451497,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 15402,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35794944
+  },
+  response_time: '122.491',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:03:12.434Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:05:26.963Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:05:26.986Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '4a955e42-a7cf-4b18-8697-9c3182d2a67d'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 56754176,
+      heapTotal: 33366016,
+      heapUsed: 13324832,
+      external: 1451497,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 15565,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 37670912
+  },
+  response_time: '122.269',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:05:31.495Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:09:11.369Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:09:11.391Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '610fa8bb-e70f-4269-ad05-446a2453b64d'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 57356288,
+      heapTotal: 33366016,
+      heapUsed: 13298392,
+      external: 1451497,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 15650,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28639232
+  },
+  response_time: '94.603',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:09:17.652Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:11:55.458Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:11:55.482Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '7d554eb5-06c8-4242-9184-7e52d12e1ff1'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 57626624,
+      heapTotal: 33628160,
+      heapUsed: 13426496,
+      external: 1452785,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 15786,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 68526080
+  },
+  response_time: '98.477',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:12:01.868Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '485e7797-5b11-4163-b584-203a2474c25e'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 39784448,
+      heapTotal: 15802368,
+      heapUsed: 13069912,
+      external: 1459729,
+      arrayBuffers: 33998
+    },
+    total_mem: 4294967296,
+    pid: 15786,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 98672640
+  },
+  response_time: '97.747',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:12:42.810Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'fc85ac9d-59c0-4a6f-9d9f-a1743e8651dc',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchant/general/get/merchantID=5) could not be resolved to a valid route",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/merchantID=5 (404) - Error: Request path (/merchant/general/get/merchantID=5) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 39436288,
+      heapTotal: 15802368,
+      heapUsed: 13260552,
+      external: 1465087,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 15786,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27713536
+  },
+  response_time: '6.091',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchant/general/get/merchantID=5) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:94:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)
+      at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+      at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:14:41.677Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6f643e3e-277a-4df8-bbe8-46587d12c601',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "pattern",\n' +
+      '\t\t\t\t"dataPath": ".merchantID",\n' +
+      '\t\t\t\t"schemaPath": "#/properties/merchantID/pattern",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"pattern": "^[-_a-zA-Z0-9]{4,}$"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should match pattern \\"^[-_a-zA-Z0-9]{4,}$\\""\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 45780992,
+      heapTotal: 16064512,
+      heapUsed: 14345832,
+      external: 1481562,
+      arrayBuffers: 55831
+    },
+    total_mem: 4294967296,
+    pid: 15786,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28020736
+  },
+  response_time: '1.854',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]{4,}$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]{4,}$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:14:59.457Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:16:25.855Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:16:25.888Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9c08df4a-391f-4ed0-9c2b-42743260f6a7'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 57192448,
+      heapTotal: 33366016,
+      heapUsed: 13347064,
+      external: 1452785,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 15999,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 108871680
+  },
+  response_time: '125.432',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:16:33.620Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9e521a88-e9ca-44a3-b91a-bfcb00560e0d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "pattern",\n' +
+      '\t\t\t\t"dataPath": ".merchantID",\n' +
+      '\t\t\t\t"schemaPath": "#/properties/merchantID/pattern",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"pattern": "^[-_a-zA-Z0-9]+$"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should match pattern \\"^[-_a-zA-Z0-9]+$\\""\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID= (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 37355520,
+      heapTotal: 15802368,
+      heapUsed: 13102584,
+      external: 1465085,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 15999,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20463616
+  },
+  response_time: '5.563',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]+$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]+$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:17:02.705Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:19:30.337Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:19:30.359Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3d9f0235-57e7-4a47-9b9d-5b23cfb6bee5'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 54607872,
+      heapTotal: 33366016,
+      heapUsed: 13334584,
+      external: 1451497,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 16097,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 30609408
+  },
+  response_time: '114.927',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:19:36.327Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:31:07.886Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:31:07.908Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6307e2d7-7721-47bd-8a7b-678db857cf9e'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 38838272,
+      heapTotal: 15540224,
+      heapUsed: 13202544,
+      external: 1451497,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 16247,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 152985600
+  },
+  response_time: '167.683',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:31:45.524Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'c1db17ca-a059-495a-99f5-f49a993e03d9'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 39342080,
+      heapTotal: 15540224,
+      heapUsed: 13565608,
+      external: 1459731,
+      arrayBuffers: 33998
+    },
+    total_mem: 4294967296,
+    pid: 16247,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 56705024
+  },
+  response_time: '70.743',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:32:11.682Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '5f8935c7-00c9-4d32-9ea5-6f86384a42ef',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "getReqData is not a function",\n' +
+      '\t"error_type": "TypeError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=5 (500) - Error: getReqData is not a function',
+  meta: {
+    memory_usage: {
+      rss: 39526400,
+      heapTotal: 15540224,
+      heapUsed: 13739184,
+      external: 1465089,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 16247,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 54255616
+  },
+  response_time: '4.771',
+  level: 'error',
+  error: TypeError: getReqData is not a function
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:41:47)
+      at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:55:7)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:32:27.369Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:35:22.771Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:35:22.793Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ecccd0d4-33a7-4822-9a2a-d19b0caeb3b7'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 57495552,
+      heapTotal: 33366016,
+      heapUsed: 13360112,
+      external: 1452785,
+      arrayBuffers: 25806
+    },
+    total_mem: 4294967296,
+    pid: 16429,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18829312
+  },
+  response_time: '127.856',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:35:27.344Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2590bbf1-2c74-437a-87c9-50c7b21b66ed',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "pattern",\n' +
+      '\t\t\t\t"dataPath": ".merchantID",\n' +
+      '\t\t\t\t"schemaPath": "#/properties/merchantID/pattern",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"pattern": "^[-_a-zA-Z0-9]+$"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should match pattern \\"^[-_a-zA-Z0-9]+$\\""\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID= (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 37171200,
+      heapTotal: 33366016,
+      heapUsed: 13766232,
+      external: 1466375,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 16429,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 46665728
+  },
+  response_time: '4.443',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]+$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]+$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:35:37.057Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '70d95dda-8ad8-4d3d-82cf-1e6c0d8d4aa2'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 42733568,
+      heapTotal: 16326656,
+      heapUsed: 13280344,
+      external: 1461419,
+      arrayBuffers: 35688
+    },
+    total_mem: 4294967296,
+    pid: 16429,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32800768
+  },
+  response_time: '58.948',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:35:44.345Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '0585680d-90f4-44de-ac3d-2c978ebc663d'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 42881024,
+      heapTotal: 16326656,
+      heapUsed: 13443488,
+      external: 1461421,
+      arrayBuffers: 35688
+    },
+    total_mem: 4294967296,
+    pid: 16429,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 15880192
+  },
+  response_time: '31.602',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:35:56.921Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b2796afc-361c-4cd2-a837-5e8740c45f23',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "pattern",\n' +
+      '\t\t\t\t"dataPath": ".merchantID",\n' +
+      '\t\t\t\t"schemaPath": "#/properties/merchantID/pattern",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"pattern": "^[-_a-zA-Z0-9]+$"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should match pattern \\"^[-_a-zA-Z0-9]+$\\""\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID= (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 42233856,
+      heapTotal: 16326656,
+      heapUsed: 13564944,
+      external: 1469613,
+      arrayBuffers: 43880
+    },
+    total_mem: 4294967296,
+    pid: 16429,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20353024
+  },
+  response_time: '0.847',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]+$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]+$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:36:07.478Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '8ff0e732-e793-4826-a5d7-6e5799f2b60d'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 42016768,
+      heapTotal: 16326656,
+      heapUsed: 14456544,
+      external: 1473583,
+      arrayBuffers: 47848
+    },
+    total_mem: 4294967296,
+    pid: 16429,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32813056
+  },
+  response_time: '55.501',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:36:15.806Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:40:05.077Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:40:05.097Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b80df1d0-a943-462e-8257-6798bacaef34',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 49418240,
+      heapTotal: 33366016,
+      heapUsed: 14225856,
+      external: 1552054,
+      arrayBuffers: 126365
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25497600
+  },
+  response_time: '345.552',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:40:20.583Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'c9dce865-dfe2-4ded-ae82-c8452b26af0b'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 29863936,
+      heapTotal: 16588800,
+      heapUsed: 13569488,
+      external: 1461660,
+      arrayBuffers: 35929
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 94183424
+  },
+  response_time: '137.198',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:41:01.732Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1c97d84f-3fc6-4ee1-b9ba-05029f4dd51c'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 29122560,
+      heapTotal: 16588800,
+      heapUsed: 13746944,
+      external: 1461901,
+      arrayBuffers: 36168
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 57368576
+  },
+  response_time: '47.976',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:43:18.265Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '76'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "ne": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '060ed5ac-0dd1-44b8-98f5-b5bc5631940d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "ne"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "name"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'name'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 30957568,
+      heapTotal: 16588800,
+      heapUsed: 13881632,
+      external: 1470330,
+      arrayBuffers: 44597
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29601792
+  },
+  response_time: '5.231',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'ne' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'name' },
+        message: "should have required property 'name'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:45:40.713Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '76'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "ne": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '197e2c72-5cd9-4801-acad-90d4c1a0e8fc',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "ne"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "required",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/required",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"missingProperty": "name"\n' +
+      '\t\t\t\t},\n' +
+      `\t\t\t\t"message": "should have required property 'name'"\n` +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 33009664,
+      heapTotal: 16588800,
+      heapUsed: 13974440,
+      external: 1471541,
+      arrayBuffers: 45812
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28753920
+  },
+  response_time: '1.517',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'ne' },
+        message: 'should NOT have additional properties'
+      },
+      {
+        keyword: 'required',
+        dataPath: '',
+        schemaPath: '#/required',
+        params: { missingProperty: 'name' },
+        message: "should have required property 'name'"
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:45:53.318Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'e9b7b48b-7814-4f11-940d-6dfd26be16ff',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 34308096,
+      heapTotal: 16588800,
+      heapUsed: 14673536,
+      external: 1483701,
+      arrayBuffers: 57972
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18546688
+  },
+  response_time: '101.184',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:46:24.824Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '4cd61b77-c854-4aff-9298-1d2539786963',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 29659136,
+      heapTotal: 16588800,
+      heapUsed: 14327112,
+      external: 1485160,
+      arrayBuffers: 59431
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22720512
+  },
+  response_time: '116.890',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:49:11.090Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '76870659-0f90-4fa2-8186-2f56443ca276',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 33140736,
+      heapTotal: 16588800,
+      heapUsed: 14812656,
+      external: 1489127,
+      arrayBuffers: 63398
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27594752
+  },
+  response_time: '68.722',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:49:46.768Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'fd092acc-40b0-4a1e-8494-e1df4e7500c1',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=5 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 28909568,
+      heapTotal: 16588800,
+      heapUsed: 14386488,
+      external: 1488554,
+      arrayBuffers: 62825
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17031168
+  },
+  response_time: '134.747',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:52:02.338Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3d012188-0c52-45f6-b2b3-7cc9aa3353f2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "pattern",\n' +
+      '\t\t\t\t"dataPath": ".merchantID",\n' +
+      '\t\t\t\t"schemaPath": "#/properties/merchantID/pattern",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"pattern": "^[-_a-zA-Z0-9]+$"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should match pattern \\"^[-_a-zA-Z0-9]+$\\""\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID= (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 32153600,
+      heapTotal: 16588800,
+      heapUsed: 14852336,
+      external: 1492521,
+      arrayBuffers: 66792
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27566080
+  },
+  response_time: '0.531',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]+$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]+$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:52:10.540Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '7d52dd9c-83e5-494b-bd3e-7e2ecf8e8594',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get? (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 33005568,
+      heapTotal: 16588800,
+      heapUsed: 14490936,
+      external: 1500138,
+      arrayBuffers: 74409
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28372992
+  },
+  response_time: '67.391',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:52:15.118Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '31d1e58c-ee43-4988-9ab9-96258e3a2869',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 30060544,
+      heapTotal: 16588800,
+      heapUsed: 14980448,
+      external: 1504343,
+      arrayBuffers: 78614
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27406336
+  },
+  response_time: '352.987',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-06T23:56:40.354Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'de66fbc4-cc3a-401f-ad87-7685e34ce2a9',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 30068736,
+      heapTotal: 16588800,
+      heapUsed: 14588792,
+      external: 1511963,
+      arrayBuffers: 86234
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 33390592
+  },
+  response_time: '208.807',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:00:30.020Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a6f346e1-3d63-43d7-829f-c63c4477aa83',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32645120,
+      heapTotal: 16588800,
+      heapUsed: 15112824,
+      external: 1516170,
+      arrayBuffers: 90441
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23883776
+  },
+  response_time: '178.831',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:00:48.873Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a9f38565-ea48-4a72-aaa4-1b71c7a94874',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 33153024,
+      heapTotal: 16588800,
+      heapUsed: 14727072,
+      external: 1523549,
+      arrayBuffers: 97820
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35835904
+  },
+  response_time: '189.520',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:01:08.531Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'cd2925a4-3154-48bd-80ff-295f41af5ca1',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32858112,
+      heapTotal: 16588800,
+      heapUsed: 14289264,
+      external: 1522975,
+      arrayBuffers: 97246
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20602880
+  },
+  response_time: '250.033',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:01:24.682Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6891fd8e-5c92-4b63-9436-fac06715a1e7',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 29982720,
+      heapTotal: 16588800,
+      heapUsed: 14810048,
+      external: 1535373,
+      arrayBuffers: 109644
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 60194816
+  },
+  response_time: '247.051',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:26:34.131Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '78'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "greggs",  "sector": "food",  "expenseBands": ["sausage", "bread"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2786a9e8-fb85-4846-9bf6-05877fbaafbf'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 32579584,
+      heapTotal: 16588800,
+      heapUsed: 14375272,
+      external: 1535079,
+      arrayBuffers: 109348
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 91217920
+  },
+  response_time: '119.872',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:26:49.778Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '0ab6f081-0cc7-4091-8d59-5e4985852678'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 29126656,
+      heapTotal: 16588800,
+      heapUsed: 14499768,
+      external: 1535323,
+      arrayBuffers: 109590
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31756288
+  },
+  response_time: '28.901',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:29:34.447Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '55867c50-ebfe-4e23-9bee-54093747bf2b',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "pattern",\n' +
+      '\t\t\t\t"dataPath": ".merchantID",\n' +
+      '\t\t\t\t"schemaPath": "#/properties/merchantID/pattern",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"pattern": "^[-_a-zA-Z0-9]+$"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should match pattern \\"^[-_a-zA-Z0-9]+$\\""\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID= (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 30486528,
+      heapTotal: 16588800,
+      heapUsed: 14602872,
+      external: 1543515,
+      arrayBuffers: 117782
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22167552
+  },
+  response_time: '1.719',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'pattern',
+        dataPath: '.merchantID',
+        schemaPath: '#/properties/merchantID/pattern',
+        params: { pattern: '^[-_a-zA-Z0-9]+$' },
+        message: 'should match pattern "^[-_a-zA-Z0-9]+$"'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:30:28.819Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '42180d74-9a69-443d-9421-4b4df248370c',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32747520,
+      heapTotal: 16588800,
+      heapUsed: 15135960,
+      external: 1547482,
+      arrayBuffers: 121749
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18907136
+  },
+  response_time: '31.567',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:30:32.243Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'be2f3093-f617-4d1c-958c-21924d017f01',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=4 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32907264,
+      heapTotal: 16850944,
+      heapUsed: 14699472,
+      external: 1548177,
+      arrayBuffers: 122448
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22261760
+  },
+  response_time: '90.988',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:30:35.787Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '92a54e23-8707-4c24-96a6-a4152d535508',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=4 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32837632,
+      heapTotal: 16850944,
+      heapUsed: 15172256,
+      external: 1552143,
+      arrayBuffers: 126414
+    },
+    total_mem: 4294967296,
+    pid: 16754,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 21094400
+  },
+  response_time: '111.045',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:31:12.333Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:40:24.663Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:40:24.711Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '45e1bfd7-82fa-40b9-85b4-2a21721ba77e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=4 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 27877376,
+      heapTotal: 33628160,
+      heapUsed: 13372384,
+      external: 1456853,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 43958272
+  },
+  response_time: '138.731',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:40:42.393Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '4823613c-7823-4f0b-8ff8-7cf3034c2ae1',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=4 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 29601792,
+      heapTotal: 16064512,
+      heapUsed: 13283560,
+      external: 1461417,
+      arrayBuffers: 35688
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 33787904
+  },
+  response_time: '116.300',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:42:35.509Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2833ebc7-bc43-46ac-95b2-390e73eb42d3'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=4 (200)',
+  meta: {
+    memory_usage: {
+      rss: 32796672,
+      heapTotal: 16064512,
+      heapUsed: 14139368,
+      external: 1465386,
+      arrayBuffers: 39655
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 79130624
+  },
+  response_time: '77.529',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:43:42.009Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '65141e19-aeaf-42cf-906b-bc68204eeaa6',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 33001472,
+      heapTotal: 16064512,
+      heapUsed: 14283840,
+      external: 1473578,
+      arrayBuffers: 47847
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 55291904
+  },
+  response_time: '43.014',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:43:49.954Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f5c9dab0-eb26-4008-873d-33ec3aa94b3c'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=4 (200)',
+  meta: {
+    memory_usage: {
+      rss: 33062912,
+      heapTotal: 16064512,
+      heapUsed: 13888768,
+      external: 1475274,
+      arrayBuffers: 49543
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 103718912
+  },
+  response_time: '71.850',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:44:29.987Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f28c734a-9096-4f21-be3f-c4ceded38676'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=4 (200)',
+  meta: {
+    memory_usage: {
+      rss: 33062912,
+      heapTotal: 16064512,
+      heapUsed: 14011408,
+      external: 1475276,
+      arrayBuffers: 49543
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40869888
+  },
+  response_time: '85.657',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:45:10.913Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6f4df3ca-c9d3-4c08-adbd-b561b7cf141b',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 31649792,
+      heapTotal: 16064512,
+      heapUsed: 14136168,
+      external: 1475276,
+      arrayBuffers: 49543
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 46223360
+  },
+  response_time: '83.204',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:45:26.129Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '78141ae6-8d81-4f0c-bc71-f675b65f5724',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32681984,
+      heapTotal: 16064512,
+      heapUsed: 13748832,
+      external: 1474697,
+      arrayBuffers: 48968
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25133056
+  },
+  response_time: '81.318',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:45:43.693Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'cd2f51ed-71ba-4b00-bc5a-169f81c0a84d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "14 UNAVAILABLE: failed to connect to all addresses",\n' +
+      '\t"error_type": "Error",\n' +
+      '\t"error": {\n' +
+      '\t\t"code": 14,\n' +
+      '\t\t"metadata": {\n' +
+      '\t\t\t"_internal_repr": {},\n' +
+      '\t\t\t"flags": 0\n' +
+      '\t\t},\n' +
+      '\t\t"details": "failed to connect to all addresses"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 34873344,
+      heapTotal: 16326656,
+      heapUsed: 14428328,
+      external: 1476393,
+      arrayBuffers: 50664
+    },
+    total_mem: 4294967296,
+    pid: 19471,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 21352448
+  },
+  response_time: '45.695',
+  level: 'error',
+  error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+      at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+      at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+      at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+      at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+      at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+    code: 14,
+    metadata: Metadata { _internal_repr: {}, flags: 0 },
+    details: 'failed to connect to all addresses'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:47:23.310Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:48:00.514Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:48:00.550Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '374744dd-fef7-4ddb-9e3c-e7a29f2dc5bd'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 57929728,
+      heapTotal: 34152448,
+      heapUsed: 14273712,
+      external: 1547986,
+      arrayBuffers: 121007
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 92004352
+  },
+  response_time: '201.530',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:48:03.509Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '89ef47ad-8a73-480c-a9e4-44760cf1d380',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 45301760,
+      heapTotal: 16064512,
+      heapUsed: 13458104,
+      external: 1465085,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17854464
+  },
+  response_time: '37.777',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:48:19.315Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '31efd26d-9752-489a-8c39-b0fc26fa9e37',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 46649344,
+      heapTotal: 16326656,
+      heapUsed: 14544248,
+      external: 1473368,
+      arrayBuffers: 47639
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 60973056
+  },
+  response_time: '114.706',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:49:18.414Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a7137f15-8cff-44e8-94a9-831c3fc3456f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 44363776,
+      heapTotal: 16326656,
+      heapUsed: 14158776,
+      external: 1473583,
+      arrayBuffers: 47854
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 41152512
+  },
+  response_time: '100.131',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:49:44.033Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=7',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9eeaf697-d364-4593-9760-0ed3b7fe9b7f'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=7 (200)',
+  meta: {
+    memory_usage: {
+      rss: 44752896,
+      heapTotal: 16326656,
+      heapUsed: 14669376,
+      external: 1477552,
+      arrayBuffers: 51821
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17096704
+  },
+  response_time: '73.951',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:50:22.943Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '5415be54-6ce9-4e8d-8105-969d39473462',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 44883968,
+      heapTotal: 16326656,
+      heapUsed: 14802608,
+      external: 1485744,
+      arrayBuffers: 60013
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 70004736
+  },
+  response_time: '79.240',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:50:40.008Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ddbd8fd4-db34-408d-a786-063732c6c0fa',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 44691456,
+      heapTotal: 16588800,
+      heapUsed: 14464504,
+      external: 1476977,
+      arrayBuffers: 51248
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 49795072
+  },
+  response_time: '33.745',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:50:49.316Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '5318d7e5-0d4a-4873-a745-0bfd53dd0627',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32227328,
+      heapTotal: 16588800,
+      heapUsed: 14946336,
+      external: 1489135,
+      arrayBuffers: 63406
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40628224
+  },
+  response_time: '101.803',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T00:52:11.050Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2f1a5a7e-ff9a-4005-b01c-916153754bb7',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 29458432,
+      heapTotal: 16588800,
+      heapUsed: 14550160,
+      external: 1480370,
+      arrayBuffers: 54641
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40796160
+  },
+  response_time: '161.118',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:00:45.072Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?id=9',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd3fda55a-3825-446b-9e9e-1d6f92422fd7',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "id"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=9 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 33497088,
+      heapTotal: 16588800,
+      heapUsed: 15027128,
+      external: 1492530,
+      arrayBuffers: 66801
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 30691328
+  },
+  response_time: '2.217',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'id' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:00:52.803Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=7',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '95514b32-232e-4186-8c40-fc3170caa601'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=7 (200)',
+  meta: {
+    memory_usage: {
+      rss: 33869824,
+      heapTotal: 16588800,
+      heapUsed: 14651640,
+      external: 1483766,
+      arrayBuffers: 58035
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31682560
+  },
+  response_time: '11.588',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:00:58.035Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=7',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ed80d767-20c3-4c9c-a0c9-b2ecf9210f2f'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=7 (200)',
+  meta: {
+    memory_usage: {
+      rss: 34013184,
+      heapTotal: 16588800,
+      heapUsed: 14768808,
+      external: 1483768,
+      arrayBuffers: 58035
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27725824
+  },
+  response_time: '10.545',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:01:09.509Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantD=7',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '5b89f140-5452-4284-b38f-75230712e97e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "merchantD"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantD=7 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 32866304,
+      heapTotal: 16588800,
+      heapUsed: 14871992,
+      external: 1491960,
+      arrayBuffers: 66227
+    },
+    total_mem: 4294967296,
+    pid: 20036,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25632768
+  },
+  response_time: '0.416',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'merchantD' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:01:45.446Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:02:59.874Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:02:59.897Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantD=7',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '5bff8318-8cc1-4b0e-aac4-6da1f9500468',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "merchantD"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantD=7 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 48988160,
+      heapTotal: 33628160,
+      heapUsed: 13058688,
+      external: 1456853,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 20912,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 108007424
+  },
+  response_time: '6.289',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'merchantD' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:03:03.762Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:03:22.001Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:03:22.019Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantD=7',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '91f3f522-48ba-42a3-b9a4-9360a21aa182',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "merchantD"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantD=7 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56406016,
+      heapTotal: 33890304,
+      heapUsed: 13063872,
+      external: 1456853,
+      arrayBuffers: 31164
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 139010048
+  },
+  response_time: '5.479',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'merchantD' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:03:26.272Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ddc01208-60b4-4e26-abf8-e3a91a60c755',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)\\n    at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 50507776,
+      heapTotal: 16326656,
+      heapUsed: 13528936,
+      external: 1461416,
+      arrayBuffers: 35687
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 75190272
+  },
+  response_time: '103.259',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:03:35.785Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get?merchantID=8',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'cfdbcb60-8a0d-495c-9793-8a30fee8ddec'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?merchantID=8 (200)',
+  meta: {
+    memory_usage: {
+      rss: 41377792,
+      heapTotal: 16326656,
+      heapUsed: 14401696,
+      external: 1473578,
+      arrayBuffers: 47847
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31801344
+  },
+  response_time: '11.525',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:04:29.759Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'fc4bf7bb-862b-48c2-82d3-4c43d810f795',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)\\n    at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 41320448,
+      heapTotal: 16326656,
+      heapUsed: 13642880,
+      external: 1471305,
+      arrayBuffers: 45576
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 38268928
+  },
+  response_time: '38.023',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at gGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:17:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:04:38.582Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=8',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '91c11d55-f9f6-4f9c-954b-0b7d2e531e6c'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=8 (200)',
+  meta: {
+    memory_usage: {
+      rss: 42029056,
+      heapTotal: 16326656,
+      heapUsed: 14140848,
+      external: 1475275,
+      arrayBuffers: 49544
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22609920
+  },
+  response_time: '9.761',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:04:54.192Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ba671933-5b3f-433d-b465-0a3885d329a4',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)\\n    at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:9)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 42160128,
+      heapTotal: 16326656,
+      heapUsed: 14269704,
+      external: 1483467,
+      arrayBuffers: 57736
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23113728
+  },
+  response_time: '31.589',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:05:03.558Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchan',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3bb7bd7f-cc30-4ef0-99f9-649b30d7d04d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "merchan"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchan (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 41828352,
+      heapTotal: 16326656,
+      heapUsed: 13919712,
+      external: 1476967,
+      arrayBuffers: 51238
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19189760
+  },
+  response_time: '0.714',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'merchan' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:05:13.638Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/gett',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '950970e5-a9f3-4419-927e-15e1e37ca140',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchant/partner/gett) could not be resolved to a valid route",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/merchant/partner/gett) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:95:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)\\n    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\\n    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/gett (404) - Error: Request path (/merchant/partner/gett) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 30564352,
+      heapTotal: 16326656,
+      heapUsed: 14465272,
+      external: 1489125,
+      arrayBuffers: 63396
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27705344
+  },
+  response_time: '1.553',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchant/partner/gett) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:95:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)
+      at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+      at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:05:22.854Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b34efba0-5dd7-4e21-90e0-2fb22bc89d51',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)\\n    at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:9)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 32583680,
+      heapTotal: 16326656,
+      heapUsed: 14092672,
+      external: 1488553,
+      arrayBuffers: 62824
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23883776
+  },
+  response_time: '88.100',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:15)
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:9),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:05:31.607Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantIj=8',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '52fc163d-ca25-4f7e-96d6-d51494e87c24',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "merchantIj"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantIj=8 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 33452032,
+      heapTotal: 16326656,
+      heapUsed: 14568552,
+      external: 1492520,
+      arrayBuffers: 66791
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 71454720
+  },
+  response_time: '0.476',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'merchantIj' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:05:59.984Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '79'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1045d021-eeeb-4517-a319-0da9a6d73f05'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 32747520,
+      heapTotal: 16588800,
+      heapUsed: 14381744,
+      external: 1481486,
+      arrayBuffers: 55755
+    },
+    total_mem: 4294967296,
+    pid: 20961,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16441344
+  },
+  response_time: '102.585',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:08:50.728Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:14:46.835Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:14:46.861Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '79'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '13439fa7-1b67-458c-b92b-d3122d25bf46',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 50466816,
+      heapTotal: 33103872,
+      heapUsed: 14219544,
+      external: 1560244,
+      arrayBuffers: 134555
+    },
+    total_mem: 4294967296,
+    pid: 22172,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31428608
+  },
+  response_time: '444.404',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:14:51.106Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '79'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a51fe674-7820-42d2-8f40-cffe7d630e10'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 45178880,
+      heapTotal: 16064512,
+      heapUsed: 13569896,
+      external: 1469851,
+      arrayBuffers: 44120
+    },
+    total_mem: 4294967296,
+    pid: 22172,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25546752
+  },
+  response_time: '100.536',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:15:19.198Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '82445267-7ede-4486-907c-65f1f3d1341b'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 29724672,
+      heapTotal: 16064512,
+      heapUsed: 13747536,
+      external: 1478287,
+      arrayBuffers: 52554
+    },
+    total_mem: 4294967296,
+    pid: 22172,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27922432
+  },
+  response_time: '34.285',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:16:15.986Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=8',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '4e9c6e28-4401-4a72-833b-3b4642919fac',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=8 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 31571968,
+      heapTotal: 16064512,
+      heapUsed: 13944536,
+      external: 1478287,
+      arrayBuffers: 52554
+    },
+    total_mem: 4294967296,
+    pid: 22172,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25825280
+  },
+  response_time: '91.535',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:17:14.588Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=8',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '67b3483f-426f-47d9-a308-05eb4c918dba'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=8 (200)',
+  meta: {
+    memory_usage: {
+      rss: 29777920,
+      heapTotal: 16064512,
+      heapUsed: 14777712,
+      external: 1482256,
+      arrayBuffers: 56521
+    },
+    total_mem: 4294967296,
+    pid: 22172,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28106752
+  },
+  response_time: '165.301',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:18:56.228Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=8',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9e15364c-e6b8-46ef-acc7-94b974083d8d'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=8 (200)',
+  meta: {
+    memory_usage: {
+      rss: 30978048,
+      heapTotal: 16064512,
+      heapUsed: 13986368,
+      external: 1479499,
+      arrayBuffers: 53768
+    },
+    total_mem: 4294967296,
+    pid: 22172,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26275840
+  },
+  response_time: '11.012',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:18:57.016Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:19:13.418Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:19:13.442Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6dfc159f-b97e-4322-9aa2-1323e6b2fc9e'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 38965248,
+      heapTotal: 15278080,
+      heapUsed: 13344208,
+      external: 1467881,
+      arrayBuffers: 42190
+    },
+    total_mem: 4294967296,
+    pid: 22696,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22556672
+  },
+  response_time: '187.275',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:19:39.665Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["wheel", "glass"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '073cff64-a46a-4c3b-ae39-c896412fa920'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 38768640,
+      heapTotal: 15278080,
+      heapUsed: 13721144,
+      external: 1468165,
+      arrayBuffers: 42432
+    },
+    total_mem: 4294967296,
+    pid: 22696,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 38408192
+  },
+  response_time: '119.594',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:20:19.326Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["sausage", "sauce"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '759f93ce-abcd-4980-b2eb-ce40b72b7d16'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 39010304,
+      heapTotal: 15278080,
+      heapUsed: 13864336,
+      external: 1468409,
+      arrayBuffers: 42674
+    },
+    total_mem: 4294967296,
+    pid: 22696,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18579456
+  },
+  response_time: '68.192',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:21:35.981Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=8',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '0e765d58-9163-4c30-99b7-2fa54ba124a6'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=8 (200)',
+  meta: {
+    memory_usage: {
+      rss: 30257152,
+      heapTotal: 15278080,
+      heapUsed: 14051352,
+      external: 1468411,
+      arrayBuffers: 42674
+    },
+    total_mem: 4294967296,
+    pid: 22696,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 33898496
+  },
+  response_time: '87.111',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:22:00.022Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '59c896d9-44f6-4d8f-8981-0521011b635e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 31039488,
+      heapTotal: 15540224,
+      heapUsed: 14238592,
+      external: 1481961,
+      arrayBuffers: 56224
+    },
+    total_mem: 4294967296,
+    pid: 22696,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 39911424
+  },
+  response_time: '39.699',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:22:06.104Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '5003cf56-cab7-4356-b21a-d79186c81c06',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 38125568,
+      heapTotal: 16326656,
+      heapUsed: 14660032,
+      external: 1476202,
+      arrayBuffers: 50473
+    },
+    total_mem: 4294967296,
+    pid: 22696,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32276480
+  },
+  response_time: '24.675',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:22:15.449Z'
+}

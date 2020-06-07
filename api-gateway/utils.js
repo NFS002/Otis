@@ -36,11 +36,12 @@ function isEmpty (obj) {
 
 function getReqData (req) {
 	switch (req.method) {
-	case "GET":
-		return req.query
-	case "POST":
-	default:
-		return req.body
+	    case "GET":
+		    return req.query
+
+	    case "POST":
+	    default:
+		    return req.body
 	}
 }
 
@@ -51,7 +52,7 @@ function wrapFuncInMiddleware (func, validators) {
 		    if (validators && validators.length)
 		        for (var validate of validators)
 		            await validate(getReqData(req))
-		    func(req, res)
+		    func(req, res).catch(e => next(e))
 		} catch (e) {
 			next(e)
 		}
@@ -72,10 +73,24 @@ function getProtoPackage (protoPath, packageName, dirs = [".", "proto"]) {
 	return loadPackageDefinition(packageDefinition)[packageName]
 }
 
+class ServiceError extends Error {
+	constructor (message, ...args) {
+		super(message, ...args)
+	}
+}
+
+/* Throws a generic server error if the given property exists on the given object */
+function throwForProperty (obj, prop, message = "Request not executed") {
+	if (Object.hasOwnProperty.call(obj, prop) && obj.executed === false)
+		throw new ServiceError(message)
+}
+
 module.exports = {
+	getReqData,
 	getProtoPackage,
 	getService,
 	getValue,
 	isEmpty,
-	wrapFuncInMiddleware
+	wrapFuncInMiddleware,
+	throwForProperty
 }

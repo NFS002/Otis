@@ -38,6 +38,7 @@ const errorHandler = () => function (err, req, res, next) {
 	if (env === "development") {
 	    errorBody.error_type = err.constructor.name
 	    errorBody.error = err
+	    errorBody.stack = err.stack
 		jsonErrorBody = JSON.stringify(errorBody, null, "\t")
 	} else {
 	    errorBody.error = "true"

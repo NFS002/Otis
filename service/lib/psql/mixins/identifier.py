@@ -6,4 +6,4 @@ from sqlalchemy import Column, Integer
 
 @dataclass()
 class IdMixin():
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)

@@ -6,7 +6,7 @@ ignore-patterns = .*_pb2.*
 
 disable=no-self-use, import-error, broad-except, global-statement, no-member
 
-good-names=id, Session
+good-names=id, merchantID
 
 # Overall score threshold to be exceeded before program exits with error.
 fail-under=10
