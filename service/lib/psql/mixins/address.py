@@ -7,8 +7,9 @@ from sqlalchemy import Column, String
 @dataclass()
 class AddressMixin():
 
-    def __init__(self, nullable=True, default_country='GB'):
-        self.street_adress = Column(String, nullable=nullable)
-        self.city = Column(String(20), nullable=nullable)
-        self.country = Column(String, nullable=nullable, default=default_country)
-        self.postcode = Column(String(10), nullable=nullable)
+    @classmethod
+    def set_defaults(cls, nullable=False, default_country=None):
+        cls.street_adress = Column(String, nullable=nullable)
+        cls.city = Column(String(20), nullable=nullable)
+        cls.country = Column(String, nullable=nullable, default=default_country)
+        cls.postcode = Column(String(10), nullable=nullable)

@@ -31862,3 +31862,343 @@
   service: 'api-gateway',
   timestamp: '2020-06-07T01:22:15.449Z'
 }
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:48:00.218Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:48:00.243Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["sausage", "sauce"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '82c6e047-aea5-45db-a71c-0433209007cc',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 57847808,
+      heapTotal: 33628160,
+      heapUsed: 14276200,
+      external: 1560246,
+      arrayBuffers: 134557
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29638656
+  },
+  response_time: '363.551',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:48:03.137Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["sausage", "sauce"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd15745bb-0a3d-4345-8cf0-f7e7e44da7a5'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 46333952,
+      heapTotal: 16326656,
+      heapUsed: 13574240,
+      external: 1469852,
+      arrayBuffers: 44121
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 92815360
+  },
+  response_time: '108.179',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:48:43.379Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["sausage", "sauce"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'e916e002-a52e-405d-a62f-2f655463d6f4'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 29388800,
+      heapTotal: 16326656,
+      heapUsed: 13751104,
+      external: 1478288,
+      arrayBuffers: 52555
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 36327424
+  },
+  response_time: '196.974',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:57:46.147Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["glass", "wheel"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ef22debd-d454-41b5-a91c-200dc0eaf882'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 28930048,
+      heapTotal: 16326656,
+      heapUsed: 13898352,
+      external: 1478532,
+      arrayBuffers: 52797
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18096128
+  },
+  response_time: '53.164',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:00:38.789Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1ba1d53b-7901-4f96-8a0d-d83010da67d8',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 31494144,
+      heapTotal: 16326656,
+      heapUsed: 14093384,
+      external: 1478532,
+      arrayBuffers: 52797
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20172800
+  },
+  response_time: '76.984',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:01:11.209Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=9',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f2a6dec7-a546-4d4c-a48c-adbec07055ce'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=9 (200)',
+  meta: {
+    memory_usage: {
+      rss: 33107968,
+      heapTotal: 16326656,
+      heapUsed: 14022256,
+      external: 1480016,
+      arrayBuffers: 54285
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 37122048
+  },
+  response_time: '13.002',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:01:17.237Z'
+}

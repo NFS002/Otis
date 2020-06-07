@@ -6,4 +6,7 @@ from sqlalchemy import Column, Integer
 
 @dataclass()
 class IdMixin():
-    id = Column(Integer, primary_key=True, autoincrement=True)
+
+    @classmethod
+    def set_defaults(cls, name='id'):
+        setattr(cls, name, Column(name, Integer, primary_key=True, autoincrement=True))

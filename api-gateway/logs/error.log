@@ -17242,3 +17242,125 @@
   service: 'api-gateway',
   timestamp: '2020-06-07T01:22:15.449Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "gregories",  "sector": "food",  "expenseBands": ["sausage", "sauce"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '82c6e047-aea5-45db-a71c-0433209007cc',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 57847808,
+      heapTotal: 33628160,
+      heapUsed: 14276200,
+      external: 1560246,
+      arrayBuffers: 134557
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29638656
+  },
+  response_time: '363.551',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pCreate (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:50:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T01:48:03.137Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/partner/get?merchantID=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1ba1d53b-7901-4f96-8a0d-d83010da67d8',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "Request not executed",\n' +
+      '\t"error_type": "ServiceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request not executed\\n    at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)\\n    at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/partner/get?merchantID=1 (500) - Error: Request not executed',
+  meta: {
+    memory_usage: {
+      rss: 31494144,
+      heapTotal: 16326656,
+      heapUsed: 14093384,
+      external: 1478532,
+      arrayBuffers: 52797
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20172800
+  },
+  response_time: '76.984',
+  level: 'error',
+  error: ServiceError: Request not executed
+      at throwForProperty (/Users/noah/Otis/backend/api-gateway/utils.js:85:9)
+      at pGet (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:42:3),
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:01:11.209Z'
+}

@@ -1398,3 +1398,115 @@ WHERE merchants."merchantID" = %(merchantID_1)s;
 FROM merchants;
 2020-06-07 02:22:15,431 - {};
 2020-06-07 02:22:15,432 - ROLLBACK;
+2020-06-07 02:48:02,919 - select version();
+2020-06-07 02:48:02,920 - {};
+2020-06-07 02:48:02,923 - select current_schema();
+2020-06-07 02:48:02,923 - {};
+2020-06-07 02:48:02,929 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 02:48:02,929 - {};
+2020-06-07 02:48:02,931 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 02:48:02,931 - {};
+2020-06-07 02:48:02,931 - show standard_conforming_strings;
+2020-06-07 02:48:02,931 - {};
+2020-06-07 02:48:02,935 - 
+CREATE TABLE merchants (
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	deleted_at TIMESTAMP WITH TIME ZONE, 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	street_adress VARCHAR NOT NULL, 
+	city VARCHAR(20) NOT NULL, 
+	country VARCHAR NOT NULL, 
+	postcode VARCHAR(10) NOT NULL, 
+	name VARCHAR NOT NULL, 
+	sector VARCHAR NOT NULL, 
+	"merchantID" SERIAL NOT NULL, 
+	PRIMARY KEY ("merchantID")
+)
+
+;
+2020-06-07 02:48:02,935 - {};
+2020-06-07 02:48:02,970 - COMMIT;
+2020-06-07 02:48:02,977 - BEGIN (implicit);
+2020-06-07 02:48:02,979 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 02:48:02,979 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': 'GB', 'postcode': None, 'name': 'gregories', 'sector': 'food'};
+2020-06-07 02:48:03,005 - ROLLBACK;
+2020-06-07 02:48:43,340 - select version();
+2020-06-07 02:48:43,341 - {};
+2020-06-07 02:48:43,342 - select current_schema();
+2020-06-07 02:48:43,342 - {};
+2020-06-07 02:48:43,343 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 02:48:43,343 - {};
+2020-06-07 02:48:43,345 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 02:48:43,345 - {};
+2020-06-07 02:48:43,345 - show standard_conforming_strings;
+2020-06-07 02:48:43,345 - {};
+2020-06-07 02:48:43,351 - 
+CREATE TABLE merchants (
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	deleted_at TIMESTAMP WITH TIME ZONE, 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	street_adress VARCHAR, 
+	city VARCHAR(20), 
+	country VARCHAR, 
+	postcode VARCHAR(10), 
+	name VARCHAR NOT NULL, 
+	sector VARCHAR NOT NULL, 
+	"merchantID" SERIAL NOT NULL, 
+	PRIMARY KEY ("merchantID")
+)
+
+;
+2020-06-07 02:48:43,351 - {};
+2020-06-07 02:48:43,364 - COMMIT;
+2020-06-07 02:48:43,370 - BEGIN (implicit);
+2020-06-07 02:48:43,371 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 02:48:43,371 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': 'GB', 'postcode': None, 'name': 'gregories', 'sector': 'food'};
+2020-06-07 02:48:43,376 - COMMIT;
+2020-06-07 02:57:46,051 - select version();
+2020-06-07 02:57:46,052 - {};
+2020-06-07 02:57:46,054 - select current_schema();
+2020-06-07 02:57:46,054 - {};
+2020-06-07 02:57:46,057 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 02:57:46,057 - {};
+2020-06-07 02:57:46,058 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 02:57:46,058 - {};
+2020-06-07 02:57:46,058 - show standard_conforming_strings;
+2020-06-07 02:57:46,059 - {};
+2020-06-07 02:57:46,062 - 
+CREATE TABLE merchants (
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	deleted_at TIMESTAMP WITH TIME ZONE, 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	street_adress VARCHAR, 
+	city VARCHAR(20), 
+	country VARCHAR, 
+	postcode VARCHAR(10), 
+	"merchantID" SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	sector VARCHAR NOT NULL, 
+	PRIMARY KEY ("merchantID")
+)
+
+;
+2020-06-07 02:57:46,062 - {};
+2020-06-07 02:57:46,101 - COMMIT;
+2020-06-07 02:57:46,125 - BEGIN (implicit);
+2020-06-07 02:57:46,127 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 02:57:46,127 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': None, 'postcode': None, 'name': 'gregories', 'sector': 'food'};
+2020-06-07 02:57:46,136 - COMMIT;
+2020-06-07 03:00:38,767 - BEGIN (implicit);
+2020-06-07 03:00:38,770 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 03:00:38,771 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': None, 'postcode': None, 'name': 'webuyanycar', 'sector': 'cars'};
+2020-06-07 03:00:38,778 - COMMIT;
+2020-06-07 03:01:11,158 - BEGIN (implicit);
+2020-06-07 03:01:11,165 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.street_adress AS merchants_street_adress, merchants.city AS merchants_city, merchants.country AS merchants_country, merchants.postcode AS merchants_postcode, merchants."merchantID" AS "merchants_merchantID", merchants.name AS merchants_name, merchants.sector AS merchants_sector 
+FROM merchants 
+WHERE merchants."merchantID" = %(merchantID_1)s;
+2020-06-07 03:01:11,165 - {'merchantID_1': '1'};
+2020-06-07 03:01:11,169 - ROLLBACK;
+2020-06-07 03:01:17,233 - BEGIN (implicit);
+2020-06-07 03:01:17,234 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.street_adress AS merchants_street_adress, merchants.city AS merchants_city, merchants.country AS merchants_country, merchants.postcode AS merchants_postcode, merchants."merchantID" AS "merchants_merchantID", merchants.name AS merchants_name, merchants.sector AS merchants_sector 
+FROM merchants 
+WHERE merchants."merchantID" = %(merchantID_1)s;
+2020-06-07 03:01:17,234 - {'merchantID_1': '9'};
+2020-06-07 03:01:17,236 - ROLLBACK;
