@@ -32202,3 +32202,223 @@
   service: 'api-gateway',
   timestamp: '2020-06-07T02:01:17.237Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["glass", "wheel"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '8f7d0adc-8228-46db-8748-0b9a28ae000c'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 29564928,
+      heapTotal: 16326656,
+      heapUsed: 14155216,
+      external: 1488452,
+      arrayBuffers: 62719
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40894464
+  },
+  response_time: '152.180',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:06:48.730Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '84'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "dunkindonuts",  "sector": "donuts",  "expenseBands": ["flour", "sugar"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ab31c023-86f1-423f-85cd-71fd22b14dde'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 30871552,
+      heapTotal: 16326656,
+      heapUsed: 14282128,
+      external: 1488699,
+      arrayBuffers: 62964
+    },
+    total_mem: 4294967296,
+    pid: 24146,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 33603584
+  },
+  response_time: '21.732',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:07:48.856Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:08:29.796Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:08:29.820Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '84'
+    },
+    url: '/merchant/partner/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "dunkindonuts",  "sector": "donuts",  "expenseBands": ["flour", "sugar"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd1ceffda-635e-41c2-b8cc-a74aea5554cd'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/partner/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 57339904,
+      heapTotal: 33890304,
+      heapUsed: 14261792,
+      external: 1556181,
+      arrayBuffers: 129202
+    },
+    total_mem: 4294967296,
+    pid: 25826,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 24313856
+  },
+  response_time: '196.821',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:08:34.107Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      'content-type': 'application/json',
+      'content-length': '81'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{  "name": "webuyanycar",  "sector": "cars",  "expenseBands": ["glass", "wheel"]}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '85d3953b-11f2-406a-82eb-76341e45637c'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 25047040,
+      heapTotal: 15802368,
+      heapUsed: 13374696,
+      external: 1468163,
+      arrayBuffers: 42432
+    },
+    total_mem: 4294967296,
+    pid: 25826,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 45654016
+  },
+  response_time: '56.233',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-07T02:09:29.946Z'
+}

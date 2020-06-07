@@ -4,7 +4,7 @@ ignore = merchant-service-venv, proto
 ignore-patterns = .*_pb2.*
 
 
-disable=no-self-use, import-error, broad-except, global-statement, no-member
+disable=no-self-use, import-error, broad-except, global-statement, no-member, useless-super-delegation
 
 good-names=id, merchantID
 

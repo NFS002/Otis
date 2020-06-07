@@ -1510,3 +1510,75 @@ FROM merchants
 WHERE merchants."merchantID" = %(merchantID_1)s;
 2020-06-07 03:01:17,234 - {'merchantID_1': '9'};
 2020-06-07 03:01:17,236 - ROLLBACK;
+2020-06-07 03:06:48,662 - select version();
+2020-06-07 03:06:48,663 - {};
+2020-06-07 03:06:48,665 - select current_schema();
+2020-06-07 03:06:48,665 - {};
+2020-06-07 03:06:48,668 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 03:06:48,669 - {};
+2020-06-07 03:06:48,670 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 03:06:48,670 - {};
+2020-06-07 03:06:48,670 - show standard_conforming_strings;
+2020-06-07 03:06:48,670 - {};
+2020-06-07 03:06:48,680 - 
+CREATE TABLE merchants (
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	deleted_at TIMESTAMP WITH TIME ZONE, 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	street_adress VARCHAR, 
+	city VARCHAR(20), 
+	country VARCHAR, 
+	postcode VARCHAR(10), 
+	"merchantID" SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	sector VARCHAR NOT NULL, 
+	PRIMARY KEY ("merchantID")
+)
+
+;
+2020-06-07 03:06:48,680 - {};
+2020-06-07 03:06:48,703 - COMMIT;
+2020-06-07 03:06:48,710 - BEGIN (implicit);
+2020-06-07 03:06:48,711 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 03:06:48,711 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': None, 'postcode': None, 'name': 'webuyanycar', 'sector': 'cars'};
+2020-06-07 03:06:48,719 - COMMIT;
+2020-06-07 03:07:48,845 - BEGIN (implicit);
+2020-06-07 03:07:48,846 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 03:07:48,846 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': None, 'postcode': None, 'name': 'dunkindonuts', 'sector': 'donuts'};
+2020-06-07 03:07:48,848 - COMMIT;
+2020-06-07 03:08:34,043 - select version();
+2020-06-07 03:08:34,043 - {};
+2020-06-07 03:08:34,047 - select current_schema();
+2020-06-07 03:08:34,047 - {};
+2020-06-07 03:08:34,049 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 03:08:34,049 - {};
+2020-06-07 03:08:34,050 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-07 03:08:34,051 - {};
+2020-06-07 03:08:34,051 - show standard_conforming_strings;
+2020-06-07 03:08:34,051 - {};
+2020-06-07 03:08:34,055 - 
+CREATE TABLE merchants (
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	deleted_at TIMESTAMP WITH TIME ZONE, 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL, 
+	street_adress VARCHAR, 
+	city VARCHAR(20), 
+	country VARCHAR, 
+	postcode VARCHAR(10), 
+	"merchantID" SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	sector VARCHAR NOT NULL, 
+	PRIMARY KEY ("merchantID")
+)
+
+;
+2020-06-07 03:08:34,055 - {};
+2020-06-07 03:08:34,078 - COMMIT;
+2020-06-07 03:08:34,082 - BEGIN (implicit);
+2020-06-07 03:08:34,085 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 03:08:34,085 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': None, 'postcode': None, 'name': 'dunkindonuts', 'sector': 'donuts'};
+2020-06-07 03:08:34,094 - COMMIT;
+2020-06-07 03:09:29,925 - BEGIN (implicit);
+2020-06-07 03:09:29,929 - INSERT INTO merchants (deleted_at, street_adress, city, country, postcode, name, sector) VALUES (%(deleted_at)s, %(street_adress)s, %(city)s, %(country)s, %(postcode)s, %(name)s, %(sector)s) RETURNING merchants."merchantID";
+2020-06-07 03:09:29,930 - {'deleted_at': None, 'street_adress': None, 'city': None, 'country': None, 'postcode': None, 'name': 'webuyanycar', 'sector': 'cars'};
+2020-06-07 03:09:29,935 - COMMIT;

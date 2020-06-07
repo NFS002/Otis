@@ -20,5 +20,8 @@ class Merchant(MerchantBase, IdMixin, CreatedAtMixin, UpdatedAtMixin, DeletedAtM
     name = Column(String, nullable=False)
     sector = Column(String, nullable=False)
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
     def __repr__(self):
         return "<Merchant(merchantID='%s', name='%s'...)>" % (self.merchantID, self.name)
