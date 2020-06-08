@@ -100,7 +100,7 @@ See the 'Configuration' section for more details.
 
 ## Code linting
 To help maintain code quality standars and consistency, we use pylint and pycodestyle (formerly pep8) for each microservice and the shared library,
-as well as eslint for the api-gateway. Comfiguration files for code linting can be found in *~/service/pylintrc*, 
+as well as eslint for the api-gateway. Configuration files for code linting can be found in *~/service/pylintrc*, 
 *~/service/tox.ini*, and *~/api-gateway/.eslintrc.json* respectively.
 
 To run the code linting programs:
