@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://gitlab.com/otis_team/backend/lib/types/merchant/schema/merchantquery.schema.json",
+  "title": "Merchant Query",
+  "description": "A search query for a given merchant",
+  "$async": true,
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier of the merchant.",
+      "type": "string",
+      "pattern": "^[-_a-zA-Z0-9]+$"
+    }
+  },
+  "additionalProperties": false
+}

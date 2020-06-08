@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://gitlab.com/otis_team/backend/lib/types/generalmerchant/schema/generalmerchant.schema.json",
+  "title": "General merchant",
+  "description": "A merchant who is not part of the Otis platform",
+  "$async": true,
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier of the merchant.",
+      "type": "string"
+    },
+    "name": {
+      "description": "The collated name for the merchant that appears in raw transaction data",
+      "type": "string"
+    },
+    "locations": {
+      "description": "The physical presences of the merchant",
+      "type": "array",
+      "items": {
+        "description": "Street address. NEEDS CLARIFICATION.",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "apiTags": {
+      "description": "Tags derived from API enrichment/categorisation",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scrapeTags": {
+      "description": "Tags derived from webscraping",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sector": {
+      "description": "Sector defined categorisation. NEEDS CLARIFICATION.",
+      "type": "string"
+    },
+    "size": {
+      "description": "The size categorisation of the mercahnt. NEEDS CLARIFICATION.",
+      "type": "string"
+    },
+    "expenseBands": {
+      "description": "Expense bands for the merchant for their given sector",
+      "type": "array",
+      "items": {
+        "$ref": "http://gitlab.com/otis_team/backend/lib/types/merchant/schema/expenseband.schema.json"
+      },
+      "additionalItems": false
+    }
+  },
+  "required": ["name", "sector", "expenseBands"],
+  "additionalProperties": false
+}

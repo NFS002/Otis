@@ -10,11 +10,10 @@ pylint:
    stage: test
    image: python:3.6
    before_script:
-     - cd service
-     - python3 -m pip install -r requirements.txt
+     - python3 -m pip install -r service/merchant/requirements.txt
    script:
-     - pylint merchant lib
-     - pycodestyle merchant lib
+     - pylint service/merchant lib/service --rcfile=service/pylintrc
+     - pycodestyle service/merchant lib/service --config=service/tox.ini
 
 eslint:
   stage: test

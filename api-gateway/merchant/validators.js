@@ -2,7 +2,7 @@
 const { join } = require("path")
 const Ajv = require("ajv")
 
-const schemasHomePath = join(process.env.OTIS_HOME, "dtypes")
+const schemasHomePath = join(process.env.OTIS_HOME, "lib/types")
 
 /* General Merchant */
 const generalMerchantSchema = require(join(schemasHomePath, "generalmerchant/schema/generalmerchant.schema.json"))

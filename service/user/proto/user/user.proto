@@ -2,7 +2,7 @@
 syntax = "proto3";
 
 // Import User data type
-import "dtypes/user/proto/user.proto";
+import "lib/types/user/proto/user.proto";
 
 package user;
 

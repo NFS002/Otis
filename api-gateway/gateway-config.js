@@ -39,7 +39,7 @@ module.exports = {
 				addresses: ["localhost:3005"],
 				name: "merchant",
 				proto_dirs: [process.env.OTIS_HOME],
-				proto_file: join(process.env.OTIS_HOME, "service/merchant/proto/merchant/merchant.proto"),
+				proto_file: join(process.env.OTIS_HOME, "lib/proto/merchant/merchant.proto"),
 				package: "merchant",
 				service: "MerchantService"
 			}
@@ -91,7 +91,7 @@ module.exports = {
 				name: "merchant",
 				addresses: ["localhost:3005"],
 				proto_dirs: [process.env.OTIS_HOME],
-				proto_file: join(process.env.OTIS_HOME, "./service/merchant/proto/merchant/merchant.proto"),
+				proto_file: join(process.env.OTIS_HOME, "lib/proto/merchant/merchant.proto"),
 				package: "merchant",
 				service: "MerchantService"
 			}

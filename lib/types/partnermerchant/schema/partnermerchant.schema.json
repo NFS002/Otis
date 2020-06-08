@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://gitlab.com/otis_team/backend/lib/types/partnermerchant/schema/partnermerchant.schema.json",
+  "title": "Partner Merchant",
+  "description": "A partner merchant",
+  "$async": true,
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier of the merchant.",
+      "type": "string"
+    },
+    "name": {
+      "description": "The collated name for the merchant that appears in raw transaction data",
+      "type": "string"
+    },
+    "locations": {
+      "description": "The physical presences of the merchant",
+      "type": "array",
+      "items": {
+        "description": "Street address. NEEDS CLARIFICATION.",
+        "type": ["string", "null"]
+      }
+    },
+    "apiTags": {
+      "description": "Tags derived from API enrichment/categorisation",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "otisTags": {
+      "description": "Tags derived from merchant id",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sector": {
+      "description": "Sector defined categorisation. NEEDS CLARIFICATION.",
+      "type": "string"
+    },
+    "size": {
+      "description": "The size categorisation of the mercahnt. NEEDS CLARIFICATION.",
+      "type": "string"
+    },
+    "rate": {
+      "description": "Contractural cashback rate",
+      "type": "number"
+    },
+    "joinDate": {
+      "description": "The date on which the merchant joined the Otis platform. ISO-8601 date.",
+      "type": "string"
+    },
+    "nextBillingDate": {
+      "description": "The next date on which the merchant will be invoiced. ISO-8601 date.",
+      "type": "string"
+    },
+    "gocardlessMandate": {
+      "description": "Mandate ID used to initiate payment with GoCardless"
+    },
+    "expenseBands": {
+      "description": "Expense bands for the merchant for their given sector",
+      "type": "array",
+      "items": {
+        "$ref": "http://gitlab.com/otis_team/backend/lib/types/merchant/schema/expenseband.schema.json"
+      },
+      "additionalItems": false
+    }
+  },
+  "required": ["name", "sector", "expenseBands"],
+  "additionalProperties": false
+}

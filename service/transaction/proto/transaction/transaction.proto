@@ -2,7 +2,7 @@
 syntax = "proto3";
 
 // Import Transaction data type
-import "dtypes/transaction/proto/transaction.proto";
+import "lib/types/transaction/proto/transaction.proto";
 
 package transaction;
 
