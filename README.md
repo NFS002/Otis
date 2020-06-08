@@ -18,8 +18,10 @@ Otis backend
 
 - api-gateway (Node.js/Express API Gateway)
 - service (Contains all Python/gRPC microservices)
-- service/lib (Shared library for each microservice)
-- dtypes (Definitions of key data types implemented in different programming languages)
+- lib/service (Shared library for each microservice )
+- lib/types (Implementations of common data types)
+- lib/proto (gRPC Mictoservice protobuf definitions and compoled *.proto files)
+- lib/db (Database utilities and migrations)
 
 ## Setting up a local development environment
 
@@ -95,6 +97,19 @@ For example:
 }
 ```
 See the 'Configuration' section for more details.
+
+## Code linting
+To help maintain code quality standars and consistency, we use pylint and pycodestyle (formerly pep8) for each microservice and the shared library,
+as well as eslint for the api-gateway. Comfiguration files for code linting can be found in *~/service/pylintrc*, 
+*~/service/tox.ini*, and *~/api-gateway/.eslintrc.json* respectively.
+
+To run the code linting programs:
+
+```shell script
+$ eslint --debug api-gateway
+$ pylint service/merchant lib/service --rcfile=service/pylintrc
+$ pycodestyle service/merchant lib/service --config=service/tox.ini
+```
 
 ## System architecture diagrams, data policies, and further documentation are available in a seperate repository at
 ### https://gitlab.com/otis_team/docs
