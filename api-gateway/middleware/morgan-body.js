@@ -157,7 +157,8 @@ function bodyToString (maxBodyLength, prettify, prependStr, body, bodyActionColo
 
 
 	if (body instanceof Buffer) {
-		body = "<Buffer>"
+	    var snippet = body.toString().substring(0, 10) + "..."
+		body = `<Buffer(${snippet})>`
 		bodyType = "string"
 		isObj = false
 		isString = true

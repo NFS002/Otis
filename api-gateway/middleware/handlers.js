@@ -30,7 +30,8 @@ const errorHandler = () => function (err, req, res, next) {
 
 	var errorBody = {
 	    message: HttpStatus.getStatusText(res.statusCode),
-		details: err.message || "unknown"
+		details: err.message || "unknown",
+		docs_url: process.env.OTIS_API_DOCS_URL || "https://documenter.getpostman.com/view/11073749/SzmmVEmC"
 	}
 
 	var jsonErrorBody = { }
