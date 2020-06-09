@@ -29,6 +29,7 @@ api_gateway_build:
   image: node:latest
   stage: build
   before_script:
+    - source .env
     - cd api-gateway
   script:
     - node .
@@ -37,6 +38,7 @@ merchant_service_build:
   image: python:3.6
   stage: build
   before_script:
+    - source .env
     - cd service/merchant
     - python3 -m pip install -r requirements.txt
   script:
