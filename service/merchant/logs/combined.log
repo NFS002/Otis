@@ -1128,3 +1128,4 @@
 {"message": "Called CreatePartnerMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-08T23:35:08.161647", "request": {"raw": "partnerMerchant {\n  name: \"webuyanycar\"\n  sector: \"car\"\n}\n", "optional_request_dict": {"partnerMerchant": {"name": "webuyanycar", "sector": "car"}}}}
 {"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-08T23:35:26.067021", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
 {"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-08T23:35:29.940580", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-06-09T19:29:35.181151"}

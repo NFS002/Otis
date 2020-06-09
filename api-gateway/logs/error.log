@@ -23967,3 +23967,577 @@
   service: 'api-gateway',
   timestamp: '2020-06-08T22:50:49.226Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?if=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '507ece69-921c-401d-8cec-7f12e60db2a7',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "if"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?if=5 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 55406592,
+      heapTotal: 33628160,
+      heapUsed: 13040368,
+      external: 1465045,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 84816,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 37765120
+  },
+  response_time: '7.716',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'if' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-09T18:35:39.237Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '522a967b-b4b6-4253-8870-c674a8e271d9',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "14 UNAVAILABLE: failed to connect to all addresses",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Error",\n' +
+      '\t"error": {\n' +
+      '\t\t"code": 14,\n' +
+      '\t\t"metadata": {\n' +
+      '\t\t\t"_internal_repr": {},\n' +
+      '\t\t\t"flags": 0\n' +
+      '\t\t},\n' +
+      '\t\t"details": "failed to connect to all addresses"\n' +
+      '\t},\n' +
+      '\t"stack": "Error: 14 UNAVAILABLE: failed to connect to all addresses\\n    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\\n    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\\n    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\\n    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\\n    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (500) - Error: 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 29839360,
+      heapTotal: 16326656,
+      heapUsed: 13338432,
+      external: 1469609,
+      arrayBuffers: 43880
+    },
+    total_mem: 4294967296,
+    pid: 84816,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 57937920
+  },
+  response_time: '39.915',
+  level: 'error',
+  error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+      at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+      at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+      at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+      at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+      at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+    code: 14,
+    metadata: Metadata { _internal_repr: {}, flags: 0 },
+    details: 'failed to connect to all addresses'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-09T18:41:32.467Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '34d5fdb2-992f-4840-a782-0f315de63bb2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "14 UNAVAILABLE: failed to connect to all addresses",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Error",\n' +
+      '\t"error": {\n' +
+      '\t\t"code": 14,\n' +
+      '\t\t"metadata": {\n' +
+      '\t\t\t"_internal_repr": {},\n' +
+      '\t\t\t"flags": 0\n' +
+      '\t\t},\n' +
+      '\t\t"details": "failed to connect to all addresses"\n' +
+      '\t},\n' +
+      '\t"stack": "Error: 14 UNAVAILABLE: failed to connect to all addresses\\n    at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)\\n    at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)\\n    at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)\\n    at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)\\n    at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/ (500) - Error: 14 UNAVAILABLE: failed to connect to all addresses',
+  meta: {
+    memory_usage: {
+      rss: 28418048,
+      heapTotal: 16326656,
+      heapUsed: 14250200,
+      external: 1481768,
+      arrayBuffers: 56039
+    },
+    total_mem: 4294967296,
+    pid: 84816,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27148288
+  },
+  response_time: '7.503',
+  level: 'error',
+  error: Error: 14 UNAVAILABLE: failed to connect to all addresses
+      at Object.exports.createStatusError (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/common.js:91:15)
+      at Object.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:1209:28)
+      at InterceptingListener._callNext (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:568:42)
+      at InterceptingListener.onReceiveStatus (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:618:8)
+      at callback (/Users/noah/Otis/backend/api-gateway/node_modules/grpc/src/client_interceptors.js:847:24) {
+    code: 14,
+    metadata: Metadata { _internal_repr: {}, flags: 0 },
+    details: 'failed to connect to all addresses'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-09T18:42:35.032Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?if=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '68ac7496-8c20-42e2-8044-3004ee8e64d6',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "if"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?if=5 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 11661312,
+      heapTotal: 16326656,
+      heapUsed: 13901296,
+      external: 1483464,
+      arrayBuffers: 57735
+    },
+    total_mem: 4294967296,
+    pid: 84816,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 52019200
+  },
+  response_time: '42.874',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'if' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-09T19:14:04.037Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?if=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b04f8630-dd0d-4a90-9643-7e6546401de8',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "if"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?if=5 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 13279232,
+      heapTotal: 16326656,
+      heapUsed: 14451136,
+      external: 1495624,
+      arrayBuffers: 69895
+    },
+    total_mem: 4294967296,
+    pid: 84816,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 21794816
+  },
+  response_time: '2.423',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'if' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-09T19:15:04.283Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?if=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '19f10f2f-4fb8-4c1e-9c7a-4e0e38e45027',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "if"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?if=5 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 49283072,
+      heapTotal: 32841728,
+      heapUsed: 13037424,
+      external: 1465045,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 85831,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 37421056
+  },
+  response_time: '9.265',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'if' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-09T19:15:16.758Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?if=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '166b541d-ea28-4eaa-b2c5-c92d22df03cb',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "if"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?if=5 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 56483840,
+      heapTotal: 33890304,
+      heapUsed: 13095816,
+      external: 1466333,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 85921,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40456192
+  },
+  response_time: '6.270',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'if' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-09T19:16:28.115Z'
+}

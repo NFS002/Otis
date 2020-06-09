@@ -12,6 +12,7 @@ Otis backend
 - Node.js >= 10
 - Npm >= 6
 - Tested on Mac OS Mojave (10.14.1)
+- postgreSQL
 
 
 ## Directory structure:
@@ -113,3 +114,6 @@ $ pycodestyle service/merchant lib/service --config=service/tox.ini
 
 ## System architecture diagrams, data policies, and further documentation are available in a seperate repository at
 ### https://gitlab.com/otis_team/docs
+
+## API documentation is also available at
+### https://documenter.getpostman.com/view/11073749/SzmmVEmC?version=latest
