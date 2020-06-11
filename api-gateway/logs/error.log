@@ -24541,3 +24541,290 @@
   service: 'api-gateway',
   timestamp: '2020-06-09T19:16:28.115Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '269ca5aa-b403-46c7-b632-74b7a1337fcd',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchants/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6bc29ef4-dbc9-476b-b5ff-4c8550b2efc4',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchants/get) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/merchants/get) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchants/get?id=1 (404) - Error: Request path (/merchants/get) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 13840384,
+      heapTotal: 15540224,
+      heapUsed: 12927400,
+      external: 1465045,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28483584
+  },
+  response_time: '48.592',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchants/get) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-10T07:47:43.711Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '076815f9-077a-4f85-9c03-2c4bc8bdf96f',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '0c55967e-2e6a-44fe-a5e1-8f1282a1d025',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchant/get) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/merchant/get) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)\\n    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\\n    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/get?id=1 (404) - Error: Request path (/merchant/get) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 15319040,
+      heapTotal: 15802368,
+      heapUsed: 14271856,
+      external: 1481727,
+      arrayBuffers: 55998
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 48590848
+  },
+  response_time: '8.156',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchant/get) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)
+      at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+      at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12),
+  service: 'api-gateway',
+  timestamp: '2020-06-10T07:48:04.105Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '693b6151-17a5-4c3d-a3cd-bd8e9114d2d8',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/:300=localhost/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '910247bf-1e50-479d-a162-fa055724733a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /:300=localhost/merchant/general/get?id=1 (404) - Error: Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 10747904,
+      heapTotal: 16326656,
+      heapUsed: 14578904,
+      external: 1480251,
+      arrayBuffers: 53776
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 21803008
+  },
+  response_time: '39.839',
+  level: 'error',
+  error: PathNotFoundError: Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:11:27.260Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'a96481e1-8638-4330-8a84-8be8c9cd89aa',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/delete?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '09d4bc0c-25e3-46d2-9420-26a6d57b1ad8',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request content type (undefined) must be set to */json\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:110:12\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] DELETE/1.1 /merchant/general/delete?id=5 (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 24956928,
+      heapTotal: 15540224,
+      heapUsed: 13864976,
+      external: 1473279,
+      arrayBuffers: 47548
+    },
+    total_mem: 4294967296,
+    pid: 9560,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 59437056
+  },
+  response_time: '35.132',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:110:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:35:19.837Z'
+}

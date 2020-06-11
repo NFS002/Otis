@@ -22,7 +22,7 @@ module.exports = {
 	gDelete: {
 		prefix: "/general/delete",
 		handler: impl.gDelete,
-		verb: "get",
+		verb: "delete",
 		validators: [validators.merchantQueryValidator]
 	},
 
@@ -45,7 +45,7 @@ module.exports = {
 	pDelete: {
 		prefix: "/partner/delete",
 		handler: impl.pDelete,
-		verb: "get",
+		verb: "delete",
 		validators: [validators.merchantQueryValidator]
 	}
 

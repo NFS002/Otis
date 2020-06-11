@@ -106,7 +106,8 @@ const invalidContentTypeHandler = () => function (req, res, next) {
 	var ctype = req.headers["Content-Type"]
 
 	var validCType = "*/json"
-	if (req.method !== "GET" && !req.is(validCType))
+	var bodyMethods = ["POST", "PUT"]
+	if (bodyMethods.includes(req.method) && !req.is(validCType))
 	    throw new InvalidContentTypeError(`Request content type (${ctype}) must be set to ${validCType}`)
 
 	next()

@@ -6,10 +6,6 @@
   "$async": true,
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier of the merchant.",
-      "type": "string"
-    },
     "name": {
       "description": "The collated name for the merchant that appears in raw transaction data",
       "type": "string"

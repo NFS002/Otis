@@ -42737,3 +42737,2458 @@
   service: 'api-gateway',
   timestamp: '2020-06-09T19:16:28.115Z'
 }
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T07:46:27.290Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T07:46:27.331Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '269ca5aa-b403-46c7-b632-74b7a1337fcd',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchants/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6bc29ef4-dbc9-476b-b5ff-4c8550b2efc4',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchants/get) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/merchants/get) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchants/get?id=1 (404) - Error: Request path (/merchants/get) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 13840384,
+      heapTotal: 15540224,
+      heapUsed: 12927400,
+      external: 1465045,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28483584
+  },
+  response_time: '48.592',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchants/get) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-10T07:47:43.711Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '076815f9-077a-4f85-9c03-2c4bc8bdf96f',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '0c55967e-2e6a-44fe-a5e1-8f1282a1d025',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchant/get) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/merchant/get) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)\\n    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\\n    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/get?id=1 (404) - Error: Request path (/merchant/get) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 15319040,
+      heapTotal: 15802368,
+      heapUsed: 14271856,
+      external: 1481727,
+      arrayBuffers: 55998
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 48590848
+  },
+  response_time: '8.156',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchant/get) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)
+      at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+      at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12),
+  service: 'api-gateway',
+  timestamp: '2020-06-10T07:48:04.105Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'a291292a-5c5a-48bc-909d-4b5199fa66ac',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd04487fb-2764-4286-a236-c83b77c63904'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 18698240,
+      heapTotal: 16326656,
+      heapUsed: 13845872,
+      external: 1463227,
+      arrayBuffers: 37392
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26685440
+  },
+  response_time: '1134.426',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T07:48:34.931Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '7ae14d3e-a55b-483b-84bd-9428a8275ee9',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '76aea2fe-25ec-4d68-b3dc-2181a963b839'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 14528512,
+      heapTotal: 16326656,
+      heapUsed: 14002032,
+      external: 1471633,
+      arrayBuffers: 45584
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 58208256
+  },
+  response_time: '519.417',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T09:09:16.623Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'beeb1860-6a1f-4993-975a-964284ac29bd',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '73dd946a-720b-4f1c-a8d1-386c13454f29'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 12947456,
+      heapTotal: 16326656,
+      heapUsed: 14162056,
+      external: 1471739,
+      arrayBuffers: 45584
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 28680192
+  },
+  response_time: '560.479',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T09:33:59.202Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '630094b4-6ce7-4875-8929-645e8b18b70a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd62edb53-3e21-4545-8667-67b5ed617716'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 12267520,
+      heapTotal: 16326656,
+      heapUsed: 14300128,
+      external: 1471845,
+      arrayBuffers: 45584
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23494656
+  },
+  response_time: '594.479',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T09:57:48.232Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '08b74c53-752f-4d97-bcc0-3051db3420f5',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '7652ca85-d070-43c0-853b-c1c368c781ab'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get? (200)',
+  meta: {
+    memory_usage: {
+      rss: 12328960,
+      heapTotal: 16326656,
+      heapUsed: 14440512,
+      external: 1480251,
+      arrayBuffers: 53776
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16932864
+  },
+  response_time: '74.898',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T09:59:20.281Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '693b6151-17a5-4c3d-a3cd-bd8e9114d2d8',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/:300=localhost/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '910247bf-1e50-479d-a162-fa055724733a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /:300=localhost/merchant/general/get?id=1 (404) - Error: Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 10747904,
+      heapTotal: 16326656,
+      heapUsed: 14578904,
+      external: 1480251,
+      arrayBuffers: 53776
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 21803008
+  },
+  response_time: '39.839',
+  level: 'error',
+  error: PathNotFoundError: Request path (/:300=localhost/merchant/general/get) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:11:27.260Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'ff95adf2-c5be-454b-8dfb-ad0c797a5323',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '785a1fea-4553-4cd9-80ee-8dd31c9fd322'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 15745024,
+      heapTotal: 16326656,
+      heapUsed: 14251584,
+      external: 1484008,
+      arrayBuffers: 58173
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 61177856
+  },
+  response_time: '2040.098',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:11:47.643Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '2ac98126-4086-4b81-941a-fb85ade23058',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '5768946c-76ed-46c1-b71a-55781d90d272'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 15536128,
+      heapTotal: 16326656,
+      heapUsed: 14387824,
+      external: 1484222,
+      arrayBuffers: 58173
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 70856704
+  },
+  response_time: '70.218',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:12:13.227Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '55d352b7-c686-48e2-94a8-cd183b397648',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '54ca98d1-d9fb-437b-b90e-303d8f48b369'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 15568896,
+      heapTotal: 16326656,
+      heapUsed: 14538360,
+      external: 1492520,
+      arrayBuffers: 66365
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35983360
+  },
+  response_time: '57.141',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:15:18.980Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'b3c69d5a-8d2b-4760-9d69-c8d5498ca01a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2d8580b8-93eb-4082-b0a5-9a7e8f7a65ee'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 17059840,
+      heapTotal: 16326656,
+      heapUsed: 14673848,
+      external: 1492734,
+      arrayBuffers: 66365
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 195411968
+  },
+  response_time: '17.030',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:15:26.574Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '4c1b0bc1-f9db-4038-8563-94d22b915d2a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '21a5f471-3d38-4e49-9af0-e990302e274c'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 15650816,
+      heapTotal: 16326656,
+      heapUsed: 14819976,
+      external: 1492840,
+      arrayBuffers: 66365
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25378816
+  },
+  response_time: '73.362',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:18:03.252Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '0f2c9d2c-34a5-49c7-a5b4-4d9c80df96e0',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '6457c283-5e5d-4163-9d9e-c07f9024e80f'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 17797120,
+      heapTotal: 16326656,
+      heapUsed: 14026432,
+      external: 1473330,
+      arrayBuffers: 47281
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17104896
+  },
+  response_time: '172.157',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:18:03.537Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '0086a897-feb8-49ac-94fb-6ee8488d7ea5',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '512e6b7c-7d9e-4ba7-bda7-397d66fcdf9b'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 15798272,
+      heapTotal: 16326656,
+      heapUsed: 14173568,
+      external: 1473544,
+      arrayBuffers: 47281
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16240640
+  },
+  response_time: '81.502',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:24:57.096Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'c95533ee-69fb-456c-bfe5-c9bc71a9ede2',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3f411a80-2e8d-45cf-8e1e-4664e5d7d0ba'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 14880768,
+      heapTotal: 16326656,
+      heapUsed: 14312296,
+      external: 1473650,
+      arrayBuffers: 47281
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 127893504
+  },
+  response_time: '21.287',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:25:01.128Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '8438c2a2-f684-4475-9095-82571ab251b3',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '49b7643d-e114-497d-9daa-307dad407b3d'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 13103104,
+      heapTotal: 16326656,
+      heapUsed: 14446496,
+      external: 1482056,
+      arrayBuffers: 55473
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19320832
+  },
+  response_time: '56.580',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:27:26.486Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'dabaa4fe-dca8-4e33-8f32-38aafc8ca85c',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a31a688b-9872-48fc-8f03-569ddd737cab'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 14753792,
+      heapTotal: 16326656,
+      heapUsed: 14584360,
+      external: 1482162,
+      arrayBuffers: 55473
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 118685696
+  },
+  response_time: '39.673',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:27:29.339Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '5fde7733-392b-404a-ad62-40ef262fe293',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '723f800a-665b-48b6-be95-bac28d61361c'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 13168640,
+      heapTotal: 16326656,
+      heapUsed: 14717712,
+      external: 1482376,
+      arrayBuffers: 55473
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22147072
+  },
+  response_time: '65.593',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:33:40.781Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '65f74008-6fa4-4925-9cb2-49cde74904bf',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b919ff04-26dd-4e77-9b90-d1f5a3daa6a1'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 14741504,
+      heapTotal: 16326656,
+      heapUsed: 14861552,
+      external: 1490674,
+      arrayBuffers: 63665
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 126414848
+  },
+  response_time: '26.993',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:33:53.739Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'ede947d1-2ff8-4e31-a015-7eba34f10c41',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '06be6b54-5a9d-480b-b52d-4cc182c5126a'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 13750272,
+      heapTotal: 16326656,
+      heapUsed: 14021232,
+      external: 1473224,
+      arrayBuffers: 47281
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 15708160
+  },
+  response_time: '79.647',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:36:26.636Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '0cd39213-531a-438d-a1ac-791d669c7ef6',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b4882a55-67a3-4683-a9aa-54c1da0242bb'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 14983168,
+      heapTotal: 16326656,
+      heapUsed: 14165968,
+      external: 1473330,
+      arrayBuffers: 47281
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 210030592
+  },
+  response_time: '23.744',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T10:36:41.513Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '9d8f1ddd-cd83-491c-bd81-fbe11694c776',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ddf831d2-a6b3-400c-978d-e34d9bbd97e9'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get?id=1 (200)',
+  meta: {
+    memory_usage: {
+      rss: 14745600,
+      heapTotal: 16326656,
+      heapUsed: 14297656,
+      external: 1481628,
+      arrayBuffers: 55473
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16265216
+  },
+  response_time: '244.154',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T11:15:58.159Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '9c353c1d-c1a2-4c07-9a99-a16dcfb69c86',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'ae5b8b48-5811-404d-adbe-f969202352db'
+    },
+    body: {
+      partnerMerchants: [
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '1',
+          name: 'greggs',
+          sector: 'food',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:31:01 2020',
+          deletedAt: 'Mon Jun  8 23:31:01 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        },
+        {
+          locations: [],
+          apiTags: [],
+          otisTags: [],
+          id: '3',
+          name: 'webuyanycar',
+          sector: 'car',
+          size: '',
+          rate: 0,
+          joinDate: '',
+          nextBillingDate: '',
+          gocardlessMandate: '',
+          expenseBand: '',
+          createdAt: 'Mon Jun  8 23:35:08 2020',
+          deletedAt: 'Mon Jun  8 23:35:08 2020',
+          updatedAt: 'Null',
+          streetAddress: 'Null',
+          postcode: 'Null',
+          country: 'Null',
+          city: 'Null'
+        }
+      ],
+      generalMerchants: [],
+      executed: true
+    }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (200)',
+  meta: {
+    memory_usage: {
+      rss: 13520896,
+      heapTotal: 16326656,
+      heapUsed: 14429304,
+      external: 1481842,
+      arrayBuffers: 55473
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 20037632
+  },
+  response_time: '98.861',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T11:23:32.274Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '11445043-fec6-4640-a678-63aee1c2f64f',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive',
+      'content-length': '86'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{\n' +
+      '  "name": "topshop",\n' +
+      '  "sector": "clothes",\n' +
+      '  "expenseBands": ["cloth", "sequins"]\n' +
+      '}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '45225e5f-3c45-49f4-a532-1d2931fb8015'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 19189760,
+      heapTotal: 16326656,
+      heapUsed: 14518928,
+      external: 1473382,
+      arrayBuffers: 47651
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25665536
+  },
+  response_time: '1656.540',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T11:58:35.856Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'c1f6a358-520d-44a8-8491-e6d374222654',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/delete?id=4',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'a00c657b-0960-4dbe-a13a-417edcc73401'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/delete?id=4 (200)',
+  meta: {
+    memory_usage: {
+      rss: 11894784,
+      heapTotal: 16326656,
+      heapUsed: 14635768,
+      external: 1473384,
+      arrayBuffers: 47651
+    },
+    total_mem: 4294967296,
+    pid: 94711,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 30478336
+  },
+  response_time: '2157.612',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-10T22:16:01.253Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:25:15.151Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:25:15.175Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:29:40.137Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:29:40.164Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:30:17.871Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:30:17.892Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:31:15.505Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:31:15.527Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': '714409a2-68ba-487c-98c8-1f35e75180dc',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive',
+      'content-length': '90'
+    },
+    url: '/merchant/general/create',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: '{\n' +
+      '  "name": "toffs",\n' +
+      '  "sector": "food",\n' +
+      '  "expenseBands": [\n' +
+      '    "fish",\n' +
+      '    "chips"\n' +
+      '  ]\n' +
+      '}'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f8e2134f-a1f3-4feb-b966-e5cf0c4f34a8'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] POST/1.1 /merchant/general/create (200)',
+  meta: {
+    memory_usage: {
+      rss: 28401664,
+      heapTotal: 15540224,
+      heapUsed: 13464512,
+      external: 1467881,
+      arrayBuffers: 42190
+    },
+    total_mem: 4294967296,
+    pid: 9560,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 145772544
+  },
+  response_time: '1862.992',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:33:49.237Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'a96481e1-8638-4330-8a84-8be8c9cd89aa',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/delete?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1'
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '09d4bc0c-25e3-46d2-9420-26a6d57b1ad8',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unsupported Media Type",\n' +
+      '\t"details": "Request content type (undefined) must be set to */json",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "InvalidContentTypeError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request content type (undefined) must be set to */json\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:110:12\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] DELETE/1.1 /merchant/general/delete?id=5 (415) - Error: Request content type (undefined) must be set to */json',
+  meta: {
+    memory_usage: {
+      rss: 24956928,
+      heapTotal: 15540224,
+      heapUsed: 13864976,
+      external: 1473279,
+      arrayBuffers: 47548
+    },
+    total_mem: 4294967296,
+    pid: 9560,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 59437056
+  },
+  response_time: '35.132',
+  level: 'error',
+  error: InvalidContentTypeError: Request content type (undefined) must be set to */json
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:110:12
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at responseTime (/Users/noah/Otis/backend/api-gateway/middleware/response-time.js:61:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:35:19.837Z'
+}
+{
+  message: '[api-gateway:development] Adding API: merchant',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:39:25.811Z'
+}
+{
+  level: 'info',
+  message: '[api-gateway:development] Listening at http://localhost:3000',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:39:25.833Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      'user-agent': 'PostmanRuntime/7.25.0',
+      accept: '*/*',
+      'postman-token': 'f392f362-9275-4e74-8b08-b9f20ee2bd24',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    url: '/merchant/general/delete?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'bd0c0381-c361-4ed5-9ea8-1f3a790eaa15'
+    },
+    body: { partnerMerchants: [], generalMerchants: [], executed: true }
+  },
+  message: '[api-gateway:localhost] DELETE/1.1 /merchant/general/delete?id=5 (200)',
+  meta: {
+    memory_usage: {
+      rss: 27254784,
+      heapTotal: 33103872,
+      heapUsed: 13375080,
+      external: 1460977,
+      arrayBuffers: 33998
+    },
+    total_mem: 4294967296,
+    pid: 9749,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31223808
+  },
+  response_time: '1084.348',
+  level: 'info',
+  service: 'api-gateway',
+  timestamp: '2020-06-11T10:39:33.495Z'
+}

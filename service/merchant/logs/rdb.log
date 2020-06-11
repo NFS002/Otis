@@ -3176,3 +3176,165 @@ WHERE merchants.id = %(id_1)s;
 FROM merchants;
 2020-06-08 23:35:29,942 - {};
 2020-06-08 23:35:29,944 - ROLLBACK;
+2020-06-10 08:48:34,751 - select version();
+2020-06-10 08:48:34,752 - {};
+2020-06-10 08:48:34,783 - select current_schema();
+2020-06-10 08:48:34,783 - {};
+2020-06-10 08:48:34,836 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-10 08:48:34,836 - {};
+2020-06-10 08:48:34,863 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-10 08:48:34,863 - {};
+2020-06-10 08:48:34,863 - show standard_conforming_strings;
+2020-06-10 08:48:34,863 - {};
+2020-06-10 08:48:34,866 - BEGIN (implicit);
+2020-06-10 08:48:34,869 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 08:48:34,869 - {'id_1': '1'};
+2020-06-10 08:48:34,900 - ROLLBACK;
+2020-06-10 10:09:16,448 - BEGIN (implicit);
+2020-06-10 10:09:16,460 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 10:09:16,461 - {};
+2020-06-10 10:09:16,567 - ROLLBACK;
+2020-06-10 10:33:58,887 - BEGIN (implicit);
+2020-06-10 10:33:58,910 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 10:33:58,911 - {'id_1': '1'};
+2020-06-10 10:33:59,144 - ROLLBACK;
+2020-06-10 10:57:48,015 - BEGIN (implicit);
+2020-06-10 10:57:48,023 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 10:57:48,023 - {'id_1': '1'};
+2020-06-10 10:57:48,180 - ROLLBACK;
+2020-06-10 10:59:20,249 - BEGIN (implicit);
+2020-06-10 10:59:20,255 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 10:59:20,255 - {};
+2020-06-10 10:59:20,267 - ROLLBACK;
+2020-06-10 11:11:45,705 - BEGIN (implicit);
+2020-06-10 11:11:45,713 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 11:11:45,714 - {'id_1': '1'};
+2020-06-10 11:11:47,540 - ROLLBACK;
+2020-06-10 11:12:13,194 - BEGIN (implicit);
+2020-06-10 11:12:13,202 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 11:12:13,203 - {};
+2020-06-10 11:12:13,222 - ROLLBACK;
+2020-06-10 11:15:18,959 - BEGIN (implicit);
+2020-06-10 11:15:18,965 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 11:15:18,966 - {'id_1': '1'};
+2020-06-10 11:15:18,971 - ROLLBACK;
+2020-06-10 11:15:26,565 - BEGIN (implicit);
+2020-06-10 11:15:26,566 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 11:15:26,566 - {};
+2020-06-10 11:15:26,567 - ROLLBACK;
+2020-06-10 11:18:03,218 - BEGIN (implicit);
+2020-06-10 11:18:03,237 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 11:18:03,240 - {'id_1': '1'};
+2020-06-10 11:18:03,246 - ROLLBACK;
+2020-06-10 11:18:03,525 - BEGIN (implicit);
+2020-06-10 11:18:03,527 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 11:18:03,527 - {};
+2020-06-10 11:18:03,534 - ROLLBACK;
+2020-06-10 11:24:57,057 - BEGIN (implicit);
+2020-06-10 11:24:57,064 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 11:24:57,065 - {};
+2020-06-10 11:24:57,084 - ROLLBACK;
+2020-06-10 11:25:01,114 - BEGIN (implicit);
+2020-06-10 11:25:01,115 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 11:25:01,115 - {'id_1': '1'};
+2020-06-10 11:25:01,126 - ROLLBACK;
+2020-06-10 11:27:26,470 - BEGIN (implicit);
+2020-06-10 11:27:26,478 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 11:27:26,478 - {};
+2020-06-10 11:27:26,483 - ROLLBACK;
+2020-06-10 11:27:29,307 - BEGIN (implicit);
+2020-06-10 11:27:29,309 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 11:27:29,310 - {'id_1': '1'};
+2020-06-10 11:27:29,336 - ROLLBACK;
+2020-06-10 11:33:40,758 - BEGIN (implicit);
+2020-06-10 11:33:40,770 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 11:33:40,771 - {};
+2020-06-10 11:33:40,775 - ROLLBACK;
+2020-06-10 11:33:53,723 - BEGIN (implicit);
+2020-06-10 11:33:53,725 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 11:33:53,725 - {'id_1': '1'};
+2020-06-10 11:33:53,735 - ROLLBACK;
+2020-06-10 11:36:26,599 - BEGIN (implicit);
+2020-06-10 11:36:26,606 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 11:36:26,608 - {};
+2020-06-10 11:36:26,630 - ROLLBACK;
+2020-06-10 11:36:41,506 - BEGIN (implicit);
+2020-06-10 11:36:41,509 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 11:36:41,509 - {'id_1': '1'};
+2020-06-10 11:36:41,512 - ROLLBACK;
+2020-06-10 12:15:58,099 - BEGIN (implicit);
+2020-06-10 12:15:58,108 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-10 12:15:58,110 - {'id_1': '1'};
+2020-06-10 12:15:58,150 - ROLLBACK;
+2020-06-10 12:23:32,237 - BEGIN (implicit);
+2020-06-10 12:23:32,242 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants;
+2020-06-10 12:23:32,243 - {};
+2020-06-10 12:23:32,264 - ROLLBACK;
+2020-06-10 12:58:35,496 - BEGIN (implicit);
+2020-06-10 12:58:35,565 - INSERT INTO merchants (deleted_at, name, sector, street_address, postcode, country, city) VALUES (%(deleted_at)s, %(name)s, %(sector)s, %(street_address)s, %(postcode)s, %(country)s, %(city)s) RETURNING merchants.id;
+2020-06-10 12:58:35,565 - {'deleted_at': None, 'name': 'topshop', 'sector': 'clothes', 'street_address': None, 'postcode': None, 'country': None, 'city': None};
+2020-06-10 12:58:35,795 - COMMIT;
+2020-06-10 23:16:01,019 - BEGIN (implicit);
+2020-06-10 23:16:01,037 - DELETE FROM merchants WHERE merchants.id = %(id_1)s;
+2020-06-10 23:16:01,038 - {'id_1': '4'};
+2020-06-10 23:16:01,215 - COMMIT;
+2020-06-11 11:33:48,931 - select version();
+2020-06-11 11:33:48,940 - {};
+2020-06-11 11:33:49,010 - select current_schema();
+2020-06-11 11:33:49,010 - {};
+2020-06-11 11:33:49,055 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-11 11:33:49,055 - {};
+2020-06-11 11:33:49,133 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-11 11:33:49,133 - {};
+2020-06-11 11:33:49,134 - show standard_conforming_strings;
+2020-06-11 11:33:49,135 - {};
+2020-06-11 11:33:49,138 - BEGIN (implicit);
+2020-06-11 11:33:49,159 - INSERT INTO merchants (deleted_at, name, sector, street_address, postcode, country, city) VALUES (%(deleted_at)s, %(name)s, %(sector)s, %(street_address)s, %(postcode)s, %(country)s, %(city)s) RETURNING merchants.id;
+2020-06-11 11:33:49,159 - {'deleted_at': None, 'name': 'toffs', 'sector': 'food', 'street_address': None, 'postcode': None, 'country': None, 'city': None};
+2020-06-11 11:33:49,219 - COMMIT;
+2020-06-11 11:39:33,004 - select version();
+2020-06-11 11:39:33,005 - {};
+2020-06-11 11:39:33,036 - select current_schema();
+2020-06-11 11:39:33,037 - {};
+2020-06-11 11:39:33,110 - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1;
+2020-06-11 11:39:33,111 - {};
+2020-06-11 11:39:33,320 - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1;
+2020-06-11 11:39:33,321 - {};
+2020-06-11 11:39:33,321 - show standard_conforming_strings;
+2020-06-11 11:39:33,322 - {};
+2020-06-11 11:39:33,336 - BEGIN (implicit);
+2020-06-11 11:39:33,337 - DELETE FROM merchants WHERE merchants.id = %(id_1)s;
+2020-06-11 11:39:33,337 - {'id_1': '5'};
+2020-06-11 11:39:33,437 - COMMIT;

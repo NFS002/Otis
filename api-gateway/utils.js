@@ -36,6 +36,7 @@ function isEmpty (obj) {
 
 function getReqData (req) {
 	switch (req.method) {
+	    case "DELETE":
 	    case "GET":
 		    return req.query
 

@@ -1129,3 +1129,33 @@
 {"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-08T23:35:26.067021", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
 {"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-08T23:35:29.940580", "request": {"raw": "", "optional_request_dict": {}}}
 {"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-06-09T19:29:35.181151"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T08:47:07.108625"}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T08:48:34.230151", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T10:09:16.424598", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T10:33:58.836244", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T10:57:47.997659", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T10:59:20.235862", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:11:45.683448", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:12:13.182102", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:15:18.944280", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:15:26.564389", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:18:03.200885", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:18:03.524611", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:24:57.039534", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:25:01.111775", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:27:26.458488", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:27:29.304391", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:33:40.742447", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:33:53.718460", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:36:26.579412", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T11:36:41.502062", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T12:15:58.071492", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T12:23:32.206839", "request": {"raw": "", "optional_request_dict": {}}}
+{"message": "Called CreateGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T12:58:35.382476", "request": {"raw": "partnerMerchant {\n  name: \"topshop\"\n  sector: \"clothes\"\n}\n", "optional_request_dict": {"partnerMerchant": {"name": "topshop", "sector": "clothes"}}}}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-10T23:16:00.840367", "request": {"raw": "id: \"4\"\n", "optional_request_dict": {"id": "4"}}}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T11:25:23.809298"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T11:31:20.733976"}
+{"message": "Called CreateGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T11:33:48.043450", "request": {"raw": "partnerMerchant {\n  name: \"toffs\"\n  sector: \"food\"\n}\n", "optional_request_dict": {"partnerMerchant": {"name": "toffs", "sector": "food"}}}}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T11:38:27.937201"}
+{"message": "Listening on localhost:3005", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T11:39:21.889728"}
+{"message": "Called DeleteGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T11:39:32.610944", "request": {"raw": "id: \"5\"\n", "optional_request_dict": {"id": "5"}}}
