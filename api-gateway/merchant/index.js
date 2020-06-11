@@ -9,7 +9,7 @@ for (var endpoint in api) {
 	var validators = api[endpoint].validators
 	var handler = utils.wrapFuncInMiddleware(api[endpoint].handler, validators)
 	var verb = api[endpoint].verb
-	router[verb](prefix, handler)
+	router[verb](prefix, [], handler)
 }
 
 /* Return router */

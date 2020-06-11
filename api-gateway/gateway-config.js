@@ -1,4 +1,5 @@
 const { join } = require("path")
+const auth = require("./auth")
 
 module.exports = {
 	development: {
@@ -8,11 +9,12 @@ module.exports = {
 
 		apis: {
 			merchant: {
-				prefix: "/merchant",
-				name: "merchant",
-				path: "./merchant"
+				path: "./merchant",
+				prefix: "/merchant"
 			}
 		},
+
+		global_auth: [auth.basicJwtCheck],
 
 		morgan: true,
 		morgan_theme: "inverted",
@@ -67,7 +69,10 @@ module.exports = {
 			}
 		},
 
+		global_auth: [auth.basicJwtCheck],
+
 		morgan: true,
+		morgan_theme: "defaultTheme",
 
 		logs: {
 			rollbar: true,
