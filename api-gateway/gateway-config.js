@@ -1,5 +1,5 @@
 const { join } = require("path")
-const auth = require("./auth")
+/* const auth = require("./auth") */
 
 module.exports = {
 	development: {
@@ -14,14 +14,14 @@ module.exports = {
 			}
 		},
 
-		global_auth: [auth.basicJwtCheck],
+		global_auth: [/* auth.basicJwtCheck */],
 
 		morgan: true,
 		morgan_theme: "inverted",
 
 		logs: {
 			rollbar: true,
-			console: false,
+			console: true,
 			pretty_print: true,
 			files: [
 				{
@@ -69,7 +69,7 @@ module.exports = {
 			}
 		},
 
-		global_auth: [auth.basicJwtCheck],
+		global_auth: [/* auth.basicJwtCheck */],
 
 		morgan: true,
 		morgan_theme: "defaultTheme",

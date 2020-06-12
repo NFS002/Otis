@@ -29,11 +29,10 @@ app.use(responseTime(logHandler()))
 app.use(invalidContentTypeHandler())
 app.use(bodyParser.json({ extended: true, type: "*/json", verify: setRawBody }))
 
-/* Add global auth */
-const auth = getValue("global_auth")
+/* Add global authentication middlewares */
+const auth = getValue("global_auth") || []
 for (var func of auth) {
 	const message = `Adding global auth middleware: ${func.name}`
-	console.log(message)
 	logger.info(message)
 	app.use(func)
 }
@@ -45,7 +44,6 @@ for (var api in apis) {
 	const module = require(a.path)
 	const message = `[api-gateway:${process.env.OTIS_ENV}] Adding API: ${api}`
 	const prefix = a.prefix
-	console.log(message)
 	logger.info(message)
 	app.use(prefix, module)
 }
@@ -59,10 +57,5 @@ app.use(errorHandler())
 
 app.listen(port, address, () => {
 	var msg = `[api-gateway:${process.env.OTIS_ENV}] Listening at http://${address}:${port}`
-	var info = {
-		level: "info",
-		message: msg
-	}
-	console.log(msg)
-	logger.log(info)
+	logger.info(msg)
 })

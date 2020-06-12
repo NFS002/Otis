@@ -58,5 +58,13 @@ module.exports = {
 		throwForProperty(value, "executed")
 		res.locals.body = value
 		res.end(JSON.stringify(value))
+	},
+
+	test: function (req, res) {
+	    var responseBody = {
+	        message: "If you can see this message, it works!"
+	    }
+	    res.locals.body = responseBody
+	    res.end(JSON.stringify(responseBody))
 	}
 }

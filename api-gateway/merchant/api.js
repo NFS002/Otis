@@ -2,51 +2,67 @@
 
 const validators = require("./validators.js")
 const impl = require("./impl.js")
+const { basicJwtCheck } = require("../auth")
 
 module.exports = {
 
-	gGet: {
-		prefix: "/general/get",
-		handler: impl.gGet,
-		verb: "get",
-		validators: [validators.merchantQueryValidator]
-	},
+	auth: [basicJwtCheck],
 
-	gCreate: {
-		prefix: "/general/create",
-		handler: impl.gCreate,
-		verb: "post",
-		validators: [validators.partnerMerchantValidator]
-	},
+	routes: {
+		gGet: {
+			prefix: "/general/get",
+			handler: impl.gGet,
+			verb: "get",
+			validators: [validators.merchantQueryValidator],
+			scopes: ["read:merchant"]
+		},
 
-	gDelete: {
-		prefix: "/general/delete",
-		handler: impl.gDelete,
-		verb: "delete",
-		validators: [validators.merchantQueryValidator]
-	},
+		gCreate: {
+			prefix: "/general/create",
+			handler: impl.gCreate,
+			verb: "post",
+			validators: [validators.partnerMerchantValidator],
+			scopes: ["write:merchant"]
+		},
 
-	/* Partner merchant handlers */
+		gDelete: {
+			prefix: "/general/delete",
+			handler: impl.gDelete,
+			verb: "delete",
+			validators: [validators.merchantQueryValidator],
+			scopes: ["delete:merchant"]
+		},
 
-	pGet: {
-		prefix: "/partner/get",
-		handler: impl.pGet,
-		verb: "get",
-		validators: [validators.merchantQueryValidator]
-	},
+		/* Partner merchant handlers */
 
-	pCreate: {
-		prefix: "/partner/create",
-		handler: impl.pCreate,
-		verb: "post",
-		validators: [validators.partnerMerchantValidator]
-	},
+		pGet: {
+			prefix: "/partner/get",
+			handler: impl.pGet,
+			verb: "get",
+			validators: [validators.merchantQueryValidator],
+			scopes: ["read:merchant"]
+		},
 
-	pDelete: {
-		prefix: "/partner/delete",
-		handler: impl.pDelete,
-		verb: "delete",
-		validators: [validators.merchantQueryValidator]
+		pCreate: {
+			prefix: "/partner/create",
+			handler: impl.pCreate,
+			verb: "post",
+			validators: [validators.partnerMerchantValidator],
+			scopes: ["write:merchant"]
+		},
+
+		pDelete: {
+			prefix: "/partner/delete",
+			handler: impl.pDelete,
+			verb: "delete",
+			validators: [validators.merchantQueryValidator],
+			scopes: ["delete:merchant"]
+		},
+
+		test: {
+		    prefix: "/test",
+		    handler: impl.test,
+		    verb: "get"
+		}
 	}
-
 }

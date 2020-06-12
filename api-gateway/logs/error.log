@@ -26722,3 +26722,1118 @@
   service: 'api-gateway',
   timestamp: '2020-06-11T22:21:33.122Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVvw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'defd769a-db50-4fc8-9a0f-998bdd166c3a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 34246656,
+      heapTotal: 17113088,
+      heapUsed: 14466312,
+      external: 1466827,
+      arrayBuffers: 41098
+    },
+    total_mem: 4294967296,
+    pid: 28819,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 84672512
+  },
+  response_time: '15.122',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:21:52.090Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVvw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1562a6a3-ec5a-4b1a-93ef-77cbdff23b68',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 57073664,
+      heapTotal: 34938880,
+      heapUsed: 14828232,
+      external: 1479195,
+      arrayBuffers: 52218
+    },
+    total_mem: 4294967296,
+    pid: 29158,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29945856
+  },
+  response_time: '318.380',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:22:43.791Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN100Jjw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '8a735d87-3f21-4781-891b-cb7026539c96',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 65257472,
+      heapTotal: 34414592,
+      heapUsed: 15538680,
+      external: 1479827,
+      arrayBuffers: 52218
+    },
+    total_mem: 4294967296,
+    pid: 29441,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 135823360
+  },
+  response_time: '212.739',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:26:12.807Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN100Jjw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd5c3d2ef-6f94-48d6-bbf1-72b14aa642ea',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 40407040,
+      heapTotal: 16850944,
+      heapUsed: 14572712,
+      external: 1477907,
+      arrayBuffers: 52218
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35700736
+  },
+  response_time: '244.400',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:29:33.910Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3Lzp'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2bdb9b9c-1fad-4247-bb53-9bc9c8c6f90d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 34721792,
+      heapTotal: 17113088,
+      heapUsed: 14894216,
+      external: 1475114,
+      arrayBuffers: 49385
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23388160
+  },
+  response_time: '7.749',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:29:49.252Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '107a9af2-3d93-41cf-857e-8426b10c3cf7',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 27086848,
+      heapTotal: 17113088,
+      heapUsed: 15503832,
+      external: 1491348,
+      arrayBuffers: 65619
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22863872
+  },
+  response_time: '21.300',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:35:20.383Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '73ae4a86-116d-4c58-b4df-8b82a0feba38',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 31571968,
+      heapTotal: 17375232,
+      heapUsed: 15282872,
+      external: 1480779,
+      arrayBuffers: 55050
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18268160
+  },
+  response_time: '1.274',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:35:22.589Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '72b2ace6-5c38-48e4-b266-f4cc2784809e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 34410496,
+      heapTotal: 34676736,
+      heapUsed: 15484408,
+      external: 1488019,
+      arrayBuffers: 60410
+    },
+    total_mem: 4294967296,
+    pid: 30499,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31223808
+  },
+  response_time: '292.159',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:46:44.792Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9b55c1de-82d3-4e6d-8c14-677a0d65ae8d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 34889728,
+      heapTotal: 17637376,
+      heapUsed: 14482760,
+      external: 1463159,
+      arrayBuffers: 37430
+    },
+    total_mem: 4294967296,
+    pid: 30499,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 41676800
+  },
+  response_time: '9.549',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:13.418Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '82f1491b-0811-4a21-ba0b-b20228fb9397',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 56225792,
+      heapTotal: 34152448,
+      heapUsed: 15306040,
+      external: 1488019,
+      arrayBuffers: 60410
+    },
+    total_mem: 4294967296,
+    pid: 30612,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 75792384
+  },
+  response_time: '194.355',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:24.936Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/test',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3b298a09-ecbc-4c34-8f27-cb99422eaa05',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchant/general/test) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/merchant/general/test) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:52:16"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/test (404) - Error: Request path (/merchant/general/test) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 46301184,
+      heapTotal: 17113088,
+      heapUsed: 14505800,
+      external: 1463159,
+      arrayBuffers: 37430
+    },
+    total_mem: 4294967296,
+    pid: 30612,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40652800
+  },
+  response_time: '6.355',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchant/general/test) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:52:16,
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:34.734Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/test',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '54539d6a-b3b6-4ac4-9ba3-af4061a8a06a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "value is not defined",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "ReferenceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "ReferenceError: value is not defined\\n    at test (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:67:24)\\n    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:56:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\\n    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/test (500) - Error: value is not defined',
+  meta: {
+    memory_usage: {
+      rss: 33533952,
+      heapTotal: 17113088,
+      heapUsed: 15422088,
+      external: 1476592,
+      arrayBuffers: 50863
+    },
+    total_mem: 4294967296,
+    pid: 30612,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27160576
+  },
+  response_time: '4.178',
+  level: 'error',
+  error: ReferenceError: value is not defined
+      at test (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:67:24)
+      at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:56:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+      at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:46.505Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiQ'
+    },
+    url: '/merchant/test',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '32186904-ee4c-4706-9976-0f440f355792',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/test (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 45813760,
+      heapTotal: 17375232,
+      heapUsed: 14448576,
+      external: 1466827,
+      arrayBuffers: 41098
+    },
+    total_mem: 4294967296,
+    pid: 30789,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26963968
+  },
+  response_time: '6.395',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:48:49.678Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2efe222d-c1f9-4403-b511-c5a076522765',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 44441600,
+      heapTotal: 17637376,
+      heapUsed: 15655112,
+      external: 1495525,
+      arrayBuffers: 69796
+    },
+    total_mem: 4294967296,
+    pid: 30789,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16908288
+  },
+  response_time: '4.865',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:49:08.224Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f456bdc0-b94e-438c-86b4-856276803b62',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 46567424,
+      heapTotal: 34676736,
+      heapUsed: 15330912,
+      external: 1488019,
+      arrayBuffers: 60410
+    },
+    total_mem: 4294967296,
+    pid: 31272,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 49696768
+  },
+  response_time: '765.449',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:58:38.221Z'
+}
