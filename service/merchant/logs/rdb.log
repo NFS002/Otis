@@ -3384,3 +3384,9 @@ FROM merchants
 WHERE merchants.id = %(id_1)s;
 2020-06-11 23:21:38,160 - {'id_1': '1'};
 2020-06-11 23:21:38,188 - ROLLBACK;
+2020-06-12 14:26:39,511 - BEGIN (implicit);
+2020-06-12 14:26:39,521 - SELECT merchants.created_at AS merchants_created_at, merchants.deleted_at AS merchants_deleted_at, merchants.updated_at AS merchants_updated_at, merchants.name AS merchants_name, merchants.sector AS merchants_sector, merchants.id AS merchants_id, merchants.street_address AS merchants_street_address, merchants.postcode AS merchants_postcode, merchants.country AS merchants_country, merchants.city AS merchants_city 
+FROM merchants 
+WHERE merchants.id = %(id_1)s;
+2020-06-12 14:26:39,522 - {'id_1': '1'};
+2020-06-12 14:26:40,035 - ROLLBACK;

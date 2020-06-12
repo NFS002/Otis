@@ -1166,3 +1166,4 @@
 {"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T23:20:27.674474", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
 {"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T23:20:52.934234", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
 {"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-11T23:21:38.119339", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}
+{"message": "Called GetGeneralMerchant", "level": "INFO", "name": "merchant-service", "time": "2020-06-12T14:26:39.434791", "request": {"raw": "id: \"1\"\n", "optional_request_dict": {"id": "1"}}}

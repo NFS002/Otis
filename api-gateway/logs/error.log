@@ -27837,3 +27837,419 @@
   service: 'api-gateway',
   timestamp: '2020-06-12T12:58:38.221Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '68bee12a-9a11-4a78-a4d2-5ba0c1e2f76f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 61816832,
+      heapTotal: 34152448,
+      heapUsed: 16891560,
+      external: 1676394,
+      arrayBuffers: 248785
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32243712
+  },
+  response_time: '297.761',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:22:43.242Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '8e1d90a7-1b3d-403a-97c2-049968a3ee32',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 49610752,
+      heapTotal: 17637376,
+      heapUsed: 14481056,
+      external: 1463159,
+      arrayBuffers: 37430
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 58716160
+  },
+  response_time: '2.331',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:22:46.541Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '68970d18-07d4-445d-ac64-2f9a229a9be4',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 28192768,
+      heapTotal: 17637376,
+      heapUsed: 15370712,
+      external: 1475318,
+      arrayBuffers: 49589
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 112558080
+  },
+  response_time: '7.229',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:24:46.552Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '56b98e71-99cd-4f71-ba17-8239a4042a88',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "No authorization token was found",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "No authorization token was found",\n' +
+      '\t\t"code": "credentials_required",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"message": "No authorization token was found"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: No authorization token was found\\n    at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\\n    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: No authorization token was found',
+  meta: {
+    memory_usage: {
+      rss: 32653312,
+      heapTotal: 17637376,
+      heapUsed: 14998600,
+      external: 1485208,
+      arrayBuffers: 59479
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19353600
+  },
+  response_time: '4.097',
+  level: 'error',
+  error: UnauthorizedError: No authorization token was found
+      at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+      at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13) {
+    code: 'credentials_required',
+    status: 401,
+    inner: { message: 'No authorization token was found' }
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:25:00.925Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2ODI2NSwiZXhwIjoxNTkyMDU0NjY1LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.brvNqyvyFXSKDVpwwLqZ2_uhVZ6FskLWhbqsgNYkJpaWOg3QfcB8goRhmgmg2V2LGM9iqs93PZSInBXfI_-7nU7gYi6DjCgcMYOFIYkT0HNW3EuQRCC1qG7WOOTx4Yjv976PuGlSXZl_doaP8onzVhZ5na51_jLi8xysEnl6NcRpAc6jig2a5sVy7HJvTbC4fDLGXdrXYHTwTKS92HOsd9_gnSly_6qep4uA2iwB26GTlK2QmtrDrG3uiBn-V2_92FwA9-w0JKoViOPb_CLCRoj3Iub5wLTyrsHaKIbo_czqFqel51XBorcHNSvddGLM5dQb4gGFWT5EuVYgqVNymQ'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '91bb9520-2a1c-49df-8aeb-f9d153bcfbf2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 30535680,
+      heapTotal: 17637376,
+      heapUsed: 15577488,
+      external: 1498022,
+      arrayBuffers: 72293
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18149376
+  },
+  response_time: '4.277',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:25:13.520Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2ODI2NSwiZXhwIjoxNTkyMDU0NjY1LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.brvNqyvyFXSKDVpwwLqZ2_uhVZ6FskLWhbqsgNYkJpaWOg3QfcB8goRhmgmg2V2LGM9iqs93PZSInBXfI_-7nU7gYi6DjCgcMYOFIYkT0HNW3EuQRCC1qG7WOOTx4Yjv976PuGlSXZl_doaP8onzVhZ5na51_jLi8xysEnl6NcRpAc6jig2a5sVy7HJvTbC4fDLGXdrXYHTwTKS92HOsd9_gnSly_6qep4uA2iwB26GTlK2QmtrDrG3uiBn-V2_92FwA9-w0JKoViOPb_CLCRoj3Iub5wLTyrsHaKIbo_czqFqel51XBorcHNSvddGLM5dQb4gGFWT5EuVYgqVNymQ'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '18ba90f5-7669-4116-b0b9-2948b7ff7aa2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 28160000,
+      heapTotal: 17637376,
+      heapUsed: 15248472,
+      external: 1488602,
+      arrayBuffers: 62873
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18280448
+  },
+  response_time: '7.606',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:26:06.797Z'
+}
