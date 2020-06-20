@@ -104,7 +104,6 @@ class InvalidContentTypeError extends Error {
 
 const invalidContentTypeHandler = () => function (req, res, next) {
 	var ctype = req.headers["Content-Type"]
-
 	var validCType = "*/json"
 	var bodyMethods = ["POST", "PUT"]
 	if (bodyMethods.includes(req.method) && !req.is(validCType))

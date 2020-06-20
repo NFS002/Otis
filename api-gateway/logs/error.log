@@ -24828,3 +24828,3428 @@
   service: 'api-gateway',
   timestamp: '2020-06-11T10:35:19.837Z'
 }
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'df794775-3cf6-4802-a07c-2975d133edc6',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "No authorization token was found",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "No authorization token was found",\n' +
+      '\t\t"code": "credentials_required",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"message": "No authorization token was found"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: No authorization token was found\\n    at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: No authorization token was found',
+  meta: {
+    memory_usage: {
+      rss: 30433280,
+      heapTotal: 34152448,
+      heapUsed: 15869632,
+      external: 1466965,
+      arrayBuffers: 39356
+    },
+    total_mem: 4294967296,
+    pid: 19594,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 111087616
+  },
+  response_time: '22.644',
+  level: 'error',
+  error: UnauthorizedError: No authorization token was found
+      at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7 {
+    code: 'credentials_required',
+    status: 401,
+    inner: { message: 'No authorization token was found' }
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-11T21:45:57.776Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '59b526b3-3390-4fc0-85cd-b18e15502127',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "No authorization token was found",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "No authorization token was found",\n' +
+      '\t\t"code": "credentials_required",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"message": "No authorization token was found"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: No authorization token was found\\n    at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: No authorization token was found',
+  meta: {
+    memory_usage: {
+      rss: 51896320,
+      heapTotal: 34676736,
+      heapUsed: 14211864,
+      external: 1474525,
+      arrayBuffers: 47548
+    },
+    total_mem: 4294967296,
+    pid: 20202,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 34488320
+  },
+  response_time: '5.869',
+  level: 'error',
+  error: UnauthorizedError: No authorization token was found
+      at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7 {
+    code: 'credentials_required',
+    status: 401,
+    inner: { message: 'No authorization token was found' }
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-11T22:12:04.720Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '20e359a3-65ad-40bd-b0f6-fcfa8f0689f3',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "No authorization token was found",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "No authorization token was found",\n' +
+      '\t\t"code": "credentials_required",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"message": "No authorization token was found"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: No authorization token was found\\n    at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: No authorization token was found',
+  meta: {
+    memory_usage: {
+      rss: 15519744,
+      heapTotal: 17113088,
+      heapUsed: 14270096,
+      external: 1461416,
+      arrayBuffers: 35687
+    },
+    total_mem: 4294967296,
+    pid: 20202,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 21843968
+  },
+  response_time: '15.603',
+  level: 'error',
+  error: UnauthorizedError: No authorization token was found
+      at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at jsonParser (/Users/noah/Otis/backend/api-gateway/node_modules/body-parser/lib/types/json.js:110:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7 {
+    code: 'credentials_required',
+    status: 401,
+    inner: { message: 'No authorization token was found' }
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-11T22:15:57.452Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN100Jjw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '59ae5994-cebf-4e97-bd0d-29998c6d31e8',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "getaddrinfo ENOTFOUND undefined",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Error",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "getaddrinfo ENOTFOUND undefined",\n' +
+      '\t\t"name": "Error",\n' +
+      '\t\t"stack": "Error: getaddrinfo ENOTFOUND undefined\\n    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)",\n' +
+      '\t\t"config": {\n' +
+      '\t\t\t"headers": {\n' +
+      '\t\t\t\t"Accept": "application/json, text/plain, */*",\n' +
+      '\t\t\t\t"User-Agent": "axios/0.19.2"\n' +
+      '\t\t\t},\n' +
+      '\t\t\t"baseURL": "https://undefined/.well-known/jwks.json",\n' +
+      '\t\t\t"transformRequest": [\n' +
+      '\t\t\t\tnull\n' +
+      '\t\t\t],\n' +
+      '\t\t\t"transformResponse": [\n' +
+      '\t\t\t\tnull\n' +
+      '\t\t\t],\n' +
+      '\t\t\t"timeout": 30000,\n' +
+      '\t\t\t"xsrfCookieName": "XSRF-TOKEN",\n' +
+      '\t\t\t"xsrfHeaderName": "X-XSRF-TOKEN",\n' +
+      '\t\t\t"maxContentLength": -1,\n' +
+      '\t\t\t"method": "get"\n' +
+      '\t\t},\n' +
+      '\t\t"code": "ENOTFOUND"\n' +
+      '\t},\n' +
+      '\t"stack": "Error: getaddrinfo ENOTFOUND undefined\\n    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (500) - Error: getaddrinfo ENOTFOUND undefined',
+  meta: {
+    memory_usage: {
+      rss: 22282240,
+      heapTotal: 17375232,
+      heapUsed: 15364568,
+      external: 1474184,
+      arrayBuffers: 48455
+    },
+    total_mem: 4294967296,
+    pid: 20202,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 17338368
+  },
+  response_time: '77.370',
+  level: 'error',
+  error: Error: getaddrinfo ENOTFOUND undefined
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'undefined',
+    config: {
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'User-Agent': 'axios/0.19.2'
+      },
+      baseURL: 'https://undefined/.well-known/jwks.json',
+      transformRequest: [ [Function: transformRequest] ],
+      transformResponse: [ [Function: transformResponse] ],
+      timeout: 30000,
+      adapter: [Function: httpAdapter],
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      validateStatus: [Function: validateStatus],
+      method: 'get',
+      data: undefined
+    },
+    request: <ref *3> Writable {
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: true,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: null,
+        writelen: 0,
+        afterWriteTickInfo: null,
+        bufferedRequest: null,
+        lastBufferedRequest: null,
+        pendingcb: 0,
+        prefinished: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: false,
+        errored: false,
+        bufferedRequestCount: 0,
+        corkedRequestsFree: {
+          next: null,
+          entry: null,
+          finish: [Function: bound onCorkedFinish]
+        }
+      },
+      writable: true,
+      _events: [Object: null prototype] {
+        response: [Function: handleResponse],
+        error: [Function: handleRequestError]
+      },
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _options: {
+        protocol: 'https:',
+        maxRedirects: 21,
+        maxBodyLength: 10485760,
+        path: '/.well-known/jwks.json',
+        method: 'GET',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'User-Agent': 'axios/0.19.2'
+        },
+        agent: undefined,
+        agents: { http: undefined, https: undefined },
+        auth: undefined,
+        hostname: 'undefined',
+        port: null,
+        nativeProtocols: <ref *4> {
+          'http:': {
+            _connectionListener: [Function: connectionListener],
+            METHODS: [
+              'ACL',         'BIND',       'CHECKOUT',
+              'CONNECT',     'COPY',       'DELETE',
+              'GET',         'HEAD',       'LINK',
+              'LOCK',        'M-SEARCH',   'MERGE',
+              'MKACTIVITY',  'MKCALENDAR', 'MKCOL',
+              'MOVE',        'NOTIFY',     'OPTIONS',
+              'PATCH',       'POST',       'PROPFIND',
+              'PROPPATCH',   'PURGE',      'PUT',
+              'REBIND',      'REPORT',     'SEARCH',
+              'SOURCE',      'SUBSCRIBE',  'TRACE',
+              'UNBIND',      'UNLINK',     'UNLOCK',
+              'UNSUBSCRIBE'
+            ],
+            STATUS_CODES: {
+              '100': 'Continue',
+              '101': 'Switching Protocols',
+              '102': 'Processing',
+              '103': 'Early Hints',
+              '200': 'OK',
+              '201': 'Created',
+              '202': 'Accepted',
+              '203': 'Non-Authoritative Information',
+              '204': 'No Content',
+              '205': 'Reset Content',
+              '206': 'Partial Content',
+              '207': 'Multi-Status',
+              '208': 'Already Reported',
+              '226': 'IM Used',
+              '300': 'Multiple Choices',
+              '301': 'Moved Permanently',
+              '302': 'Found',
+              '303': 'See Other',
+              '304': 'Not Modified',
+              '305': 'Use Proxy',
+              '307': 'Temporary Redirect',
+              '308': 'Permanent Redirect',
+              '400': 'Bad Request',
+              '401': 'Unauthorized',
+              '402': 'Payment Required',
+              '403': 'Forbidden',
+              '404': 'Not Found',
+              '405': 'Method Not Allowed',
+              '406': 'Not Acceptable',
+              '407': 'Proxy Authentication Required',
+              '408': 'Request Timeout',
+              '409': 'Conflict',
+              '410': 'Gone',
+              '411': 'Length Required',
+              '412': 'Precondition Failed',
+              '413': 'Payload Too Large',
+              '414': 'URI Too Long',
+              '415': 'Unsupported Media Type',
+              '416': 'Range Not Satisfiable',
+              '417': 'Expectation Failed',
+              '418': "I'm a Teapot",
+              '421': 'Misdirected Request',
+              '422': 'Unprocessable Entity',
+              '423': 'Locked',
+              '424': 'Failed Dependency',
+              '425': 'Too Early',
+              '426': 'Upgrade Required',
+              '428': 'Precondition Required',
+              '429': 'Too Many Requests',
+              '431': 'Request Header Fields Too Large',
+              '451': 'Unavailable For Legal Reasons',
+              '500': 'Internal Server Error',
+              '501': 'Not Implemented',
+              '502': 'Bad Gateway',
+              '503': 'Service Unavailable',
+              '504': 'Gateway Timeout',
+              '505': 'HTTP Version Not Supported',
+              '506': 'Variant Also Negotiates',
+              '507': 'Insufficient Storage',
+              '508': 'Loop Detected',
+              '509': 'Bandwidth Limit Exceeded',
+              '510': 'Not Extended',
+              '511': 'Network Authentication Required'
+            },
+            Agent: [Function: Agent] { defaultMaxSockets: Infinity },
+            ClientRequest: [Function: ClientRequest],
+            IncomingMessage: [Function: IncomingMessage],
+            OutgoingMessage: [Function: OutgoingMessage],
+            Server: [Function: Server],
+            ServerResponse: [Function: ServerResponse],
+            createServer: [Function: createServer],
+            get: [Function: get],
+            request: [Function: request],
+            maxHeaderSize: [Getter],
+            globalAgent: [Getter/Setter]
+          },
+          'https:': {
+            Agent: [Function: Agent],
+            globalAgent: <ref *2> Agent {
+              _events: [Object: null prototype] {
+                free: [Function (anonymous)],
+                newListener: [Function: maybeEnableKeylog]
+              },
+              _eventsCount: 2,
+              _maxListeners: undefined,
+              defaultPort: 443,
+              protocol: 'https:',
+              options: { path: null },
+              requests: {},
+              sockets: {
+                'undefined:443::::::::::::::::::': [
+                  <ref *1> TLSSocket {
+                    _tlsOptions: {
+                      allowHalfOpen: undefined,
+                      pipe: false,
+                      secureContext: SecureContext {
+                        context: SecureContext {},
+                        singleUse: true
+                      },
+                      isServer: false,
+                      requestCert: true,
+                      rejectUnauthorized: true,
+                      session: undefined,
+                      ALPNProtocols: undefined,
+                      requestOCSP: undefined,
+                      enableTrace: undefined,
+                      pskCallback: undefined
+                    },
+                    _secureEstablished: false,
+                    _securePending: false,
+                    _newSessionPending: false,
+                    _controlReleased: true,
+                    _SNICallback: null,
+                    servername: null,
+                    alpnProtocol: null,
+                    authorized: false,
+                    authorizationError: null,
+                    encrypted: true,
+                    _events: [Object: null prototype] {
+                      close: [
+                        [Function: onSocketCloseDestroySSL],
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: onClose],
+                        [Function: socketCloseListener]
+                      ],
+                      end: [
+                        [Function: onReadableStreamEnd],
+                        [Function: bound onceWrapper] {
+                          listener: [Function: onConnectEnd]
+                        }
+                      ],
+                      newListener: [Function: keylogNewListener],
+                      connect: [
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function: connect]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        }
+                      ],
+                      secure: [Function: onConnectSecure],
+                      session: [Function (anonymous)],
+                      free: [Function: onFree],
+                      timeout: [
+                        [Function: onTimeout],
+                        [Function: bound onceWrapper] {
+                          listener: [Function: emitRequestTimeout]
+                        }
+                      ],
+                      agentRemove: [Function: onRemove],
+                      error: [Function: socketErrorListener],
+                      drain: [Function: ondrain]
+                    },
+                    _eventsCount: 11,
+                    connecting: false,
+                    _hadError: true,
+                    _parent: null,
+                    _host: 'undefined',
+                    _readableState: ReadableState {
+                      objectMode: false,
+                      highWaterMark: 16384,
+                      buffer: BufferList { head: null, tail: null, length: 0 },
+                      length: 0,
+                      pipes: [],
+                      flowing: true,
+                      ended: false,
+                      endEmitted: false,
+                      reading: true,
+                      sync: false,
+                      needReadable: true,
+                      emittedReadable: false,
+                      readableListening: false,
+                      resumeScheduled: false,
+                      errorEmitted: true,
+                      emitClose: false,
+                      autoDestroy: false,
+                      destroyed: true,
+                      defaultEncoding: 'utf8',
+                      awaitDrainWriters: null,
+                      multiAwaitDrain: false,
+                      readingMore: false,
+                      decoder: null,
+                      encoding: null,
+                      [Symbol(kPaused)]: false
+                    },
+                    readable: false,
+                    _maxListeners: undefined,
+                    _writableState: WritableState {
+                      objectMode: false,
+                      highWaterMark: 16384,
+                      finalCalled: false,
+                      needDrain: false,
+                      ending: false,
+                      ended: false,
+                      finished: false,
+                      destroyed: true,
+                      decodeStrings: false,
+                      defaultEncoding: 'utf8',
+                      length: 144,
+                      writing: true,
+                      corked: 0,
+                      sync: false,
+                      bufferProcessing: false,
+                      onwrite: [Function: bound onwrite],
+                      writecb: [Function: bound onFinish],
+                      writelen: 144,
+                      afterWriteTickInfo: null,
+                      bufferedRequest: null,
+                      lastBufferedRequest: null,
+                      pendingcb: 1,
+                      prefinished: false,
+                      errorEmitted: true,
+                      emitClose: false,
+                      autoDestroy: false,
+                      errored: true,
+                      bufferedRequestCount: 0,
+                      corkedRequestsFree: {
+                        next: null,
+                        entry: null,
+                        finish: [Function: bound onCorkedFinish]
+                      }
+                    },
+                    writable: false,
+                    allowHalfOpen: false,
+                    _sockname: null,
+                    _pendingData: 'GET /.well-known/jwks.json HTTP/1.1\r\n' +
+                      'Accept: application/json, text/plain, */*\r\n' +
+                      'User-Agent: axios/0.19.2\r\n' +
+                      'Host: undefined\r\n' +
+                      'Connection: close\r\n' +
+                      '\r\n',
+                    _pendingEncoding: 'latin1',
+                    server: undefined,
+                    _server: null,
+                    ssl: null,
+                    _requestCert: true,
+                    _rejectUnauthorized: true,
+                    parser: null,
+                    _httpMessage: ClientRequest {
+                      _events: [Object: null prototype] {
+                        response: [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        socket: [
+                          [Function (anonymous)],
+                          [Function (anonymous)]
+                        ],
+                        abort: [Function (anonymous)],
+                        aborted: [Function (anonymous)],
+                        error: [Function (anonymous)],
+                        timeout: [
+                          [Function (anonymous)],
+                          [Function: bound onceWrapper] {
+                            listener: [Function: handleRequestTimeout]
+                          }
+                        ]
+                      },
+                      _eventsCount: 6,
+                      _maxListeners: undefined,
+                      outputData: [],
+                      outputSize: 0,
+                      writable: true,
+                      _last: true,
+                      chunkedEncoding: false,
+                      shouldKeepAlive: false,
+                      useChunkedEncodingByDefault: false,
+                      sendDate: false,
+                      _removedConnection: false,
+                      _removedContLen: false,
+                      _removedTE: false,
+                      _contentLength: 0,
+                      _hasBody: true,
+                      _trailer: '',
+                      finished: true,
+                      _headerSent: true,
+                      socket: [Circular *1],
+                      _header: 'GET /.well-known/jwks.json HTTP/1.1\r\n' +
+                        'Accept: application/json, text/plain, */*\r\n' +
+                        'User-Agent: axios/0.19.2\r\n' +
+                        'Host: undefined\r\n' +
+                        'Connection: close\r\n' +
+                        '\r\n',
+                      _onPendingData: [Function: noopPendingOutput],
+                      agent: [Circular *2],
+                      socketPath: undefined,
+                      method: 'GET',
+                      maxHeaderSize: undefined,
+                      insecureHTTPParser: undefined,
+                      path: '/.well-known/jwks.json',
+                      _ended: false,
+                      res: null,
+                      aborted: false,
+                      timeoutCb: [Function: emitRequestTimeout],
+                      upgradeOrConnect: false,
+                      parser: null,
+                      maxHeadersCount: null,
+                      reusedSocket: false,
+                      _redirectable: [Circular *3],
+                      [Symbol(kCapture)]: false,
+                      [Symbol(kNeedDrain)]: false,
+                      [Symbol(corked)]: 0,
+                      [Symbol(kOutHeaders)]: [Object: null prototype] {
+                        accept: [
+                          'Accept',
+                          'application/json, text/plain, */*'
+                        ],
+                        'user-agent': [ 'User-Agent', 'axios/0.19.2' ],
+                        host: [ 'Host', 'undefined' ]
+                      }
+                    },
+                    [Symbol(res)]: TLSWrap {
+                      _parent: TCP {
+                        reading: [Getter/Setter],
+                        onconnection: null,
+                        [Symbol(owner)]: [Circular *1],
+                        [Symbol(handle_onclose)]: [Function: done]
+                      },
+                      _parentWrap: undefined,
+                      _secureContext: SecureContext {
+                        context: SecureContext {},
+                        singleUse: true
+                      },
+                      reading: false,
+                      onhandshakestart: [Function: noop],
+                      onhandshakedone: [Function (anonymous)],
+                      onocspresponse: [Function: onocspresponse],
+                      onnewsession: [Function: onnewsessionclient],
+                      onkeylog: [Function: onkeylogclient],
+                      onerror: [Function: onerror],
+                      [Symbol(owner)]: [Circular *1]
+                    },
+                    [Symbol(asyncId)]: 146,
+                    [Symbol(kHandle)]: null,
+                    [Symbol(kSetNoDelay)]: false,
+                    [Symbol(lastWriteQueueSize)]: 0,
+                    [Symbol(timeout)]: null,
+                    [Symbol(kBuffer)]: null,
+                    [Symbol(kBufferCb)]: null,
+                    [Symbol(kBufferGen)]: null,
+                    [Symbol(kCapture)]: false,
+                    [Symbol(kBytesRead)]: 0,
+                    [Symbol(kBytesWritten)]: 0,
+                    [Symbol(connect-options)]: {
+                      rejectUnauthorized: true,
+                      ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
+                      checkServerIdentity: [Function: checkServerIdentity],
+                      minDHSize: 1024,
+                      protocol: 'https:',
+                      maxRedirects: 21,
+                      maxBodyLength: 10485760,
+                      path: null,
+                      method: 'GET',
+                      headers: {
+                        Accept: 'application/json, text/plain, */*',
+                        'User-Agent': 'axios/0.19.2'
+                      },
+                      agent: undefined,
+                      agents: { http: undefined, https: undefined },
+                      auth: undefined,
+                      hostname: 'undefined',
+                      port: 443,
+                      nativeProtocols: [Circular *4],
+                      pathname: '/.well-known/jwks.json',
+                      _defaultAgent: [Circular *2],
+                      host: 'undefined',
+                      servername: 'undefined',
+                      _agentKey: 'undefined:443::::::::::::::::::',
+                      encoding: null,
+                      singleUse: true
+                    }
+                  }
+                ]
+              },
+              freeSockets: {},
+              keepAliveMsecs: 1000,
+              keepAlive: false,
+              maxSockets: Infinity,
+              maxFreeSockets: 256,
+              maxCachedSessions: 100,
+              _sessionCache: {
+                map: {
+                  'api.rollbar.com:443::::::::::::::::::': <Buffer 30 82 06 96 02 01 01 02 02 03 04 04 02 13 02 04 20 39 4d 4a ba 3c 25 08 6b f5 33 5f 7c 26 87 7d ee 41 02 e7 cc 50 17 96 51 c3 c5 35 15 a7 3c 9a 26 04 ... 1640 more bytes>
+                },
+                list: [ 'api.rollbar.com:443::::::::::::::::::' ]
+              },
+              [Symbol(kCapture)]: false
+            },
+            Server: [Function: Server],
+            createServer: [Function: createServer],
+            get: [Function: get],
+            request: [Function: request]
+          }
+        },
+        pathname: '/.well-known/jwks.json'
+      },
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: <ref *5> ClientRequest {
+        _events: [Object: null prototype] {
+          response: [Function: bound onceWrapper] {
+            listener: [Function (anonymous)]
+          },
+          socket: [ [Function (anonymous)], [Function (anonymous)] ],
+          abort: [Function (anonymous)],
+          aborted: [Function (anonymous)],
+          error: [Function (anonymous)],
+          timeout: [
+            [Function (anonymous)],
+            [Function: bound onceWrapper] {
+              listener: [Function: handleRequestTimeout]
+            }
+          ]
+        },
+        _eventsCount: 6,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        _last: true,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        useChunkedEncodingByDefault: false,
+        sendDate: false,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        _contentLength: 0,
+        _hasBody: true,
+        _trailer: '',
+        finished: true,
+        _headerSent: true,
+        socket: <ref *1> TLSSocket {
+          _tlsOptions: {
+            allowHalfOpen: undefined,
+            pipe: false,
+            secureContext: SecureContext {
+              context: SecureContext {},
+              singleUse: true
+            },
+            isServer: false,
+            requestCert: true,
+            rejectUnauthorized: true,
+            session: undefined,
+            ALPNProtocols: undefined,
+            requestOCSP: undefined,
+            enableTrace: undefined,
+            pskCallback: undefined
+          },
+          _secureEstablished: false,
+          _securePending: false,
+          _newSessionPending: false,
+          _controlReleased: true,
+          _SNICallback: null,
+          servername: null,
+          alpnProtocol: null,
+          authorized: false,
+          authorizationError: null,
+          encrypted: true,
+          _events: [Object: null prototype] {
+            close: [
+              [Function: onSocketCloseDestroySSL],
+              [Function: bound onceWrapper] {
+                listener: [Function (anonymous)]
+              },
+              [Function: onClose],
+              [Function: socketCloseListener]
+            ],
+            end: [
+              [Function: onReadableStreamEnd],
+              [Function: bound onceWrapper] {
+                listener: [Function: onConnectEnd]
+              }
+            ],
+            newListener: [Function: keylogNewListener],
+            connect: [
+              [Function: bound onceWrapper] {
+                listener: [Function (anonymous)]
+              },
+              [Function: bound onceWrapper] {
+                listener: [Function (anonymous)]
+              },
+              [Function: bound onceWrapper] {
+                listener: [Function: connect]
+              },
+              [Function: bound onceWrapper] {
+                listener: [Function (anonymous)]
+              }
+            ],
+            secure: [Function: onConnectSecure],
+            session: [Function (anonymous)],
+            free: [Function: onFree],
+            timeout: [
+              [Function: onTimeout],
+              [Function: bound onceWrapper] {
+                listener: [Function: emitRequestTimeout]
+              }
+            ],
+            agentRemove: [Function: onRemove],
+            error: [Function: socketErrorListener],
+            drain: [Function: ondrain]
+          },
+          _eventsCount: 11,
+          connecting: false,
+          _hadError: true,
+          _parent: null,
+          _host: 'undefined',
+          _readableState: ReadableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            buffer: BufferList { head: null, tail: null, length: 0 },
+            length: 0,
+            pipes: [],
+            flowing: true,
+            ended: false,
+            endEmitted: false,
+            reading: true,
+            sync: false,
+            needReadable: true,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            errorEmitted: true,
+            emitClose: false,
+            autoDestroy: false,
+            destroyed: true,
+            defaultEncoding: 'utf8',
+            awaitDrainWriters: null,
+            multiAwaitDrain: false,
+            readingMore: false,
+            decoder: null,
+            encoding: null,
+            [Symbol(kPaused)]: false
+          },
+          readable: false,
+          _maxListeners: undefined,
+          _writableState: WritableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            finalCalled: false,
+            needDrain: false,
+            ending: false,
+            ended: false,
+            finished: false,
+            destroyed: true,
+            decodeStrings: false,
+            defaultEncoding: 'utf8',
+            length: 144,
+            writing: true,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            onwrite: [Function: bound onwrite],
+            writecb: [Function: bound onFinish],
+            writelen: 144,
+            afterWriteTickInfo: null,
+            bufferedRequest: null,
+            lastBufferedRequest: null,
+            pendingcb: 1,
+            prefinished: false,
+            errorEmitted: true,
+            emitClose: false,
+            autoDestroy: false,
+            errored: true,
+            bufferedRequestCount: 0,
+            corkedRequestsFree: {
+              next: null,
+              entry: null,
+              finish: [Function: bound onCorkedFinish]
+            }
+          },
+          writable: false,
+          allowHalfOpen: false,
+          _sockname: null,
+          _pendingData: 'GET /.well-known/jwks.json HTTP/1.1\r\n' +
+            'Accept: application/json, text/plain, */*\r\n' +
+            'User-Agent: axios/0.19.2\r\n' +
+            'Host: undefined\r\n' +
+            'Connection: close\r\n' +
+            '\r\n',
+          _pendingEncoding: 'latin1',
+          server: undefined,
+          _server: null,
+          ssl: null,
+          _requestCert: true,
+          _rejectUnauthorized: true,
+          parser: null,
+          _httpMessage: [Circular *5],
+          [Symbol(res)]: TLSWrap {
+            _parent: TCP {
+              reading: [Getter/Setter],
+              onconnection: null,
+              [Symbol(owner)]: [Circular *1],
+              [Symbol(handle_onclose)]: [Function: done]
+            },
+            _parentWrap: undefined,
+            _secureContext: SecureContext {
+              context: SecureContext {},
+              singleUse: true
+            },
+            reading: false,
+            onhandshakestart: [Function: noop],
+            onhandshakedone: [Function (anonymous)],
+            onocspresponse: [Function: onocspresponse],
+            onnewsession: [Function: onnewsessionclient],
+            onkeylog: [Function: onkeylogclient],
+            onerror: [Function: onerror],
+            [Symbol(owner)]: [Circular *1]
+          },
+          [Symbol(asyncId)]: 146,
+          [Symbol(kHandle)]: null,
+          [Symbol(kSetNoDelay)]: false,
+          [Symbol(lastWriteQueueSize)]: 0,
+          [Symbol(timeout)]: null,
+          [Symbol(kBuffer)]: null,
+          [Symbol(kBufferCb)]: null,
+          [Symbol(kBufferGen)]: null,
+          [Symbol(kCapture)]: false,
+          [Symbol(kBytesRead)]: 0,
+          [Symbol(kBytesWritten)]: 0,
+          [Symbol(connect-options)]: {
+            rejectUnauthorized: true,
+            ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
+            checkServerIdentity: [Function: checkServerIdentity],
+            minDHSize: 1024,
+            protocol: 'https:',
+            maxRedirects: 21,
+            maxBodyLength: 10485760,
+            path: null,
+            method: 'GET',
+            headers: {
+              Accept: 'application/json, text/plain, */*',
+              'User-Agent': 'axios/0.19.2'
+            },
+            agent: undefined,
+            agents: { http: undefined, https: undefined },
+            auth: undefined,
+            hostname: 'undefined',
+            port: 443,
+            nativeProtocols: <ref *4> {
+              'http:': {
+                _connectionListener: [Function: connectionListener],
+                METHODS: [
+                  'ACL',         'BIND',       'CHECKOUT',
+                  'CONNECT',     'COPY',       'DELETE',
+                  'GET',         'HEAD',       'LINK',
+                  'LOCK',        'M-SEARCH',   'MERGE',
+                  'MKACTIVITY',  'MKCALENDAR', 'MKCOL',
+                  'MOVE',        'NOTIFY',     'OPTIONS',
+                  'PATCH',       'POST',       'PROPFIND',
+                  'PROPPATCH',   'PURGE',      'PUT',
+                  'REBIND',      'REPORT',     'SEARCH',
+                  'SOURCE',      'SUBSCRIBE',  'TRACE',
+                  'UNBIND',      'UNLINK',     'UNLOCK',
+                  'UNSUBSCRIBE'
+                ],
+                STATUS_CODES: {
+                  '100': 'Continue',
+                  '101': 'Switching Protocols',
+                  '102': 'Processing',
+                  '103': 'Early Hints',
+                  '200': 'OK',
+                  '201': 'Created',
+                  '202': 'Accepted',
+                  '203': 'Non-Authoritative Information',
+                  '204': 'No Content',
+                  '205': 'Reset Content',
+                  '206': 'Partial Content',
+                  '207': 'Multi-Status',
+                  '208': 'Already Reported',
+                  '226': 'IM Used',
+                  '300': 'Multiple Choices',
+                  '301': 'Moved Permanently',
+                  '302': 'Found',
+                  '303': 'See Other',
+                  '304': 'Not Modified',
+                  '305': 'Use Proxy',
+                  '307': 'Temporary Redirect',
+                  '308': 'Permanent Redirect',
+                  '400': 'Bad Request',
+                  '401': 'Unauthorized',
+                  '402': 'Payment Required',
+                  '403': 'Forbidden',
+                  '404': 'Not Found',
+                  '405': 'Method Not Allowed',
+                  '406': 'Not Acceptable',
+                  '407': 'Proxy Authentication Required',
+                  '408': 'Request Timeout',
+                  '409': 'Conflict',
+                  '410': 'Gone',
+                  '411': 'Length Required',
+                  '412': 'Precondition Failed',
+                  '413': 'Payload Too Large',
+                  '414': 'URI Too Long',
+                  '415': 'Unsupported Media Type',
+                  '416': 'Range Not Satisfiable',
+                  '417': 'Expectation Failed',
+                  '418': "I'm a Teapot",
+                  '421': 'Misdirected Request',
+                  '422': 'Unprocessable Entity',
+                  '423': 'Locked',
+                  '424': 'Failed Dependency',
+                  '425': 'Too Early',
+                  '426': 'Upgrade Required',
+                  '428': 'Precondition Required',
+                  '429': 'Too Many Requests',
+                  '431': 'Request Header Fields Too Large',
+                  '451': 'Unavailable For Legal Reasons',
+                  '500': 'Internal Server Error',
+                  '501': 'Not Implemented',
+                  '502': 'Bad Gateway',
+                  '503': 'Service Unavailable',
+                  '504': 'Gateway Timeout',
+                  '505': 'HTTP Version Not Supported',
+                  '506': 'Variant Also Negotiates',
+                  '507': 'Insufficient Storage',
+                  '508': 'Loop Detected',
+                  '509': 'Bandwidth Limit Exceeded',
+                  '510': 'Not Extended',
+                  '511': 'Network Authentication Required'
+                },
+                Agent: [Function: Agent] { defaultMaxSockets: Infinity },
+                ClientRequest: [Function: ClientRequest],
+                IncomingMessage: [Function: IncomingMessage],
+                OutgoingMessage: [Function: OutgoingMessage],
+                Server: [Function: Server],
+                ServerResponse: [Function: ServerResponse],
+                createServer: [Function: createServer],
+                get: [Function: get],
+                request: [Function: request],
+                maxHeaderSize: [Getter],
+                globalAgent: [Getter/Setter]
+              },
+              'https:': {
+                Agent: [Function: Agent],
+                globalAgent: <ref *2> Agent {
+                  _events: [Object: null prototype] {
+                    free: [Function (anonymous)],
+                    newListener: [Function: maybeEnableKeylog]
+                  },
+                  _eventsCount: 2,
+                  _maxListeners: undefined,
+                  defaultPort: 443,
+                  protocol: 'https:',
+                  options: { path: null },
+                  requests: {},
+                  sockets: {
+                    'undefined:443::::::::::::::::::': [ [Circular *1] ]
+                  },
+                  freeSockets: {},
+                  keepAliveMsecs: 1000,
+                  keepAlive: false,
+                  maxSockets: Infinity,
+                  maxFreeSockets: 256,
+                  maxCachedSessions: 100,
+                  _sessionCache: {
+                    map: {
+                      'api.rollbar.com:443::::::::::::::::::': <Buffer 30 82 06 96 02 01 01 02 02 03 04 04 02 13 02 04 20 39 4d 4a ba 3c 25 08 6b f5 33 5f 7c 26 87 7d ee 41 02 e7 cc 50 17 96 51 c3 c5 35 15 a7 3c 9a 26 04 ... 1640 more bytes>
+                    },
+                    list: [ 'api.rollbar.com:443::::::::::::::::::' ]
+                  },
+                  [Symbol(kCapture)]: false
+                },
+                Server: [Function: Server],
+                createServer: [Function: createServer],
+                get: [Function: get],
+                request: [Function: request]
+              }
+            },
+            pathname: '/.well-known/jwks.json',
+            _defaultAgent: <ref *2> Agent {
+              _events: [Object: null prototype] {
+                free: [Function (anonymous)],
+                newListener: [Function: maybeEnableKeylog]
+              },
+              _eventsCount: 2,
+              _maxListeners: undefined,
+              defaultPort: 443,
+              protocol: 'https:',
+              options: { path: null },
+              requests: {},
+              sockets: { 'undefined:443::::::::::::::::::': [ [Circular *1] ] },
+              freeSockets: {},
+              keepAliveMsecs: 1000,
+              keepAlive: false,
+              maxSockets: Infinity,
+              maxFreeSockets: 256,
+              maxCachedSessions: 100,
+              _sessionCache: {
+                map: {
+                  'api.rollbar.com:443::::::::::::::::::': <Buffer 30 82 06 96 02 01 01 02 02 03 04 04 02 13 02 04 20 39 4d 4a ba 3c 25 08 6b f5 33 5f 7c 26 87 7d ee 41 02 e7 cc 50 17 96 51 c3 c5 35 15 a7 3c 9a 26 04 ... 1640 more bytes>
+                },
+                list: [ 'api.rollbar.com:443::::::::::::::::::' ]
+              },
+              [Symbol(kCapture)]: false
+            },
+            host: 'undefined',
+            servername: 'undefined',
+            _agentKey: 'undefined:443::::::::::::::::::',
+            encoding: null,
+            singleUse: true
+          }
+        },
+        _header: 'GET /.well-known/jwks.json HTTP/1.1\r\n' +
+          'Accept: application/json, text/plain, */*\r\n' +
+          'User-Agent: axios/0.19.2\r\n' +
+          'Host: undefined\r\n' +
+          'Connection: close\r\n' +
+          '\r\n',
+        _onPendingData: [Function: noopPendingOutput],
+        agent: <ref *2> Agent {
+          _events: [Object: null prototype] {
+            free: [Function (anonymous)],
+            newListener: [Function: maybeEnableKeylog]
+          },
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          defaultPort: 443,
+          protocol: 'https:',
+          options: { path: null },
+          requests: {},
+          sockets: {
+            'undefined:443::::::::::::::::::': [
+              <ref *1> TLSSocket {
+                _tlsOptions: {
+                  allowHalfOpen: undefined,
+                  pipe: false,
+                  secureContext: SecureContext {
+                    context: SecureContext {},
+                    singleUse: true
+                  },
+                  isServer: false,
+                  requestCert: true,
+                  rejectUnauthorized: true,
+                  session: undefined,
+                  ALPNProtocols: undefined,
+                  requestOCSP: undefined,
+                  enableTrace: undefined,
+                  pskCallback: undefined
+                },
+                _secureEstablished: false,
+                _securePending: false,
+                _newSessionPending: false,
+                _controlReleased: true,
+                _SNICallback: null,
+                servername: null,
+                alpnProtocol: null,
+                authorized: false,
+                authorizationError: null,
+                encrypted: true,
+                _events: [Object: null prototype] {
+                  close: [
+                    [Function: onSocketCloseDestroySSL],
+                    [Function: bound onceWrapper] {
+                      listener: [Function (anonymous)]
+                    },
+                    [Function: onClose],
+                    [Function: socketCloseListener]
+                  ],
+                  end: [
+                    [Function: onReadableStreamEnd],
+                    [Function: bound onceWrapper] {
+                      listener: [Function: onConnectEnd]
+                    }
+                  ],
+                  newListener: [Function: keylogNewListener],
+                  connect: [
+                    [Function: bound onceWrapper] {
+                      listener: [Function (anonymous)]
+                    },
+                    [Function: bound onceWrapper] {
+                      listener: [Function (anonymous)]
+                    },
+                    [Function: bound onceWrapper] {
+                      listener: [Function: connect]
+                    },
+                    [Function: bound onceWrapper] {
+                      listener: [Function (anonymous)]
+                    }
+                  ],
+                  secure: [Function: onConnectSecure],
+                  session: [Function (anonymous)],
+                  free: [Function: onFree],
+                  timeout: [
+                    [Function: onTimeout],
+                    [Function: bound onceWrapper] {
+                      listener: [Function: emitRequestTimeout]
+                    }
+                  ],
+                  agentRemove: [Function: onRemove],
+                  error: [Function: socketErrorListener],
+                  drain: [Function: ondrain]
+                },
+                _eventsCount: 11,
+                connecting: false,
+                _hadError: true,
+                _parent: null,
+                _host: 'undefined',
+                _readableState: ReadableState {
+                  objectMode: false,
+                  highWaterMark: 16384,
+                  buffer: BufferList { head: null, tail: null, length: 0 },
+                  length: 0,
+                  pipes: [],
+                  flowing: true,
+                  ended: false,
+                  endEmitted: false,
+                  reading: true,
+                  sync: false,
+                  needReadable: true,
+                  emittedReadable: false,
+                  readableListening: false,
+                  resumeScheduled: false,
+                  errorEmitted: true,
+                  emitClose: false,
+                  autoDestroy: false,
+                  destroyed: true,
+                  defaultEncoding: 'utf8',
+                  awaitDrainWriters: null,
+                  multiAwaitDrain: false,
+                  readingMore: false,
+                  decoder: null,
+                  encoding: null,
+                  [Symbol(kPaused)]: false
+                },
+                readable: false,
+                _maxListeners: undefined,
+                _writableState: WritableState {
+                  objectMode: false,
+                  highWaterMark: 16384,
+                  finalCalled: false,
+                  needDrain: false,
+                  ending: false,
+                  ended: false,
+                  finished: false,
+                  destroyed: true,
+                  decodeStrings: false,
+                  defaultEncoding: 'utf8',
+                  length: 144,
+                  writing: true,
+                  corked: 0,
+                  sync: false,
+                  bufferProcessing: false,
+                  onwrite: [Function: bound onwrite],
+                  writecb: [Function: bound onFinish],
+                  writelen: 144,
+                  afterWriteTickInfo: null,
+                  bufferedRequest: null,
+                  lastBufferedRequest: null,
+                  pendingcb: 1,
+                  prefinished: false,
+                  errorEmitted: true,
+                  emitClose: false,
+                  autoDestroy: false,
+                  errored: true,
+                  bufferedRequestCount: 0,
+                  corkedRequestsFree: {
+                    next: null,
+                    entry: null,
+                    finish: [Function: bound onCorkedFinish]
+                  }
+                },
+                writable: false,
+                allowHalfOpen: false,
+                _sockname: null,
+                _pendingData: 'GET /.well-known/jwks.json HTTP/1.1\r\n' +
+                  'Accept: application/json, text/plain, */*\r\n' +
+                  'User-Agent: axios/0.19.2\r\n' +
+                  'Host: undefined\r\n' +
+                  'Connection: close\r\n' +
+                  '\r\n',
+                _pendingEncoding: 'latin1',
+                server: undefined,
+                _server: null,
+                ssl: null,
+                _requestCert: true,
+                _rejectUnauthorized: true,
+                parser: null,
+                _httpMessage: [Circular *5],
+                [Symbol(res)]: TLSWrap {
+                  _parent: TCP {
+                    reading: [Getter/Setter],
+                    onconnection: null,
+                    [Symbol(owner)]: [Circular *1],
+                    [Symbol(handle_onclose)]: [Function: done]
+                  },
+                  _parentWrap: undefined,
+                  _secureContext: SecureContext {
+                    context: SecureContext {},
+                    singleUse: true
+                  },
+                  reading: false,
+                  onhandshakestart: [Function: noop],
+                  onhandshakedone: [Function (anonymous)],
+                  onocspresponse: [Function: onocspresponse],
+                  onnewsession: [Function: onnewsessionclient],
+                  onkeylog: [Function: onkeylogclient],
+                  onerror: [Function: onerror],
+                  [Symbol(owner)]: [Circular *1]
+                },
+                [Symbol(asyncId)]: 146,
+                [Symbol(kHandle)]: null,
+                [Symbol(kSetNoDelay)]: false,
+                [Symbol(lastWriteQueueSize)]: 0,
+                [Symbol(timeout)]: null,
+                [Symbol(kBuffer)]: null,
+                [Symbol(kBufferCb)]: null,
+                [Symbol(kBufferGen)]: null,
+                [Symbol(kCapture)]: false,
+                [Symbol(kBytesRead)]: 0,
+                [Symbol(kBytesWritten)]: 0,
+                [Symbol(connect-options)]: {
+                  rejectUnauthorized: true,
+                  ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
+                  checkServerIdentity: [Function: checkServerIdentity],
+                  minDHSize: 1024,
+                  protocol: 'https:',
+                  maxRedirects: 21,
+                  maxBodyLength: 10485760,
+                  path: null,
+                  method: 'GET',
+                  headers: {
+                    Accept: 'application/json, text/plain, */*',
+                    'User-Agent': 'axios/0.19.2'
+                  },
+                  agent: undefined,
+                  agents: { http: undefined, https: undefined },
+                  auth: undefined,
+                  hostname: 'undefined',
+                  port: 443,
+                  nativeProtocols: <ref *4> {
+                    'http:': {
+                      _connectionListener: [Function: connectionListener],
+                      METHODS: [
+                        'ACL',         'BIND',       'CHECKOUT',
+                        'CONNECT',     'COPY',       'DELETE',
+                        'GET',         'HEAD',       'LINK',
+                        'LOCK',        'M-SEARCH',   'MERGE',
+                        'MKACTIVITY',  'MKCALENDAR', 'MKCOL',
+                        'MOVE',        'NOTIFY',     'OPTIONS',
+                        'PATCH',       'POST',       'PROPFIND',
+                        'PROPPATCH',   'PURGE',      'PUT',
+                        'REBIND',      'REPORT',     'SEARCH',
+                        'SOURCE',      'SUBSCRIBE',  'TRACE',
+                        'UNBIND',      'UNLINK',     'UNLOCK',
+                        'UNSUBSCRIBE'
+                      ],
+                      STATUS_CODES: {
+                        '100': 'Continue',
+                        '101': 'Switching Protocols',
+                        '102': 'Processing',
+                        '103': 'Early Hints',
+                        '200': 'OK',
+                        '201': 'Created',
+                        '202': 'Accepted',
+                        '203': 'Non-Authoritative Information',
+                        '204': 'No Content',
+                        '205': 'Reset Content',
+                        '206': 'Partial Content',
+                        '207': 'Multi-Status',
+                        '208': 'Already Reported',
+                        '226': 'IM Used',
+                        '300': 'Multiple Choices',
+                        '301': 'Moved Permanently',
+                        '302': 'Found',
+                        '303': 'See Other',
+                        '304': 'Not Modified',
+                        '305': 'Use Proxy',
+                        '307': 'Temporary Redirect',
+                        '308': 'Permanent Redirect',
+                        '400': 'Bad Request',
+                        '401': 'Unauthorized',
+                        '402': 'Payment Required',
+                        '403': 'Forbidden',
+                        '404': 'Not Found',
+                        '405': 'Method Not Allowed',
+                        '406': 'Not Acceptable',
+                        '407': 'Proxy Authentication Required',
+                        '408': 'Request Timeout',
+                        '409': 'Conflict',
+                        '410': 'Gone',
+                        '411': 'Length Required',
+                        '412': 'Precondition Failed',
+                        '413': 'Payload Too Large',
+                        '414': 'URI Too Long',
+                        '415': 'Unsupported Media Type',
+                        '416': 'Range Not Satisfiable',
+                        '417': 'Expectation Failed',
+                        '418': "I'm a Teapot",
+                        '421': 'Misdirected Request',
+                        '422': 'Unprocessable Entity',
+                        '423': 'Locked',
+                        '424': 'Failed Dependency',
+                        '425': 'Too Early',
+                        '426': 'Upgrade Required',
+                        '428': 'Precondition Required',
+                        '429': 'Too Many Requests',
+                        '431': 'Request Header Fields Too Large',
+                        '451': 'Unavailable For Legal Reasons',
+                        '500': 'Internal Server Error',
+                        '501': 'Not Implemented',
+                        '502': 'Bad Gateway',
+                        '503': 'Service Unavailable',
+                        '504': 'Gateway Timeout',
+                        '505': 'HTTP Version Not Supported',
+                        '506': 'Variant Also Negotiates',
+                        '507': 'Insufficient Storage',
+                        '508': 'Loop Detected',
+                        '509': 'Bandwidth Limit Exceeded',
+                        '510': 'Not Extended',
+                        '511': 'Network Authentication Required'
+                      },
+                      Agent: [Function: Agent] { defaultMaxSockets: Infinity },
+                      ClientRequest: [Function: ClientRequest],
+                      IncomingMessage: [Function: IncomingMessage],
+                      OutgoingMessage: [Function: OutgoingMessage],
+                      Server: [Function: Server],
+                      ServerResponse: [Function: ServerResponse],
+                      createServer: [Function: createServer],
+                      get: [Function: get],
+                      request: [Function: request],
+                      maxHeaderSize: [Getter],
+                      globalAgent: [Getter/Setter]
+                    },
+                    'https:': {
+                      Agent: [Function: Agent],
+                      globalAgent: [Circular *2],
+                      Server: [Function: Server],
+                      createServer: [Function: createServer],
+                      get: [Function: get],
+                      request: [Function: request]
+                    }
+                  },
+                  pathname: '/.well-known/jwks.json',
+                  _defaultAgent: [Circular *2],
+                  host: 'undefined',
+                  servername: 'undefined',
+                  _agentKey: 'undefined:443::::::::::::::::::',
+                  encoding: null,
+                  singleUse: true
+                }
+              }
+            ]
+          },
+          freeSockets: {},
+          keepAliveMsecs: 1000,
+          keepAlive: false,
+          maxSockets: Infinity,
+          maxFreeSockets: 256,
+          maxCachedSessions: 100,
+          _sessionCache: {
+            map: {
+              'api.rollbar.com:443::::::::::::::::::': <Buffer 30 82 06 96 02 01 01 02 02 03 04 04 02 13 02 04 20 39 4d 4a ba 3c 25 08 6b f5 33 5f 7c 26 87 7d ee 41 02 e7 cc 50 17 96 51 c3 c5 35 15 a7 3c 9a 26 04 ... 1640 more bytes>
+            },
+            list: [ 'api.rollbar.com:443::::::::::::::::::' ]
+          },
+          [Symbol(kCapture)]: false
+        },
+        socketPath: undefined,
+        method: 'GET',
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        path: '/.well-known/jwks.json',
+        _ended: false,
+        res: null,
+        aborted: false,
+        timeoutCb: [Function: emitRequestTimeout],
+        upgradeOrConnect: false,
+        parser: null,
+        maxHeadersCount: null,
+        reusedSocket: false,
+        _redirectable: [Circular *3],
+        [Symbol(kCapture)]: false,
+        [Symbol(kNeedDrain)]: false,
+        [Symbol(corked)]: 0,
+        [Symbol(kOutHeaders)]: [Object: null prototype] {
+          accept: [ 'Accept', 'application/json, text/plain, */*' ],
+          'user-agent': [ 'User-Agent', 'axios/0.19.2' ],
+          host: [ 'Host', 'undefined' ]
+        }
+      },
+      _currentUrl: 'https://undefined/.well-known/jwks.json',
+      [Symbol(kCapture)]: false
+    },
+    response: undefined,
+    isAxiosError: true,
+    toJSON: [Function (anonymous)]
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-11T22:16:21.127Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN100Jjw'
+    },
+    url: '/merchant/general/get/?if=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'b486fbb0-c0e6-48d4-813e-9bbb26ad217d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Bad Request",\n' +
+      '\t"details": "validation failed",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "ValidationError",\n' +
+      '\t"error": {\n' +
+      '\t\t"message": "validation failed",\n' +
+      '\t\t"errors": [\n' +
+      '\t\t\t{\n' +
+      '\t\t\t\t"keyword": "additionalProperties",\n' +
+      '\t\t\t\t"dataPath": "",\n' +
+      '\t\t\t\t"schemaPath": "#/additionalProperties",\n' +
+      '\t\t\t\t"params": {\n' +
+      '\t\t\t\t\t"additionalProperty": "if"\n' +
+      '\t\t\t\t},\n' +
+      '\t\t\t\t"message": "should NOT have additional properties"\n' +
+      '\t\t\t}\n' +
+      '\t\t],\n' +
+      '\t\t"validation": true,\n' +
+      '\t\t"ajv": true\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?if=1 (400) - Error: validation failed',
+  meta: {
+    memory_usage: {
+      rss: 36265984,
+      heapTotal: 16588800,
+      heapUsed: 14725232,
+      external: 1478882,
+      arrayBuffers: 53047
+    },
+    total_mem: 4294967296,
+    pid: 20973,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 50700288
+  },
+  response_time: '26.860',
+  level: 'error',
+  error: [ValidationError: validation failed] {
+    errors: [
+      {
+        keyword: 'additionalProperties',
+        dataPath: '',
+        schemaPath: '#/additionalProperties',
+        params: { additionalProperty: 'if' },
+        message: 'should NOT have additional properties'
+      }
+    ],
+    validation: true,
+    ajv: true
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-11T22:20:57.575Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN0Jjw'
+    },
+    url: '/merchant/general/get/?if=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9a1f4771-e3f9-4e32-bbc9-344e9273ce8f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?if=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 34086912,
+      heapTotal: 17113088,
+      heapUsed: 15710448,
+      external: 1495357,
+      arrayBuffers: 69522
+    },
+    total_mem: 4294967296,
+    pid: 20973,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 53403648
+  },
+  response_time: '3.992',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-11T22:21:07.887Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN0Jjw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '58f58a0a-e157-4bf5-ac9c-6727579cb322',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 32567296,
+      heapTotal: 17637376,
+      heapUsed: 15610088,
+      external: 1499553,
+      arrayBuffers: 73824
+    },
+    total_mem: 4294967296,
+    pid: 20973,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 25608192
+  },
+  response_time: '6.152',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-11T22:21:33.122Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVvw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'defd769a-db50-4fc8-9a0f-998bdd166c3a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 34246656,
+      heapTotal: 17113088,
+      heapUsed: 14466312,
+      external: 1466827,
+      arrayBuffers: 41098
+    },
+    total_mem: 4294967296,
+    pid: 28819,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 84672512
+  },
+  response_time: '15.122',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:21:52.090Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVvw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '1562a6a3-ec5a-4b1a-93ef-77cbdff23b68',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 57073664,
+      heapTotal: 34938880,
+      heapUsed: 14828232,
+      external: 1479195,
+      arrayBuffers: 52218
+    },
+    total_mem: 4294967296,
+    pid: 29158,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 29945856
+  },
+  response_time: '318.380',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:22:43.791Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN100Jjw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '8a735d87-3f21-4781-891b-cb7026539c96',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 65257472,
+      heapTotal: 34414592,
+      heapUsed: 15538680,
+      external: 1479827,
+      arrayBuffers: 52218
+    },
+    total_mem: 4294967296,
+    pid: 29441,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 135823360
+  },
+  response_time: '212.739',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:26:12.807Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3LzpSIN100Jjw'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'd5c3d2ef-6f94-48d6-bbf1-72b14aa642ea',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 40407040,
+      heapTotal: 16850944,
+      heapUsed: 14572712,
+      external: 1477907,
+      arrayBuffers: 52218
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 35700736
+  },
+  response_time: '244.400',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:29:33.910Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkxMzY2OSwiZXhwIjoxNTkyMDAwMDY5LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.gYomkwyO1DY48TKusoeuG_AlvfcV9UNM4QbSZEIWofKbKjXDY2vis-HYoDeK3hQmLGlQV77BM4w9K8KvTDUIEY1PKsdSnySHRvFnKh73Ai1aP6ts0vSt76i3SoZxJa0NVR6NAebqAQsL35fUVPhPI-Sj9LDcoN644NuiM4vOom0gU1ypuzo0--3t2fr4U3somDDamqMIEEGwujlC5rLPRkbdGXUqVzqNxmg7wGW7kvsSXoqa86UIlT7AbwcouOPn2nbcyYWLyLOnVArqi4Dmne5nqzhr7Xrxth8yGL4-2iv5Lo_fbW9SX4ntXRbghhe9IBbR0KHVv3Lzp'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2bdb9b9c-1fad-4247-bb53-9bc9c8c6f90d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 34721792,
+      heapTotal: 17113088,
+      heapUsed: 14894216,
+      external: 1475114,
+      arrayBuffers: 49385
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 23388160
+  },
+  response_time: '7.749',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:29:49.252Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '107a9af2-3d93-41cf-857e-8426b10c3cf7',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 27086848,
+      heapTotal: 17113088,
+      heapUsed: 15503832,
+      external: 1491348,
+      arrayBuffers: 65619
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 22863872
+  },
+  response_time: '21.300',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:35:20.383Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '73ae4a86-116d-4c58-b4df-8b82a0feba38',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 31571968,
+      heapTotal: 17375232,
+      heapUsed: 15282872,
+      external: 1480779,
+      arrayBuffers: 55050
+    },
+    total_mem: 4294967296,
+    pid: 29593,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18268160
+  },
+  response_time: '1.274',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:35:22.589Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '72b2ace6-5c38-48e4-b266-f4cc2784809e',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 34410496,
+      heapTotal: 34676736,
+      heapUsed: 15484408,
+      external: 1488019,
+      arrayBuffers: 60410
+    },
+    total_mem: 4294967296,
+    pid: 30499,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 31223808
+  },
+  response_time: '292.159',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:46:44.792Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '9b55c1de-82d3-4e6d-8c14-677a0d65ae8d',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 34889728,
+      heapTotal: 17637376,
+      heapUsed: 14482760,
+      external: 1463159,
+      arrayBuffers: 37430
+    },
+    total_mem: 4294967296,
+    pid: 30499,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 41676800
+  },
+  response_time: '9.549',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:13.418Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get/?id=5',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '82f1491b-0811-4a21-ba0b-b20228fb9397',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=5 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 56225792,
+      heapTotal: 34152448,
+      heapUsed: 15306040,
+      external: 1488019,
+      arrayBuffers: 60410
+    },
+    total_mem: 4294967296,
+    pid: 30612,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 75792384
+  },
+  response_time: '194.355',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:24.936Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/test',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '3b298a09-ecbc-4c34-8f27-cb99422eaa05',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Not Found",\n' +
+      '\t"details": "Request path (/merchant/general/test) could not be resolved to a valid route",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "PathNotFoundError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "Error: Request path (/merchant/general/test) could not be resolved to a valid route\\n    at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:52:16"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/test (404) - Error: Request path (/merchant/general/test) could not be resolved to a valid route',
+  meta: {
+    memory_usage: {
+      rss: 46301184,
+      heapTotal: 17113088,
+      heapUsed: 14505800,
+      external: 1463159,
+      arrayBuffers: 37430
+    },
+    total_mem: 4294967296,
+    pid: 30612,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 40652800
+  },
+  response_time: '6.355',
+  level: 'error',
+  error: PathNotFoundError: Request path (/merchant/general/test) could not be resolved to a valid route
+      at /Users/noah/Otis/backend/api-gateway/middleware/handlers.js:96:8
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:635:15
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:260:14)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:52:16,
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:34.734Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/test',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '54539d6a-b3b6-4ac4-9ba3-af4061a8a06a',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Server Error",\n' +
+      '\t"details": "value is not defined",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "ReferenceError",\n' +
+      '\t"error": {},\n' +
+      '\t"stack": "ReferenceError: value is not defined\\n    at test (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:67:24)\\n    at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:56:7)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)\\n    at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/test (500) - Error: value is not defined',
+  meta: {
+    memory_usage: {
+      rss: 33533952,
+      heapTotal: 17113088,
+      heapUsed: 15422088,
+      external: 1476592,
+      arrayBuffers: 50863
+    },
+    total_mem: 4294967296,
+    pid: 30612,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 27160576
+  },
+  response_time: '4.178',
+  level: 'error',
+  error: ReferenceError: value is not defined
+      at test (/Users/noah/Otis/backend/api-gateway/merchant/impl.js:67:24)
+      at wrap (/Users/noah/Otis/backend/api-gateway/utils.js:56:7)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:137:13)
+      at Route.dispatch (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/route.js:112:3)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:281:22
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:128:7,
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:47:46.505Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiQ'
+    },
+    url: '/merchant/test',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '32186904-ee4c-4706-9976-0f440f355792',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "invalid signature",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "invalid signature",\n' +
+      '\t\t"code": "invalid_token",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"name": "JsonWebTokenError",\n' +
+      '\t\t\t"message": "invalid signature"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: invalid signature\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14\\n    at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)\\n    at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)\\n    at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)\\n    at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/test (401) - Error: invalid signature',
+  meta: {
+    memory_usage: {
+      rss: 45813760,
+      heapTotal: 17375232,
+      heapUsed: 14448576,
+      external: 1466827,
+      arrayBuffers: 41098
+    },
+    total_mem: 4294967296,
+    pid: 30789,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 26963968
+  },
+  response_time: '6.395',
+  level: 'error',
+  error: UnauthorizedError: invalid signature
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:102:22
+      at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:14
+      at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+      at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+      at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+      at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37 {
+    code: 'invalid_token',
+    status: 401,
+    inner: JsonWebTokenError: invalid signature
+        at /Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:133:19
+        at getSecret (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:90:14)
+        at Object.module.exports [as verify] (/Users/noah/Otis/backend/api-gateway/node_modules/jsonwebtoken/verify.js:94:10)
+        at verifyToken (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:100:13)
+        at fn (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:746:34)
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1213:16
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:166:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:706:43
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:167:37
+        at /Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/node_modules/async/lib/async.js:1209:30
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:48:49.678Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '2efe222d-c1f9-4403-b511-c5a076522765',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 44441600,
+      heapTotal: 17637376,
+      heapUsed: 15655112,
+      external: 1495525,
+      arrayBuffers: 69796
+    },
+    total_mem: 4294967296,
+    pid: 30789,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 16908288
+  },
+  response_time: '4.865',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:49:08.224Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': 'f456bdc0-b94e-438c-86b4-856276803b62',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 46567424,
+      heapTotal: 34676736,
+      heapUsed: 15330912,
+      external: 1488019,
+      arrayBuffers: 60410
+    },
+    total_mem: 4294967296,
+    pid: 31272,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 49696768
+  },
+  response_time: '765.449',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T12:58:38.221Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '68bee12a-9a11-4a78-a4d2-5ba0c1e2f76f',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 61816832,
+      heapTotal: 34152448,
+      heapUsed: 16891560,
+      external: 1676394,
+      arrayBuffers: 248785
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 32243712
+  },
+  response_time: '297.761',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:22:43.242Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '8e1d90a7-1b3d-403a-97c2-049968a3ee32',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 49610752,
+      heapTotal: 17637376,
+      heapUsed: 14481056,
+      external: 1463159,
+      arrayBuffers: 37430
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 58716160
+  },
+  response_time: '2.331',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:22:46.541Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2NTI2MSwiZXhwIjoxNTkyMDUxNjYxLCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Q4APJUWhYI2yzjsp5B7xFRDXogoCB1rzyqRnRQ455XzoPBwY5EBCq1R3zNJ7Yz46zIwpgAxbIN3NNiASDEltLcEWbbDqRtl4HwOZs57bB_boW-v0kSWL4FhtnUNi0Mf4Wn5vGjZxfgrBAL3ScI-T8UdhRE8S-ZkzYLfIiuwD_YjuAxzWNsViDCb2HmLHf2Epj48-cbhoU4ZQNEHZesjyHFVKntLaQtHdddssvTxGLxAZlalgu9pFti3Dm6s2Rj3VzzgF-tLiYSV8voob52O6WWb5Tp4RE7zPhx1kPJ03lwZQ-hPO4GJ4VajjBNkHB2OdJKIK_ZQWD9o76HUXiWDLbQ'
+    },
+    url: '/merchant/general/get',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '68970d18-07d4-445d-ac64-2f9a229a9be4',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 28192768,
+      heapTotal: 17637376,
+      heapUsed: 15370712,
+      external: 1475318,
+      arrayBuffers: 49589
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 112558080
+  },
+  response_time: '7.229',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:24:46.552Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '56b98e71-99cd-4f71-ba17-8239a4042a88',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Unauthorized",\n' +
+      '\t"details": "No authorization token was found",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "UnauthorizedError",\n' +
+      '\t"error": {\n' +
+      '\t\t"name": "UnauthorizedError",\n' +
+      '\t\t"message": "No authorization token was found",\n' +
+      '\t\t"code": "credentials_required",\n' +
+      '\t\t"status": 401,\n' +
+      '\t\t"inner": {\n' +
+      '\t\t\t"message": "No authorization token was found"\n' +
+      '\t\t}\n' +
+      '\t},\n' +
+      '\t"stack": "UnauthorizedError: No authorization token was found\\n    at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)\\n    at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)\\n    at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)\\n    at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)\\n    at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)\\n    at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)"\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (401) - Error: No authorization token was found',
+  meta: {
+    memory_usage: {
+      rss: 32653312,
+      heapTotal: 17637376,
+      heapUsed: 14998600,
+      external: 1485208,
+      arrayBuffers: 59479
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 19353600
+  },
+  response_time: '4.097',
+  level: 'error',
+  error: UnauthorizedError: No authorization token was found
+      at middleware (/Users/noah/Otis/backend/api-gateway/node_modules/express-jwt/lib/index.js:76:21)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13)
+      at /Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:284:7
+      at Function.process_params (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:335:12)
+      at next (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:275:10)
+      at Function.handle (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:174:3)
+      at router (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (/Users/noah/Otis/backend/api-gateway/node_modules/express/lib/router/index.js:317:13) {
+    code: 'credentials_required',
+    status: 401,
+    inner: { message: 'No authorization token was found' }
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:25:00.925Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2ODI2NSwiZXhwIjoxNTkyMDU0NjY1LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.brvNqyvyFXSKDVpwwLqZ2_uhVZ6FskLWhbqsgNYkJpaWOg3QfcB8goRhmgmg2V2LGM9iqs93PZSInBXfI_-7nU7gYi6DjCgcMYOFIYkT0HNW3EuQRCC1qG7WOOTx4Yjv976PuGlSXZl_doaP8onzVhZ5na51_jLi8xysEnl6NcRpAc6jig2a5sVy7HJvTbC4fDLGXdrXYHTwTKS92HOsd9_gnSly_6qep4uA2iwB26GTlK2QmtrDrG3uiBn-V2_92FwA9-w0JKoViOPb_CLCRoj3Iub5wLTyrsHaKIbo_czqFqel51XBorcHNSvddGLM5dQb4gGFWT5EuVYgqVNymQ'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '91bb9520-2a1c-49df-8aeb-f9d153bcfbf2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 30535680,
+      heapTotal: 17637376,
+      heapUsed: 15577488,
+      external: 1498022,
+      arrayBuffers: 72293
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18149376
+  },
+  response_time: '4.277',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:25:13.520Z'
+}
+{
+  request: {
+    type: 'http request',
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'curl/7.54.0',
+      accept: '*/*',
+      authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpaaXJHTEpsOUlYTHZ1RF9Ca0tXbiJ9.eyJpc3MiOiJodHRwczovL2Rldi1ueXU5azN1OC5ldS5hdXRoMC5jb20vIiwic3ViIjoiQkpTeHFGOTRaNE9yUTlSSVNlR0FQS0NEV0d5dUxsWGNAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTk2ODI2NSwiZXhwIjoxNTkyMDU0NjY1LCJhenAiOiJCSlN4cUY5NFo0T3JROVJJU2VHQVBLQ0RXR3l1TGxYYyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.brvNqyvyFXSKDVpwwLqZ2_uhVZ6FskLWhbqsgNYkJpaWOg3QfcB8goRhmgmg2V2LGM9iqs93PZSInBXfI_-7nU7gYi6DjCgcMYOFIYkT0HNW3EuQRCC1qG7WOOTx4Yjv976PuGlSXZl_doaP8onzVhZ5na51_jLi8xysEnl6NcRpAc6jig2a5sVy7HJvTbC4fDLGXdrXYHTwTKS92HOsd9_gnSly_6qep4uA2iwB26GTlK2QmtrDrG3uiBn-V2_92FwA9-w0JKoViOPb_CLCRoj3Iub5wLTyrsHaKIbo_czqFqel51XBorcHNSvddGLM5dQb4gGFWT5EuVYgqVNymQ'
+    },
+    url: '/merchant/general/get/?id=1',
+    host: 'localhost',
+    ip: '127.0.0.1',
+    body: {}
+  },
+  response: {
+    type: 'http response',
+    headers: [Object: null prototype] {
+      'x-dns-prefetch-control': 'off',
+      'x-frame-options': 'SAMEORIGIN',
+      'strict-transport-security': 'max-age=15552000; includeSubDomains',
+      'x-download-options': 'noopen',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '1; mode=block',
+      'x-request-id': '18ba90f5-7669-4116-b0b9-2948b7ff7aa2',
+      'content-type': 'application/json; charset=utf-8'
+    },
+    body: '{\n' +
+      '\t"message": "Forbidden",\n' +
+      '\t"details": "Insufficient scope",\n' +
+      '\t"docs_url": "https://documenter.getpostman.com/view/11073749/SzmmVEmC",\n' +
+      '\t"error_type": "Object",\n' +
+      '\t"error": {\n' +
+      '\t\t"statusCode": 403,\n' +
+      '\t\t"error": "Forbidden",\n' +
+      '\t\t"message": "Insufficient scope"\n' +
+      '\t}\n' +
+      '}'
+  },
+  message: '[api-gateway:localhost] GET/1.1 /merchant/general/get/?id=1 (403) - Error: Insufficient scope',
+  meta: {
+    memory_usage: {
+      rss: 28160000,
+      heapTotal: 17637376,
+      heapUsed: 15248472,
+      external: 1488602,
+      arrayBuffers: 62873
+    },
+    total_mem: 4294967296,
+    pid: 32274,
+    gid: '-',
+    argv: [
+      '/usr/local/Cellar/node/13.13.0_1/bin/node',
+      '/Users/noah/Otis/backend/api-gateway'
+    ],
+    platform: 'darwin',
+    total_unused_mem: 18280448
+  },
+  response_time: '7.606',
+  level: 'error',
+  error: {
+    statusCode: 403,
+    error: 'Forbidden',
+    message: 'Insufficient scope'
+  },
+  service: 'api-gateway',
+  timestamp: '2020-06-12T13:26:06.797Z'
+}

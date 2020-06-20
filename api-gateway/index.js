@@ -29,14 +29,21 @@ app.use(responseTime(logHandler()))
 app.use(invalidContentTypeHandler())
 app.use(bodyParser.json({ extended: true, type: "*/json", verify: setRawBody }))
 
+/* Add global authentication middlewares */
+const auth = getValue("global_auth") || []
+for (var func of auth) {
+	const message = `Adding global auth middleware: ${func.name}`
+	logger.info(message)
+	app.use(func)
+}
+
+/* Add API router modules */
 const apis = getValue("apis")
 for (var api in apis) {
 	const a = apis[api]
 	const module = require(a.path)
-	const name = a.name
-	const message = `[api-gateway:${process.env.OTIS_ENV}] Adding API: ${name}`
+	const message = `[api-gateway:${process.env.OTIS_ENV}] Adding API: ${api}`
 	const prefix = a.prefix
-	console.log(message)
 	logger.info(message)
 	app.use(prefix, module)
 }
@@ -50,10 +57,5 @@ app.use(errorHandler())
 
 app.listen(port, address, () => {
 	var msg = `[api-gateway:${process.env.OTIS_ENV}] Listening at http://${address}:${port}`
-	var info = {
-		level: "info",
-		message: msg
-	}
-	console.log(msg)
-	logger.log(info)
+	logger.info(msg)
 })
