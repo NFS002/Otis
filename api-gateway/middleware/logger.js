@@ -102,7 +102,7 @@ const getLogBody = function (time, req, res, err) {
 	logBody.response = resLogBody
 	logBody.message = getLogMessage(req, res)
 
-	if ( Object.hasOwnProperty.call(logConfig, "meta") && logConfig.meta === true)
+	if (Object.hasOwnProperty.call(logConfig, "meta") && logConfig.meta === true)
 	    logBody.meta = getMetaLogBody(req, res)
 
 
