@@ -9,9 +9,14 @@ module.exports = {
 
 		apis: {
 			merchant: {
+			    name: "merchant",
 				path: "./merchant",
-				prefix: "/merchant"
-			}
+				prefix: "/merchant",
+				overrides: {
+				    auth: false,
+				    validators: false
+				},
+			},
 		},
 
 		global_auth: [/* auth.basicJwtCheck */],
@@ -66,8 +71,12 @@ module.exports = {
 			merchant: {
 				name: "merchant",
 				path: "./merchant",
-				prefix: "/merchant"
-			}
+				prefix: "/merchant",
+				overrides: {
+                    auth: false,
+                    validators: false
+               },
+			},
 		},
 
 		global_auth: [/* auth.basicJwtCheck */],

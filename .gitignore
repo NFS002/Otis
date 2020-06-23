@@ -2,11 +2,11 @@
 .idea
 data
 node_modules
-**/npm-debug.log
+npm-debug.log
 .env
 .env.local
 testdata.json
 *venv
-**/logs/*
+logs/*
 certs/*
-**/__pycache__
+__pycache__

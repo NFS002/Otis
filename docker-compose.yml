@@ -4,55 +4,27 @@ version: '3.5'
 services:
 
   api_gateway:
-    image: microhq/micro:latest
+    container_name: "otis.api.gateway"
     restart: always
-    command: api --handler=api
-    ports:
-      - 8080:8080
-    networks:
-      - api-gateway-tier
-
-  api_merchant:
-    restart: always
-    container_name: "go.micro.api.merchant"
-    env_file:
-      - .env
     build:
-      context: ./api/merchant/
-      dockerfile: Dockerfile
-      args:
-        - goprivate=${GOPRIVATE}
-        - gitlab_user=${GITLAB_USER}
-        - gitlab_token=${GITLAB_TOKEN}
-    depends_on:
-      - api_gateway
-    ports:
-      - 50051:50051
-    networks:
-      - api-gateway-tier
-      - api-merchant-tier
-      - api-transaction-tier
-
-  api_user:
-    restart: always
-    container_name: "go.micro.api.user"
+      context: .
+      dockerfile: ./api-gateway/Dockerfile
+    expose:
+      - "3000"
+    volumes:
+      - ./certs:/app/certs
+      - ./api-gateway/gateway-config.js:/app/api-gateway/gateway-config.js
     env_file:
-      - .env
-    build:
-      context: ./api/user/
-      dockerfile: Dockerfile
-      args:
-        - goprivate=${GOPRIVATE}
-        - gitlab_user=${GITLAB_USER}
-        - gitlab_token=${GITLAB_TOKEN}
-    depends_on:
-      - api_gateway
+      - .env.local
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
     ports:
-      - 50052:50052
+      - "3000:3000"
     networks:
       - api-gateway-tier
-      - api-user-tier
-      - api-transaction-tier
 
 #  service_merchant:
 #    restart: always
