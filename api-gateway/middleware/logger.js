@@ -45,18 +45,18 @@ const getWinstonFormat = function () {
 const winstonConf = {
 	level: "info",
 	format: getWinstonFormat(),
-	meta: true,
 	defaultMeta: { service: "api-gateway" },
 	transports: winstonTransports
 }
 
 const getLogMessage = function (req, res) {
-	return "[api-gateway:" + req.hostname + "] " + req.method + "/" + req.httpVersion +
-    " " + req.originalUrl + " (" + res.statusCode + ")"
+	return "[api-gateway:" + process.env.OTIS_ENV + "] " + req.method + "/" + req.httpVersion +
+    " " + req.originalUrl + " (" + res.statusCode + "). Request from " + req.hostname
 }
 
 const getMetaLogBody = function (req, res) {
 	const meta = {}
+	meta.service = "api-gateway"
 	meta.memory_usage = process.memoryUsage()
 	meta.total_mem = os.totalmem()
 	meta.pid = process.pid ? process.pid : "-"
@@ -101,14 +101,16 @@ const getLogBody = function (time, req, res, err) {
 	logBody.request = reqLogBody
 	logBody.response = resLogBody
 	logBody.message = getLogMessage(req, res)
-	logBody.meta = getMetaLogBody(req, res)
+
+	if ( Object.hasOwnProperty.call(logConfig, "meta") && logConfig.meta === true)
+	    logBody.meta = getMetaLogBody(req, res)
 
 
 	if (time) {
 	    var roundedStrTime = String(time.toFixed(3))
 		logBody.response_time = roundedStrTime
 		if (time > 3500) {
-		    logBody.message += (" - Warning: Slow Response Time: " + roundedStrTime)
+		    logBody.message += (" - Warning: slow response time: " + roundedStrTime)
 			logBody.level = "warning"
 		}
 	}

@@ -23,6 +23,7 @@ module.exports = {
 			rollbar: true,
 			console: true,
 			pretty_print: true,
+			meta: false,
 			files: [
 				{
 					filename: join(process.env.OTIS_HOME, "api-gateway/logs/combined.log"),
@@ -72,12 +73,13 @@ module.exports = {
 		global_auth: [/* auth.basicJwtCheck */],
 
 		morgan: true,
-		morgan_theme: "defaultTheme",
+		morgan_theme: "inverted",
 
 		logs: {
 			rollbar: true,
 			console: false,
 			pretty_print: false,
+			meta: true,
 			files: [
 				{
 					filename: join(process.env.OTIS_HOME, "api-gateway/logs/combined.log"),

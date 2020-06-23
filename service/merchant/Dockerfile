@@ -1,43 +1,31 @@
-FROM golang:alpine as builder
+# Use project home directory or git repo url as build context
+#
+# Build from git url:
+#        docker build -f service/merchant/Dockerfile -t otis-merchant-service https://gitlab.com/otis_team/backend
+# Build from project home directory:
+#        docker build -f service/merchant/Dockerfile -t otis-merchant-service .
+#
+# Run with default service-config.py:
+#        docker run --env-file .env -v `pwd`/certs:/app/certs --expose 3005 -p 0.0.0.0:3005:3005 otis-merchant-service
+# Run with specific service-config.py:
+#       docker run --env-file .env -v `pwd`/certs:/app/certs -v `pwd`/service/merchant/service-config.py:/app/merchant-service/service-config.py --expose 3005 -p 0.0.0.0:3005:3005 otis-merchant-service
+#
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache git
+FROM python:3.6
 
-ARG gitlab_user
-ENV gitlab_user=$gitlab_user
-ARG gitlab_token
-ENV gitlab_token=$gitlab_token
+RUN groupadd -g 61000 docker
+RUN useradd -g 61000 -l -M -s /bin/false -u 61000 docker
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache git
+RUN mkdir -p /app/service/merchant /app/lib && chown -R docker:docker /app
 
-RUN mkdir /app
-WORKDIR /app
+WORKDIR /app/service/merchant
 
-ARG gitlab_user
-ENV gitlab_user=$gitlab_user
-ARG gitlab_token
-ENV gitlab_token=$gitlab_token
+COPY --chown=docker:docker service/merchant/requirements.txt ./
+RUN pip install -r requirements.txt
 
-ENV GO111MODULE=on
+USER docker
 
-COPY . .
+COPY --chown=docker:docker ./service/merchant /app/service/merchant
+COPY --chown=docker:docker ./lib /app/lib
 
-RUN git config \
-    --global \
-    url."https://${gitlab_user}:${gitlab_token}@gitlab.com/".insteadOf \
-    "https://gitlab.com/"
-
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o merchant-service
-
-# RUN
-
-FROM alpine:latest
-
-RUN apk --no-cache add ca-certificates
-
-RUN mkdir /app
-WORKDIR /APP
-COPY --from=builder /app/merchant-service .
-
-CMD ["./merchant-service"]
+CMD ["python3", "."]
