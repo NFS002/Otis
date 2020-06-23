@@ -5,9 +5,9 @@ const utils = require("../utils")
 const jwtAuthz = require("express-jwt-authz")
 const { logger } = require("../middleware/logger")
 
-var has_override = function(key) {
-    var cfg_overrides = utils.getValue("apis::merchant::overrides") || {}
-    return (Object.hasOwnProperty.call(cfg_overrides, key) && cfg_overrides[key] === false)
+var hasOverride = function (key) {
+	var cfgOverrides = utils.getValue("apis::merchant::overrides") || {}
+	return (Object.hasOwnProperty.call(cfgOverrides, key) && cfgOverrides[key] === false)
 }
 
 /* Add API Auth */
@@ -20,9 +20,9 @@ for (var fn of jwtAuthFuncs) {
 
 /* Add API methods */
 for (var endpoint in api.routes) {
-    var jwtAuthScopes = has_override("auth") ? [] : route.scopes || []
-    var validators = has_override("validators") ? [] : route.validators || []
 	var route = api.routes[endpoint]
+	var jwtAuthScopes = hasOverride("auth") ? [] : route.scopes || []
+	var validators = hasOverride("validators") ? [] : route.validators || []
 	var prefix = route.prefix
 	var handler = utils.wrapFuncInMiddleware(route.handler, validators)
 	var verb = route.verb

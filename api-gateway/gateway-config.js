@@ -15,8 +15,8 @@ module.exports = {
 				overrides: {
 				    auth: false,
 				    validators: false
-				},
-			},
+				}
+			}
 		},
 
 		global_auth: [/* auth.basicJwtCheck */],
@@ -73,10 +73,10 @@ module.exports = {
 				path: "./merchant",
 				prefix: "/merchant",
 				overrides: {
-                    auth: false,
-                    validators: false
-               },
-			},
+					auth: false,
+					validators: false
+				}
+			}
 		},
 
 		global_auth: [/* auth.basicJwtCheck */],
