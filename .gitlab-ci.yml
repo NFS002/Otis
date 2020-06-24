@@ -38,12 +38,10 @@ container_build:
    image: docker:stable
    services:
      - docker:dind
-   variables:
-     IMAGETAG: $CI_COMMIT_REF_SLUG
    before_script:
      - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-   script:
      - if [ -z "$CI_COMMIT_TAG" ]; then IMAGETAG="$CI_COMMIT_REF_SLUG"; else IMAGETAG="$CI_COMMIT_TAG"; fi
+   script:
      - docker build --no-cache=true -f=api-gateway/Dockerfile -t=$CI_REGISTRY/otis_team/backend/api-gateway:$IMAGETAG .
      - docker push $CI_REGISTRY/otis_team/backend/api-gateway:$IMAGETAG
      - docker build --no-cache=true -f=service/merchant/Dockerfile -t=$CI_REGISTRY/otis_team/backend/service/merchant:$IMAGETAG .
