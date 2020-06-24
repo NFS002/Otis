@@ -30,17 +30,17 @@ eslint:
     - eslint --debug .
 
 
-master_container_build:
+container_build:
    stage: build
    only:
      - master
+     - tags
    image: docker:stable
-   variables:
-     IMAGETAG: $CI_COMMIT_REF_SLUG
    services:
      - docker:dind
    before_script:
      - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+     - if [ -z "$CI_COMMIT_TAG" ]; then IMAGETAG="$CI_COMMIT_REF_SLUG"; else IMAGETAG="$CI_COMMIT_TAG"; fi
    script:
      - docker build --no-cache=true -f=api-gateway/Dockerfile -t=$CI_REGISTRY/otis_team/backend/api-gateway:$IMAGETAG .
      - docker push $CI_REGISTRY/otis_team/backend/api-gateway:$IMAGETAG
@@ -51,14 +51,6 @@ master_container_build:
 #    - docker build -t registry.gitlab.com/otis_team/backend/service/transaction:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./service/transaction/
 #    - docker build -t registry.gitlab.com/otis_team/backend/api/merchant:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/merchant/
 #    - docker build -t registry.gitlab.com/otis_team/backend/api/user:latest --build-arg gitlab_user=$CI_REGISTRY_USER --build-arg gitlab_token=$CI_REGISTRY_PASSWORD ./api/user/
-
-
-tags_container_build:
-  extends: master_container_build
-  only:
-    - tags
-  variables:
-    IMAGETAG: $CI_COMMIT_TAG
 
 # container_registry:
 #    stage: build
