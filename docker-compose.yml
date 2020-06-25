@@ -48,6 +48,7 @@ services:
       - "3005:3005"
     networks:
       - api-gateway-tier
+      - api-merchant-tier
 
 networks:
   api-gateway-tier:
