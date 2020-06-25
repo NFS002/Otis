@@ -12,7 +12,7 @@ certs/*
 **/__pycache__
 README.md
 Makefile
-api-gateay/eslint.json
+.eslintrc.json
 service/pylintrc
 service/pylintdict.txt
 service/tox.ini

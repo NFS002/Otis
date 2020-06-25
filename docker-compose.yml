@@ -4,16 +4,16 @@ version: '3.5'
 services:
 
   api_gateway:
-    container_name: "otis.api.gateway"
+    image: ${OTIS_CI_REGISTRY}/otis_team/backend/api-gateway:${OTIS_DOCKER_IMAGETAG}
     restart: always
     build:
-      context: .
-      dockerfile: ./api-gateway/Dockerfile
+      context: ${OTIS_HOME}
+      dockerfile: ${OTIS_HOME}/api-gateway/Dockerfile
     expose:
-      - "3000"
+      - "3005"
     volumes:
-      - ./certs:/app/certs
-      - ./api-gateway/gateway-config.js:/app/api-gateway/gateway-config.js
+      - ${OTIS_HOME}/certs:/app/certs
+      - ${OTIS_HOME}/api-gateway/gateway-config.js:/app/api-gateway/gateway-config.js
     env_file:
       - .env.local
     logging:
@@ -23,6 +23,29 @@ services:
         max-file: "10"
     ports:
       - "3000:3000"
+    networks:
+      - api-gateway-tier
+
+  merchant_service:
+    image: ${OTIS_CI_REGISTRY}/otis_team/backend/service/merchant:${OTIS_DOCKER_IMAGETAG}
+    restart: always
+    build:
+      context: ${OTIS_HOME}
+      dockerfile: ${OTIS_HOME}/service/merchant/Dockerfile
+    expose:
+      - "3000"
+    volumes:
+      - ${OTIS_HOME}/certs:/app/certs
+      - ${OTIS_HOME}/service/merchant/service-config.py:/app/merchant-service/service-config.py
+    env_file:
+      - .env.local
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+    ports:
+      - "3005:3005"
     networks:
       - api-gateway-tier
 
